@@ -224,149 +224,173 @@
         <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
       </div>
 
-      <!-- Contenedor Principal de Trayectoria (Grafo Git 100% Continuo y Unificado, Puntos al ras de las etiquetas) -->
-      <div class="relative w-full max-w-4xl mx-auto flex flex-col md:grid md:grid-cols-[1fr_80px_1fr] items-start">
+      <!-- Contenedor Principal de Trayectoria (Sincronización Exacta de Nodos Git con Badges) -->
+      <div class="relative w-full max-w-4xl mx-auto flex flex-col">
         
-        <!-- ================= FILA 1 ================= -->
-        <!-- Espacio izquierdo fila 1 -->
-        <div class="hidden md:block"></div>
+        <!-- ================= FILA 1: Top Right (Weekend Restaurant) ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+          <!-- Espacio izquierdo fila 1 -->
+          <div class="hidden md:block"></div>
 
-        <!-- CENTRO: ÚNICO SVG CONTINUO (Spans 3 rows, 100% unido sin cortes) -->
-        <div class="hidden md:flex row-span-3 justify-center items-start h-full relative">
-          <svg fill="none" class="w-full h-full min-h-[600px] drop-shadow-md overflow-visible" viewBox="0 0 80 600">
-            <!-- 🔵 Tronco Principal Azul Continuo -->
-            <line x1="40" y1="0" x2="40" y2="590" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round"></line>
-            
-            <!-- 🟡 Rama Amarilla (Izquierda): Curva continua desde arriba (y=12) hasta merge abajo (y=545) -->
-            <path d="M40 12 C40 40 20 55 20 80 V480 C20 510 40 525 40 545" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"></path>
-            
-            <!-- 🔴 Rama Roja (Derecha): Curva continua desde azul (y=270) hasta merge en azul (y=485) -->
-            <path d="M40 270 C40 295 60 305 60 330 V420 C60 450 40 465 40 485" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"></path>
-            
-            <!-- Conexión 1: Weekend Restaurant (Derecha al ras y=12) -->
-            <path d="M40 12 H75" stroke="#00daf3" stroke-width="3" stroke-linecap="round"></path>
-            <circle cx="40" cy="12" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
-            <circle cx="75" cy="12" fill="#00daf3" r="4.5"></circle>
+          <!-- Centro: Segmento 1 Git Graph (Nodo Azul en cy=12 alineado con badge h-6) -->
+          <div class="hidden md:flex justify-center h-full relative">
+            <svg class="w-full h-full min-h-[170px]" viewBox="0 0 80 170" preserveAspectRatio="none" fill="none">
+              <!-- 🔵 Tronco Principal Azul -->
+              <path d="M40 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🟡 Rama Amarilla Split a la izquierda -->
+              <path d="M40 12C40 40 20 55 20 80V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal exacto a cy=12 -->
+              <path d="M40 12H75" stroke="#00daf3" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos -->
+              <circle cx="40" cy="12" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
+              <circle cx="75" cy="12" fill="#00daf3" r="4.5"></circle>
+            </svg>
+          </div>
 
-            <!-- Conexión 2: Mobile & Data (Izquierda al ras y=212) -->
-            <path d="M20 212 H5" stroke="#facc15" stroke-width="3" stroke-linecap="round"></path>
-            <circle cx="5" cy="212" fill="#facc15" r="4.5"></circle>
-            
-            <!-- Punto Rojo de inicio en línea azul (y=270) -->
-            <circle cx="40" cy="270" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
+          <!-- Contenido Derecho Fila 1: Weekend Restaurant -->
+          <div class="w-full md:pl-6 pb-12">
+            <div class="flex flex-col gap-1 text-left group">
+              <!-- Badge centrado en y=12 (h-6) -->
+              <div class="flex flex-wrap items-center gap-2 h-6 mb-1">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30">
+                  <span class="size-1.5 rounded-full bg-[#00daf3] animate-pulse"></span> main branch · Actual
+                </span>
+                <span class="text-xs font-mono text-zinc-400">Ene 2025 – Actualidad</span>
+              </div>
+              
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                Frontend Engineer / Full Stack Developer
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-orange-400/90 mt-0.5">
+                Weekend Restaurant & Lounge S.A.C. <span class="text-zinc-500 font-normal italic">(Weekend - Huarmey)</span>
+              </p>
+              <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
+                Carta Digital Interactiva y Sistema de Pedidos & Checkout Automatizado para Delivery y Reservas.
+              </p>
 
-            <!-- Conexión 3: Freelance (Derecha al ras y=412) -->
-            <path d="M60 412 H75" stroke="#ef4444" stroke-width="3" stroke-linecap="round"></path>
-            <circle cx="75" cy="412" fill="#ef4444" r="4.5"></circle>
-
-            <!-- Merge Rojo en la línea Azul -->
-            <circle cx="40" cy="485" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
-
-            <!-- Merge Amarillo en la línea Azul -->
-            <circle cx="40" cy="545" fill="#facc15" r="6" stroke="#09090b" stroke-width="2"></circle>
-
-            <!-- Nodo Final Azul -->
-            <circle cx="40" cy="585" fill="#00daf3" r="6.5" stroke="#09090b" stroke-width="2.5"></circle>
-          </svg>
-        </div>
-
-        <!-- Contenido Derecho Fila 1: Weekend Restaurant (Movido hacia abajo para coincidir con el círculo) -->
-        <div class="w-full md:pl-6 pb-12 md:pb-16 min-h-[200px] flex flex-col mt-[75px] md:mt-[75px]" style="transform: translateY(75px);">
-          <div class="flex flex-col gap-1 text-left group">
-            <div class="flex flex-wrap items-center gap-2 mb-1">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30">
-                <span class="size-1.5 rounded-full bg-[#00daf3] animate-pulse"></span> main branch · Actual
-              </span>
-              <span class="text-xs font-mono text-zinc-400">Ene 2025 – Actualidad</span>
-            </div>
-            
-            <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
-              Frontend Engineer / Full Stack Developer
-            </h3>
-            <p class="text-xs sm:text-sm font-semibold text-orange-400/90 mt-0.5">
-              Weekend Restaurant & Lounge S.A.C. <span class="text-zinc-500 font-normal italic">(Weekend - Huarmey)</span>
-            </p>
-            <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
-              Carta Digital Interactiva y Sistema de Pedidos & Checkout Automatizado para Delivery y Reservas.
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">React 19</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">TypeScript</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Tailwind v4</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Clean Architecture</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">WhatsApp API</span>
+              <div class="flex flex-wrap gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">React 19</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">TypeScript</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Tailwind v4</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Clean Architecture</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">WhatsApp API</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- ================= FILA 2 ================= -->
-        <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data -->
-        <div class="w-full md:pr-6 pb-12 md:pb-16 min-h-[200px] text-left md:text-right flex flex-col items-start md:items-end">
-          <div class="flex flex-col gap-1 text-left md:text-right items-start md:items-end group">
-            <div class="flex flex-wrap md:justify-end items-center gap-2 mb-1">
-              <span class="text-xs font-mono text-zinc-400 order-2 md:order-1">2021 – 2024</span>
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#facc15]/10 text-[#facc15] border border-[#facc15]/30 order-1 md:order-2">
-                feature/mobile-data
-              </span>
-            </div>
-            
-            <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
-              Mobile Developer & Data Analyst
-            </h3>
-            <p class="text-xs sm:text-sm font-semibold text-zinc-300 mt-0.5">
-              Desarrollo de Software & Proyectos Móviles
-            </p>
-            <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
-              Construcción de aplicaciones móviles reactivas (Flutter/Android) y pipelines de datos estructurados para analítica y reportería.
-            </p>
+        <!-- ================= FILA 2: Middle Left (Mobile Developer & Data Analyst) ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+          <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data -->
+          <div class="w-full md:pr-6 pb-12 text-left md:text-right flex flex-col items-start md:items-end">
+            <div class="flex flex-col gap-1 text-left md:text-right items-start md:items-end group">
+              <!-- Badge centrado en y=12 (h-6) -->
+              <div class="flex flex-wrap md:justify-end items-center gap-2 h-6 mb-1">
+                <span class="text-xs font-mono text-zinc-400 order-2 md:order-1">2021 – 2024</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#facc15]/10 text-[#facc15] border border-[#facc15]/30 order-1 md:order-2">
+                  feature/mobile-data
+                </span>
+              </div>
+              
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                Mobile Developer & Data Analyst
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-zinc-300 mt-0.5">
+                Desarrollo de Software & Proyectos Móviles
+              </p>
+              <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
+                Construcción de aplicaciones móviles reactivas (Flutter/Android) y pipelines de datos estructurados para analítica y reportería.
+              </p>
 
-            <div class="flex flex-wrap md:justify-end gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Python</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">PostgreSQL</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Docker</span>
+              <div class="flex flex-wrap md:justify-end gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Python</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Docker</span>
+              </div>
             </div>
           </div>
+
+          <!-- Centro: Segmento 2 Git Graph (Nodo Amarillo en cy=12 alineado con badge h-6) -->
+          <div class="hidden md:flex justify-center h-full relative">
+            <svg class="w-full h-full min-h-[170px]" viewBox="0 0 80 170" preserveAspectRatio="none" fill="none">
+              <!-- 🔵 Tronco Azul Continuo -->
+              <path d="M40 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🟡 Rama Amarilla Continua -->
+              <path d="M20 0V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🔴 Rama Roja Split a la derecha -->
+              <path d="M40 75C40 100 60 115 60 140V170" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal exacto a cy=12 hacia la izquierda -->
+              <path d="M20 12H5" stroke="#facc15" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos -->
+              <circle cx="5" cy="12" fill="#facc15" r="4.5"></circle>
+              <circle cx="40" cy="75" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
+            </svg>
+          </div>
+
+          <!-- Espacio derecho fila 2 -->
+          <div class="hidden md:block"></div>
         </div>
 
-        <!-- Espacio derecho fila 2 -->
-        <div class="hidden md:block"></div>
+        <!-- ================= FILA 3: Bottom Right (Mobile & Software Developer - FREELANCE) ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+          <!-- Espacio izquierdo fila 3 -->
+          <div class="hidden md:block"></div>
 
-        <!-- ================= FILA 3 ================= -->
-        <!-- Espacio izquierdo fila 3 -->
-        <div class="hidden md:block"></div>
+          <!-- Centro: Segmento 3 Git Graph (Nodo Rojo en cy=12 alineado con badge h-6) -->
+          <div class="hidden md:flex justify-center h-full relative">
+            <svg class="w-full h-full min-h-[180px]" viewBox="0 0 80 180" preserveAspectRatio="none" fill="none">
+              <!-- 🔵 Tronco Azul -->
+              <path d="M40 0V180" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🔴 Rama Roja merge en Azul en y=75 -->
+              <path d="M60 0V25C60 50 40 60 40 75" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🟡 Rama Amarilla merge en Azul en y=135 -->
+              <path d="M20 0V90C20 115 40 125 40 135" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal exacto a cy=12 hacia la derecha -->
+              <path d="M60 12H75" stroke="#ef4444" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos -->
+              <circle cx="75" cy="12" fill="#ef4444" r="4.5"></circle>
+              <!-- Merge Rojo -->
+              <circle cx="40" cy="75" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
+              <!-- Merge Amarillo -->
+              <circle cx="40" cy="135" fill="#facc15" r="6" stroke="#09090b" stroke-width="2"></circle>
+              <!-- Nodo Final Azul -->
+              <circle cx="40" cy="170" fill="#00daf3" r="6.5" stroke="#09090b" stroke-width="2.5"></circle>
+            </svg>
+          </div>
 
-        <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE - Desplazado 95px hacia arriba) -->
-        <div class="w-full md:pl-6 min-h-[200px] flex flex-col -mt-[95px] md:-mt-[95px]" style="transform: translateY(-95px);">
-          <div class="flex flex-col gap-1 text-left group">
-            <div class="flex flex-wrap items-center gap-2 mb-1">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30">
-                feature/freelance-mobile
-              </span>
-              <span class="text-xs font-mono text-zinc-400">Enero 2024 – Actualidad</span>
-            </div>
-            
-            <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
-              Mobile & Software Developer
-            </h3>
-            <p class="text-xs sm:text-sm font-semibold text-orange-400/90 mt-0.5">
-              FREELANCE
-            </p>
-            <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
-              Desarrollo integral (End-to-End) de apps móviles y soluciones de automatización a medida con arquitecturas limpias y despliegues estables con Docker.
-            </p>
+          <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE) -->
+          <div class="w-full md:pl-6 pb-4">
+            <div class="flex flex-col gap-1 text-left group">
+              <!-- Badge centrado en y=12 (h-6) -->
+              <div class="flex flex-wrap items-center gap-2 h-6 mb-1">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30">
+                  feature/freelance-mobile
+                </span>
+                <span class="text-xs font-mono text-zinc-400">Enero 2024 – Actualidad</span>
+              </div>
+              
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                Mobile & Software Developer
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-orange-400/90 mt-0.5">
+                FREELANCE
+              </p>
+              <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
+                Desarrollo integral (End-to-End) de apps móviles y soluciones de automatización a medida con arquitecturas limpias y despliegues estables con Docker.
+              </p>
 
-            <div class="flex flex-wrap gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Android Studio</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Python</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Docker</span>
-              <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Git</span>
+              <div class="flex flex-wrap gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Android Studio</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Python</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Docker</span>
+                <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Git</span>
+              </div>
             </div>
           </div>
         </div>
