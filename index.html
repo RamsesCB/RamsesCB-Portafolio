@@ -391,62 +391,139 @@
       </div>
     </section>
 
-    <!-- Proyectos Section -->
-    <section id="proyectos" class="pt-24 flex flex-col gap-8">
+    <!-- Proyectos Section (Estilo Lua Portfolio con Slider Interactivo para LuxHealth) -->
+    <section id="proyectos" class="pt-24 flex flex-col gap-6">
       
-      <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-        <span class="material-symbols-outlined text-orange-400 text-2xl">code_blocks</span>
+      <h2 class="text-3xl font-semibold mb-2 flex gap-x-3 items-center text-white">
+        <svg class="size-7 text-white" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M7 8l-4 4l4 4"></path>
+          <path d="M17 8l4 4l-4 4"></path>
+          <path d="M14 4l-4 16"></path>
+        </svg>
         Proyectos
       </h2>
 
       <div class="flex flex-col gap-10">
         
-        <!-- Proyecto 1 -->
-        <article class="flex flex-col gap-4 p-6 sm:p-8 rounded-2xl bg-zinc-900/40 border border-white/10 hover:border-orange-500/30 transition-all group">
+        <!-- Proyecto LuxHealth -->
+        <article class="flex flex-col gap-4">
+          <!-- Cabecera del Proyecto: Título y Link al Repositorio -->
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-            <h3 class="text-xl sm:text-2xl font-bold text-orange-400 group-hover:text-orange-300 transition-colors">
-              Plataforma Móvil &amp; Analítica de Datos
+            <h3 class="text-2xl font-semibold text-orange-400">
+              LuxHealth
             </h3>
-            <a href="https://github.com/RamsesCB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors">
-              <i class="devicon-github-original text-sm"></i>
+            <a href="https://github.com/RamsesCB/LuxHealth" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-300 hover:text-white transition-all shadow-sm hover:border-orange-500/30">
+              <i class="devicon-github-original text-sm text-white"></i>
               <span>Ver repositorio</span>
+              <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
             </a>
           </div>
 
-          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
-            Ecosistema multiplataforma enfocado en la recolección, estructuración y visualización interactiva de métricas de rendimiento en tiempo real, integrando arquitectura limpia y testing unitario exhaustivo.
+          <!-- Descripción -->
+          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed text-pretty">
+            Mobile HealthTech App impulsada por <span class="text-white font-medium">Google Gemini AI &amp; Flutter</span>. Diseñada con arquitectura <span class="text-white font-medium">Offline-First</span> para brindar soporte y prescripción nutricional personalizada a pacientes con patologías crónicas (enfermedad renal crónica, diabetes, hipertensión), integrando análisis multimodal de alimentos y sincronización local de alta confiabilidad.
           </p>
 
-          <ul class="flex flex-wrap gap-2 pt-2">
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-3.5" alt="Flutter">Flutter</span></li>
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-3.5" alt="Python">Python</span></li>
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-3.5" alt="PostgreSQL">PostgreSQL</span></li>
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-3.5" alt="Docker">Docker</span></li>
+          <!-- Badges de Tecnologías estilo Lua -->
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-3.5" alt="Flutter">
+                Flutter
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-3.5" alt="Dart">
+                Dart
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-orange-400">auto_awesome</span>
+                Gemini AI
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-[#00daf3]">offline_bolt</span>
+                Offline-First
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-emerald-400">account_tree</span>
+                Clean Architecture
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-3.5" alt="Docker">
+                Docker
+              </span>
+            </li>
           </ul>
-        </article>
 
-        <!-- Proyecto 2 -->
-        <article class="flex flex-col gap-4 p-6 sm:p-8 rounded-2xl bg-zinc-900/40 border border-white/10 hover:border-orange-500/30 transition-all group">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-            <h3 class="text-xl sm:text-2xl font-bold text-orange-400 group-hover:text-orange-300 transition-colors">
-              Motor de Procesamiento Concurrente &amp; APIs
-            </h3>
-            <a href="https://github.com/RamsesCB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors">
-              <i class="devicon-github-original text-sm"></i>
-              <span>Ver repositorio</span>
-            </a>
+          <!-- Slider / Carrusel de Imágenes Interactivo -->
+          <div class="relative group/slider w-full mt-2">
+            
+            <!-- Track deslizante con snap -->
+            <div id="project-slider" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl border border-white/10 bg-zinc-900/30 p-2 sm:p-3 shadow-2xl shadow-black/80 select-none cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+              
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/1.webp" alt="LuxHealth Mockup 1" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/2.webp" alt="LuxHealth Mockup 2" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/3.webp" alt="LuxHealth Mockup 3" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/4.webp" alt="LuxHealth Mockup 4" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/5.webp" alt="LuxHealth Mockup 5" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/6.webp" alt="LuxHealth Mockup 6" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/7.webp" alt="LuxHealth Mockup 7" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/instagram_overview.webp" alt="LuxHealth Overview" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/9.webp" alt="LuxHealth Mockup 9" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/10.webp" alt="LuxHealth Mockup 10" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+
+            </div>
+
+            <!-- Botones de navegación flotantes -->
+            <button id="slider-prev" type="button" aria-label="Imagen anterior" class="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_left</span>
+            </button>
+            <button id="slider-next" type="button" aria-label="Siguiente imagen" class="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_right</span>
+            </button>
+
+            <!-- Contador e Indicador de deslizamiento -->
+            <div class="flex items-center justify-between pt-3 px-1 text-xs text-zinc-400 font-mono">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-xs text-orange-400">swipe_left</span>
+                <span>Desliza para ver más capturas</span>
+              </span>
+              <span id="slider-counter" class="px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-zinc-300">
+                1 / 10
+              </span>
+            </div>
+
           </div>
-
-          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
-            Servicio de backend de alto rendimiento diseñado con Go y TypeScript para procesar flujos intensivos de datos y sincronización asíncrona, preparado para entornos de contenedores con Docker.
-          </p>
-
-          <ul class="flex flex-wrap gap-2 pt-2">
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-3.5" alt="Go">Go</span></li>
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-3.5" alt="TypeScript">TypeScript</span></li>
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-3.5" alt="Linux">Linux</span></li>
-            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-3.5" alt="Git">Git</span></li>
-          </ul>
         </article>
 
       </div>
@@ -529,5 +606,72 @@
       </div>
     </div>
   </footer>
+
+  <!-- Script interactivo para el Slider de Proyectos -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('project-slider');
+      const prevBtn = document.getElementById('slider-prev');
+      const nextBtn = document.getElementById('slider-next');
+      const counter = document.getElementById('slider-counter');
+      const items = slider ? slider.querySelectorAll('.slider-item') : [];
+
+      if (!slider || items.length === 0) return;
+
+      const updateCounter = () => {
+        const scrollLeft = slider.scrollLeft;
+        const width = slider.clientWidth;
+        let index = Math.round(scrollLeft / (items[0].offsetWidth + 16)) + 1;
+        if (index < 1) index = 1;
+        if (index > items.length) index = items.length;
+        if (counter) counter.textContent = `${index} / ${items.length}`;
+      };
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          const itemWidth = items[0].offsetWidth + 16;
+          slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          const itemWidth = items[0].offsetWidth + 16;
+          slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        });
+      }
+
+      slider.addEventListener('scroll', () => {
+        window.requestAnimationFrame(updateCounter);
+      });
+
+      // Touch & Drag Support
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    });
+  </script>
 
 </body></html>
