@@ -224,34 +224,34 @@
         <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
       </div>
 
-      <!-- Contenedor Principal de Trayectoria (Sincronización Exacta de Nodos Git con Badges) -->
+      <!-- Contenedor Principal de Trayectoria (Espaciado Reducido, Nodos Circulares Uniformes y Sin Solapamiento) -->
       <div class="relative w-full max-w-4xl mx-auto flex flex-col">
         
         <!-- ================= FILA 1: Top Right (Weekend Restaurant) ================= -->
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] items-stretch">
           <!-- Espacio izquierdo fila 1 -->
           <div class="hidden md:block"></div>
 
-          <!-- Centro: Segmento 1 Git Graph (Nodo Azul en cy=12 alineado con badge h-6) -->
-          <div class="hidden md:flex justify-center h-full relative">
-            <svg class="w-full h-full min-h-[170px]" viewBox="0 0 80 170" preserveAspectRatio="none" fill="none">
+          <!-- Centro: Segmento 1 Git Graph -->
+          <div class="hidden md:flex justify-center h-full relative w-[50px] mx-auto">
+            <svg class="w-[50px] h-full min-h-[170px]" viewBox="0 0 50 170" fill="none" preserveAspectRatio="none">
               <!-- 🔵 Tronco Principal Azul -->
-              <path d="M40 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M25 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🟡 Rama Amarilla Split a la izquierda -->
-              <path d="M40 12C40 40 20 55 20 80V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Brazo conector horizontal exacto a cy=12 -->
-              <path d="M40 12H75" stroke="#00daf3" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Nodos -->
-              <circle cx="40" cy="12" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
-              <circle cx="75" cy="12" fill="#00daf3" r="4.5"></circle>
+              <path d="M25 14C25 40 12 55 12 80V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal -->
+              <path d="M25 14H45" stroke="#00daf3" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos Circulares Uniformes -->
+              <circle cx="25" cy="14" fill="#00daf3" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
+              <circle cx="45" cy="14" fill="#00daf3" r="4.5" vector-effect="non-scaling-stroke"></circle>
             </svg>
           </div>
 
-          <!-- Contenido Derecho Fila 1: Weekend Restaurant -->
-          <div class="w-full md:pl-6 pb-12">
+          <!-- Contenido Derecho Fila 1: Weekend Restaurant (Distancia reducida: md:pl-3) -->
+          <div class="w-full md:pl-3 pb-12">
             <div class="flex flex-col gap-1 text-left group">
-              <!-- Badge centrado en y=12 (h-6) -->
-              <div class="flex flex-wrap items-center gap-2 h-6 mb-1">
+              <!-- Badge alineado a y=14 -->
+              <div class="flex flex-wrap items-center gap-2 mb-2">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30">
                   <span class="size-1.5 rounded-full bg-[#00daf3] animate-pulse"></span> main branch · Actual
                 </span>
@@ -280,12 +280,12 @@
         </div>
 
         <!-- ================= FILA 2: Middle Left (Mobile Developer & Data Analyst) ================= -->
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
-          <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data -->
-          <div class="w-full md:pr-6 pb-12 text-left md:text-right flex flex-col items-start md:items-end">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] items-stretch">
+          <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data (Distancia reducida: md:pr-3) -->
+          <div class="w-full md:pr-3 pb-12 text-left md:text-right flex flex-col items-start md:items-end">
             <div class="flex flex-col gap-1 text-left md:text-right items-start md:items-end group">
-              <!-- Badge centrado en y=12 (h-6) -->
-              <div class="flex flex-wrap md:justify-end items-center gap-2 h-6 mb-1">
+              <!-- Badge alineado a y=14 -->
+              <div class="flex flex-wrap md:justify-end items-center gap-2 mb-2">
                 <span class="text-xs font-mono text-zinc-400 order-2 md:order-1">2021 – 2024</span>
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#facc15]/10 text-[#facc15] border border-[#facc15]/30 order-1 md:order-2">
                   feature/mobile-data
@@ -313,20 +313,20 @@
             </div>
           </div>
 
-          <!-- Centro: Segmento 2 Git Graph (Nodo Amarillo en cy=12 alineado con badge h-6) -->
-          <div class="hidden md:flex justify-center h-full relative">
-            <svg class="w-full h-full min-h-[170px]" viewBox="0 0 80 170" preserveAspectRatio="none" fill="none">
+          <!-- Centro: Segmento 2 Git Graph -->
+          <div class="hidden md:flex justify-center h-full relative w-[50px] mx-auto">
+            <svg class="w-[50px] h-full min-h-[170px]" viewBox="0 0 50 170" fill="none" preserveAspectRatio="none">
               <!-- 🔵 Tronco Azul Continuo -->
-              <path d="M40 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M25 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🟡 Rama Amarilla Continua -->
-              <path d="M20 0V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M12 0V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🔴 Rama Roja Split a la derecha -->
-              <path d="M40 75C40 100 60 115 60 140V170" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Brazo conector horizontal exacto a cy=12 hacia la izquierda -->
-              <path d="M20 12H5" stroke="#facc15" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Nodos -->
-              <circle cx="5" cy="12" fill="#facc15" r="4.5"></circle>
-              <circle cx="40" cy="75" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
+              <path d="M25 75C25 100 38 115 38 140V170" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal hacia la izquierda -->
+              <path d="M12 14H5" stroke="#facc15" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos Circulares Uniformes -->
+              <circle cx="5" cy="14" fill="#facc15" r="4.5" vector-effect="non-scaling-stroke"></circle>
+              <circle cx="25" cy="75" fill="#ef4444" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
             </svg>
           </div>
 
@@ -335,37 +335,37 @@
         </div>
 
         <!-- ================= FILA 3: Bottom Right (Mobile & Software Developer - FREELANCE) ================= -->
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] items-stretch">
           <!-- Espacio izquierdo fila 3 -->
           <div class="hidden md:block"></div>
 
-          <!-- Centro: Segmento 3 Git Graph (Nodo Rojo en cy=12 alineado con badge h-6) -->
-          <div class="hidden md:flex justify-center h-full relative">
-            <svg class="w-full h-full min-h-[180px]" viewBox="0 0 80 180" preserveAspectRatio="none" fill="none">
+          <!-- Centro: Segmento 3 Git Graph -->
+          <div class="hidden md:flex justify-center h-full relative w-[50px] mx-auto">
+            <svg class="w-[50px] h-full min-h-[180px]" viewBox="0 0 50 180" fill="none" preserveAspectRatio="none">
               <!-- 🔵 Tronco Azul -->
-              <path d="M40 0V180" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M25 0V180" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🔴 Rama Roja merge en Azul en y=75 -->
-              <path d="M60 0V25C60 50 40 60 40 75" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M38 0V25C38 50 25 60 25 75" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🟡 Rama Amarilla merge en Azul en y=135 -->
-              <path d="M20 0V90C20 115 40 125 40 135" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Brazo conector horizontal exacto a cy=12 hacia la derecha -->
-              <path d="M60 12H75" stroke="#ef4444" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Nodos -->
-              <circle cx="75" cy="12" fill="#ef4444" r="4.5"></circle>
+              <path d="M12 0V90C12 115 25 125 25 135" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal hacia la derecha -->
+              <path d="M38 14H45" stroke="#ef4444" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos Circulares Uniformes -->
+              <circle cx="45" cy="14" fill="#ef4444" r="4.5" vector-effect="non-scaling-stroke"></circle>
               <!-- Merge Rojo -->
-              <circle cx="40" cy="75" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
+              <circle cx="25" cy="75" fill="#ef4444" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
               <!-- Merge Amarillo -->
-              <circle cx="40" cy="135" fill="#facc15" r="6" stroke="#09090b" stroke-width="2"></circle>
+              <circle cx="25" cy="135" fill="#facc15" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
               <!-- Nodo Final Azul -->
-              <circle cx="40" cy="170" fill="#00daf3" r="6.5" stroke="#09090b" stroke-width="2.5"></circle>
+              <circle cx="25" cy="170" fill="#00daf3" r="5.5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
             </svg>
           </div>
 
-          <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE) -->
-          <div class="w-full md:pl-6 pb-4">
+          <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE - Sin Solapamiento, Distancia reducida: md:pl-3) -->
+          <div class="w-full md:pl-3 pb-4">
             <div class="flex flex-col gap-1 text-left group">
-              <!-- Badge centrado en y=12 (h-6) -->
-              <div class="flex flex-wrap items-center gap-2 h-6 mb-1">
+              <!-- Badge y fecha con flujo libre y gap adecuado (sin solapamiento) -->
+              <div class="flex flex-wrap items-center gap-2 mb-2">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30">
                   feature/freelance-mobile
                 </span>
