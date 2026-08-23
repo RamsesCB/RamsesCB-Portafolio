@@ -241,8 +241,8 @@
             <!-- Connector to Right Card (Weekend Restaurant) -->
             <path d="M40 40H75" stroke="#00daf3" stroke-width="2.5" stroke-dasharray="3 3"></path>
             <!-- Nodes -->
-            <circle cx="40" cy="40" fill="#00daf3" r="6.5" stroke="#09090b" stroke-width="2.5"></circle>
-            <circle cx="75" cy="40" fill="#00daf3" r="4"></circle>
+            <circle cx="40" cy="40" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
+            <circle cx="75" cy="40" fill="#00daf3" r="4.5"></circle>
           </svg>
         </div>
 
@@ -308,22 +308,21 @@
           </div>
         </div>
 
-        <!-- Centro: Segmento 2 Git Graph (Amarillo en la IZQUIERDA con nodo y extensión, Rojo nace en Azul con punto rojo hacia DERECHA) -->
+        <!-- Centro: Segmento 2 Git Graph (Línea amarilla limpia, extensión a izquierda, punto rojo en azul para rama roja) -->
         <div class="hidden md:flex flex-col items-center justify-center h-full relative">
           <svg fill="none" height="180" viewBox="0 0 80 180" width="80" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-md">
-            <!-- Yellow Branch on LEFT -->
+            <!-- Yellow Branch on LEFT (Línea limpia continua) -->
             <path d="M20 0V180" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"></path>
             <!-- Blue Main Branch in Center -->
             <path d="M40 0V180" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round"></path>
             <!-- Red Branch Split from Blue to RIGHT -->
-            <path d="M40 90C40 110 60 120 60 140V180" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"></path>
+            <path d="M40 100C40 120 60 130 60 150V180" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"></path>
             <!-- Connector to Left Card (Mobile & Data) -->
-            <path d="M20 90H5" stroke="#facc15" stroke-width="2.5" stroke-dasharray="3 3"></path>
-            <!-- Nodes -->
-            <circle cx="20" cy="90" fill="#facc15" r="5.5"></circle>
-            <circle cx="5" cy="90" fill="#facc15" r="4"></circle>
+            <path d="M20 40H5" stroke="#facc15" stroke-width="2.5" stroke-dasharray="3 3"></path>
+            <!-- Solo nodo terminal del conector a la tarjeta -->
+            <circle cx="5" cy="40" fill="#facc15" r="4.5"></circle>
             <!-- Red Starting Point on Blue Line -->
-            <circle cx="40" cy="90" fill="#ef4444" r="5.5" stroke="#09090b" stroke-width="1.5"></circle>
+            <circle cx="40" cy="100" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
           </svg>
         </div>
 
@@ -334,24 +333,23 @@
         <!-- Espacio izquierdo vacío en desktop -->
         <div class="hidden md:block"></div>
 
-        <!-- Centro: Segmento 3 Git Graph (Rojo se une a Azul PRIMERO con punto rojo, luego Amarillo se une a Azul con punto amarillo) -->
+        <!-- Centro: Segmento 3 Git Graph (Líneas limpias sin puntos intermedios en curvas, solo conexiones y merges) -->
         <div class="hidden md:flex flex-col items-center justify-center h-full relative">
           <svg fill="none" height="220" viewBox="0 0 80 220" width="80" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-md">
             <!-- Blue Main Branch -->
             <path d="M40 0V220" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Red Branch on RIGHT: node & merges into Blue at y=110 -->
+            <!-- Red Branch on RIGHT: clean curve merging into Blue at y=110 -->
             <path d="M60 0V50C60 75 40 85 40 110" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Yellow Branch on LEFT: continues down & merges into Blue at y=175 -->
+            <!-- Yellow Branch on LEFT: clean curve merging into Blue at y=175 -->
             <path d="M20 0V135C20 155 40 165 40 175" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"></path>
             <!-- Connector to Right Card (Freelance) -->
-            <path d="M60 50H75" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="3 3"></path>
-            <!-- Nodes -->
-            <circle cx="60" cy="50" fill="#ef4444" r="5.5"></circle>
-            <circle cx="75" cy="50" fill="#ef4444" r="4"></circle>
+            <path d="M60 40H75" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="3 3"></path>
+            <!-- Solo nodo terminal del conector a la tarjeta -->
+            <circle cx="75" cy="40" fill="#ef4444" r="4.5"></circle>
             <!-- Red Merge Node on Blue Line -->
-            <circle cx="40" cy="110" fill="#ef4444" r="5.5" stroke="#09090b" stroke-width="1.5"></circle>
+            <circle cx="40" cy="110" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
             <!-- Yellow Merge Node on Blue Line (After Red) -->
-            <circle cx="40" cy="175" fill="#facc15" r="5.5" stroke="#09090b" stroke-width="1.5"></circle>
+            <circle cx="40" cy="175" fill="#facc15" r="6" stroke="#09090b" stroke-width="2"></circle>
             <!-- Blue Final Node -->
             <circle cx="40" cy="205" fill="#00daf3" r="6.5" stroke="#09090b" stroke-width="2.5"></circle>
           </svg>
