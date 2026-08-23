@@ -214,7 +214,7 @@
 
     </section>
 
-    <!-- Trayectoria Section (Centrada con Grafo Git y Barras Naranjas) -->
+    <!-- Trayectoria Section (Formato Git Graph con Información Detallada) -->
     <section id="trayectoria" class="w-full py-20 flex flex-col items-center">
       
       <!-- Título centrado con líneas naranjas -->
@@ -224,44 +224,135 @@
         <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
       </div>
 
-      <!-- Git Graph Centrado -->
-      <div class="relative flex justify-center w-full">
-        <div class="relative flex items-center gap-8 sm:gap-14">
+      <div class="w-full flex flex-col gap-12 max-w-4xl">
+        
+        <!-- Experiencia Principal (Weekend Restaurant) con Conexión Git -->
+        <article class="relative pl-6 sm:pl-10 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-[#00daf3] before:via-[#facc15] before:to-[#ef4444]/40">
           
-          <!-- Git Graph SVG (Azul #00daf3, Amarillo #facc15, Rojo #ef4444) -->
-          <svg fill="none" height="400" viewBox="0 0 80 400" width="80" xmlns="http://www.w3.org/2000/svg" class="shrink-0 drop-shadow-md">
-            <!-- Blue Main Branch -->
-            <path d="M20 0V400" stroke="#00daf3" stroke-width="3"></path>
-            <!-- Orange/Yellow Branch -->
-            <path d="M20 40C20 40 40 40 40 60V300" stroke="#facc15" stroke-width="3"></path>
-            <!-- Red Branch -->
-            <path d="M40 100C40 100 60 100 60 120V250" stroke="#ef4444" stroke-width="3"></path>
-            <!-- Nodes -->
-            <circle cx="20" cy="40" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
-            <circle cx="40" cy="80" fill="#facc15" r="5"></circle>
-            <circle cx="40" cy="140" fill="#facc15" r="5"></circle>
-            <circle cx="60" cy="180" fill="#ef4444" r="5"></circle>
-            <circle cx="40" cy="280" fill="#facc15" r="5"></circle>
-            <circle cx="20" cy="350" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
-          </svg>
+          <!-- Git Node Indicator -->
+          <span class="absolute -left-[7px] top-2 size-4 rounded-full bg-zinc-950 border-2 border-[#00daf3] shadow-[0_0_10px_#00daf3]"></span>
 
-          <!-- Labels Verticalmente Alineados -->
-          <div class="flex flex-col justify-between h-[360px] py-3 text-left">
-            <div class="group">
-              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Analista de Datos</h3>
-              <p class="text-xs sm:text-sm font-mono text-zinc-400">2021 - Presente</p>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8">
+            
+            <!-- Columna Izquierda: Rol, Empresa y Periodo -->
+            <div class="md:col-span-2 flex flex-col gap-1.5">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30 w-max mb-1">
+                <span class="size-1.5 rounded-full bg-[#00daf3] animate-pulse"></span> main branch · Actual
+              </div>
+              <h3 class="text-xl font-bold text-orange-400 leading-snug">
+                Frontend Engineer / Full Stack Developer
+              </h3>
+              <p class="text-xs font-mono text-zinc-400">Web & Mobile-First</p>
+              <h4 class="text-base font-semibold text-white mt-1">
+                Weekend Restaurant & Lounge S.A.C.
+              </h4>
+              <p class="text-xs text-zinc-400 italic">Weekend - Huarmey</p>
+              <time class="text-xs font-mono text-zinc-400 mt-2">Enero 2025 – Actualidad</time>
             </div>
-            <div class="group">
-              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Mobile Developer</h3>
-              <p class="text-xs sm:text-sm font-mono text-zinc-400">2019 - 2021</p>
+
+            <!-- Columna Derecha: Proyecto, Stack y Logros -->
+            <div class="md:col-span-3 flex flex-col gap-3 text-zinc-300">
+              
+              <!-- Título del Proyecto -->
+              <h4 class="text-base sm:text-lg font-bold text-white leading-snug">
+                Carta Digital Interactiva y Sistema de Pedidos & Checkout Automatizado para Delivery y Reservas
+              </h4>
+
+              <!-- Tech Stack -->
+              <div class="text-xs font-mono text-orange-300/90 leading-relaxed">
+                <span class="text-zinc-400">Stack:</span> React 19, TypeScript, JavaScript (ES6+), Vite, Tailwind CSS v4, Framer Motion, Clean Architecture (Hexagonal), WhatsApp API / Web Intent, LocalStorage Cache, Cloudinary / Supabase Storage, Git / GitHub.
+              </div>
+
+              <!-- Puntos de Impacto y Logros -->
+              <ul class="space-y-3 pt-2 text-xs sm:text-sm text-zinc-300">
+                <li class="flex items-start gap-2.5 leading-relaxed">
+                  <span class="text-orange-400 font-bold shrink-0 mt-0.5">•</span>
+                  <span>
+                    <strong class="text-white font-medium">Arquitectura & Desarrollo Modular:</strong> Diseñé e implementé desde cero una Single Page Application (SPA) móvil y web aplicando <strong class="text-white font-semibold">Clean Architecture (Hexagonal)</strong>, estructurando de forma desacoplada la lógica de dominio (modelos de carta, cálculo dinámico de empaques/tápers por combos, tarifas de delivery zonificadas y motor de reservas) separada de la infraestructura y componentes de presentación.
+                  </span>
+                </li>
+                <li class="flex items-start gap-2.5 leading-relaxed">
+                  <span class="text-orange-400 font-bold shrink-0 mt-0.5">•</span>
+                  <span>
+                    <strong class="text-white font-medium">Automatización de Negocio & Checkout por WhatsApp:</strong> Automaticé el flujo de pedidos y generación de comandas estructuradas enviadas directamente a WhatsApp, eliminando la fricción de registro para los usuarios y <strong class="text-white font-semibold">reduciendo en más del 80% los errores</strong> en toma de comandas y cálculo de importes durante horas de alta demanda.
+                  </span>
+                </li>
+                <li class="flex items-start gap-2.5 leading-relaxed">
+                  <span class="text-orange-400 font-bold shrink-0 mt-0.5">•</span>
+                  <span>
+                    <strong class="text-white font-medium">Rendimiento, UI/UX & Experiencia de Usuario:</strong> Desarrollé una interfaz interactiva y de alto rendimiento con microinteracciones fluidas (<strong class="text-white font-semibold">Framer Motion</strong>), motor de búsqueda en tiempo real sobre más de 150 productos, persistencia de carrito local resiliente a recargas y optimización de assets multimedia con tiempos de carga sub-segundo.
+                  </span>
+                </li>
+              </ul>
+
             </div>
-            <div class="group">
-              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Junior Developer</h3>
-              <p class="text-xs sm:text-sm font-mono text-zinc-400">2018 - 2019</p>
+
+          </div>
+        </article>
+
+        <!-- Experiencia 2: Mobile & Backend Developer -->
+        <article class="relative pl-6 sm:pl-10 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-[#facc15] before:to-[#ef4444]/30">
+          <!-- Git Node Indicator -->
+          <span class="absolute -left-[7px] top-2 size-4 rounded-full bg-zinc-950 border-2 border-[#facc15] shadow-[0_0_10px_#facc15]"></span>
+
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8">
+            <div class="md:col-span-2 flex flex-col gap-1">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-mono font-semibold bg-[#facc15]/10 text-[#facc15] border border-[#facc15]/30 w-max mb-1">
+                feature/mobile-data
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-zinc-200">
+                Mobile Developer & Data Analyst
+              </h3>
+              <h4 class="text-sm font-semibold text-zinc-400">
+                Proyectos & Desarrollo de Software
+              </h4>
+              <time class="text-xs font-mono text-zinc-400 mt-1">2021 – 2024</time>
+            </div>
+
+            <div class="md:col-span-3 flex flex-col gap-2 text-zinc-300">
+              <h4 class="text-base font-bold text-white">
+                Desarrollo de Aplicaciones Móviles Reactivas y Análisis de Datos
+              </h4>
+              <div class="text-xs font-mono text-orange-300/80">
+                <span class="text-zinc-400">Stack:</span> Flutter, Dart, Kotlin, Python, Pandas, PostgreSQL, Docker, Git.
+              </div>
+              <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                Construcción de aplicaciones móviles multiplataforma y pipelines de datos estructurados para reportería y analítica con persistencia en PostgreSQL y contenedores Docker.
+              </p>
             </div>
           </div>
+        </article>
 
-        </div>
+        <!-- Experiencia 3: Junior Developer -->
+        <article class="relative pl-6 sm:pl-10">
+          <!-- Git Node Indicator -->
+          <span class="absolute -left-[7px] top-2 size-4 rounded-full bg-zinc-950 border-2 border-[#ef4444] shadow-[0_0_10px_#ef4444]"></span>
+
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8">
+            <div class="md:col-span-2 flex flex-col gap-1">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-mono font-semibold bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30 w-max mb-1">
+                feature/core-dev
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-zinc-200">
+                Junior Developer
+              </h3>
+              <time class="text-xs font-mono text-zinc-400 mt-1">2018 – 2020</time>
+            </div>
+
+            <div class="md:col-span-3 flex flex-col gap-2 text-zinc-300">
+              <h4 class="text-base font-bold text-white">
+                Fundamentos de Ingeniería de Software & Lógica Backend
+              </h4>
+              <div class="text-xs font-mono text-orange-300/80">
+                <span class="text-zinc-400">Stack:</span> Java, C++, JavaScript, Linux, Git.
+              </div>
+              <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                Desarrollo de módulos lógicos de algoritmos, scripts de automatización de tareas y desarrollo de interfaces con estándares web.
+              </p>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
