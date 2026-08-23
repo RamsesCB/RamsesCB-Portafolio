@@ -224,34 +224,34 @@
         <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
       </div>
 
-      <!-- Contenedor Principal de Trayectoria (Espaciado Reducido, Nodos Circulares Uniformes y Sin Solapamiento) -->
+      <!-- Contenedor Principal de Trayectoria (Espaciado Vertical Compacto y Separación Horizontal Restaurada) -->
       <div class="relative w-full max-w-4xl mx-auto flex flex-col">
         
         <!-- ================= FILA 1: Top Right (Weekend Restaurant) ================= -->
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] items-stretch">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
           <!-- Espacio izquierdo fila 1 -->
           <div class="hidden md:block"></div>
 
           <!-- Centro: Segmento 1 Git Graph -->
-          <div class="hidden md:flex justify-center h-full relative w-[50px] mx-auto">
-            <svg class="w-[50px] h-full min-h-[170px]" viewBox="0 0 50 170" fill="none" preserveAspectRatio="none">
+          <div class="hidden md:flex justify-center h-full relative w-[80px] mx-auto">
+            <svg class="w-[80px] h-full min-h-[120px]" viewBox="0 0 80 120" fill="none" preserveAspectRatio="none">
               <!-- 🔵 Tronco Principal Azul -->
-              <path d="M25 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M40 0V120" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🟡 Rama Amarilla Split a la izquierda -->
-              <path d="M25 14C25 40 12 55 12 80V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Brazo conector horizontal -->
-              <path d="M25 14H45" stroke="#00daf3" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Nodos Circulares Uniformes -->
-              <circle cx="25" cy="14" fill="#00daf3" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
-              <circle cx="45" cy="14" fill="#00daf3" r="4.5" vector-effect="non-scaling-stroke"></circle>
+              <path d="M40 12C40 30 20 45 20 65V120" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal exacto a cy=12 -->
+              <path d="M40 12H75" stroke="#00daf3" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos Circulares -->
+              <circle cx="40" cy="12" fill="#00daf3" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
+              <circle cx="75" cy="12" fill="#00daf3" r="4.5" vector-effect="non-scaling-stroke"></circle>
             </svg>
           </div>
 
-          <!-- Contenido Derecho Fila 1: Weekend Restaurant (Distancia reducida: md:pl-3) -->
-          <div class="w-full md:pl-3 pb-12">
+          <!-- Contenido Derecho Fila 1: Weekend Restaurant (Separación lateral restaurada: md:pl-6, Vertical compacta: pb-6 md:pb-8) -->
+          <div class="w-full md:pl-6 pb-6 md:pb-8">
             <div class="flex flex-col gap-1 text-left group">
-              <!-- Badge alineado a y=14 -->
-              <div class="flex flex-wrap items-center gap-2 mb-2">
+              <!-- Badge alineado a y=12 -->
+              <div class="flex flex-wrap items-center gap-2 mb-1.5">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30">
                   <span class="size-1.5 rounded-full bg-[#00daf3] animate-pulse"></span> main branch · Actual
                 </span>
@@ -268,7 +268,7 @@
                 Carta Digital Interactiva y Sistema de Pedidos & Checkout Automatizado para Delivery y Reservas.
               </p>
 
-              <div class="flex flex-wrap gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
+              <div class="flex flex-wrap gap-1.5 mt-2 text-[11px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">React 19</span>
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">TypeScript</span>
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Tailwind v4</span>
@@ -280,12 +280,12 @@
         </div>
 
         <!-- ================= FILA 2: Middle Left (Mobile Developer & Data Analyst) ================= -->
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] items-stretch">
-          <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data (Distancia reducida: md:pr-3) -->
-          <div class="w-full md:pr-3 pb-12 text-left md:text-right flex flex-col items-start md:items-end">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+          <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data (Separación lateral restaurada: md:pr-6, Vertical compacta: pb-6 md:pb-8) -->
+          <div class="w-full md:pr-6 pb-6 md:pb-8 text-left md:text-right flex flex-col items-start md:items-end">
             <div class="flex flex-col gap-1 text-left md:text-right items-start md:items-end group">
-              <!-- Badge alineado a y=14 -->
-              <div class="flex flex-wrap md:justify-end items-center gap-2 mb-2">
+              <!-- Badge alineado a y=12 -->
+              <div class="flex flex-wrap md:justify-end items-center gap-2 mb-1.5">
                 <span class="text-xs font-mono text-zinc-400 order-2 md:order-1">2021 – 2024</span>
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#facc15]/10 text-[#facc15] border border-[#facc15]/30 order-1 md:order-2">
                   feature/mobile-data
@@ -302,7 +302,7 @@
                 Construcción de aplicaciones móviles reactivas (Flutter/Android) y pipelines de datos estructurados para analítica y reportería.
               </p>
 
-              <div class="flex flex-wrap md:justify-end gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
+              <div class="flex flex-wrap md:justify-end gap-1.5 mt-2 text-[11px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
@@ -314,19 +314,19 @@
           </div>
 
           <!-- Centro: Segmento 2 Git Graph -->
-          <div class="hidden md:flex justify-center h-full relative w-[50px] mx-auto">
-            <svg class="w-[50px] h-full min-h-[170px]" viewBox="0 0 50 170" fill="none" preserveAspectRatio="none">
+          <div class="hidden md:flex justify-center h-full relative w-[80px] mx-auto">
+            <svg class="w-[80px] h-full min-h-[120px]" viewBox="0 0 80 120" fill="none" preserveAspectRatio="none">
               <!-- 🔵 Tronco Azul Continuo -->
-              <path d="M25 0V170" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M40 0V120" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🟡 Rama Amarilla Continua -->
-              <path d="M12 0V170" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <path d="M20 0V120" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🔴 Rama Roja Split a la derecha -->
-              <path d="M25 75C25 100 38 115 38 140V170" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Brazo conector horizontal hacia la izquierda -->
-              <path d="M12 14H5" stroke="#facc15" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Nodos Circulares Uniformes -->
-              <circle cx="5" cy="14" fill="#facc15" r="4.5" vector-effect="non-scaling-stroke"></circle>
-              <circle cx="25" cy="75" fill="#ef4444" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
+              <path d="M40 50C40 70 60 85 60 100V120" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal exacto a cy=12 hacia la izquierda -->
+              <path d="M20 12H5" stroke="#facc15" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos Circulares -->
+              <circle cx="5" cy="12" fill="#facc15" r="4.5" vector-effect="non-scaling-stroke"></circle>
+              <circle cx="40" cy="50" fill="#ef4444" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
             </svg>
           </div>
 
@@ -335,37 +335,37 @@
         </div>
 
         <!-- ================= FILA 3: Bottom Right (Mobile & Software Developer - FREELANCE) ================= -->
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] items-stretch">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
           <!-- Espacio izquierdo fila 3 -->
           <div class="hidden md:block"></div>
 
           <!-- Centro: Segmento 3 Git Graph -->
-          <div class="hidden md:flex justify-center h-full relative w-[50px] mx-auto">
-            <svg class="w-[50px] h-full min-h-[180px]" viewBox="0 0 50 180" fill="none" preserveAspectRatio="none">
+          <div class="hidden md:flex justify-center h-full relative w-[80px] mx-auto">
+            <svg class="w-[80px] h-full min-h-[130px]" viewBox="0 0 80 130" fill="none" preserveAspectRatio="none">
               <!-- 🔵 Tronco Azul -->
-              <path d="M25 0V180" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- 🔴 Rama Roja merge en Azul en y=75 -->
-              <path d="M38 0V25C38 50 25 60 25 75" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- 🟡 Rama Amarilla merge en Azul en y=135 -->
-              <path d="M12 0V90C12 115 25 125 25 135" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Brazo conector horizontal hacia la derecha -->
-              <path d="M38 14H45" stroke="#ef4444" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-              <!-- Nodos Circulares Uniformes -->
-              <circle cx="45" cy="14" fill="#ef4444" r="4.5" vector-effect="non-scaling-stroke"></circle>
+              <path d="M40 0V130" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🔴 Rama Roja merge en Azul en y=58 -->
+              <path d="M60 0V20C60 38 40 46 40 58" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🟡 Rama Amarilla merge en Azul en y=100 -->
+              <path d="M20 0V65C20 82 40 90 40 100" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Brazo conector horizontal exacto a cy=12 hacia la derecha -->
+              <path d="M60 12H75" stroke="#ef4444" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- Nodos Circulares -->
+              <circle cx="75" cy="12" fill="#ef4444" r="4.5" vector-effect="non-scaling-stroke"></circle>
               <!-- Merge Rojo -->
-              <circle cx="25" cy="75" fill="#ef4444" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
+              <circle cx="40" cy="58" fill="#ef4444" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
               <!-- Merge Amarillo -->
-              <circle cx="25" cy="135" fill="#facc15" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
+              <circle cx="40" cy="100" fill="#facc15" r="5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
               <!-- Nodo Final Azul -->
-              <circle cx="25" cy="170" fill="#00daf3" r="5.5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
+              <circle cx="40" cy="122" fill="#00daf3" r="5.5" stroke="#09090b" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
             </svg>
           </div>
 
-          <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE - Sin Solapamiento, Distancia reducida: md:pl-3) -->
-          <div class="w-full md:pl-3 pb-4">
+          <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE - Separación lateral restaurada: md:pl-6) -->
+          <div class="w-full md:pl-6 pb-2">
             <div class="flex flex-col gap-1 text-left group">
-              <!-- Badge y fecha con flujo libre y gap adecuado (sin solapamiento) -->
-              <div class="flex flex-wrap items-center gap-2 mb-2">
+              <!-- Badge alineado a y=12 -->
+              <div class="flex flex-wrap items-center gap-2 mb-1.5">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30">
                   feature/freelance-mobile
                 </span>
@@ -382,7 +382,7 @@
                 Desarrollo integral (End-to-End) de apps móviles y soluciones de automatización a medida con arquitecturas limpias y despliegues estables con Docker.
               </p>
 
-              <div class="flex flex-wrap gap-1.5 mt-2.5 text-[11px] font-mono text-zinc-400">
+              <div class="flex flex-wrap gap-1.5 mt-2 text-[11px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
                 <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
