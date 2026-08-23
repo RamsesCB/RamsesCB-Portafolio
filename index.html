@@ -224,30 +224,54 @@
         <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
       </div>
 
-      <!-- Layout de Ramas Git Alternadas -->
-      <div class="relative w-full max-w-4xl mx-auto flex flex-col md:grid md:grid-cols-[1fr_80px_1fr] gap-8 md:gap-0 items-center">
+      <!-- Contenedor Principal de Trayectoria (Grafo Git 100% Continuo y Unificado) -->
+      <div class="relative w-full max-w-4xl mx-auto flex flex-col md:grid md:grid-cols-[1fr_80px_1fr] items-stretch gap-10 md:gap-0">
         
         <!-- ================= FILA 1: Top Right (Weekend Restaurant) ================= -->
-        <!-- Espacio izquierdo vacío en desktop -->
+        <!-- Espacio izquierdo fila 1 -->
         <div class="hidden md:block"></div>
 
-        <!-- Centro: Segmento 1 Git Graph (Amarillo hacia la IZQUIERDA, Azul con conexión a la DERECHA) -->
-        <div class="hidden md:flex flex-col items-center justify-center h-full relative">
-          <svg fill="none" height="180" viewBox="0 0 80 180" width="80" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-md">
-            <!-- Blue Main Branch -->
-            <path d="M40 0V180" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Yellow Branch Split to LEFT -->
-            <path d="M40 40C40 60 20 70 20 90V180" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Connector to Right Card (Weekend Restaurant) -->
-            <path d="M40 40H75" stroke="#00daf3" stroke-width="2.5" stroke-dasharray="3 3"></path>
-            <!-- Nodes -->
-            <circle cx="40" cy="40" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
-            <circle cx="75" cy="40" fill="#00daf3" r="4.5"></circle>
+        <!-- CENTRO: ÚNICO SVG CONTINUO Y UNIFICADO (Abarca las 3 filas con row-span-3) -->
+        <div class="hidden md:flex row-span-3 justify-center items-center h-full relative">
+          <svg fill="none" class="w-full h-full min-h-[580px] drop-shadow-md overflow-visible" viewBox="0 0 80 580">
+            <!-- 🔵 Tronco Principal Azul Continuo -->
+            <line x1="40" y1="10" x2="40" y2="565" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round"></line>
+            
+            <!-- 🟡 Rama Amarilla (Izquierda): Curva continua desde arriba hasta su merge abajo -->
+            <path d="M40 50 C40 75 20 85 20 110 V440 C20 470 40 480 40 505" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"></path>
+            
+            <!-- 🔴 Rama Roja (Derecha): Curva continua que nace en Azul (y=245), baja a la derecha y hace merge en Azul (y=435) -->
+            <path d="M40 245 C40 270 60 280 60 305 V385 C60 410 40 420 40 435" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"></path>
+            
+            <!-- Conexión 1: Weekend Restaurant (Derecha) -->
+            <path d="M40 50 H75" stroke="#00daf3" stroke-width="2.5" stroke-dasharray="3 3"></path>
+            <circle cx="40" cy="50" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
+            <circle cx="75" cy="50" fill="#00daf3" r="4.5"></circle>
+
+            <!-- Conexión 2: Mobile & Data (Izquierda) -->
+            <path d="M20 230 H5" stroke="#facc15" stroke-width="2.5" stroke-dasharray="3 3"></path>
+            <circle cx="5" cy="230" fill="#facc15" r="4.5"></circle>
+            
+            <!-- Punto Rojo donde nace la Rama Roja en la línea Azul -->
+            <circle cx="40" cy="245" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
+
+            <!-- Conexión 3: Freelance (Derecha) -->
+            <path d="M60 365 H75" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="3 3"></path>
+            <circle cx="75" cy="365" fill="#ef4444" r="4.5"></circle>
+
+            <!-- Merge Rojo en la línea Azul -->
+            <circle cx="40" cy="435" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
+
+            <!-- Merge Amarillo en la línea Azul (después del rojo) -->
+            <circle cx="40" cy="505" fill="#facc15" r="6" stroke="#09090b" stroke-width="2"></circle>
+
+            <!-- Nodo Final Azul -->
+            <circle cx="40" cy="560" fill="#00daf3" r="6.5" stroke="#09090b" stroke-width="2.5"></circle>
           </svg>
         </div>
 
-        <!-- Contenido Derecho: Weekend Restaurant (Sin Box) -->
-        <div class="w-full md:pl-6">
+        <!-- Contenido Derecho Fila 1: Weekend Restaurant (Sin Box) -->
+        <div class="w-full md:pl-6 pb-12 md:pb-16 flex flex-col justify-center">
           <div class="flex flex-col gap-1 text-left group">
             <div class="flex flex-wrap items-center gap-2 mb-1">
               <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30">
@@ -277,8 +301,8 @@
         </div>
 
         <!-- ================= FILA 2: Middle Left (Mobile Developer & Data Analyst) ================= -->
-        <!-- Contenido Izquierdo: Mobile Developer & Data (Sin Box) -->
-        <div class="w-full md:pr-6 md:text-right">
+        <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data (Sin Box) -->
+        <div class="w-full md:pr-6 pb-12 md:pb-16 flex flex-col justify-center text-left md:text-right items-start md:items-end">
           <div class="flex flex-col gap-1 text-left md:text-right items-start md:items-end group">
             <div class="flex flex-wrap md:justify-end items-center gap-2 mb-1">
               <span class="text-xs font-mono text-zinc-400 order-2 md:order-1">2021 – 2024</span>
@@ -308,55 +332,15 @@
           </div>
         </div>
 
-        <!-- Centro: Segmento 2 Git Graph (Línea amarilla limpia, extensión a izquierda, punto rojo en azul para rama roja) -->
-        <div class="hidden md:flex flex-col items-center justify-center h-full relative">
-          <svg fill="none" height="180" viewBox="0 0 80 180" width="80" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-md">
-            <!-- Yellow Branch on LEFT (Línea limpia continua) -->
-            <path d="M20 0V180" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Blue Main Branch in Center -->
-            <path d="M40 0V180" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Red Branch Split from Blue to RIGHT -->
-            <path d="M40 100C40 120 60 130 60 150V180" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Connector to Left Card (Mobile & Data) -->
-            <path d="M20 40H5" stroke="#facc15" stroke-width="2.5" stroke-dasharray="3 3"></path>
-            <!-- Solo nodo terminal del conector a la tarjeta -->
-            <circle cx="5" cy="40" fill="#facc15" r="4.5"></circle>
-            <!-- Red Starting Point on Blue Line -->
-            <circle cx="40" cy="100" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
-          </svg>
-        </div>
-
-        <!-- Espacio derecho vacío en desktop -->
+        <!-- Espacio derecho fila 2 -->
         <div class="hidden md:block"></div>
 
         <!-- ================= FILA 3: Bottom Right (Mobile & Software Developer - FREELANCE) ================= -->
-        <!-- Espacio izquierdo vacío en desktop -->
+        <!-- Espacio izquierdo fila 3 -->
         <div class="hidden md:block"></div>
 
-        <!-- Centro: Segmento 3 Git Graph (Líneas limpias sin puntos intermedios en curvas, solo conexiones y merges) -->
-        <div class="hidden md:flex flex-col items-center justify-center h-full relative">
-          <svg fill="none" height="220" viewBox="0 0 80 220" width="80" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-md">
-            <!-- Blue Main Branch -->
-            <path d="M40 0V220" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Red Branch on RIGHT: clean curve merging into Blue at y=110 -->
-            <path d="M60 0V50C60 75 40 85 40 110" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Yellow Branch on LEFT: clean curve merging into Blue at y=175 -->
-            <path d="M20 0V135C20 155 40 165 40 175" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"></path>
-            <!-- Connector to Right Card (Freelance) -->
-            <path d="M60 40H75" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="3 3"></path>
-            <!-- Solo nodo terminal del conector a la tarjeta -->
-            <circle cx="75" cy="40" fill="#ef4444" r="4.5"></circle>
-            <!-- Red Merge Node on Blue Line -->
-            <circle cx="40" cy="110" fill="#ef4444" r="6" stroke="#09090b" stroke-width="2"></circle>
-            <!-- Yellow Merge Node on Blue Line (After Red) -->
-            <circle cx="40" cy="175" fill="#facc15" r="6" stroke="#09090b" stroke-width="2"></circle>
-            <!-- Blue Final Node -->
-            <circle cx="40" cy="205" fill="#00daf3" r="6.5" stroke="#09090b" stroke-width="2.5"></circle>
-          </svg>
-        </div>
-
-        <!-- Contenido Derecho: Mobile & Software Developer (FREELANCE - Sin Box) -->
-        <div class="w-full md:pl-6">
+        <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE - Sin Box) -->
+        <div class="w-full md:pl-6 flex flex-col justify-center">
           <div class="flex flex-col gap-1 text-left group">
             <div class="flex flex-wrap items-center gap-2 mb-1">
               <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30">
