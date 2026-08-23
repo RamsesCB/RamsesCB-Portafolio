@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Ramses CB - Software Engineer & Mobile / Data Specialist</title>
+  <meta name="description" content="Portfolio profesional de Ramses CB. Software Engineer & Mobile / Data Specialist. Construyendo soluciones escalables y robustas.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <!-- Devicon CDN -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              orange: '#ff5f1f',
+              'orange-light': '#ff8a50',
+              'orange-glow': '#ff5f1f33',
+            }
+          },
+          animation: {
+            'infinite-slider': 'infiniteSlide 35s linear infinite',
+          },
+          keyframes: {
+            infiniteSlide: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #09090b;
+      color: #f4f4f5;
+      font-family: 'Geist', sans-serif;
+    }
+
+    .mask-slider {
+      mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    }
+
+    .slide-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff5f1f;
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen overflow-x-hidden selection:bg-[#ff5f1f] selection:text-white">
+
+  <!-- Floating Header Nav (Estilo Pill de Lua Portfolio) -->
+  <nav class="fixed top-4 left-0 right-0 flex justify-center text-sm px-4 z-50">
+    <div class="flex items-center gap-1 sm:gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-zinc-900/80 backdrop-blur-md shadow-lg shadow-black/40 text-xs sm:text-sm">
+      <a href="#sobre-mi" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Sobre mí</a>
+      <a href="#trayectoria" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Trayectoria</a>
+      <a href="#proyectos" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Proyectos</a>
+      <a href="#certificaciones" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Certificaciones</a>
+      <a href="mailto:sergiocontrerasbernaola22@gmail.com" class="px-3 py-1 text-orange-400 hover:text-orange-300 font-medium transition-colors rounded-full hover:bg-orange-500/10">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="px-4 sm:px-6 md:px-12 max-w-4xl mx-auto pt-24 pb-20">
+
+    <!-- Hero / Sobre mí Section -->
+    <section id="sobre-mi" class="pt-12 md:pt-16 flex flex-col gap-8">
+      
+      <!-- Avatar / Monogram -->
+      <div class="flex items-center gap-4">
+        <div class="size-20 md:size-24 rounded-full bg-gradient-to-tr from-zinc-900 via-zinc-800 to-zinc-700 border-2 border-orange-500/30 flex items-center justify-center shadow-xl shadow-orange-500/10 text-white font-extrabold text-2xl md:text-3xl font-mono">
+          RCB
+        </div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-white/10 text-xs font-mono text-emerald-400">
+          <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Disponible para proyectos
+        </div>
+      </div>
+
+      <!-- Textos Principales -->
+      <div class="flex flex-col gap-4">
+        <h1 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          Hola, soy Ramses CB
+        </h1>
+        
+        <h2 class="text-lg sm:text-xl md:text-2xl leading-relaxed text-zinc-300 max-w-3xl">
+          <span class="text-orange-400 font-semibold">Software Engineer & Mobile / Data Specialist.</span>
+          <span class="text-zinc-400"> Nv Chimbote, Perú.</span>
+        </h2>
+        
+        <p class="text-base md:text-lg text-zinc-300 leading-relaxed max-w-3xl font-normal">
+          Construyendo <span class="text-white font-medium">soluciones escalables y robustas</span> basadas en requerimientos reales, con foco en <span class="text-white font-medium">arquitectura limpia</span>, testing y preparación sólida para producción.
+        </p>
+      </div>
+
+      <!-- Contact Icons (Solo logos circulares) -->
+      <div class="flex gap-4 flex-wrap items-center pt-2">
+        
+        <!-- LinkedIn -->
+        <a class="size-11 rounded-full border border-white/10 flex justify-center items-center bg-white/5 hover:bg-white/10 hover:border-orange-500/40 hover:scale-110 transition-all text-zinc-200"
+           href="https://www.linkedin.com/in/ramses-contreras-08a652378" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="LinkedIn">
+          <i class="devicon-linkedin-plain text-xl text-[#0a66c2]"></i>
+        </a>
+
+        <!-- GitHub -->
+        <a class="size-11 rounded-full border border-white/10 flex justify-center items-center bg-white/5 hover:bg-white/10 hover:border-orange-500/40 hover:scale-110 transition-all text-zinc-200"
+           href="https://github.com/RamsesCB" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="GitHub">
+          <i class="devicon-github-original text-xl text-white"></i>
+        </a>
+
+        <!-- Email -->
+        <a class="size-11 rounded-full border border-white/10 flex justify-center items-center bg-white/5 hover:bg-white/10 hover:border-orange-500/40 hover:scale-110 transition-all text-zinc-200"
+           href="mailto:sergiocontrerasbernaola22@gmail.com"
+           aria-label="Email">
+          <span class="material-symbols-outlined text-orange-400 text-xl">mail</span>
+        </a>
+      </div>
+
+      <!-- Carrusel de Iconos (Solo símbolos deslizantes sin títulos) -->
+      <div class="w-full mt-2">
+        <div class="relative w-full overflow-hidden mask-slider py-4">
+          <div class="slide-track flex w-max animate-infinite-slider gap-8 items-center">
+            
+            <!-- Iconos del carrusel (Set 1) -->
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" alt="Flutter" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" alt="Dart" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" alt="Kotlin" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" alt="Android Studio" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" alt="Python" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" alt="Java" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" alt="Go" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" alt="TypeScript" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" alt="JavaScript" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" alt="C++" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" alt="Pandas" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" alt="NumPy" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" alt="Matplotlib" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" alt="PostgreSQL" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pygame/pygame-original.svg" class="size-8" alt="Pygame" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" alt="HTML5" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" alt="CSS3" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" alt="Docker" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" alt="Git" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" alt="Linux" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" alt="Arch Linux" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" alt="Fedora" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" alt="Ubuntu" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" alt="VS Code" /></div>
+            <div class="flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-orange-400 text-3xl">smart_toy</span></div>
+            <div class="flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-cyan-400 text-3xl">auto_awesome</span></div>
+            <div class="flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-emerald-400 text-3xl">rocket_launch</span></div>
+            <div class="flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-purple-400 text-3xl">note_alt</span></div>
+
+            <!-- Duplicate Set for Continuous Loop -->
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" alt="Flutter" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" alt="Dart" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" alt="Kotlin" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" alt="Android Studio" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" alt="Python" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" alt="Java" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" alt="Go" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" alt="TypeScript" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" alt="JavaScript" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" alt="C++" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" alt="Pandas" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" alt="NumPy" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" alt="Matplotlib" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" alt="PostgreSQL" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pygame/pygame-original.svg" class="size-8" alt="Pygame" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" alt="HTML5" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" alt="CSS3" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" alt="Docker" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" alt="Git" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" alt="Linux" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" alt="Arch Linux" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" alt="Fedora" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" alt="Ubuntu" /></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" alt="VS Code" /></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Trayectoria Section (Centrada con Grafo Git y Barras Naranjas) -->
+    <section id="trayectoria" class="w-full py-20 flex flex-col items-center">
+      
+      <!-- Título centrado con líneas naranjas -->
+      <div class="flex items-center justify-center gap-4 mb-14">
+        <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
+        <h2 class="text-3xl font-bold text-white tracking-tight">Trayectoria</h2>
+        <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
+      </div>
+
+      <!-- Git Graph Centrado -->
+      <div class="relative flex justify-center w-full">
+        <div class="relative flex items-center gap-8 sm:gap-14">
+          
+          <!-- Git Graph SVG (Azul #00daf3, Amarillo #facc15, Rojo #ef4444) -->
+          <svg fill="none" height="400" viewBox="0 0 80 400" width="80" xmlns="http://www.w3.org/2000/svg" class="shrink-0 drop-shadow-md">
+            <!-- Blue Main Branch -->
+            <path d="M20 0V400" stroke="#00daf3" stroke-width="3"></path>
+            <!-- Orange/Yellow Branch -->
+            <path d="M20 40C20 40 40 40 40 60V300" stroke="#facc15" stroke-width="3"></path>
+            <!-- Red Branch -->
+            <path d="M40 100C40 100 60 100 60 120V250" stroke="#ef4444" stroke-width="3"></path>
+            <!-- Nodes -->
+            <circle cx="20" cy="40" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
+            <circle cx="40" cy="80" fill="#facc15" r="5"></circle>
+            <circle cx="40" cy="140" fill="#facc15" r="5"></circle>
+            <circle cx="60" cy="180" fill="#ef4444" r="5"></circle>
+            <circle cx="40" cy="280" fill="#facc15" r="5"></circle>
+            <circle cx="20" cy="350" fill="#00daf3" r="6" stroke="#09090b" stroke-width="2"></circle>
+          </svg>
+
+          <!-- Labels Verticalmente Alineados -->
+          <div class="flex flex-col justify-between h-[360px] py-3 text-left">
+            <div class="group">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Analista de Datos</h3>
+              <p class="text-xs sm:text-sm font-mono text-zinc-400">2021 - Presente</p>
+            </div>
+            <div class="group">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Mobile Developer</h3>
+              <p class="text-xs sm:text-sm font-mono text-zinc-400">2019 - 2021</p>
+            </div>
+            <div class="group">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Junior Developer</h3>
+              <p class="text-xs sm:text-sm font-mono text-zinc-400">2018 - 2019</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="pt-24 flex flex-col gap-8">
+      
+      <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+        <span class="material-symbols-outlined text-orange-400 text-2xl">code_blocks</span>
+        Proyectos
+      </h2>
+
+      <div class="flex flex-col gap-10">
+        
+        <!-- Proyecto 1 -->
+        <article class="flex flex-col gap-4 p-6 sm:p-8 rounded-2xl bg-zinc-900/40 border border-white/10 hover:border-orange-500/30 transition-all group">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <h3 class="text-xl sm:text-2xl font-bold text-orange-400 group-hover:text-orange-300 transition-colors">
+              Plataforma Móvil & Analítica de Datos
+            </h3>
+            <a href="https://github.com/RamsesCB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors">
+              <i class="devicon-github-original text-sm"></i>
+              <span>Ver repositorio</span>
+            </a>
+          </div>
+
+          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+            Ecosistema multiplataforma enfocado en la recolección, estructuración y visualización interactiva de métricas de rendimiento en tiempo real, integrando arquitectura limpia y testing unitario exhaustivo.
+          </p>
+
+          <ul class="flex flex-wrap gap-2 pt-2">
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-3.5" alt="Flutter">Flutter</span></li>
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-3.5" alt="Python">Python</span></li>
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-3.5" alt="PostgreSQL">PostgreSQL</span></li>
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-3.5" alt="Docker">Docker</span></li>
+          </ul>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="flex flex-col gap-4 p-6 sm:p-8 rounded-2xl bg-zinc-900/40 border border-white/10 hover:border-orange-500/30 transition-all group">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <h3 class="text-xl sm:text-2xl font-bold text-orange-400 group-hover:text-orange-300 transition-colors">
+              Motor de Procesamiento Concurrente & APIs
+            </h3>
+            <a href="https://github.com/RamsesCB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors">
+              <i class="devicon-github-original text-sm"></i>
+              <span>Ver repositorio</span>
+            </a>
+          </div>
+
+          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+            Servicio de backend de alto rendimiento diseñado con Go y TypeScript para procesar flujos intensivos de datos y sincronización asíncrona, preparado para entornos de contenedores con Docker.
+          </p>
+
+          <ul class="flex flex-wrap gap-2 pt-2">
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-3.5" alt="Go">Go</span></li>
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-3.5" alt="TypeScript">TypeScript</span></li>
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-3.5" alt="Linux">Linux</span></li>
+            <li><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-zinc-800/80 text-zinc-200 border border-white/5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-3.5" alt="Git">Git</span></li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Certificaciones Section -->
+    <section id="certificaciones" class="pt-24 flex flex-col gap-8">
+      
+      <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+        <span class="material-symbols-outlined text-orange-400 text-2xl">verified</span>
+        Certificaciones
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <div class="p-6 rounded-2xl bg-zinc-900/40 border border-white/10 flex flex-col justify-between gap-4 hover:border-white/20 transition-all">
+          <div class="space-y-2">
+            <span class="text-xs font-mono text-orange-400 uppercase tracking-wider">Certificación Profesional</span>
+            <h3 class="text-lg font-bold text-white">Mobile Application Engineering</h3>
+            <p class="text-xs sm:text-sm text-zinc-400">Especialización en desarrollo móvil multiplataforma, arquitecturas reactivas y buenas prácticas de producción.</p>
+          </div>
+          <span class="text-xs font-mono text-zinc-400">Verificado</span>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-zinc-900/40 border border-white/10 flex flex-col justify-between gap-4 hover:border-white/20 transition-all">
+          <div class="space-y-2">
+            <span class="text-xs font-mono text-orange-400 uppercase tracking-wider">Certificación Profesional</span>
+            <h3 class="text-lg font-bold text-white">Data Analysis & Backend Systems</h3>
+            <p class="text-xs sm:text-sm text-zinc-400">Fundamentos avanzados de análisis de datos, persistencia en bases de datos relacionales y optimización de consultas.</p>
+          </div>
+          <span class="text-xs font-mono text-zinc-400">Verificado</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="pt-24">
+      <div class="rounded-3xl bg-gradient-to-b from-zinc-900/80 to-zinc-950 p-8 sm:p-12 border border-white/10 text-center flex flex-col items-center gap-6 shadow-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">
+          ¿Interesado en construir algo juntos?
+        </h2>
+        <p class="text-zinc-300 max-w-lg text-sm sm:text-base leading-relaxed">
+          Siempre abierto a nuevas oportunidades, proyectos de ingeniería de software, desarrollo móvil o ciencia de datos.
+        </p>
+        <a href="mailto:sergiocontrerasbernaola22@gmail.com" 
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-medium text-sm transition-all shadow-lg shadow-orange-500/20 hover:scale-105">
+          <span class="material-symbols-outlined text-lg">mail</span>
+          <span>Enviar mensaje</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Navigation -->
+  <footer class="border-t border-zinc-800/80 bg-zinc-950 py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      
+      <!-- Monograma & Nombre -->
+      <div class="flex items-center gap-2.5">
+        <span class="size-8 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center font-mono font-bold text-xs text-orange-400">
+          RC
+        </span>
+        <span class="text-sm font-semibold text-white">Ramses CB</span>
+      </div>
+
+      <!-- Footer Nav Links -->
+      <div class="flex flex-wrap justify-center gap-5 text-xs text-zinc-400">
+        <a href="#sobre-mi" class="hover:text-white transition-colors">Sobre mí</a>
+        <a href="#trayectoria" class="hover:text-white transition-colors">Trayectoria</a>
+        <a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a>
+        <a href="#certificaciones" class="hover:text-white transition-colors">Certificaciones</a>
+        <a href="https://github.com/RamsesCB" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/ramses-contreras-08a652378" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-xs text-zinc-400 font-mono">
+        © 2026 Ramses CB.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
