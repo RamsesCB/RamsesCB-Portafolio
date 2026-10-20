@@ -229,15 +229,21 @@
               <path d="M40 0V120" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
               <!-- 🟡 Rama Amarilla Split a la izquierda -->
               <path d="M40 12C40 30 20 45 20 65V120" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              <!-- 🟢 Rama Verde Split a la derecha y Merge en main arriba -->
+              <path d="M40 108C40 90 60 75 60 60V20C60 12 40 10 40 6" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
             </svg>
-            <!-- Brazo Horizontal Azul Continuo Conectado -->
-            <div class="absolute h-[3.5px] bg-[#00daf3] rounded-full z-0" style="left: 50%; right: 4px; top: 5px; transform: translateY(-50%);"></div>
-            <!-- Nodo Azul del tronco en el brazo horizontal -->
-            <span class="absolute w-3 h-3 rounded-full bg-[#00daf3] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 5px; transform: translateY(-50%);"></span>
-            <!-- Nodo Terminal Azul Conectado -->
-            <span class="absolute w-3 h-3 rounded-full bg-[#00daf3] z-10" style="right: 0px; top: 5px; transform: translateY(-50%);"></span>
-            <!-- Nodo Amarillo ubicado exactamente al inicio de la rama amarilla -->
+            <!-- Brazo Horizontal Verde Continuo Conectado -->
+            <div class="absolute h-[3.5px] bg-[#22c55e] rounded-full z-0" style="left: 75%; right: 4px; top: 12px; transform: translateY(-50%);"></div>
+            <!-- Nodo Terminal Verde Conectado a Weekend Restaurant -->
+            <span class="absolute w-3 h-3 rounded-full bg-[#22c55e] z-10" style="right: 0px; top: 12px; transform: translateY(-50%);"></span>
+            <!-- Nodo Verde en la intersección de la rama verde con el brazo -->
+            <span class="absolute w-3 h-3 rounded-full bg-[#22c55e] border-2 border-[#09090b] z-10" style="left: calc(75% - 6px); top: 12px; transform: translateY(-50%);"></span>
+            <!-- Nodo Verde Merge en la rama main arriba -->
+            <span class="absolute w-3 h-3 rounded-full bg-[#22c55e] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 6px; transform: translateY(-50%);"></span>
+            <!-- Nodo Amarillo ubicado al inicio de la rama amarilla -->
             <span class="absolute w-3 h-3 rounded-full bg-[#facc15] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 24px; transform: translateY(-50%);"></span>
+            <!-- 🟢 Punto Verde donde inicia esta rama hacia el lado derecho (posición del mouse) -->
+            <span class="absolute w-3 h-3 rounded-full bg-[#22c55e] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 90%; transform: translateY(-50%);"></span>
           </div>
 
           <!-- Contenido Derecho Fila 1: Weekend Restaurant (Separación lateral restaurada: md:pl-6, Vertical compacta: pb-6 md:pb-8) -->
@@ -245,8 +251,8 @@
             <div class="flex flex-col gap-1 text-left group">
               <!-- Badge alineado a y=12 -->
               <div class="flex flex-wrap items-center gap-2 mb-1.5">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30">
-                  <span class="size-1.5 rounded-full bg-[#00daf3] animate-pulse"></span> main branch · Actual
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#22c55e]/10 text-[#22c55e] border border-[#22c55e]/30">
+                  <span class="size-1.5 rounded-full bg-[#22c55e] animate-pulse"></span> feature/weekend-fullstack
                 </span>
                 <span class="text-xs font-mono text-zinc-400">Jul 2026 – Actualidad</span>
               </div>
