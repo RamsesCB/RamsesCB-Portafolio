@@ -78,6 +78,20 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #ff5f1f;
     }
+
+    /* Animación minimalista y sutil de subida y bajada para 'ver más' */
+    @keyframes subtleBob {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(4px);
+      }
+    }
+
+    .animate-subtle-bob {
+      animation: subtleBob 2.2s ease-in-out infinite;
+    }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen overflow-x-hidden selection:bg-[#ff5f1f] selection:text-white">
@@ -474,9 +488,9 @@
 
         <!-- Botón / Enlace minimalista 'ver más' centrado directamente bajo el árbol -->
         <div class="flex flex-col items-center pt-3 pb-2 relative z-30">
-          <button id="btn-toggle-trayectoria" type="button" class="group flex flex-col items-center gap-0.5 text-white hover:opacity-90 transition-opacity cursor-pointer select-none">
-            <span id="btn-toggle-text" class="text-[15px] font-medium tracking-wide text-white">ver más</span>
-            <span class="material-symbols-outlined text-2xl text-white font-bold leading-none -mt-0.5 group-hover:translate-y-0.5 transition-transform duration-300" id="btn-toggle-chevron">expand_more</span>
+          <button id="btn-toggle-trayectoria" type="button" class="group flex flex-col items-center gap-0.5 text-zinc-300 hover:text-zinc-100 transition-colors duration-300 cursor-pointer select-none animate-subtle-bob">
+            <span id="btn-toggle-text" class="text-[15px] font-medium tracking-wide text-zinc-300 group-hover:text-zinc-100 transition-colors duration-300">ver más</span>
+            <span class="material-symbols-outlined text-2xl text-zinc-300 group-hover:text-zinc-100 font-medium leading-none -mt-0.5 transition-all duration-300" id="btn-toggle-chevron">expand_more</span>
           </button>
         </div>
 
@@ -881,6 +895,8 @@
             if (toggleChevron) {
               toggleChevron.classList.add('rotate-180');
             }
+            // Desactivar animación de rebote en 'ver menos'
+            toggleBtn.classList.remove('animate-subtle-bob');
           } else {
             // Colapsar a la altura estándar
             trayWrapper.style.maxHeight = STANDARD_COLLAPSED_HEIGHT + 'px';
@@ -891,10 +907,37 @@
             if (toggleChevron) {
               toggleChevron.classList.remove('rotate-180');
             }
+            // Reactivar animación únicamente para 'ver más'
+            toggleBtn.classList.add('animate-subtle-bob');
             // Desplazar suavemente a la base del contenedor
             toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
         });
+      }
+
+      // Navegación fluida en enlaces de navegación sin modificar la URL ni añadir almohadilla (#)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href').substring(1);
+          if (!targetId) return;
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const navbarOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navbarOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Limpiar cualquier hash existente en la URL en la carga inicial
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
       }
     });
   </script>
