@@ -5,18 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Ramses CB - Software Engineer &amp; Mobile / Data Specialist</title>
   <meta name="description" content="Portfolio profesional de Ramses CB. Software Engineer &amp; Mobile / Data Specialist. Construyendo soluciones escalables y robustas.">
+  <meta name="theme-color" content="#09090b">
+  <meta name="color-scheme" content="dark">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Favicon / Tab Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
   
-  <!-- Fonts -->
+  <!-- Performance: Resource Hints & Preconnects -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
   
-  <!-- Devicon CDN -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- Devicon CDN (Preload no bloqueante) -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></noscript>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
     tailwind.config = {
@@ -114,7 +130,7 @@
       
       <!-- Avatar / Monogram -->
       <div class="flex items-center gap-4">
-        <img class="size-20 md:size-24 rounded-full object-cover object-top border-2 border-orange-500/30 shadow-xl shadow-orange-500/10" src="assets/avatar.webp" alt="Foto de perfil de Ramses CB">
+        <img class="size-20 md:size-24 rounded-full object-cover object-top border-2 border-orange-500/30 shadow-xl shadow-orange-500/10" src="assets/avatar.webp" alt="Foto de perfil de Ramses CB" width="96" height="96" fetchpriority="high" decoding="sync">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-white/10 text-xs font-mono text-amber-400">
           <span class="size-2 rounded-full bg-amber-400 animate-pulse"></span>
           Ocupado por ahora
@@ -162,56 +178,56 @@
           <div class="slide-track flex w-max animate-infinite-slider gap-8 items-center">
             
             <!-- Iconos del carrusel (Set 1) -->
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" alt="Flutter"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" alt="Dart"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-8" alt="Firebase"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" alt="Kotlin"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" alt="Android Studio"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" alt="Python"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" alt="Java"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" alt="Go"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" alt="TypeScript"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" alt="JavaScript"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" alt="C++"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" alt="Pandas"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" alt="NumPy"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" alt="Matplotlib"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" alt="PostgreSQL"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" alt="HTML5"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" alt="CSS3"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" alt="Docker"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" alt="Git"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" alt="Linux"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" alt="Arch Linux"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" alt="Fedora"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" alt="Ubuntu"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" alt="VS Code"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Flutter"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Dart"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Firebase"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Kotlin"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Android Studio"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Python"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Java"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Go"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="TypeScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="JavaScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="C++"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Pandas"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="NumPy"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Matplotlib"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="PostgreSQL"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="HTML5"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="CSS3"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Docker"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Git"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Arch Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Fedora"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Ubuntu"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="VS Code"></div>
 
             <!-- Duplicate Set for Continuous Loop -->
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" alt="Flutter"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" alt="Dart"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-8" alt="Firebase"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" alt="Kotlin"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" alt="Android Studio"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" alt="Python"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" alt="Java"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" alt="Go"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" alt="TypeScript"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" alt="JavaScript"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" alt="C++"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" alt="Pandas"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" alt="NumPy"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" alt="Matplotlib"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" alt="PostgreSQL"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" alt="HTML5"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" alt="CSS3"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" alt="Docker"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" alt="Git"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" alt="Linux"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" alt="Arch Linux"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" alt="Fedora"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" alt="Ubuntu"></div>
-            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" alt="VS Code"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Flutter"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Dart"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Firebase"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Kotlin"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Android Studio"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Python"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Java"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Go"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="TypeScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="JavaScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="C++"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Pandas"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="NumPy"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Matplotlib"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="PostgreSQL"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="HTML5"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="CSS3"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Docker"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Git"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Arch Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Fedora"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Ubuntu"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="VS Code"></div>
           </div>
         </div>
       </div>
@@ -585,7 +601,7 @@
 
           <!-- Video Showcase VP9 -->
           <div class="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/30 shadow-2xl shadow-black/80 mt-2">
-            <video class="w-full h-auto aspect-video object-cover rounded-xl" autoplay loop muted playsinline controls preload="metadata">
+            <video class="w-full h-auto aspect-video object-cover rounded-xl" autoplay loop muted playsinline controls preload="metadata" poster="assets/weeknd_poster.webp">
               <source src="assets/weeknd_showcase.webm" type="video/webm; codecs=vp9">
               Tu navegador no soporta la reproducción de video.
             </video>
@@ -658,34 +674,34 @@
             <div id="project-slider" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl border border-white/10 bg-zinc-900/30 p-2 sm:p-3 shadow-2xl shadow-black/80 select-none cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
               
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/1.webp" alt="LuxHealth Mockup 1" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/1.webp" alt="LuxHealth Mockup 1" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/2.webp" alt="LuxHealth Mockup 2" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/2.webp" alt="LuxHealth Mockup 2" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/3.webp" alt="LuxHealth Mockup 3" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/3.webp" alt="LuxHealth Mockup 3" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/4.webp" alt="LuxHealth Mockup 4" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/4.webp" alt="LuxHealth Mockup 4" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/5.webp" alt="LuxHealth Mockup 5" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/5.webp" alt="LuxHealth Mockup 5" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/6.webp" alt="LuxHealth Mockup 6" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/6.webp" alt="LuxHealth Mockup 6" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/7.webp" alt="LuxHealth Mockup 7" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/7.webp" alt="LuxHealth Mockup 7" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/instagram_overview.webp" alt="LuxHealth Overview" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/instagram_overview.webp" alt="LuxHealth Overview" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/9.webp" alt="LuxHealth Mockup 9" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/9.webp" alt="LuxHealth Mockup 9" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
               <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
-                <img src="assets/10.webp" alt="LuxHealth Mockup 10" class="w-full h-auto object-cover" loading="lazy">
+                <img src="assets/10.webp" alt="LuxHealth Mockup 10" class="w-full h-auto object-cover" loading="lazy" decoding="async">
               </div>
 
             </div>
@@ -727,32 +743,32 @@
         
         <!-- Certificado 1: UNS -->
         <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
-          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/UNSCertificate.webp" alt="Certificado Profesional - Universidad Nacional del Santa" loading="lazy">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/UNSCertificate.webp" alt="Certificado Profesional - Universidad Nacional del Santa" loading="lazy" decoding="async">
         </div>
 
         <!-- Certificado 2: AI Fundamentals (DataCamp) -->
         <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
-          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/AIFundamentals.webp" alt="Certificado AI Fundamentals - DataCamp" loading="lazy">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/AIFundamentals.webp" alt="Certificado AI Fundamentals - DataCamp" loading="lazy" decoding="async">
         </div>
 
         <!-- Certificado 3: Data Analyst Associate (DataCamp) -->
         <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
-          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/DataAnalystAssociate.webp" alt="Certificado Data Analyst Associate - DataCamp" loading="lazy">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/DataAnalystAssociate.webp" alt="Certificado Data Analyst Associate - DataCamp" loading="lazy" decoding="async">
         </div>
 
         <!-- Certificado 4: Python Data Associate (DataCamp) -->
         <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
-          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/PythonDataAssociate.webp" alt="Certificado Python Data Associate - DataCamp" loading="lazy">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/PythonDataAssociate.webp" alt="Certificado Python Data Associate - DataCamp" loading="lazy" decoding="async">
         </div>
 
         <!-- Certificado 5: Big School -->
         <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
-          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/BigSchoolCertificate.webp" alt="Certificado Profesional - Big School" loading="lazy">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/BigSchoolCertificate.webp" alt="Certificado Profesional - Big School" loading="lazy" decoding="async">
         </div>
 
         <!-- Certificado 6: Azure Database Admin Bootcamp -->
         <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
-          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/AzureDatabaseAdminBootcamp.webp" alt="Certificado - Bootcamp Administración de Bases de Datos en Azure" loading="lazy">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/AzureDatabaseAdminBootcamp.webp" alt="Certificado - Bootcamp Administración de Bases de Datos en Azure" loading="lazy" decoding="async">
         </div>
 
       </div>
@@ -841,7 +857,7 @@
 
       slider.addEventListener('scroll', () => {
         window.requestAnimationFrame(updateCounter);
-      });
+      }, { passive: true });
 
       // Touch & Drag Support
       let isDown = false;
