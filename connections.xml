@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolioConnections version="2.5" xmlns="https://portafolio-taller-ia.vercel.app/schema">
+  <metadata>
+    <project>Portafolio Taller IA</project>
+    <domain>https://portafolio-taller-ia.vercel.app</domain>
+    <author>RamsesCB</author>
+    <repository>https://github.com/RamsesCB/portafolio-taller-ia</repository>
+    <architecture>
+      <pattern>Orthogonal Rectangular Connection Matrix</pattern>
+      <dimensionX unit="category" count="5">Anime, Caricatura, Elegancia, Edicion, Superheroe</dimensionX>
+      <dimensionY unit="pipeline_depth" count="5">0:ColumnBase, 1:HoverSequence, 2:VideoEditVisualizer, 3:PromptsLibrary, 4:DetailModal</dimensionY>
+    </architecture>
+  </metadata>
+
+  <explicitRoutes>
+    <route id="root" path="/" explicitUrl="https://portafolio-taller-ia.vercel.app/" entry="index.html" title="Inicio / Arcade Boot" />
+    <route id="arcade" path="/arcade" explicitUrl="https://portafolio-taller-ia.vercel.app/arcade.html" entry="arcade.html" title="Arcade CRT Experience" />
+    <route id="portafolio" path="/portafolio" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html" entry="portafolio.html" title="Portafolio Panorámico" />
+    <route id="section-anime" path="/portafolio?section=anime" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=anime" parent="portafolio" sectionKey="anime" title="Sección Anime Prompts" />
+    <route id="section-caricatura" path="/portafolio?section=caricatura" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=caricatura" parent="portafolio" sectionKey="caricatura" title="Sección Caricatura Prompts" />
+    <route id="section-elegancia" path="/portafolio?section=elegancia" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=elegancia" parent="portafolio" sectionKey="elegancia" title="Sección Elegancia Prompts" />
+    <route id="section-edicion" path="/portafolio?section=edicion" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=edicion" parent="portafolio" sectionKey="edicion" title="Sección Edición Prompts" />
+    <route id="section-superheroe" path="/portafolio?section=superheroe" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=superheroe" parent="portafolio" sectionKey="superheroe" title="Sección Superhéroe Prompts" />
+  </explicitRoutes>
+
+  <!-- MATRIZ RECTANGULAR DE CONEXIONES ORTOGONALES (5x5) -->
+  <rectangularMatrix columns="5" rows="5">
+    
+    <!-- COLUMNA 0: ANIME (X=0) -->
+    <column index="0" key="anime" label="ANIME" themeColor="#243447" accentColor="#0284C7" fontFamily="'Comic Sans MS', cursive, sans-serif">
+      <node coordX="0" coordY="0" layer="ColumnBase" asset="assets/images/anime/frame-01.webp" role="Thumbnail Inicial" />
+      <node coordX="0" coordY="1" layer="HoverSequence" role="Secuencia Interactiva de Fotogramas">
+        <frames total="10" directory="assets/images/anime/">
+          <frame index="1" file="frame-01.webp" />
+          <frame index="2" file="frame-02.webp" />
+          <frame index="3" file="frame-03.webp" />
+          <frame index="4" file="frame-04.webp" />
+          <frame index="5" file="frame-05.webp" />
+          <frame index="6" file="frame-06.webp" />
+          <frame index="7" file="frame-07.webp" />
+          <frame index="8" file="frame-08.webp" />
+          <frame index="9" file="frame-09.webp" />
+          <frame index="10" file="frame-10.webp" />
+        </frames>
+      </node>
+      <node coordX="0" coordY="2" layer="VideoEditVisualizer" role="Visualizador Cinético Audio Edit">
+        <audioTrack format="mp3" file="assets/audio/audio_masterizado_3d_5.10.16.mp3" />
+        <audioTrack format="wav" file="assets/audio/audio_masterizado_3d_5.10.16.wav" />
+        <durationMs>5000</durationMs>
+        <lyricsSync type="kineticTypography">
+          <cue start="0.0" end="1.3" line1="¿ESTÁS LISTO..." line2="PARA EL IMPACTO?" />
+          <cue start="1.3" end="2.6" line1="DESPIERTA TU ENERGÍA" line2="ROMPE TUS LÍMITES" />
+          <cue start="2.6" end="3.8" line1="VELOCIDAD CINÉTICA" line2="PODER DESBORDADO" />
+          <cue start="3.8" end="5.0" line1="SHONEN AL MÁXIMO" line2="¡VAMOS CON TODO!" />
+        </lyricsSync>
+      </node>
+      <node coordX="0" coordY="3" layer="PromptsLibrary" role="Biblioteca de Prompts Anime">
+        <layout type="grid" columns="3" rows="2" totalBoxes="6" theme="LuxuryLightMode" />
+        <headerTitle>PROMPTS DE ANIME</headerTitle>
+        <styling font="Comic Sans MS" topMargin="18vh" leftMargin="22%" rightMargin="22%" />
+        <bioText>Colección dedicada con cariño al universo anime shonen.</bioText>
+      </node>
+      <node coordX="0" coordY="4" layer="DetailModal" role="Visualización Expandida y Enrutamiento Explícito">
+        <explicitUrl>https://portafolio-taller-ia.vercel.app/portafolio.html?section=anime</explicitUrl>
+        <exitButton position="top-left" text="← [ESC] VOLVER AL PORTAFOLIO" />
+      </node>
+    </column>
+
+    <!-- COLUMNA 1: CARICATURA (X=1) -->
+    <column index="1" key="caricatura" label="CARICATURA" themeColor="#FF6B6B" accentColor="#E04848" fontFamily="'Comic Sans MS', 'Inter', cursive, sans-serif">
+      <node coordX="1" coordY="0" layer="ColumnBase" asset="assets/images/caricatura/frame-01.webp" role="Thumbnail Inicial" />
+      <node coordX="1" coordY="1" layer="HoverSequence" role="Secuencia Interactiva de Fotogramas">
+        <frames total="8" directory="assets/images/caricatura/">
+          <frame index="1" file="frame-01.webp" />
+          <frame index="2" file="frame-02.webp" />
+          <frame index="3" file="frame-03.webp" />
+          <frame index="4" file="frame-04.webp" />
+          <frame index="5" file="frame-05.webp" />
+          <frame index="6" file="frame-06.webp" />
+          <frame index="7" file="frame-07.webp" />
+          <frame index="8" file="frame-08.webp" />
+        </frames>
+      </node>
+      <node coordX="1" coordY="2" layer="VideoEditVisualizer" role="Visualizador Cinético Audio Edit">
+        <audioTrack format="mp3" file="assets/audio/audio_caricatura.mp3" />
+        <audioTrack format="wav" file="assets/audio/audio_caricatura.wav" />
+        <durationMs>5000</durationMs>
+        <lyricsSync type="kineticTypography">
+          <cue start="0.0" end="1.2" line1="¡MÚSICA, MAESTRO!" line2="ARRANCA EL SHOW" />
+          <cue start="1.2" end="2.5" line1="DESATANDO LA LOCURA" line2="DINAMISMO TOON" />
+          <cue start="2.5" end="3.7" line1="¡PREPÁRATE PARA REÍR!" line2="EXPRESIONES PURAS" />
+          <cue start="3.7" end="5.0" line1="¡ESTO ES TODO, AMIGOS!" line2="LA MAGIA DE LA RISA" />
+        </lyricsSync>
+      </node>
+      <node coordX="1" coordY="3" layer="PromptsLibrary" role="Biblioteca de Prompts Caricatura">
+        <layout type="grid" columns="3" rows="2" totalBoxes="6" theme="LuxuryLightMode" />
+        <headerTitle>PROMPTS DE CARICATURA</headerTitle>
+        <styling font="Comic Sans MS" topMargin="18vh" leftMargin="22%" rightMargin="22%" />
+        <bioText>Homenaje a la animación clásica, trazo elástico y dinamismo toon.</bioText>
+      </node>
+      <node coordX="1" coordY="4" layer="DetailModal" role="Visualización Expandida y Enrutamiento Explícito">
+        <explicitUrl>https://portafolio-taller-ia.vercel.app/portafolio.html?section=caricatura</explicitUrl>
+        <exitButton position="top-left" text="← [ESC] VOLVER AL PORTAFOLIO" />
+      </node>
+    </column>
+
+    <!-- COLUMNA 2: ELEGANCIA (X=2) -->
+    <column index="2" key="elegancia" label="ELEGANCIA" themeColor="#E9DDC2" accentColor="#C5A059" fontFamily="'Times New Roman', Georgia, serif">
+      <node coordX="2" coordY="0" layer="ColumnBase" asset="assets/images/elegancia/frame-01.webp" role="Thumbnail Inicial" />
+      <node coordX="2" coordY="1" layer="HoverSequence" role="Secuencia Interactiva de Fotogramas">
+        <frames total="10" directory="assets/images/elegancia/">
+          <frame index="1" file="frame-01.webp" />
+          <frame index="2" file="frame-02.webp" />
+          <frame index="3" file="frame-03.webp" />
+          <frame index="4" file="frame-04.webp" />
+          <frame index="5" file="frame-05.webp" />
+          <frame index="6" file="frame-06.webp" />
+          <frame index="7" file="frame-07.webp" />
+          <frame index="8" file="frame-08.webp" />
+          <frame index="9" file="frame-09.webp" />
+          <frame index="10" file="frame-10.webp" />
+        </frames>
+      </node>
+      <node coordX="2" coordY="2" layer="VideoEditVisualizer" role="Visualizador Cinético Audio Edit">
+        <audioTrack format="mp3" file="assets/audio/audio_masterizado_3d.mp3" />
+        <audioTrack format="wav" file="assets/audio/audio_masterizado_3d.wav" />
+        <durationMs>5000</durationMs>
+        <lyricsSync type="kineticTypography">
+          <cue start="0.0" end="1.3" line1="ESTÁS LISTO..." line2="PARA LA ALTA COSTURA" />
+          <cue start="1.3" end="2.6" line1="LA FORMA ENCUENTRA" line2="LA ESENCIA PURA" />
+          <cue start="2.6" end="3.8" line1="DRAPEADO ESCULTURAL" line2="LUZ ATEMPORAL" />
+          <cue start="3.8" end="5.0" line1="ELEGANCIA ABSOLUTA" line2="EDICIÓN DE LUJO" />
+        </lyricsSync>
+      </node>
+      <node coordX="2" coordY="3" layer="PromptsLibrary" role="Biblioteca de Prompts Elegancia">
+        <layout type="grid" columns="3" rows="2" totalBoxes="6" theme="LuxuryLightMode" />
+        <headerTitle>PROMPTS DE ELEGANCIA</headerTitle>
+        <styling font="Times New Roman" topMargin="18vh" leftMargin="22%" rightMargin="22%" />
+        <bioText>Colección de alta costura, drapeado escultural y fotografía editorial.</bioText>
+      </node>
+      <node coordX="2" coordY="4" layer="DetailModal" role="Visualización Expandida y Enrutamiento Explícito">
+        <explicitUrl>https://portafolio-taller-ia.vercel.app/portafolio.html?section=elegancia</explicitUrl>
+        <exitButton position="top-left" text="← [ESC] VOLVER AL PORTAFOLIO" />
+      </node>
+    </column>
+
+    <!-- COLUMNA 3: EDICION (X=3) -->
+    <column index="3" key="edicion" label="EDICION" themeColor="#143F54" accentColor="#0E7490" fontFamily="'Space Grotesk', sans-serif">
+      <node coordX="3" coordY="0" layer="ColumnBase" asset="assets/images/edicion/frame-01.webp" role="Thumbnail Inicial" />
+      <node coordX="3" coordY="1" layer="HoverSequence" role="Secuencia Interactiva de Fotogramas">
+        <frames total="8" directory="assets/images/edicion/">
+          <frame index="1" file="frame-01.webp" />
+          <frame index="2" file="frame-02.webp" />
+          <frame index="3" file="frame-03.webp" />
+          <frame index="4" file="frame-04.webp" />
+          <frame index="5" file="frame-05.webp" />
+          <frame index="6" file="frame-06.webp" />
+          <frame index="7" file="frame-07.webp" />
+          <frame index="8" file="frame-08.webp" />
+        </frames>
+      </node>
+      <node coordX="3" coordY="2" layer="VideoEditVisualizer" role="Visualizador Cinético Audio Edit">
+        <audioTrack format="mp3" file="assets/audio/audio_edicion.mp3" />
+        <audioTrack format="wav" file="assets/audio/audio_edicion.wav" />
+        <durationMs>5000</durationMs>
+        <lyricsSync type="kineticTypography">
+          <cue start="0.0" end="1.2" line1="WE ON GO." line2="PRECISION CUT" />
+          <cue start="1.2" end="2.5" line1="EVERYTHING PRETTY" line2="FRAME BY FRAME" />
+          <cue start="2.5" end="3.7" line1="I DO WHAT I DO" line2="SPEED RAMP &amp; GLITCH" />
+          <cue start="3.7" end="5.0" line1="BEAT SYNC LOCKED" line2="RENDER COMPLETE" />
+        </lyricsSync>
+      </node>
+      <node coordX="3" coordY="3" layer="PromptsLibrary" role="Biblioteca de Prompts Edición">
+        <layout type="grid" columns="3" rows="3" totalBoxes="7" theme="LuxuryLightMode" />
+        <headerTitle>PROMPTS DE EDICIÓN</headerTitle>
+        <styling font="Space Grotesk" topMargin="18vh" leftMargin="22%" rightMargin="22%" />
+        <bioText>Montaje audiovisual, tipografía cinética y ritmo contemporáneo.</bioText>
+        <interactiveComparison id="crochet-amigurumi-yarn-art">
+          <trigger>pointerHoldAndDrag</trigger>
+          <originalAsset format="webp">assets/images/edicion/crochet_original.webp</originalAsset>
+          <iaAsset format="webp">assets/images/edicion/crochet_ia.webp</iaAsset>
+          <sliderType>splitDividerWithHandle</sliderType>
+        </interactiveComparison>
+      </node>
+      <node coordX="3" coordY="4" layer="DetailModal" role="Visualización Expandida y Enrutamiento Explícito">
+        <explicitUrl>https://portafolio-taller-ia.vercel.app/portafolio.html?section=edicion</explicitUrl>
+        <exitButton position="top-left" text="← [ESC] VOLVER AL PORTAFOLIO" />
+      </node>
+    </column>
+
+    <!-- COLUMNA 4: SUPERHEROE (X=4) -->
+    <column index="4" key="superheroe" label="SUPERHÉROE" themeColor="#5AB0E6" accentColor="#2563EB" fontFamily="'Inter', sans-serif">
+      <node coordX="4" coordY="0" layer="ColumnBase" asset="assets/images/superheroe/frame-01.webp" role="Thumbnail Inicial" />
+      <node coordX="4" coordY="1" layer="HoverSequence" role="Secuencia Interactiva de Fotogramas">
+        <frames total="6" directory="assets/images/superheroe/">
+          <frame index="1" file="frame-01.webp" />
+          <frame index="2" file="frame-02.webp" />
+          <frame index="3" file="frame-03.webp" />
+          <frame index="4" file="frame-04.webp" />
+          <frame index="5" file="frame-06.webp" />
+          <frame index="6" file="frame-08.webp" />
+        </frames>
+      </node>
+      <node coordX="4" coordY="2" layer="VideoEditVisualizer" role="Visualizador Cinético Audio Edit">
+        <audioTrack format="mp3" file="assets/audio/audio_superheroe.mp3" />
+        <audioTrack format="wav" file="assets/audio/audio_superheroe.wav" />
+        <durationMs>5000</durationMs>
+        <lyricsSync type="kineticTypography">
+          <cue start="0.0" end="1.3" line1="FLY IN THE SKY" line2="SOARING HIGH" />
+          <cue start="1.3" end="2.6" line1="FLY IN THE RAIN" line2="NEVER SURRENDER" />
+          <cue start="2.6" end="3.8" line1="DESPIERTA EL PODER" line2="QUE LLEVAS DENTRO" />
+          <cue start="3.8" end="5.0" line1="NACE UNA LEYENDA" line2="EL HÉROE DESPIERTA" />
+        </lyricsSync>
+      </node>
+      <node coordX="4" coordY="3" layer="PromptsLibrary" role="Biblioteca de Prompts Superhéroe">
+        <layout type="grid" columns="3" rows="2" totalBoxes="6" theme="LuxuryLightMode" />
+        <headerTitle>PROMPTS DE SUPERHÉROE</headerTitle>
+        <styling font="Inter" topMargin="18vh" leftMargin="22%" rightMargin="22%" />
+        <bioText>Viñetas épicas, claroscuro cinematográfico e imponencia heroica.</bioText>
+      </node>
+      <node coordX="4" coordY="4" layer="DetailModal" role="Visualización Expandida y Enrutamiento Explícito">
+        <explicitUrl>https://portafolio-taller-ia.vercel.app/portafolio.html?section=superheroe</explicitUrl>
+        <exitButton position="top-left" text="← [ESC] VOLVER AL PORTAFOLIO" />
+      </node>
+    </column>
+
+  </rectangularMatrix>
+
+  <!-- REGISTRO CENTRAL DE AUDIO -->
+  <audioRegistry>
+    <track id="audio-anime-mp3" src="assets/audio/audio_masterizado_3d_5.10.16.mp3" bitrate="192kbps" durationSec="29.5" />
+    <track id="audio-anime-wav" src="assets/audio/audio_masterizado_3d_5.10.16.wav" sampleRate="44100" durationSec="29.5" />
+    <track id="audio-caricatura-mp3" src="assets/audio/audio_caricatura.mp3" bitrate="192kbps" durationSec="15.5" />
+    <track id="audio-caricatura-wav" src="assets/audio/audio_caricatura.wav" sampleRate="44100" durationSec="15.5" />
+    <track id="audio-elegancia-mp3" src="assets/audio/audio_masterizado_3d.mp3" bitrate="192kbps" durationSec="29.0" />
+    <track id="audio-elegancia-wav" src="assets/audio/audio_masterizado_3d.wav" sampleRate="44100" durationSec="29.0" />
+    <track id="audio-edicion-mp3" src="assets/audio/audio_edicion.mp3" bitrate="192kbps" durationSec="21.4" />
+    <track id="audio-edicion-wav" src="assets/audio/audio_edicion.wav" sampleRate="44100" durationSec="21.4" />
+    <track id="audio-superheroe-mp3" src="assets/audio/audio_superheroe.mp3" bitrate="192kbps" durationSec="29.4" />
+    <track id="audio-superheroe-wav" src="assets/audio/audio_superheroe.wav" sampleRate="44100" durationSec="29.4" />
+  </audioRegistry>
+</portfolioConnections>

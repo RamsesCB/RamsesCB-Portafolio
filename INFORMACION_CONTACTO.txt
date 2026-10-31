@@ -1,0 +1,34 @@
+==================================================
+INFORMACIÓN DE CONTACTO - PORTAFOLIO RAMSES CB
+==================================================
+
+1. DATOS PERSONALES:
+   - Nombre: Ramses Contreras Bernaola
+   - Marca / Firma: Ramses CB
+   - Monograma: RC
+   - Ubicación: Nuevo Chimbote (Nv. Chimbote), Áncash, Perú
+   - Ocupación / Perfil: Software Engineer Student (UTP)
+
+2. CORREO ELECTRÓNICO:
+   - Email: sergiocontrerasbernaola22@gmail.com
+   - Enlace directo (mailto): mailto:sergiocontrerasbernaola22@gmail.com
+   - Ubicación en web: Botón de correo en la tarjeta Bio (Hero / Sobre mí)
+
+3. TELÉFONO / WHATSAPP:
+   - Número: +51 948 090 684
+   - Enlace directo a chat: https://wa.me/51948090684
+   - Ubicación en web: Botón "Enviar mensaje" en la sección Contact CTA (pre-footer)
+
+4. REDES PROFESIONALES Y CÓDIGO:
+   - LinkedIn: https://www.linkedin.com/in/ramses-contreras-08a652378
+     * Ubicación en web: Tarjeta Bio (Hero) y enlace en pie de página (Footer)
+   - GitHub (Perfil Principal): https://github.com/RamsesCB
+     * Usuario: RamsesCB
+     * Ubicación en web: Tarjeta Bio (Hero), enlaces en Proyectos y pie de página (Footer)
+
+5. REPOSITORIOS Y ENLACES DE PROYECTOS VINCULADOS:
+   - Repositorio Heliostrand: https://github.com/RamsesCB/heliostrand-nfc-core-cpp
+   - Google Play (Heliostrand Testing): https://play.google.com/apps/testing/com.theojansen.heliostrand_app
+   - Repositorio LuxHealth: https://github.com/RamsesCB/LuxHealth
+   - Despliegue en Producción WEEKEND: https://weekend-huarmey.vercel.app/
+==================================================

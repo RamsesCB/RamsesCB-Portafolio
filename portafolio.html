@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Ramses CB - Software Engineer &amp; Mobile / Data Specialist</title>
+  <meta name="description" content="Portfolio profesional de Ramses CB. Software Engineer &amp; Mobile / Data Specialist. Construyendo soluciones escalables y robustas.">
+  <meta name="theme-color" content="#09090b">
+  <meta name="color-scheme" content="dark">
+  
+  <!-- Favicon / Tab Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  
+  <!-- Performance: Resource Hints & Preconnects -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <!-- Devicon CDN (Preload no bloqueante) -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></noscript>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              orange: '#ff5f1f',
+              'orange-light': '#ff8a50',
+              'orange-glow': '#ff5f1f33',
+            }
+          },
+          animation: {
+            'infinite-slider': 'infiniteSlide 35s linear infinite',
+          },
+          keyframes: {
+            infiniteSlide: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #09090b;
+      color: #f4f4f5;
+      font-family: 'Geist', sans-serif;
+    }
+
+    .mask-slider {
+      mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    }
+
+    .slide-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff5f1f;
+    }
+
+    /* Animación minimalista y sutil de subida y bajada para 'ver más' */
+    @keyframes subtleBob {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(4px);
+      }
+    }
+
+    .animate-subtle-bob {
+      animation: subtleBob 2.2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen overflow-x-hidden selection:bg-[#ff5f1f] selection:text-white">
+
+  <!-- Floating Return to Arcade Button -->
+  <a href="/" class="fixed top-4 left-4 z-50 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-amber-400/30 bg-zinc-900/90 hover:bg-zinc-800 text-amber-400 hover:text-amber-300 text-xs font-mono font-semibold shadow-xl shadow-black/60 backdrop-blur-md transition-all hover:scale-105 select-none" title="Volver al Menú Arcade">
+    <span class="text-xs">◄</span>
+    <span>ARCADE</span>
+  </a>
+
+  <!-- Floating Header Nav (Estilo Pill de Lua Portfolio) -->
+  <nav class="fixed top-4 left-0 right-0 flex justify-center text-sm px-4 z-50 pointer-events-none">
+    <div class="pointer-events-auto flex items-center gap-1 sm:gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-zinc-900/80 backdrop-blur-md shadow-lg shadow-black/40 text-xs sm:text-sm">
+      <a href="/" class="px-2.5 py-1 text-amber-400 hover:text-amber-300 transition-colors rounded-full hover:bg-amber-400/10 font-mono font-medium flex items-center gap-1.5"><span class="text-[11px]">🕹️</span> Arcade</a>
+      <span class="text-zinc-700 hidden sm:inline">|</span>
+      <a href="#sobre-mi" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Sobre mí</a>
+      <a href="#trayectoria" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Trayectoria</a>
+      <a href="#proyectos" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Proyectos</a>
+      <a href="#certificaciones" class="px-3 py-1 text-zinc-300 hover:text-white transition-colors rounded-full hover:bg-white/5">Certificaciones</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="px-4 sm:px-6 md:px-12 max-w-4xl mx-auto pt-24 pb-20">
+
+    <!-- Hero / Sobre mí Section -->
+    <section id="sobre-mi" class="pt-12 md:pt-16 flex flex-col gap-8">
+      
+      <!-- Bio Card estilo Pixel Art (DEV // COFFEE) -->
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-10 w-full">
+        
+        <!-- Tarjeta Izquierda: Personaje Pixel Art -->
+        <div class="w-full max-w-[320px] sm:w-72 md:w-80 shrink-0 bg-[#232323] rounded-3xl p-6 sm:p-8 flex items-center justify-center border border-white/10 shadow-2xl shadow-black/80">
+          <img src="assets/pixel_avatar.webp" alt="Ramses CB - Pixel Art" class="w-full h-auto max-h-[460px] object-contain drop-shadow-2xl select-none" width="512" height="1024" fetchpriority="high" decoding="sync">
+        </div>
+
+        <!-- Columna Derecha: Información de Perfil & Bio -->
+        <div class="flex flex-col flex-1 w-full text-left">
+          
+          <!-- Encabezado con Nombre y Badge -->
+          <div class="flex flex-col gap-1">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h1 class="text-white text-3xl sm:text-4xl font-bold tracking-tight">
+                Ramses CB
+              </h1>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-white/10 text-xs font-mono text-amber-400 shadow-sm">
+                <span class="size-2 rounded-full bg-amber-400 animate-pulse"></span>
+                Ocupado por ahora
+              </div>
+            </div>
+            
+            <h2 class="text-lg sm:text-xl font-semibold text-[#d4a34b] tracking-tight">
+              Software Engineer Student
+            </h2>
+            
+            <p class="text-xs sm:text-sm text-zinc-400 font-mono flex flex-wrap items-center gap-1.5 mt-0.5">
+              <span>Nv. Chimbote, Perú</span>
+              <span class="text-zinc-600">•</span>
+              <span>Coffee-powered builder</span>
+              <span class="text-zinc-600">•</span>
+              <span class="text-[#d4a34b] font-medium">DEV // COFFEE</span>
+            </p>
+          </div>
+
+          <!-- Separador sutil -->
+          <hr class="border-zinc-800 my-4">
+
+          <!-- ABOUT ME -->
+          <div class="flex flex-col gap-1">
+            <h3 class="text-xs font-bold text-[#d4a34b] tracking-wider uppercase">
+              ABOUT ME
+            </h3>
+            <p class="text-sm sm:text-base text-zinc-300 leading-relaxed text-pretty">
+              Software Engineer Student (UTP, Nv. Chimbote). Creo soluciones digitales prácticas y escalables con código limpio: apps móviles, web y backend. Enfocado en resolver problemas reales y llevar proyectos a producción.
+            </p>
+          </div>
+
+          <!-- SKILLS -->
+          <div class="flex flex-col gap-1 mt-4">
+            <h3 class="text-xs font-bold text-[#d4a34b] tracking-wider uppercase">
+              SKILLS
+            </h3>
+            <div class="text-xs sm:text-sm text-zinc-300 font-mono space-y-1">
+              <p>Flutter • Dart • React • TypeScript • Python</p>
+              <p>Laravel • C++ • Java • SQL • Docker • Clean Arch</p>
+            </div>
+          </div>
+
+          <!-- PROJECTS -->
+          <div class="flex flex-col gap-1 mt-4">
+            <h3 class="text-xs font-bold text-[#d4a34b] tracking-wider uppercase">
+              PROJECTS
+            </h3>
+            <ul class="text-xs sm:text-sm text-zinc-300 font-mono space-y-1">
+              <li>• Heliostrand — Solar Tracker &amp; Telemetría NFC (C++ / Flutter)</li>
+              <li>• CapyFood — Delivery Multi-Local &amp; Logística (Flutter + Laravel)</li>
+              <li>• WEEKEND — Carta Web &amp; Checkout Automatizado (React 19)</li>
+            </ul>
+          </div>
+
+          <!-- Contact Icons -->
+          <div class="flex gap-3 flex-wrap items-center pt-5 mt-auto">
+            <!-- LinkedIn -->
+            <a class="size-10 rounded-full border border-white/10 flex justify-center items-center bg-white/5 hover:bg-white/10 hover:border-orange-500/40 hover:scale-110 transition-all text-zinc-200" href="https://www.linkedin.com/in/ramses-contreras-08a652378" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="devicon-linkedin-plain text-lg text-[#0a66c2]"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a class="size-10 rounded-full border border-white/10 flex justify-center items-center bg-white/5 hover:bg-white/10 hover:border-orange-500/40 hover:scale-110 transition-all text-zinc-200" href="https://github.com/RamsesCB" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="devicon-github-original text-lg text-white"></i>
+            </a>
+
+            <!-- Email -->
+            <a class="size-10 rounded-full border border-white/10 flex justify-center items-center bg-white/5 hover:bg-white/10 hover:border-orange-500/40 hover:scale-110 transition-all text-zinc-200" href="mailto:sergiocontrerasbernaola22@gmail.com" aria-label="Email">
+              <span class="material-symbols-outlined text-orange-400 text-lg">mail</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Carrusel de Iconos (Solo símbolos oficiales deslizantes) -->
+      <div class="w-full mt-2">
+        <div class="relative w-full overflow-hidden mask-slider py-4">
+          <div class="slide-track flex w-max animate-infinite-slider gap-8 items-center">
+            
+            <!-- Iconos del carrusel (Set 1) -->
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Flutter"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Dart"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Firebase"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Kotlin"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Android Studio"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Python"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Java"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Go"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="TypeScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="JavaScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="C++"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Pandas"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="NumPy"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Matplotlib"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="PostgreSQL"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="HTML5"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="CSS3"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Docker"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Git"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Arch Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Fedora"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Ubuntu"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="VS Code"></div>
+
+            <!-- Duplicate Set for Continuous Loop -->
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Flutter"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Dart"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Firebase"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Kotlin"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Android Studio"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Python"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Java"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Go"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="TypeScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="JavaScript"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="C++"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Pandas"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="NumPy"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Matplotlib"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="PostgreSQL"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="HTML5"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="CSS3"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Docker"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Git"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Arch Linux"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Fedora"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="Ubuntu"></div>
+            <div class="flex items-center justify-center shrink-0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="size-8" width="32" height="32" loading="lazy" decoding="async" alt="VS Code"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Trayectoria Section (Ramas Git Alternadas Izquierda / Derecha) -->
+    <section id="trayectoria" class="w-full py-20 flex flex-col items-center">
+      
+      <!-- Título centrado con líneas naranjas -->
+      <div class="flex items-center justify-center gap-4 mb-16">
+        <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
+        <h2 class="text-3xl font-bold text-white tracking-tight">Trayectoria</h2>
+        <div class="w-10 h-1 bg-orange-500 rounded-full"></div>
+      </div>
+
+      <!-- Contenedor Principal de Trayectoria (Espaciado Vertical Compacto y Separación Horizontal Restaurada) -->
+      <div class="relative w-full max-w-4xl mx-auto flex flex-col items-center">
+        
+        <!-- Wrapper Colapsable con Altura Estándar y Transición Fluida -->
+        <div id="trayectoria-collapsible" class="relative w-full overflow-hidden transition-[max-height] duration-700 ease-in-out" style="max-height: 860px;">
+
+          <!-- ================= FILA 0: Top Left (Main Branch Actual) ================= -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+            <!-- Contenido Izquierdo: Main Branch Actual (Alineado a la derecha hacia el centro) -->
+            <div class="w-full md:pr-6 pb-2 text-left md:text-right flex flex-col items-start md:items-end">
+              <div class="flex flex-col gap-0.5 text-left md:text-right items-start md:items-end group">
+                <!-- Badge alineado a y=12 con el brazo cian -->
+                <div class="flex flex-wrap md:justify-end items-center gap-2 mb-1">
+                  <span class="text-xs font-mono text-zinc-400 order-2 md:order-1">Agosto 2026 – Actualidad</span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#00daf3]/10 text-[#00daf3] border border-[#00daf3]/30 order-1 md:order-2">
+                    <span class="size-1.5 rounded-full bg-[#00daf3] animate-pulse"></span> main
+                  </span>
+                </div>
+                
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                  Flutter / Backend Developer
+                </h3>
+                <p class="text-xs sm:text-sm font-semibold text-orange-400/90">
+                  CapyFood <span class="text-zinc-500 font-normal italic">(Huarmey, Perú)</span>
+                </p>
+                <p class="text-xs text-zinc-300 mt-0.5 max-w-md leading-relaxed">
+                  Plataforma móvil de pedidos y reparto (clientes, locales y repartidores) con pagos QR, geolocalización, roles y notificaciones push.
+                </p>
+
+                <div class="flex flex-wrap md:justify-end gap-1 mt-1 text-[10px] font-mono text-zinc-400">
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Laravel</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">PHP</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Firebase</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Oracle</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Clean Architecture</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Centro: Segmento Superior Tronco Main con Brazo hacia la Izquierda -->
+            <div class="hidden md:flex justify-center h-full relative w-[80px] mx-auto min-h-[100px]">
+              <svg class="absolute w-[80px]" style="top: 12px; bottom: 0px; left: 0px; height: calc(100% - 12px);" viewBox="0 0 80 100" fill="none" preserveAspectRatio="none">
+                <!-- 🔵 Tronco Principal Azul Superior Conectado Exactamente al Punto -->
+                <path d="M40 0V100" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              </svg>
+              <!-- Brazo Horizontal Azul hacia la izquierda (apuntando al lado izquierdo) -->
+              <div class="absolute h-[3.5px] bg-[#00daf3] rounded-full z-0" style="left: 4px; right: 50%; top: 12px; transform: translateY(-50%);"></div>
+              <!-- Nodo Terminal Azul apuntando al lado izquierdo -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#00daf3] z-10" style="left: 0px; top: 12px; transform: translateY(-50%);"></span>
+              <!-- Nodo Azul en la unión con el tronco principal -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#00daf3] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 12px; transform: translateY(-50%);"></span>
+            </div>
+
+            <!-- Espacio derecho fila 0 -->
+            <div class="hidden md:block"></div>
+          </div>
+          
+          <!-- ================= FILA 1: Top Right (Weekend Restaurant) ================= -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+            <!-- Espacio izquierdo fila 1 -->
+            <div class="hidden md:block"></div>
+
+            <!-- Centro: Segmento 1 Git Graph -->
+            <div class="hidden md:flex justify-center h-full relative w-[80px] mx-auto">
+              <svg class="w-[80px] h-full min-h-[120px]" viewBox="0 0 80 120" fill="none" preserveAspectRatio="none">
+                <!-- 🔵 Tronco Principal Azul -->
+                <path d="M40 0V120" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                <!-- 🟡 Rama Amarilla Split a la izquierda conectada directamente al nodo amarillo -->
+                <path d="M40 9.5C40 12 20 22 20 40V120" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                <!-- 🟢 Rama Verde Split a la derecha y Merge en main arriba -->
+                <path d="M40 0C40 3 60 5 60 8V75C60 90 40 98 40 115" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              </svg>
+              <!-- Brazo Horizontal Verde Continuo Conectado a y=120px -->
+              <div class="absolute h-[3.5px] bg-[#22c55e] rounded-full z-0" style="left: 75%; right: 4px; top: 120px; transform: translateY(-50%);"></div>
+              <!-- Nodo Terminal Verde Conectado a Weekend Restaurant en y=120px -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#22c55e] z-10" style="right: 0px; top: 120px; transform: translateY(-50%);"></span>
+              <!-- 🟢 Nodo Verde Merge en la rama main arriba (directamente bajo el tronco superior) -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#22c55e] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 0px; transform: translateY(-50%);"></span>
+              <!-- 🟡 Nodo Amarillo ubicado al inicio de la rama amarilla -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#facc15] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 24px; transform: translateY(-50%);"></span>
+              <!-- 🟢 Punto Verde donde inicia esta rama hacia el lado derecho abajo -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#22c55e] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); bottom: 10px; transform: translateY(50%);"></span>
+            </div>
+
+            <!-- Contenido Derecho Fila 1: Weekend Restaurant (Con pt-[108px] para alinear badge a y=120px) -->
+            <div class="w-full md:pl-6 md:pt-[108px] pb-6 md:pb-8">
+              <div class="flex flex-col gap-1 text-left group">
+                <!-- Badge alineado a y=120 -->
+                <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#22c55e]/10 text-[#22c55e] border border-[#22c55e]/30">
+                    <span class="size-1.5 rounded-full bg-[#22c55e] animate-pulse"></span> feature/weekend-frontend
+                  </span>
+                  <span class="text-xs font-mono text-zinc-400">Jul 2026</span>
+                </div>
+                
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                  Frontend Developer
+                </h3>
+                <p class="text-xs sm:text-sm font-semibold text-orange-400/90 mt-0.5">
+                  Weekend Restaurant &amp; Lounge S.A.C. <span class="text-zinc-500 font-normal italic"><br>(Weekend - Huarmey)</span>
+                </p>
+                <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
+                  Carta Digital Interactiva y Sistema de Pedidos &amp; Checkout Automatizado para Delivery y Reservas.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mt-2 text-[11px] font-mono text-zinc-400">
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">React 19</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">TypeScript</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Tailwind v4</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Clean Architecture</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">WhatsApp API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= FILA 2: Middle Left (Mobile Developer & Data Analyst) ================= -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+            <!-- Contenido Izquierdo Fila 2: Mobile Developer & Data -->
+            <div class="w-full md:pr-6 pb-6 md:pb-8 text-left md:text-right flex flex-col items-start md:items-end">
+              <div class="flex flex-col gap-1 text-left md:text-right items-start md:items-end group">
+                <!-- Badge alineado a y=12 -->
+                <div class="flex flex-wrap md:justify-end items-center gap-2 mb-1.5">
+                  <span class="text-xs font-mono text-zinc-400 order-2 md:order-1">Dec 2025</span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#facc15]/10 text-[#facc15] border border-[#facc15]/30 order-1 md:order-2">
+                    feature/mobile-data
+                  </span>
+                </div>
+                
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                  Mobile Developer &amp; Data Analyst
+                </h3>
+                <p class="text-xs sm:text-sm font-semibold text-zinc-300 mt-0.5">
+                  Desarrollo de Software &amp; Proyectos Móviles
+                </p>
+                <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
+                  Construcción de aplicaciones móviles reactivas (Flutter/Android) y pipelines de datos estructurados para analítica y reportería.
+                </p>
+
+                <div class="flex flex-wrap md:justify-end gap-1.5 mt-2 text-[11px] font-mono text-zinc-400">
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Python</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">PostgreSQL</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Centro: Segmento 2 Git Graph -->
+            <div class="hidden md:flex justify-center h-full relative w-[80px] mx-auto">
+              <svg class="w-[80px] h-full min-h-[120px]" viewBox="0 0 80 120" fill="none" preserveAspectRatio="none">
+                <!-- 🔵 Tronco Azul Continuo -->
+                <path d="M40 0V120" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                <!-- 🟡 Rama Amarilla Continua -->
+                <path d="M20 0V120" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                <!-- 🔴 Rama Roja Split a la derecha -->
+                <path d="M40 50C40 70 60 85 60 100V120" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              </svg>
+              <!-- Brazo Horizontal Amarillo Continuo Conectado -->
+              <div class="absolute h-[3.5px] bg-[#facc15] rounded-full z-0" style="left: 4px; right: 75%; top: 12px; transform: translateY(-50%);"></div>
+              <!-- Nodo Terminal Amarillo Conectado -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#facc15] z-10" style="left: 0px; top: 12px; transform: translateY(-50%);"></span>
+              <!-- Nodo Rojo Split -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#ef4444] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 40%;"></span>
+            </div>
+
+            <!-- Espacio derecho fila 2 -->
+            <div class="hidden md:block"></div>
+          </div>
+
+          <!-- ================= FILA 3: Bottom Right (Mobile & Software Developer - FREELANCE) ================= -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch">
+            <!-- Espacio izquierdo fila 3 -->
+            <div class="hidden md:block"></div>
+
+            <!-- Centro: Segmento 3 Git Graph -->
+            <div class="hidden md:flex justify-center h-full relative w-[80px] mx-auto">
+              <svg class="w-[80px] h-full min-h-[130px]" viewBox="0 0 80 130" fill="none" preserveAspectRatio="none">
+                <!-- 🔵 Tronco Azul -->
+                <path d="M40 0V130" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                <!-- 🔴 Rama Roja merge en Azul en y=58 -->
+                <path d="M60 0V20C60 38 40 46 40 58" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                <!-- 🟡 Rama Amarilla merge en Azul en y=100 -->
+                <path d="M20 0V65C20 82 40 90 40 100" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+              </svg>
+              <!-- Brazo Horizontal Rojo Continuo Conectado -->
+              <div class="absolute h-[3.5px] bg-[#ef4444] rounded-full z-0" style="left: 75%; right: 4px; top: 12px; transform: translateY(-50%);"></div>
+              <!-- Nodo Terminal Rojo Conectado -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#ef4444] z-10" style="right: 0px; top: 12px; transform: translateY(-50%);"></span>
+              <!-- Merge Rojo -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#ef4444] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 44%;"></span>
+              <!-- Merge Amarillo -->
+              <span class="absolute w-3 h-3 rounded-full bg-[#facc15] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); top: 77%;"></span>
+            </div>
+
+            <!-- Contenido Derecho Fila 3: Mobile & Software Developer (FREELANCE) -->
+            <div class="w-full md:pl-6 pb-2">
+              <div class="flex flex-col gap-1 text-left group">
+                <!-- Badge alineado a y=12 -->
+                <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30">
+                    <span class="size-1.5 rounded-full bg-[#ef4444] animate-pulse"></span> feature/freelance-mobile
+                  </span>
+                  <span class="text-xs font-mono text-zinc-400">Enero 2025</span>
+                </div>
+                
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                  Mobile &amp; Software Developer
+                </h3>
+                <p class="text-xs sm:text-sm font-semibold text-orange-400/90 mt-0.5">
+                  FREELANCE
+                </p>
+                <p class="text-xs text-zinc-300 mt-1 max-w-sm leading-relaxed">
+                  Desarrollo integral (End-to-End) de apps móviles y soluciones de automatización a medida con arquitecturas limpias y despliegues estables con Docker.
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mt-2 text-[11px] font-mono text-zinc-400">
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Flutter</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Dart</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Kotlin</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Android Studio</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Python</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Docker</span>
+                  <span class="px-2 py-0.5 rounded bg-zinc-900 border border-white/5">Git</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= EXTENSIÓN INFERIOR DEL TRONCO MAIN ================= -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch pb-3">
+            <!-- Espacio izquierdo -->
+            <div class="hidden md:block"></div>
+            <!-- Centro: Segmento Tronco Main Extendido con Nodo Terminal -->
+            <div class="flex flex-col items-center relative w-[80px] mx-auto">
+              <!-- Línea vertical azul extendida -->
+              <div class="relative w-full h-16 flex justify-center">
+                <svg class="w-[80px] h-full" viewBox="0 0 80 64" fill="none" preserveAspectRatio="none">
+                  <!-- 🔵 Tronco Principal Azul Extendido -->
+                  <path d="M40 0V64" stroke="#00daf3" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+                </svg>
+                <!-- Nodo Terminal Azul al final de la línea -->
+                <span class="absolute w-3 h-3 rounded-full bg-[#00daf3] border-2 border-[#09090b] z-10" style="left: calc(50% - 6px); bottom: 0px; transform: translateY(50%);"></span>
+              </div>
+            </div>
+            <!-- Espacio derecho -->
+            <div class="hidden md:block"></div>
+          </div>
+
+        </div>
+
+        <!-- Fade sutil en la base cuando está colapsado -->
+        <div id="trayectoria-fade" class="w-full h-16 -mt-16 bg-gradient-to-t from-[#09090b] to-transparent pointer-events-none relative z-20 transition-opacity duration-500"></div>
+
+        <!-- Botón / Enlace minimalista 'ver más' centrado directamente bajo el árbol -->
+        <div class="flex flex-col items-center pt-3 pb-2 relative z-30">
+          <button id="btn-toggle-trayectoria" type="button" class="group flex flex-col items-center gap-0.5 text-zinc-300 hover:text-zinc-100 transition-colors duration-300 cursor-pointer select-none animate-subtle-bob">
+            <span id="btn-toggle-text" class="text-[15px] font-medium tracking-wide text-zinc-300 group-hover:text-zinc-100 transition-colors duration-300">ver más</span>
+            <span class="material-symbols-outlined text-2xl text-zinc-300 group-hover:text-zinc-100 font-medium leading-none -mt-0.5 transition-all duration-300" id="btn-toggle-chevron">expand_more</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Proyectos Section (Estilo Lua Portfolio con Slider Interactivo para LuxHealth) -->
+    <section id="proyectos" class="pt-24 flex flex-col gap-6">
+      
+      <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+        <span class="material-symbols-outlined text-orange-400 text-2xl">code_blocks</span>
+        Proyectos
+      </h2>
+
+      <div class="flex flex-col gap-12">
+        
+        <!-- Proyecto 1: Heliostrand — Solar Tracker & NFC Telemetry Ecosystem -->
+        <article class="flex flex-col gap-4">
+          <!-- Cabecera del Proyecto: Título, Badges y Enlaces -->
+          <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-3">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <h3 class="text-2xl font-semibold text-orange-400">
+                Heliostrand — Solar Tracker &amp; NFC Telemetry Ecosystem
+              </h3>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> En Producción
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20" title="Actualmente en desarrollo experimental y redacción científica">
+                <span class="material-symbols-outlined text-[13px]">school</span> Próximo Artículo Científico
+              </span>
+            </div>
+
+            <!-- Botones de Acción: Ver repositorio & Ver en Google Play -->
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="https://github.com/RamsesCB/heliostrand-nfc-core-cpp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-300 hover:text-white transition-all shadow-sm hover:border-orange-500/30">
+                <i class="devicon-github-original text-sm text-white"></i>
+                <span>Ver repositorio</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+              <a href="https://play.google.com/apps/testing/com.theojansen.heliostrand_app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-300 hover:text-white transition-all shadow-sm hover:border-emerald-500/30">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" class="size-3.5" alt="Android">
+                <span>Ver en Google Play</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed text-pretty">
+            Ecosistema embebido y multiplataforma de seguimiento solar biaxial para un mecanismo robótico caminante (<span class="text-white font-medium">Theo Jansen Strandbeest</span>). Permite la adquisición e inspección de telemetría física en tiempo real (sensores LDR cuadripolares, ángulos de servo Pitch/Yaw y estado de tracción) mediante un <span class="text-white font-medium">protocolo binario propietario sobre NFC pasivo (NTAG213)</span>, complementado con simulación interactiva, persistencia local y monitoreo de fiabilidad con <span class="text-white font-medium">Sentry</span>. Actualmente en preparación y desarrollo experimental para su próxima publicación como <span class="text-purple-300 font-medium">artículo científico</span>.
+          </p>
+
+          <!-- Badges de Tecnologías estilo Lua -->
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-3.5" alt="Flutter">
+                Flutter
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-3.5" alt="Dart">
+                Dart
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="size-3.5" alt="C++">
+                C++ (Firmware)
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" class="size-3.5" alt="Arduino">
+                Arduino Uno
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="size-3.5" alt="Java">
+                Java 21 (Desktop)
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-sky-400">contactless</span>
+                NFC (ISO 14443-4 / NTAG213)
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sentry/sentry-original.svg" class="size-3.5" alt="Sentry">
+                Sentry
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" class="size-3.5" alt="GitHub Actions">
+                GitHub Actions (CI/CD)
+              </span>
+            </li>
+          </ul>
+
+          <!-- Slider / Carrusel de Imágenes Interactivo -->
+          <div class="relative group/slider w-full mt-2">
+            
+            <!-- Track deslizante con snap -->
+            <div id="heliostrand-slider" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl border border-white/10 bg-zinc-900/30 p-2 sm:p-3 shadow-2xl shadow-black/80 select-none cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+              
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/heliostrand_1.webp" alt="Heliostrand - Dashboard Móvil y Telemetría NFC en Tiempo Real" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/heliostrand_2.webp" alt="Heliostrand - Arquitectura del Sistema (Arduino · NFC · Flutter · Java)" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/heliostrand_3.webp" alt="Heliostrand - Flujo de Datos y Comunicación NFC (NTAG213 y PN532)" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/heliostrand_4.webp" alt="Heliostrand - Contrato de Datos V2 y Distribución Multiplataforma" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+
+            </div>
+
+            <!-- Botones de navegación flotantes -->
+            <button id="heliostrand-prev" type="button" aria-label="Imagen anterior" class="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_left</span>
+            </button>
+            <button id="heliostrand-next" type="button" aria-label="Imagen siguiente" class="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_right</span>
+            </button>
+
+            <!-- Contador de imágenes -->
+            <div class="absolute bottom-5 right-5 px-3 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-300 shadow-lg">
+              <span id="heliostrand-counter">1 / 4</span>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Proyecto 2: CapyFood -->
+        <article class="flex flex-col gap-4">
+          <!-- Cabecera del Proyecto: Título y Link a Google Play -->
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <h3 class="text-2xl font-semibold text-orange-400">
+                CapyFood — Plataforma Integral de Delivery Multi-Local y Logística Urbana
+              </h3>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> En Producción
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20">
+                <span class="size-1.5 rounded-full bg-sky-400"></span> Google Play Console (Track de Pruebas)
+              </span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-white/5 border border-white/10 text-zinc-300 shadow-sm hover:border-emerald-500/30 transition-all cursor-default" title="Disponible para evaluadores en Google Play Store — versión 1.2.3">
+              <span class="material-symbols-outlined text-sm text-emerald-400">android</span>
+              <span>Disponible en Google Play</span>
+              <span class="text-[10px] text-zinc-500 font-normal">v1.2.3</span>
+            </div>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed text-pretty">
+            Ecosistema de delivery de última milla enfocado en ciudades intermedias, con soporte pionero para pedidos simultáneos en múltiples comercios (<span class="text-white font-medium">multi-local</span>) en una sola orden consolidada. Integra <span class="text-white font-medium">pagos instantáneos por QR (Yape/Plin)</span>, rastreo GPS en segundo plano con <span class="text-white font-medium">Foreground Services</span> de alta precisión y un despacho inteligente de rutas para repartidores.
+          </p>
+
+          <!-- Badges de Tecnologías estilo Lua -->
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-3.5" alt="Flutter">
+                Flutter
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-3.5" alt="Dart">
+                Dart
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="size-3.5" alt="Laravel">
+                Laravel
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="size-3.5" alt="PHP">
+                PHP
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" class="size-3.5" alt="Oracle">
+                Oracle Database 23c
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-3.5" alt="Docker">
+                Docker
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" class="size-3.5" alt="Nginx">
+                Nginx
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-3.5" alt="Firebase">
+                Firebase Cloud Messaging
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="size-3.5" alt="Firestore">
+                Firestore
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-orange-400">map</span>
+                Google Maps Platform
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" class="size-3.5" alt="Android">
+                Android Foreground Service
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" class="size-3.5" alt="Redis">
+                Redis
+              </span>
+            </li>
+          </ul>
+
+          <!-- Slider / Carrusel de Imágenes Interactivo -->
+          <div class="relative group/slider w-full mt-2">
+            
+            <!-- Track deslizante con snap -->
+            <div id="capyfood-slider" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl border border-white/10 bg-zinc-900/30 p-2 sm:p-3 shadow-2xl shadow-black/80 select-none cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+              
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/capyfood_1.webp" alt="CapyFood - Explora Huarmey" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/capyfood_2.webp" alt="CapyFood - Google Play Console Track de Pruebas" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/capyfood_3.webp" alt="CapyFood - Del carrito al pago con Yape y Plin" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg flex items-center justify-center">
+                <img src="assets/capyfood_4.webp" alt="CapyFood - Todo en un solo lugar y Ajustes" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+
+            </div>
+
+            <!-- Botones de navegación flotantes -->
+            <button id="capyfood-prev" type="button" aria-label="Imagen anterior" class="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_left</span>
+            </button>
+            <button id="capyfood-next" type="button" aria-label="Imagen siguiente" class="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_right</span>
+            </button>
+
+            <!-- Contador de imágenes -->
+            <div class="absolute bottom-5 right-5 px-3 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-300 shadow-lg">
+              <span id="capyfood-counter">1 / 4</span>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Proyecto 3: WEEKEND Carta Web -->
+        <article class="flex flex-col gap-4">
+          <!-- Cabecera del Proyecto: Título y Link a Producción -->
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <h3 class="text-2xl font-semibold text-orange-400">
+                WEEKEND — Carta Web &amp; Sistema Gastronómico
+              </h3>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> En Producción
+              </span>
+            </div>
+            <a href="https://weekend-huarmey.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-300 hover:text-white transition-all shadow-sm hover:border-orange-500/30">
+              <span class="material-symbols-outlined text-sm text-orange-400">rocket_launch</span>
+              <span>Visitar</span>
+              <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+            </a>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed text-pretty">
+            Plataforma interactiva de alta concurrencia desplegada en producción para <span class="text-white font-medium">WEEKEND Lounge &amp; Restaurant</span>. Cuenta con carta digital de 13 categorías y buscador en tiempo real, <span class="text-white font-medium">checkout inteligente</span> con cálculo automático de tarifas de delivery por zona, sistema de reservas y conexión automatizada a la <span class="text-white font-medium">WhatsApp API</span>.
+          </p>
+
+          <!-- Badges de Tecnologías estilo Lua -->
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="size-3.5" alt="React">
+                React 19
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="size-3.5" alt="TypeScript">
+                TypeScript
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" class="size-3.5" alt="Tailwind CSS">
+                Tailwind CSS
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-emerald-400">account_tree</span>
+                Clean Architecture
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" class="size-3.5" alt="Vite">
+                Vite 6
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" class="size-3.5" alt="Supabase">
+                Supabase
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" class="size-3.5" alt="Vercel">
+                Vercel Edge
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <i class="devicon-whatsapp-plain text-xs text-emerald-400"></i>
+                WhatsApp API
+              </span>
+            </li>
+          </ul>
+
+          <!-- Video Showcase VP9 -->
+          <div class="relative w-full rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/30 shadow-2xl shadow-black/80 mt-2">
+            <video class="w-full h-auto aspect-video object-cover rounded-xl" autoplay loop muted playsinline controls preload="metadata" poster="assets/weeknd_poster.webp">
+              <source src="assets/weeknd_showcase.webm" type="video/webm; codecs=vp9">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+        </article>
+
+        <!-- Proyecto 4: LuxHealth -->
+        <article class="flex flex-col gap-4">
+          <!-- Cabecera del Proyecto: Título y Link al Repositorio -->
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <h3 class="text-2xl font-semibold text-orange-400">
+              LuxHealth
+            </h3>
+            <a href="https://github.com/RamsesCB/LuxHealth" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-300 hover:text-white transition-all shadow-sm hover:border-orange-500/30">
+              <i class="devicon-github-original text-sm text-white"></i>
+              <span>Ver repositorio</span>
+              <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+            </a>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-sm sm:text-base text-zinc-300 leading-relaxed text-pretty">
+            Mobile HealthTech App impulsada por <span class="text-white font-medium">Google Gemini AI &amp; Flutter</span>. Diseñada con arquitectura <span class="text-white font-medium">Offline-First</span> para brindar soporte y prescripción nutricional personalizada a pacientes con patologías crónicas (enfermedad renal crónica, diabetes, hipertensión), integrando análisis multimodal de alimentos y sincronización local de alta confiabilidad.
+          </p>
+
+          <!-- Badges de Tecnologías estilo Lua -->
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="size-3.5" alt="Flutter">
+                Flutter
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" class="size-3.5" alt="Dart">
+                Dart
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-orange-400">auto_awesome</span>
+                Gemini AI
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-[#00daf3]">offline_bolt</span>
+                Offline-First
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <span class="material-symbols-outlined text-xs text-emerald-400">account_tree</span>
+                Clean Architecture
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center gap-x-2 rounded-full text-xs bg-zinc-900 border border-white/10 text-zinc-200 py-1 px-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="size-3.5" alt="Docker">
+                Docker
+              </span>
+            </li>
+          </ul>
+
+          <!-- Slider / Carrusel de Imágenes Interactivo -->
+          <div class="relative group/slider w-full mt-2">
+            
+            <!-- Track deslizante con snap -->
+            <div id="project-slider" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-2xl border border-white/10 bg-zinc-900/30 p-2 sm:p-3 shadow-2xl shadow-black/80 select-none cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+              
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/1.webp" alt="LuxHealth Mockup 1" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/2.webp" alt="LuxHealth Mockup 2" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/3.webp" alt="LuxHealth Mockup 3" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/4.webp" alt="LuxHealth Mockup 4" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/5.webp" alt="LuxHealth Mockup 5" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/6.webp" alt="LuxHealth Mockup 6" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/7.webp" alt="LuxHealth Mockup 7" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/instagram_overview.webp" alt="LuxHealth Overview" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/9.webp" alt="LuxHealth Mockup 9" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+              <div class="slider-item snap-center shrink-0 w-full sm:w-[92%] md:w-[88%] rounded-xl overflow-hidden bg-zinc-950 border border-white/5 shadow-lg">
+                <img src="assets/10.webp" alt="LuxHealth Mockup 10" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+              </div>
+
+            </div>
+
+            <!-- Botones de navegación flotantes -->
+            <button id="slider-prev" type="button" aria-label="Imagen anterior" class="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_left</span>
+            </button>
+            <button id="slider-next" type="button" aria-label="Siguiente imagen" class="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-zinc-900/85 hover:bg-zinc-800 border border-white/10 text-white backdrop-blur-md flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 shadow-xl cursor-pointer">
+              <span class="material-symbols-outlined text-lg">chevron_right</span>
+            </button>
+
+            <!-- Contador e Indicador de deslizamiento -->
+            <div class="flex items-center justify-between pt-3 px-1 text-xs text-zinc-400 font-mono">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-xs text-orange-400">swipe_left</span>
+                <span>Desliza para ver más capturas</span>
+              </span>
+              <span id="slider-counter" class="px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-zinc-300">
+                1 / 10
+              </span>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Certificaciones Section (Grid de Certificados WebP Reales) -->
+    <section id="certificaciones" class="pt-24 flex flex-col gap-6">
+      
+      <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+        <span class="material-symbols-outlined text-orange-400 text-2xl">verified</span>
+        Certificaciones
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-2">
+        
+        <!-- Certificado 1: UNS -->
+        <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/UNSCertificate.webp" alt="Certificado Profesional - Universidad Nacional del Santa" loading="lazy" decoding="async">
+        </div>
+
+        <!-- Certificado 2: AI Fundamentals (DataCamp) -->
+        <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/AIFundamentals.webp" alt="Certificado AI Fundamentals - DataCamp" loading="lazy" decoding="async">
+        </div>
+
+        <!-- Certificado 3: Data Analyst Associate (DataCamp) -->
+        <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/DataAnalystAssociate.webp" alt="Certificado Data Analyst Associate - DataCamp" loading="lazy" decoding="async">
+        </div>
+
+        <!-- Certificado 4: Python Data Associate (DataCamp) -->
+        <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/PythonDataAssociate.webp" alt="Certificado Python Data Associate - DataCamp" loading="lazy" decoding="async">
+        </div>
+
+        <!-- Certificado 5: Big School -->
+        <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/BigSchoolCertificate.webp" alt="Certificado Profesional - Big School" loading="lazy" decoding="async">
+        </div>
+
+        <!-- Certificado 6: Azure Database Admin Bootcamp -->
+        <div class="group overflow-hidden rounded-xl bg-transparent p-0 transition-all">
+          <img class="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02]" src="assets/AzureDatabaseAdminBootcamp.webp" alt="Certificado - Bootcamp Administración de Bases de Datos en Azure" loading="lazy" decoding="async">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact CTA Section (Limpio y camuflado con el fondo) -->
+    <section class="pt-24 pb-8">
+      <div class="p-8 sm:p-12 text-center flex flex-col items-center gap-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">
+          ¿Interesado en construir algo juntos?
+        </h2>
+        <p class="text-zinc-300 max-w-lg text-sm sm:text-base leading-relaxed">
+          Siempre abierto a nuevas oportunidades, proyectos de ingeniería de software, desarrollo móvil o ciencia de datos.
+        </p>
+        <a href="https://wa.me/51948090684" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-medium text-sm transition-all shadow-lg shadow-orange-500/20 hover:scale-105">
+          <i class="devicon-whatsapp-plain text-lg text-white"></i>
+          <span>Enviar mensaje</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Navigation -->
+  <footer class="border-t border-zinc-800/80 bg-zinc-950 py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      
+      <!-- Monograma & Nombre -->
+      <div class="flex items-center gap-2.5">
+        <span class="size-8 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center font-mono font-bold text-xs text-orange-400">
+          RC
+        </span>
+        <span class="text-sm font-semibold text-white">Ramses CB</span>
+      </div>
+
+      <!-- Footer Nav Links -->
+      <div class="flex flex-wrap justify-center gap-5 text-xs text-zinc-400">
+        <a href="/" class="text-amber-400 hover:text-amber-300 transition-colors font-mono font-medium">🕹️ Menú Arcade</a>
+        <a href="#sobre-mi" class="hover:text-white transition-colors">Sobre mí</a>
+        <a href="#trayectoria" class="hover:text-white transition-colors">Trayectoria</a>
+        <a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a>
+        <a href="#certificaciones" class="hover:text-white transition-colors">Certificaciones</a>
+        <a href="https://github.com/RamsesCB" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/ramses-contreras-08a652378" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-xs text-zinc-400 font-mono">
+        © 2026 Ramses CB.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script interactivo para el Slider de Proyectos -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Función reutilizable para inicializar sliders de proyectos
+      const setupSlider = (sliderId, prevId, nextId, counterId) => {
+        const slider = document.getElementById(sliderId);
+        const prevBtn = document.getElementById(prevId);
+        const nextBtn = document.getElementById(nextId);
+        const counter = document.getElementById(counterId);
+        if (!slider) return;
+        const items = slider.querySelectorAll('.slider-item');
+        if (items.length === 0) return;
+
+        const updateCounter = () => {
+          const scrollLeft = slider.scrollLeft;
+          let index = Math.round(scrollLeft / (items[0].offsetWidth + 16)) + 1;
+          if (index < 1) index = 1;
+          if (index > items.length) index = items.length;
+          if (counter) counter.textContent = `${index} / ${items.length}`;
+        };
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            const itemWidth = items[0].offsetWidth + 16;
+            slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            const itemWidth = items[0].offsetWidth + 16;
+            slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+          });
+        }
+
+        slider.addEventListener('scroll', () => {
+          window.requestAnimationFrame(updateCounter);
+        }, { passive: true });
+
+        // Touch & Drag Support
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => { isDown = false; });
+        slider.addEventListener('mouseup', () => { isDown = false; });
+        slider.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 1.5;
+          slider.scrollLeft = scrollLeft - walk;
+        });
+      };
+
+      // Inicializar carruseles de proyectos
+      setupSlider('heliostrand-slider', 'heliostrand-prev', 'heliostrand-next', 'heliostrand-counter');
+      setupSlider('capyfood-slider', 'capyfood-prev', 'capyfood-next', 'capyfood-counter');
+      setupSlider('project-slider', 'slider-prev', 'slider-next', 'slider-counter');
+
+      // Trayectoria Ver Más / Ver Menos Toggle con Altura Estándar
+      const toggleBtn = document.getElementById('btn-toggle-trayectoria');
+      const trayWrapper = document.getElementById('trayectoria-collapsible');
+      const trayFade = document.getElementById('trayectoria-fade');
+      const toggleText = document.getElementById('btn-toggle-text');
+      const toggleChevron = document.getElementById('btn-toggle-chevron');
+
+      const STANDARD_COLLAPSED_HEIGHT = 860; // Altura estándar visible inicial en px
+
+      if (toggleBtn && trayWrapper) {
+        let isExpanded = false;
+
+        toggleBtn.addEventListener('click', () => {
+          isExpanded = !isExpanded;
+
+          if (isExpanded) {
+            // Expandir suavemente a la altura total real
+            trayWrapper.style.maxHeight = trayWrapper.scrollHeight + 'px';
+            if (trayFade) {
+              trayFade.classList.add('opacity-0');
+            }
+            if (toggleText) toggleText.textContent = 'ver menos';
+            if (toggleChevron) {
+              toggleChevron.classList.add('rotate-180');
+            }
+            // Desactivar animación de rebote en 'ver menos'
+            toggleBtn.classList.remove('animate-subtle-bob');
+          } else {
+            // Colapsar a la altura estándar
+            trayWrapper.style.maxHeight = STANDARD_COLLAPSED_HEIGHT + 'px';
+            if (trayFade) {
+              trayFade.classList.remove('opacity-0');
+            }
+            if (toggleText) toggleText.textContent = 'ver más';
+            if (toggleChevron) {
+              toggleChevron.classList.remove('rotate-180');
+            }
+            // Reactivar animación únicamente para 'ver más'
+            toggleBtn.classList.add('animate-subtle-bob');
+            // Desplazar suavemente a la base del contenedor
+            toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      }
+
+      // Navegación fluida en enlaces de navegación sin modificar la URL ni añadir almohadilla (#)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href').substring(1);
+          if (!targetId) return;
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const navbarOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navbarOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Limpiar cualquier hash existente en la URL en la carga inicial
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    });
+  </script>
+
+</body>
+</html>
