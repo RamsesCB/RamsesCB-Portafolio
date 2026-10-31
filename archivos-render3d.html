@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>RamsesCB</title>
+  
+  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532 y Servomotor).">
+  <meta name="theme-color" content="#000000" id="theme-color-meta">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Sketchfab Viewer API para control programático de cinemática -->
+  <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+
+  <style>
+    /* ========================================================
+       APPLE DESIGN SYSTEM — HARDWARE 3D STUDIO (DARK / LIGHT)
+       ======================================================== */
+    :root,
+    [data-theme="dark"] {
+      --bg-canvas: #000000;
+      --bg-panel: #0d0d10;
+      --bg-panel-secondary: #141418;
+      --bg-subtle: #1a1a20;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --border-focus: rgba(10, 132, 255, 0.6);
+      --text-primary: #f5f5f7;
+      --text-secondary: #a1a1a6;
+      --text-tertiary: #6e6e73;
+      --accent: #2997ff;
+      --accent-soft: rgba(41, 151, 255, 0.14);
+      --accent-glow: rgba(41, 151, 255, 0.25);
+      --success: #30d158;
+      --success-soft: rgba(48, 209, 88, 0.14);
+      --warning: #ff9f0a;
+      --warning-soft: rgba(255, 159, 10, 0.14);
+      --glass-bg: rgba(13, 13, 16, 0.76);
+      --segmented-bg: rgba(255, 255, 255, 0.06);
+      --segmented-active: rgba(255, 255, 255, 0.16);
+      --segmented-text: #8e8e93;
+      --segmented-text-active: #ffffff;
+      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      --lightbox-bg: rgba(0, 0, 0, 0.88);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-pill: 9999px;
+    }
+
+    [data-theme="light"] {
+      --bg-canvas: #f5f5f7;
+      --bg-panel: #ffffff;
+      --bg-panel-secondary: #fbfbfd;
+      --bg-subtle: #f0f0f4;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-strong: rgba(0, 0, 0, 0.16);
+      --border-focus: rgba(0, 113, 227, 0.6);
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-tertiary: #86868b;
+      --accent: #0071e3;
+      --accent-soft: rgba(0, 113, 227, 0.1);
+      --accent-glow: rgba(0, 113, 227, 0.2);
+      --success: #34c759;
+      --success-soft: rgba(52, 199, 89, 0.12);
+      --warning: #ff9500;
+      --warning-soft: rgba(255, 149, 0, 0.12);
+      --glass-bg: rgba(255, 255, 255, 0.82);
+      --segmented-bg: rgba(0, 0, 0, 0.05);
+      --segmented-active: #ffffff;
+      --segmented-text: #6e6e73;
+      --segmented-text-active: #1d1d1f;
+      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      --lightbox-bg: rgba(29, 29, 31, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ========================================================
+       TOP HEADER (APPLE FROSTED BAR)
+       ======================================================== */
+    header.studio-header {
+      background: var(--glass-bg);
+      backdrop-filter: saturate(180%) blur(24px);
+      -webkit-backdrop-filter: saturate(180%) blur(24px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 20px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 100;
+      flex-shrink: 0;
+      transition: border-color 0.25s ease;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    /* Botón Volver Arcade */
+    .btn-nav-arcade {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 13px;
+      background: var(--segmented-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      color: var(--text-primary);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+
+    .btn-nav-arcade:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateX(-1px);
+    }
+
+    .btn-nav-arcade svg {
+      transition: transform 0.2s ease;
+    }
+
+    .btn-nav-arcade:hover svg {
+      transform: translateX(-2px);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    /* Segmented Control - Vista */
+    .view-segmented-wrap {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      max-width: 520px;
+    }
+
+    .segmented-control {
+      display: inline-flex;
+      background: var(--segmented-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3px;
+      gap: 2px;
+      backdrop-filter: blur(8px);
+    }
+
+    .seg-btn {
+      background: transparent;
+      border: none;
+      color: var(--segmented-text);
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .seg-btn:hover:not(.active) {
+      color: var(--text-primary);
+    }
+
+    .seg-btn.active {
+      background: var(--segmented-active);
+      color: var(--segmented-text-active);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+      font-weight: 600;
+    }
+
+    /* Lado Derecho - Controles de Tema y Portafolio */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    /* Selector de Tema (Negro Predeterminado / Blanco) */
+    .theme-segmented {
+      display: inline-flex;
+      background: var(--segmented-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .theme-btn {
+      background: transparent;
+      border: none;
+      color: var(--segmented-text);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.74rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.18s ease;
+      user-select: none;
+    }
+
+    .theme-btn.active {
+      background: var(--segmented-active);
+      color: var(--segmented-text-active);
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .theme-btn:hover:not(.active) {
+      color: var(--text-primary);
+    }
+
+    .btn-quick-portfolio {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      font-size: 0.74rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+    }
+
+    .btn-quick-portfolio:hover {
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-color: rgba(41, 151, 255, 0.25);
+    }
+
+    /* ========================================================
+       MAIN CANVAS & GRID DE PANELES
+       ======================================================== */
+    main.studio-main {
+      flex: 1;
+      padding: 14px 16px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      height: calc(100vh - 56px);
+      background-color: var(--bg-canvas);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    /* Modos de vista enfocada */
+    main.studio-main.view-arduino {
+      grid-template-columns: 1fr;
+    }
+    main.studio-main.view-arduino .panel-pn532,
+    main.studio-main.view-arduino .panel-servo {
+      display: none;
+    }
+
+    main.studio-main.view-pn532 {
+      grid-template-columns: 1fr;
+    }
+    main.studio-main.view-pn532 .panel-arduino,
+    main.studio-main.view-pn532 .panel-servo {
+      display: none;
+    }
+
+    main.studio-main.view-servo {
+      grid-template-columns: 1fr;
+    }
+    main.studio-main.view-servo .panel-arduino,
+    main.studio-main.view-servo .panel-pn532 {
+      display: none;
+    }
+
+    /* ========================================================
+       APPLE PANEL CARDS
+       ======================================================== */
+    .studio-panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 0;
+      position: relative;
+      box-shadow: var(--card-shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .studio-panel:hover {
+      border-color: var(--border-strong);
+    }
+
+    /* Cabecera del Panel */
+    .panel-top-bar {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-panel);
+      flex-shrink: 0;
+      height: 48px;
+      gap: 10px;
+    }
+
+    .panel-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .panel-indicator {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent-glow);
+      flex-shrink: 0;
+    }
+
+    .panel-title-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .panel-spec-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    .panel-actions-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Botón animado Play/Pause con estilo Apple */
+    .btn-animation-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .btn-animation-toggle.playing {
+      background: var(--success-soft);
+      color: var(--success);
+      border-color: rgba(48, 209, 88, 0.28);
+    }
+
+    .btn-animation-toggle.paused {
+      background: var(--warning-soft);
+      color: var(--warning);
+      border-color: rgba(255, 159, 10, 0.28);
+    }
+
+    .btn-animation-toggle:hover {
+      filter: brightness(1.1);
+      transform: scale(1.02);
+    }
+
+    /* Píldoras de Cambio de Pestaña (3D / Renders) */
+    .tab-pills-wrap {
+      display: inline-flex;
+      background: var(--segmented-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .tab-pill-btn {
+      background: transparent;
+      border: none;
+      color: var(--segmented-text);
+      padding: 3px 9px;
+      border-radius: 4px;
+      font-size: 0.73rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .tab-pill-btn.active {
+      background: var(--segmented-active);
+      color: var(--segmented-text-active);
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .tab-pill-btn:hover:not(.active) {
+      color: var(--text-primary);
+    }
+
+    /* ========================================================
+       PANEL VIEWPORT (WEBGL & CAD IFRAMES)
+       ======================================================== */
+    .panel-viewport {
+      flex: 1;
+      position: relative;
+      background: var(--bg-canvas);
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .panel-viewport iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: var(--bg-canvas);
+      transform: translateZ(0);
+      will-change: transform;
+    }
+
+    /* Overlay Atajo Espacio (Servomotor) */
+    .key-shortcut-hint {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.76);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #f5f5f7;
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      z-index: 10;
+      transition: opacity 0.2s ease;
+    }
+
+    .key-badge {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.68rem;
+      font-family: inherit;
+      font-weight: 600;
+    }
+
+    /* ========================================================
+       GALLERY VIEWPORT (RENDERS PBR & CAD)
+       ======================================================== */
+    .panel-gallery {
+      display: none;
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      background: var(--bg-panel-secondary);
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+      align-content: start;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-subtle) transparent;
+    }
+
+    .panel-gallery.active {
+      display: grid;
+    }
+
+    .render-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .render-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .render-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg-canvas);
+    }
+
+    .render-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .render-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .render-badge-pbr {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      font-size: 0.62rem;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(8px);
+      color: #f5f5f7;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      letter-spacing: 0.02em;
+    }
+
+    .render-info {
+      padding: 8px 10px;
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-panel);
+    }
+
+    /* Single Render Focus Card */
+    .single-render-wrap {
+      display: none;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: var(--bg-panel-secondary);
+      overflow-y: auto;
+    }
+
+    .single-render-wrap.active {
+      display: flex;
+    }
+
+    .single-render-card {
+      max-width: 440px;
+      width: 100%;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .single-render-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .single-render-card img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      display: block;
+      background: var(--bg-canvas);
+    }
+
+    .single-render-card .render-info {
+      padding: 10px 14px;
+      font-size: 0.78rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ========================================================
+       PANEL FOOTER
+       ======================================================== */
+    .panel-footer-bar {
+      padding: 7px 14px;
+      background: var(--bg-panel);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      height: 34px;
+    }
+
+    .panel-footer-bar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: color 0.15s ease;
+    }
+
+    .panel-footer-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========================================================
+       LIGHTBOX MODAL (APPLE IMMERSIVE BLUR)
+       ======================================================== */
+    .lightbox-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: var(--lightbox-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 28px;
+      opacity: 0;
+      transition: opacity 0.22s ease;
+    }
+
+    .lightbox-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content-box {
+      position: relative;
+      max-width: 92vw;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-content-box img {
+      max-width: 100%;
+      max-height: 82vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      object-fit: contain;
+      background: transparent;
+      transform: scale(0.97);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lightbox-backdrop.active .lightbox-content-box img {
+      transform: scale(1);
+    }
+
+    .lightbox-caption {
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: #f5f5f7;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.15s ease;
+    }
+
+    .lightbox-close-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: scale(1.08);
+    }
+
+    /* ========================================================
+       RESPONSIVE ADAPTATIONS
+       ======================================================== */
+    @media (max-width: 1120px) {
+      header.studio-header {
+        height: auto;
+        padding: 10px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .view-segmented-wrap {
+        order: 3;
+        max-width: 100%;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      main.studio-main {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow-y: auto;
+        padding: 12px;
+        gap: 16px;
+      }
+
+      .studio-panel {
+        height: 520px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand-sub {
+        display: none;
+      }
+
+      .seg-btn {
+        padding: 4px 8px;
+        font-size: 0.72rem;
+      }
+
+      .theme-btn span {
+        display: none;
+      }
+
+      .theme-btn {
+        padding: 4px 8px;
+      }
+
+      .btn-quick-portfolio {
+        display: none;
+      }
+
+      .studio-panel {
+        height: 460px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       APPLE NAVIGATION BAR
+       ======================================================== -->
+  <header class="studio-header">
+    <div class="header-left">
+      <a href="/" class="btn-nav-arcade" title="Regresar al Arcade CRT Principal">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>ARCADE</span>
+      </a>
+
+      <div class="brand-group">
+        <h1 class="brand-title">Hardware 3D Studio</h1>
+        <span class="brand-sub">RamsesCB • Arduino / NFC / Servomotor</span>
+      </div>
+    </div>
+
+    <!-- Segmented View Mode -->
+    <div class="view-segmented-wrap">
+      <div class="segmented-control" role="tablist" aria-label="Selector de Vista 3D">
+        <button class="seg-btn active" id="btn-grid" onclick="setViewMode('grid')" role="tab" aria-selected="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Cuadrícula</span>
+        </button>
+        <button class="seg-btn" id="btn-arduino" onclick="setViewMode('arduino')" role="tab" aria-selected="false">
+          ⚡ Arduino UNO
+        </button>
+        <button class="seg-btn" id="btn-pn532" onclick="setViewMode('pn532')" role="tab" aria-selected="false">
+          📡 PN532 NFC
+        </button>
+        <button class="seg-btn" id="btn-servo" onclick="setViewMode('servo')" role="tab" aria-selected="false">
+          ⚙️ Servomotor
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Controls: Theme Switcher + Portfolio -->
+    <div class="header-right">
+      <a href="/portafolio" class="btn-quick-portfolio" title="Ver Portafolio de Software">
+        <span>Portafolio</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
+
+      <!-- Apple Theme Segmented Toggle (Negro predeterminado / Blanco) -->
+      <div class="theme-segmented" role="radiogroup" aria-label="Tema Visual">
+        <button class="theme-btn active" id="theme-btn-dark" onclick="setAppTheme('dark')" role="radio" aria-checked="true" title="Modo Oscuro OLED (Predeterminado)">
+          <span>🌙</span>
+          <span>Negro</span>
+        </button>
+        <button class="theme-btn" id="theme-btn-light" onclick="setAppTheme('light')" role="radio" aria-checked="false" title="Modo Claro Apple">
+          <span>☀️</span>
+          <span>Blanco</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       STUDIO MAIN CANVAS (3 PANELS)
+       ======================================================== -->
+  <main class="studio-main" id="studioMain">
+
+    <!-- PANEL 1: ARDUINO UNO R3 -->
+    <section class="studio-panel panel-arduino" id="panelArduino">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#0a84ff; box-shadow:0 0 8px rgba(10,132,255,0.4);"></span>
+          <span class="panel-title-text">Arduino UNO R3</span>
+          <span class="panel-spec-tag">ATmega328P</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-ard-3d" onclick="setPanelTab('arduino', '3d')">3D Interactivo</button>
+          <button class="tab-pill-btn" id="tab-ard-renders" onclick="setPanelTab('arduino', 'renders')">Renders (6)</button>
+        </div>
+      </div>
+
+      <!-- 3D WebGL Viewport -->
+      <div class="panel-viewport" id="viewport-ard-3d">
+        <iframe title="Arduino UNO R3 3D Interactive Model"
+                src="https://sketchfab.com/models/85e4a60ec0294e2c83fbafa6051a3681/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Gallery Viewport (6 Renders HD) -->
+      <div class="panel-gallery" id="viewport-ard-renders">
+        <div class="render-card" onclick="openLightbox('/assets/renders3d/artstation_11298390_42991245_Arduino UNO.webp', 'Arduino UNO R3 — Perspectiva Frontal')">
+          <div class="render-img-wrap">
+            <img src="/assets/renders3d/artstation_11298390_42991245_Arduino UNO.webp" alt="Arduino UNO Render 1" loading="lazy">
+            <span class="render-badge-pbr">PBR 1080p</span>
+          </div>
+          <div class="render-info">Perspectiva Frontal</div>
+        </div>
+        <div class="render-card" onclick="openLightbox('/assets/renders3d/artstation_11298390_42991247_Arduino UNO.webp', 'Arduino UNO R3 — Detalle Chip ATmega328P')">
+          <div class="render-img-wrap">
+            <img src="/assets/renders3d/artstation_11298390_42991247_Arduino UNO.webp" alt="Arduino UNO Render 2" loading="lazy">
+            <span class="render-badge-pbr">PBR 1080p</span>
+          </div>
+          <div class="render-info">Detalle ATmega328P</div>
+        </div>
+        <div class="render-card" onclick="openLightbox('/assets/renders3d/artstation_11298390_42991250_Arduino UNO.webp', 'Arduino UNO R3 — Conectores USB & Jack DC')">
+          <div class="render-img-wrap">
+            <img src="/assets/renders3d/artstation_11298390_42991250_Arduino UNO.webp" alt="Arduino UNO Render 3" loading="lazy">
+            <span class="render-badge-pbr">PBR 1080p</span>
+          </div>
+          <div class="render-info">Conectores USB & Jack DC</div>
+        </div>
+        <div class="render-card" onclick="openLightbox('/assets/renders3d/artstation_11298390_42991252_Arduino UNO.webp', 'Arduino UNO R3 — Perfil Lateral')">
+          <div class="render-img-wrap">
+            <img src="/assets/renders3d/artstation_11298390_42991252_Arduino UNO.webp" alt="Arduino UNO Render 4" loading="lazy">
+            <span class="render-badge-pbr">PBR 1080p</span>
+          </div>
+          <div class="render-info">Perfil Lateral</div>
+        </div>
+        <div class="render-card" onclick="openLightbox('/assets/renders3d/artstation_11298390_42991254_Arduino UNO.webp', 'Arduino UNO R3 — Vista Rasante PBR')">
+          <div class="render-img-wrap">
+            <img src="/assets/renders3d/artstation_11298390_42991254_Arduino UNO.webp" alt="Arduino UNO Render 5" loading="lazy">
+            <span class="render-badge-pbr">PBR 1080p</span>
+          </div>
+          <div class="render-info">Vista Rasante PBR</div>
+        </div>
+        <div class="render-card" onclick="openLightbox('/assets/renders3d/artstation_11298390_42991255_Arduino UNO.webp', 'Arduino UNO R3 — Vista Top Cenital')">
+          <div class="render-img-wrap">
+            <img src="/assets/renders3d/artstation_11298390_42991255_Arduino UNO.webp" alt="Arduino UNO Render 6" loading="lazy">
+            <span class="render-badge-pbr">PBR 1080p</span>
+          </div>
+          <div class="render-info">Vista Top Cenital</div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>Mohamed Fathi • 1080p Texturas PBR</span>
+        <a href="https://sketchfab.com/3d-models/arduino-uno-85e4a60ec0294e2c83fbafa6051a3681" target="_blank" rel="noopener">
+          Sketchfab
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- PANEL 2: PN532 NFC MODULE -->
+    <section class="studio-panel panel-pn532" id="panelPn532">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#30d158; box-shadow:0 0 8px rgba(48,209,88,0.4);"></span>
+          <span class="panel-title-text">Módulo PN532 NFC</span>
+          <span class="panel-spec-tag">13.56 MHz</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-pn-3d" onclick="setPanelTab('pn532', '3d')">3D CAD</button>
+          <button class="tab-pill-btn" id="tab-pn-render" onclick="setPanelTab('pn532', 'render')">Render</button>
+        </div>
+      </div>
+
+      <!-- 3D CAD Viewport -->
+      <div class="panel-viewport" id="viewport-pn-3d">
+        <iframe title="PN532 NFC RFID Module CAD Model"
+                src="https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1702333&width=800&height=600&edraw=true"
+                scrolling="no"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-pn-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/pn532_render.webp', 'Módulo PN532 NFC — Ensamble CAD V3')">
+          <img src="/assets/renders3d/pn532_render.webp" alt="PN532 NFC Ensamble Render" loading="lazy">
+          <div class="render-info">
+            <span>Ensamble CAD — PN532 V3</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>Catálogo 171 • ID 1702333</span>
+        <a href="https://www.3dcontentcentral.com/Download-Model.aspx?catalogid=171&id=1702333" target="_blank" rel="noopener">
+          3D ContentCentral
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- PANEL 3: SERVOMOTOR EXPLODE ANIMATION -->
+    <section class="studio-panel panel-servo" id="panelServo">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#bf5af2; box-shadow:0 0 8px rgba(191,90,242,0.4);"></span>
+          <span class="panel-title-text">Servomotor Explode</span>
+          <span class="panel-spec-tag">Cinemática</span>
+        </div>
+        <div class="panel-actions-group">
+          <!-- Play / Pause animado -->
+          <button class="btn-animation-toggle playing" id="btn-servo-toggle" onclick="toggleServoAnimation()" title="Pausar o reanudar animación (Tecla Espacio)">
+            <span id="servo-toggle-icon">⏸</span>
+            <span id="servo-toggle-text">Pausar</span>
+          </button>
+          <div class="tab-pills-wrap">
+            <button class="tab-pill-btn active" id="tab-servo-3d" onclick="setPanelTab('servo', '3d')">3D</button>
+            <button class="tab-pill-btn" id="tab-servo-render" onclick="setPanelTab('servo', 'render')">Render</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Cinemático Viewport -->
+      <div class="panel-viewport" id="viewport-servo-3d">
+        <iframe id="iframe-servomotor"
+                title="Servomotor Explode Animation"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+
+        <!-- Indicador flotante Apple de atajo de teclado -->
+        <div class="key-shortcut-hint" id="shortcutHint">
+          <span class="key-badge">Espacio</span>
+          <span id="shortcutHintText">Pausar / Reanudar despiece</span>
+        </div>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-servo-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/servomotor_render.webp', 'Servomotor — Despiece Estático de Componentes')">
+          <img src="/assets/renders3d/servomotor_render.webp" alt="Servomotor Despiece Render" loading="lazy">
+          <div class="render-info">
+            <span>Servomotor — Despiece Estático (Render)</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>Autor: mik1190 • Animación Despiece</span>
+        <a href="https://sketchfab.com/3d-models/servomotor-explode-animation-0fad21024bbc461db314a21db96b1395" target="_blank" rel="noopener">
+          Sketchfab
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       APPLE LIGHTBOX IMMERSIVE MODAL
+       ======================================================== -->
+  <div class="lightbox-backdrop" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-content-box" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" title="Cerrar visor (Esc)">&times;</button>
+      <img id="lightboxImg" src="" alt="Hardware 3D Render HD">
+      <div class="lightbox-caption" id="lightboxCaption">Detalle de Render</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SCRIPTS: ENGINE DE VISUALIZACIÓN & CONTROLES APPLE
+       ======================================================== */ -->
+  <script>
+    /* ========================================================
+       1. SISTEMA DE TEMAS (NEGRO PREDETERMINADO / BLANCO)
+       ======================================================== */
+    const STORAGE_KEY_THEME = 'ramsescb_theme_render3d';
+
+    function initTheme() {
+      // Predeterminado en color negro (dark), respetando selección previa si el usuario la cambió a blanco
+      const savedTheme = localStorage.getItem(STORAGE_KEY_THEME) || 'dark';
+      setAppTheme(savedTheme, false);
+    }
+
+    function setAppTheme(theme, save = true) {
+      const html = document.documentElement;
+      const btnDark = document.getElementById('theme-btn-dark');
+      const btnLight = document.getElementById('theme-btn-light');
+      const metaColor = document.getElementById('theme-color-meta');
+
+      if (theme === 'light') {
+        html.setAttribute('data-theme', 'light');
+        btnLight.classList.add('active');
+        btnLight.setAttribute('aria-checked', 'true');
+        btnDark.classList.remove('active');
+        btnDark.setAttribute('aria-checked', 'false');
+        if (metaColor) metaColor.setAttribute('content', '#f5f5f7');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btnDark.classList.add('active');
+        btnDark.setAttribute('aria-checked', 'true');
+        btnLight.classList.remove('active');
+        btnLight.setAttribute('aria-checked', 'false');
+        if (metaColor) metaColor.setAttribute('content', '#000000');
+      }
+
+      if (save) {
+        localStorage.setItem(STORAGE_KEY_THEME, theme);
+      }
+    }
+
+    /* ========================================================
+       2. SKETCHFAB VIEWER API PARA SERVOMOTOR (CINEMÁTICA)
+       ======================================================== */
+    let servoApi = null;
+    let isServoPlaying = true;
+    const servoIframe = document.getElementById('iframe-servomotor');
+
+    function initServomotorViewer() {
+      if (!window.Sketchfab) {
+        console.warn('Sketchfab API SDK aún no cargado');
+        return;
+      }
+
+      const client = new Sketchfab(servoIframe);
+      client.init('0fad21024bbc461db314a21db96b1395', {
+        success: function(api) {
+          servoApi = api;
+          api.start();
+          api.addEventListener('viewerready', function() {
+            isServoPlaying = true;
+            updateServoButtonState(true);
+          });
+        },
+        error: function() {
+          console.error('Error al inicializar Sketchfab Viewer API para el servomotor.');
+        },
+        autostart: 1,
+        preload: 1,
+        ui_watermark: 0,
+        ui_infos: 0,
+        annotations_visible: 0
+      });
+    }
+
+    function toggleServoAnimation() {
+      if (!servoApi) return;
+
+      if (isServoPlaying) {
+        servoApi.pause(function(err) {
+          if (!err) {
+            isServoPlaying = false;
+            updateServoButtonState(false);
+          }
+        });
+      } else {
+        servoApi.play(function(err) {
+          if (!err) {
+            isServoPlaying = true;
+            updateServoButtonState(true);
+          }
+        });
+      }
+    }
+
+    function updateServoButtonState(playing) {
+      const btn = document.getElementById('btn-servo-toggle');
+      const icon = document.getElementById('servo-toggle-icon');
+      const text = document.getElementById('servo-toggle-text');
+      const hint = document.getElementById('shortcutHintText');
+
+      if (playing) {
+        btn.className = 'btn-animation-toggle playing';
+        icon.textContent = '⏸';
+        text.textContent = 'Pausar';
+        if (hint) hint.textContent = 'Pausar despiece';
+      } else {
+        btn.className = 'btn-animation-toggle paused';
+        icon.textContent = '▶';
+        text.textContent = 'Reanudar';
+        if (hint) hint.textContent = 'Reanudar despiece';
+      }
+    }
+
+    // Atajo global Tecla Espacio para el servomotor
+    window.addEventListener('keydown', function(e) {
+      if (e.code === 'Space' || e.key === ' ' || e.keyCode === 32) {
+        if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+        // Evitar scroll de la ventana
+        e.preventDefault();
+        toggleServoAnimation();
+      }
+    });
+
+    const panelServoEl = document.getElementById('panelServo');
+    if (panelServoEl) {
+      panelServoEl.addEventListener('mouseenter', () => window.focus());
+    }
+
+    /* ========================================================
+       3. MODOS DE VISTA SEGMENTADA (CUADRÍCULA O ENFOCADA)
+       ======================================================== */
+    function setViewMode(mode) {
+      const main = document.getElementById('studioMain');
+      const buttons = {
+        grid: document.getElementById('btn-grid'),
+        arduino: document.getElementById('btn-arduino'),
+        pn532: document.getElementById('btn-pn532'),
+        servo: document.getElementById('btn-servo')
+      };
+
+      main.classList.remove('view-arduino', 'view-pn532', 'view-servo');
+      Object.values(buttons).forEach(btn => {
+        if (btn) {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
+
+      if (mode === 'grid') {
+        buttons.grid.classList.add('active');
+        buttons.grid.setAttribute('aria-selected', 'true');
+      } else if (mode === 'arduino') {
+        main.classList.add('view-arduino');
+        buttons.arduino.classList.add('active');
+        buttons.arduino.setAttribute('aria-selected', 'true');
+      } else if (mode === 'pn532') {
+        main.classList.add('view-pn532');
+        buttons.pn532.classList.add('active');
+        buttons.pn532.setAttribute('aria-selected', 'true');
+      } else if (mode === 'servo') {
+        main.classList.add('view-servo');
+        buttons.servo.classList.add('active');
+        buttons.servo.setAttribute('aria-selected', 'true');
+      }
+    }
+
+    /* ========================================================
+       4. PESTAÑAS INTERNAS DE CADA PANEL (3D vs RENDERS)
+       ======================================================== */
+    function setPanelTab(panel, tab) {
+      if (panel === 'arduino') {
+        const vp3d = document.getElementById('viewport-ard-3d');
+        const vpren = document.getElementById('viewport-ard-renders');
+        const tab3d = document.getElementById('tab-ard-3d');
+        const tabren = document.getElementById('tab-ard-renders');
+
+        if (tab === '3d') {
+          vp3d.style.display = 'block';
+          vpren.classList.remove('active');
+          tab3d.classList.add('active');
+          tabren.classList.remove('active');
+        } else {
+          vp3d.style.display = 'none';
+          vpren.classList.add('active');
+          tab3d.classList.remove('active');
+          tabren.classList.add('active');
+        }
+      } else if (panel === 'pn532') {
+        const vp3d = document.getElementById('viewport-pn-3d');
+        const vpren = document.getElementById('viewport-pn-render');
+        const tab3d = document.getElementById('tab-pn-3d');
+        const tabren = document.getElementById('tab-pn-render');
+
+        if (tab === '3d') {
+          vp3d.style.display = 'block';
+          vpren.classList.remove('active');
+          tab3d.classList.add('active');
+          tabren.classList.remove('active');
+        } else {
+          vp3d.style.display = 'none';
+          vpren.classList.add('active');
+          tab3d.classList.remove('active');
+          tabren.classList.add('active');
+        }
+      } else if (panel === 'servo') {
+        const vp3d = document.getElementById('viewport-servo-3d');
+        const vpren = document.getElementById('viewport-servo-render');
+        const tab3d = document.getElementById('tab-servo-3d');
+        const tabren = document.getElementById('tab-servo-render');
+
+        if (tab === '3d') {
+          vp3d.style.display = 'block';
+          vpren.classList.remove('active');
+          tab3d.classList.add('active');
+          tabren.classList.remove('active');
+        } else {
+          vp3d.style.display = 'none';
+          vpren.classList.add('active');
+          tab3d.classList.remove('active');
+          tabren.classList.add('active');
+        }
+      }
+    }
+
+    /* ========================================================
+       5. LIGHTBOX MODAL DE ALTA DEFINICIÓN
+       ======================================================== */
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      
+      img.src = src;
+      cap.textContent = caption || 'Render de Hardware';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Iniciar tema y 3D al cargar el DOM
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      initServomotorViewer();
+    });
+  </script>
+</body>
+</html>

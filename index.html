@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Language" content="es">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#05040a">
-<title>PortafolioIA</title>
+<title>RamsesCB</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="shortcut icon" href="favicon.ico">
@@ -1438,8 +1438,38 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
   align-items: flex-start;
   padding: clamp(4px, .8vh, 7px) 0;
   border-bottom: 1px solid rgba(157, 255, 157, .09);
+  transition: all 0.15s ease;
 }
 .archive-row:last-child { border-bottom: 0; }
+.archive-row.archive-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.archive-row.archive-link:hover,
+.archive-row.archive-link:focus,
+.archive-row.archive-link.is-active-row {
+  background: rgba(157, 255, 157, 0.12);
+  border-bottom-color: rgba(157, 255, 157, 0.4);
+  transform: translateX(3px);
+  outline: none;
+}
+.archive-row.archive-link:hover .archive-name,
+.archive-row.archive-link:focus .archive-name,
+.archive-row.archive-link.is-active-row .archive-name {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(157, 255, 157, 0.75);
+}
+.archive-row.archive-link:hover .archive-arrow,
+.archive-row.archive-link:focus .archive-arrow,
+.archive-row.archive-link.is-active-row .archive-arrow {
+  color: #9dff9d;
+  transform: translateX(4px);
+  text-shadow: 0 0 8px rgba(157, 255, 157, 0.9);
+}
 .archive-num {
   font-family: var(--mono);
   font-size: clamp(6px, .78vh, 8px);
@@ -3535,23 +3565,31 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
                   </div>
 
                   <div class="content-panel" data-panel="ARCHIVO" hidden>
-                    <div class="archive-row">
+                    <a href="/archivos-render3d" id="archiveRenders3dBtn" class="archive-row archive-link" tabindex="0" title="Abrir Visor 3D y Renders de Hardware">
                       <span class="archive-num">001</span>
+                      <div class="archive-main">
+                        <div class="archive-name">RENDERS 3D / HARDWARE STUDIO</div>
+                        <div class="archive-tag">arduino uno • pn532 nfc • servomotor • visor interactivo</div>
+                      </div>
+                      <span class="archive-arrow">→</span>
+                    </a>
+                    <div class="archive-row">
+                      <span class="archive-num">002</span>
                       <div class="archive-main"><div class="archive-name">PLAY PROVINCE / 2024</div><div class="archive-tag">arcade • web • identidad</div></div>
                       <span class="archive-arrow">→</span>
                     </div>
                     <div class="archive-row">
-                      <span class="archive-num">002</span>
+                      <span class="archive-num">003</span>
                       <div class="archive-main"><div class="archive-name">CINTAS PERDIDAS</div><div class="archive-tag">editorial • archivo</div></div>
                       <span class="archive-arrow">→</span>
                     </div>
                     <div class="archive-row">
-                      <span class="archive-num">003</span>
+                      <span class="archive-num">004</span>
                       <div class="archive-main"><div class="archive-name">RADIO LUMEN</div><div class="archive-tag">audio • identidad</div></div>
                       <span class="archive-arrow">→</span>
                     </div>
                     <div class="archive-row">
-                      <span class="archive-num">004</span>
+                      <span class="archive-num">005</span>
                       <div class="archive-main"><div class="archive-name">MANUALES</div><div class="archive-tag">print • sistema</div></div>
                       <span class="archive-arrow">→</span>
                     </div>
@@ -5183,6 +5221,12 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
     window.location.href = "/portafolio";
   }
 
+  function openRenders3d() {
+    tone(920, 0.08, "square", 0.08);
+    window.setTimeout(() => tone(1240, 0.12, "square", 0.07), 70);
+    window.location.href = "/archivos-render3d";
+  }
+
   function getOrCreateRadioAudio() {
     if (!radioAudio) {
       radioAudio = new Audio();
@@ -5682,6 +5726,13 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
         toggleRadioPlay();
         return;
       }
+      if (current === "ARCHIVO") {
+        event.preventDefault();
+        ensureAudio();
+        registerFirstInteraction();
+        openRenders3d();
+        return;
+      }
       return;
     }
     if ((event.key === "Escape" || event.key === "Backspace") && current !== "menu") {
@@ -5729,6 +5780,16 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
       ensureAudio();
       registerFirstInteraction();
       openPersonalPortfolio();
+    });
+  }
+
+  const archiveRenders3dBtn = $("#archiveRenders3dBtn");
+  if (archiveRenders3dBtn) {
+    archiveRenders3dBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      ensureAudio();
+      registerFirstInteraction();
+      openRenders3d();
     });
   }
 

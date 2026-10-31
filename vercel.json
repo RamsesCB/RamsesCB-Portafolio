@@ -19,6 +19,10 @@
       "dest": "/prompts.html"
     },
     {
+      "src": "/archivos-render3d",
+      "dest": "/archivos-render3d.html"
+    },
+    {
       "src": "/connections.xml",
       "dest": "/connections.xml",
       "headers": {
