@@ -2,11 +2,14 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
+  "redirects": [
     {
-      "src": "/arcade",
-      "dest": "/arcade.html"
-    },
+      "source": "/arcade",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "routes": [
     {
       "src": "/portafolio",
       "dest": "/portafolio.html"

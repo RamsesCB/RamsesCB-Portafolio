@@ -13,14 +13,9 @@
   </metadata>
 
   <explicitRoutes>
-    <route id="root" path="/" explicitUrl="https://portafolio-taller-ia.vercel.app/" entry="index.html" title="Inicio / Arcade Boot" />
-    <route id="arcade" path="/arcade" explicitUrl="https://portafolio-taller-ia.vercel.app/arcade.html" entry="arcade.html" title="Arcade CRT Experience" />
-    <route id="portafolio" path="/portafolio" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html" entry="portafolio.html" title="Portafolio Panorámico" />
-    <route id="section-anime" path="/portafolio?section=anime" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=anime" parent="portafolio" sectionKey="anime" title="Sección Anime Prompts" />
-    <route id="section-caricatura" path="/portafolio?section=caricatura" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=caricatura" parent="portafolio" sectionKey="caricatura" title="Sección Caricatura Prompts" />
-    <route id="section-elegancia" path="/portafolio?section=elegancia" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=elegancia" parent="portafolio" sectionKey="elegancia" title="Sección Elegancia Prompts" />
-    <route id="section-edicion" path="/portafolio?section=edicion" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=edicion" parent="portafolio" sectionKey="edicion" title="Sección Edición Prompts" />
-    <route id="section-superheroe" path="/portafolio?section=superheroe" explicitUrl="https://portafolio-taller-ia.vercel.app/portafolio.html?section=superheroe" parent="portafolio" sectionKey="superheroe" title="Sección Superhéroe Prompts" />
+    <route id="root" path="/" explicitUrl="https://ramsescb.com/" entry="index.html" title="Inicio / Arcade Boot" />
+    <route id="portafolio" path="/portafolio" explicitUrl="https://ramsescb.com/portafolio" entry="portafolio.html" title="Portafolio Profesional de Ramses CB" />
+    <route id="prompts" path="/prompts" explicitUrl="https://ramsescb.com/prompts" entry="prompts.html" title="Galería Interactiva de Prompts IA" />
   </explicitRoutes>
 
   <!-- MATRIZ RECTANGULAR DE CONEXIONES ORTOGONALES (5x5) -->
