@@ -4767,6 +4767,12 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
       osc.connect(gain);
       gain.connect(ctx.destination);
+      osc.onended = () => {
+        try {
+          osc.disconnect();
+          gain.disconnect();
+        } catch (e) {}
+      };
       osc.start();
       osc.stop(ctx.currentTime + duration);
     } catch (error) {}
@@ -5198,6 +5204,13 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
       radioAudio.addEventListener("waiting", () => {
         const statusEl = $("#radioStatusText");
         if (statusEl) statusEl.textContent = "SINTONIZANDO...";
+      });
+      radioAudio.addEventListener("error", () => {
+        const statusEl = $("#radioStatusText");
+        if (statusEl) statusEl.textContent = "ESTACIÓN NO DISPONIBLE";
+        radioPlaying = false;
+        updateRadioUI();
+        stopWaveVisualizer();
       });
       radioAudio.addEventListener("playing", () => {
         const statusEl = $("#radioStatusText");
