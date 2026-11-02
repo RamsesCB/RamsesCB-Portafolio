@@ -1004,6 +1004,57 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
 .content-scroll::-webkit-scrollbar-track { background: transparent; }
 .content-panel[hidden] { display: none !important; }
 
+/* ========================================================
+   ARCADE CRT PANEL SKELETON PREVIEW (Anti-Slop R-27 & R-40)
+   ======================================================== */
+.crt-panel-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.4vh, 14px);
+  padding: clamp(6px, 1vh, 12px);
+  width: 100%;
+}
+.crt-panel-skeleton[hidden] {
+  display: none !important;
+}
+@keyframes crt-sk-pulse {
+  0%, 100% { opacity: 0.18; transform: scaleX(0.99); }
+  50% { opacity: 0.55; transform: scaleX(1); }
+}
+.crt-sk-bar {
+  background: rgba(157, 255, 157, 0.22);
+  border: 1px solid rgba(157, 255, 157, 0.35);
+  border-radius: 3px;
+  animation: crt-sk-pulse 1.3s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(157, 255, 157, 0.15);
+}
+.crt-sk-title {
+  height: clamp(14px, 2vh, 20px);
+  width: clamp(120px, 35%, 220px);
+}
+.crt-sk-line {
+  height: clamp(8px, 1.2vh, 12px);
+  width: 100%;
+}
+.crt-sk-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.crt-sk-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.crt-sk-box {
+  flex: 1;
+  height: clamp(40px, 7vh, 60px);
+  background: rgba(157, 255, 157, 0.12);
+  border: 1px solid rgba(157, 255, 157, 0.25);
+  border-radius: 4px;
+  animation: crt-sk-pulse 1.3s ease-in-out infinite;
+}
+
 .term-line {
   display: flex;
   gap: clamp(3px, .6vh, 6px);
@@ -3491,6 +3542,20 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
                 </div>
                 <div class="content-scroll" id="contentScroll">
 
+                  <!-- Arcade Panel Skeleton Preview (Anti-Slop R-27 & R-40) -->
+                  <div class="crt-panel-skeleton" id="crtPanelSkeleton" hidden aria-hidden="true">
+                    <div class="crt-sk-bar crt-sk-title"></div>
+                    <div class="crt-sk-grid">
+                      <div class="crt-sk-bar crt-sk-line"></div>
+                      <div class="crt-sk-bar crt-sk-line" style="width: 88%;"></div>
+                      <div class="crt-sk-bar crt-sk-line" style="width: 72%;"></div>
+                    </div>
+                    <div class="crt-sk-row">
+                      <div class="crt-sk-box"></div>
+                      <div class="crt-sk-box"></div>
+                      <div class="crt-sk-box"></div>
+                    </div>
+                  </div>
 
                   <div class="content-panel" data-panel="RADIO" hidden>
                     <div class="radio-shell">
@@ -5510,12 +5575,27 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
     contentView.hidden = false;
     contentTitle.textContent = mode;
     contentIndex.textContent = (index + 1) + "/5";
-    panels.forEach((panel) => {
-      panel.hidden = panel.dataset.panel !== mode;
-    });
-    contentScroll.scrollTop = 0;
-    if (mode === "SOBRE MÍ") startTyping();
-    else stopTyping();
+
+    const crtSk = $("#crtPanelSkeleton");
+    if (crtSk) {
+      crtSk.hidden = false;
+      panels.forEach((panel) => panel.hidden = true);
+      setTimeout(() => {
+        crtSk.hidden = true;
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.panel !== mode;
+        });
+        contentScroll.scrollTop = 0;
+        if (mode === "SOBRE MÍ") startTyping();
+      }, 90);
+    } else {
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.panel !== mode;
+      });
+      contentScroll.scrollTop = 0;
+      if (mode === "SOBRE MÍ") startTyping();
+    }
+    if (mode !== "SOBRE MÍ") stopTyping();
     if (mode === "RADIO") {
       updateRadioUI();
       playRadioTrack();

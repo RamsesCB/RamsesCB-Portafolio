@@ -12,15 +12,33 @@
     },
     {
       "src": "/portafolio",
-      "dest": "/portafolio.html"
+      "dest": "/portafolio.html",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      }
     },
     {
       "src": "/prompts",
-      "dest": "/prompts.html"
+      "dest": "/prompts.html",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      }
     },
     {
       "src": "/archivos-render3d",
-      "dest": "/archivos-render3d.html"
+      "dest": "/archivos-render3d.html",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      }
     },
     {
       "src": "/connections.xml",
@@ -38,7 +56,13 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/$1",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+      }
     }
   ]
 }

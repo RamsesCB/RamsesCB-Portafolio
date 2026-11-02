@@ -492,6 +492,79 @@
       overflow: hidden;
     }
 
+    /* ========================================================
+       APPLE 3D HARDWARE SKELETON LOADERS (Anti-Slop R-27 & R-40)
+       ======================================================== */
+    .viewport-skeleton-loader {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-panel);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 15;
+      pointer-events: none;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s ease;
+      will-change: opacity, transform;
+    }
+
+    .viewport-skeleton-loader.is-loaded {
+      opacity: 0;
+      transform: scale(0.98);
+      pointer-events: none;
+    }
+
+    .sk-cube-mesh {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sk-cube-mesh svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--accent);
+      fill: none;
+      animation: sk-cube-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes sk-cube-pulse {
+      0%, 100% { transform: scale(0.95); opacity: 0.6; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+
+    .sk-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--segmented-bg);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      backdrop-filter: blur(10px);
+    }
+
+    .sk-status-pill .sk-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: sk-dot-blink 1.2s infinite ease-in-out;
+    }
+
+    @keyframes sk-dot-blink {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
     .panel-viewport iframe {
       width: 100%;
       height: 100%;
@@ -928,7 +1001,18 @@
 
       <!-- 3D WebGL Viewport -->
       <div class="panel-viewport" id="viewport-ard-3d">
-        <iframe title="Arduino UNO R3 3D Interactive Model"
+        <!-- Skeleton Preview (Anti-Slop R-27 & R-40) -->
+        <div class="viewport-skeleton-loader" id="sk-ard-3d" aria-hidden="true">
+          <div class="sk-cube-mesh">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot"></span>
+            <span>Cargando escena 3D WebGL (PBR)...</span>
+          </div>
+        </div>
+        <iframe id="iframe-arduino"
+                title="Arduino UNO R3 3D Interactive Model"
                 src="https://sketchfab.com/models/85e4a60ec0294e2c83fbafa6051a3681/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
                 allowfullscreen
@@ -1007,7 +1091,18 @@
 
       <!-- 3D CAD Viewport -->
       <div class="panel-viewport" id="viewport-pn-3d">
-        <iframe title="PN532 NFC RFID Module CAD Model"
+        <!-- Skeleton Preview (Anti-Slop R-27 & R-40) -->
+        <div class="viewport-skeleton-loader" id="sk-pn-3d" aria-hidden="true">
+          <div class="sk-cube-mesh">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot"></span>
+            <span>Cargando ensamble CAD (13.56 MHz)...</span>
+          </div>
+        </div>
+        <iframe id="iframe-pn532"
+                title="PN532 NFC RFID Module CAD Model"
                 src="https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1702333&width=800&height=600&edraw=true"
                 scrolling="no"
                 allowfullscreen
@@ -1058,6 +1153,16 @@
 
       <!-- 3D Cinemático Viewport -->
       <div class="panel-viewport" id="viewport-servo-3d">
+        <!-- Skeleton Preview (Anti-Slop R-27 & R-40) -->
+        <div class="viewport-skeleton-loader" id="sk-servo-3d" aria-hidden="true">
+          <div class="sk-cube-mesh">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot"></span>
+            <span>Inicializando cinemática y despiece...</span>
+          </div>
+        </div>
         <iframe id="iframe-servomotor"
                 title="Servomotor Explode Animation"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
@@ -1168,6 +1273,11 @@
           api.addEventListener('viewerready', function() {
             isServoPlaying = true;
             updateServoButtonState(true);
+            const sk = document.getElementById('sk-servo-3d');
+            if (sk) {
+              sk.classList.add('is-loaded');
+              setTimeout(() => { sk.style.display = 'none'; }, 380);
+            }
           });
         },
         error: function() {
@@ -1355,9 +1465,32 @@
       if (e.key === 'Escape') closeLightbox();
     });
 
-    // Iniciar tema y 3D al cargar el DOM
+    /* ========================================================
+       6. CONTROL DE SKELETON LOADERS (3D VIEWPORTS)
+       ======================================================== */
+    function setupIframeSkeleton(iframeId, skeletonId) {
+      const iframe = document.getElementById(iframeId);
+      const skeleton = document.getElementById(skeletonId);
+      if (!iframe || !skeleton) return;
+
+      const dismiss = () => {
+        if (!skeleton.classList.contains('is-loaded')) {
+          skeleton.classList.add('is-loaded');
+          setTimeout(() => { if (skeleton.parentNode) skeleton.style.display = 'none'; }, 380);
+        }
+      };
+
+      iframe.addEventListener('load', dismiss);
+      // Fallback de seguridad si la conexión es lenta o si viene de caché
+      setTimeout(dismiss, 3000);
+    }
+
+    // Iniciar tema, esqueletos y 3D al cargar el DOM
     window.addEventListener('DOMContentLoaded', () => {
       initTheme();
+      setupIframeSkeleton('iframe-arduino', 'sk-ard-3d');
+      setupIframeSkeleton('iframe-pn532', 'sk-pn-3d');
+      setupIframeSkeleton('iframe-servomotor', 'sk-servo-3d');
       initServomotorViewer();
     });
   </script>
