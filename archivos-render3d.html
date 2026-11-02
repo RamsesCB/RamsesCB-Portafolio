@@ -493,7 +493,7 @@
     }
 
     /* ========================================================
-       APPLE 3D HARDWARE SKELETON LOADERS (Anti-Slop R-27 & R-40)
+       APPLE 3D HARDWARE SKELETON LOADERS (Exact Physical Silhouettes)
        ======================================================== */
     .viewport-skeleton-loader {
       position: absolute;
@@ -503,7 +503,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 14px;
+      gap: 16px;
       z-index: 15;
       pointer-events: none;
       transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s ease;
@@ -516,26 +516,161 @@
       pointer-events: none;
     }
 
-    .sk-cube-mesh {
-      width: 48px;
-      height: 48px;
+    /* Siluetas de Hardware Físico */
+    .sk-board-silhouette {
       position: relative;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px dashed rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      animation: sk-cube-pulse 2.2s ease-in-out infinite;
+    }
+    
+    .sk-arduino-board {
+      width: 170px;
+      height: 120px;
+    }
+    .sk-usb-port {
+      position: absolute;
+      top: -8px;
+      left: 14px;
+      width: 32px;
+      height: 14px;
+      background: rgba(10, 132, 255, 0.25);
+      border-radius: 3px;
+      border: 1px solid rgba(10, 132, 255, 0.4);
+    }
+    .sk-dc-jack {
+      position: absolute;
+      top: 34px;
+      left: -8px;
+      width: 24px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: 3px;
+    }
+    .sk-mcu-chip {
+      position: absolute;
+      bottom: 18px;
+      right: 22px;
+      width: 72px;
+      height: 20px;
+      background: rgba(10, 132, 255, 0.16);
+      border: 1px solid rgba(10, 132, 255, 0.35);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.58rem;
+      font-family: monospace;
+      color: rgba(10, 132, 255, 0.7);
+    }
+    .sk-pin-row.top {
+      position: absolute;
+      top: 6px;
+      right: 14px;
+      width: 80px;
+      height: 8px;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 4px, transparent 4px, transparent 7px);
+    }
+    .sk-pin-row.btm {
+      position: absolute;
+      bottom: 6px;
+      right: 14px;
+      width: 70px;
+      height: 8px;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 4px, transparent 4px, transparent 7px);
+    }
+
+    .sk-nfc-board {
+      width: 150px;
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .sk-antenna-coil {
+      width: 110px;
+      height: 64px;
+      border: 2px solid rgba(48, 209, 88, 0.35);
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+    .sk-coil-inner {
+      width: 86px;
+      height: 42px;
+      border: 1.5px dashed rgba(48, 209, 88, 0.25);
+      border-radius: 5px;
+    }
+    .sk-nfc-chip {
+      padding: 2px 8px;
+      background: rgba(48, 209, 88, 0.15);
+      border: 1px solid rgba(48, 209, 88, 0.3);
+      border-radius: 4px;
+      font-size: 0.6rem;
+      font-family: monospace;
+      color: rgba(48, 209, 88, 0.8);
+    }
 
-    .sk-cube-mesh svg {
-      width: 100%;
-      height: 100%;
-      stroke: var(--accent);
-      fill: none;
-      animation: sk-cube-pulse 2s ease-in-out infinite;
+    .sk-servo-motor {
+      width: 140px;
+      height: 125px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .sk-servo-spline {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(191, 90, 242, 0.3);
+      border: 1.5px solid rgba(191, 90, 242, 0.5);
+      margin-bottom: 2px;
+    }
+    .sk-servo-top-case {
+      width: 44px;
+      height: 16px;
+      background: rgba(191, 90, 242, 0.18);
+      border-radius: 4px 4px 0 0;
+      border: 1px solid rgba(191, 90, 242, 0.3);
+    }
+    .sk-servo-body {
+      width: 72px;
+      height: 56px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .sk-servo-gear {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(191, 90, 242, 0.4);
+    }
+    .sk-servo-gear.sm {
+      width: 14px;
+      height: 14px;
+    }
+    .sk-servo-tabs {
+      position: absolute;
+      top: 34px;
+      width: 96px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 2px;
     }
 
     @keyframes sk-cube-pulse {
-      0%, 100% { transform: scale(0.95); opacity: 0.6; }
-      50% { transform: scale(1.05); opacity: 1; }
+      0%, 100% { opacity: 0.4; transform: scale(0.97); }
+      50% { opacity: 0.85; transform: scale(1.02); }
     }
 
     .sk-status-pill {
@@ -1001,14 +1136,18 @@
 
       <!-- 3D WebGL Viewport -->
       <div class="panel-viewport" id="viewport-ard-3d">
-        <!-- Skeleton Preview (Anti-Slop R-27 & R-40) -->
+        <!-- Skeleton Preview (Exact Arduino UNO PCB Silhouette) -->
         <div class="viewport-skeleton-loader" id="sk-ard-3d" aria-hidden="true">
-          <div class="sk-cube-mesh">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          <div class="sk-board-silhouette sk-arduino-board">
+            <div class="sk-usb-port"></div>
+            <div class="sk-dc-jack"></div>
+            <div class="sk-pin-row top"></div>
+            <div class="sk-mcu-chip">ATmega328P</div>
+            <div class="sk-pin-row btm"></div>
           </div>
           <div class="sk-status-pill">
             <span class="sk-dot"></span>
-            <span>Cargando escena 3D WebGL (PBR)...</span>
+            <span>Cargando escena 3D Arduino UNO R3...</span>
           </div>
         </div>
         <iframe id="iframe-arduino"
@@ -1091,10 +1230,13 @@
 
       <!-- 3D CAD Viewport -->
       <div class="panel-viewport" id="viewport-pn-3d">
-        <!-- Skeleton Preview (Anti-Slop R-27 & R-40) -->
+        <!-- Skeleton Preview (Exact PN532 NFC Board Silhouette) -->
         <div class="viewport-skeleton-loader" id="sk-pn-3d" aria-hidden="true">
-          <div class="sk-cube-mesh">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          <div class="sk-board-silhouette sk-nfc-board">
+            <div class="sk-antenna-coil">
+              <div class="sk-coil-inner"></div>
+            </div>
+            <div class="sk-nfc-chip">PN532 NFC 13.56MHz</div>
           </div>
           <div class="sk-status-pill">
             <span class="sk-dot"></span>
@@ -1153,10 +1295,16 @@
 
       <!-- 3D Cinemático Viewport -->
       <div class="panel-viewport" id="viewport-servo-3d">
-        <!-- Skeleton Preview (Anti-Slop R-27 & R-40) -->
+        <!-- Skeleton Preview (Exact Servomotor Explode Silhouette) -->
         <div class="viewport-skeleton-loader" id="sk-servo-3d" aria-hidden="true">
-          <div class="sk-cube-mesh">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <div class="sk-board-silhouette sk-servo-motor">
+            <div class="sk-servo-spline"></div>
+            <div class="sk-servo-top-case"></div>
+            <div class="sk-servo-tabs"></div>
+            <div class="sk-servo-body">
+              <div class="sk-servo-gear"></div>
+              <div class="sk-servo-gear sm"></div>
+            </div>
           </div>
           <div class="sk-status-pill">
             <span class="sk-dot"></span>

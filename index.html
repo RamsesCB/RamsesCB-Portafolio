@@ -1006,54 +1006,45 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
 .content-panel[hidden] { display: none !important; }
 
 /* ========================================================
-   ARCADE CRT PANEL SKELETON PREVIEW (Anti-Slop R-27 & R-40)
+   ARCADE CRT 1:1 SHADOW SILHOUETTES (Exact Panel Footprints)
    ======================================================== */
-.crt-panel-skeleton {
+.crt-shadow-sk {
   display: flex;
   flex-direction: column;
-  gap: clamp(8px, 1.4vh, 14px);
-  padding: clamp(6px, 1vh, 12px);
   width: 100%;
+  animation: crt-sk-flicker 1.8s ease-in-out infinite;
+  pointer-events: none;
 }
-.crt-panel-skeleton[hidden] {
+.crt-shadow-sk[hidden] {
   display: none !important;
 }
-@keyframes crt-sk-pulse {
-  0%, 100% { opacity: 0.18; transform: scaleX(0.99); }
-  50% { opacity: 0.55; transform: scaleX(1); }
+
+@keyframes crt-sk-flicker {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.75; }
 }
-.crt-sk-bar {
-  background: rgba(157, 255, 157, 0.22);
-  border: 1px solid rgba(157, 255, 157, 0.35);
-  border-radius: 3px;
-  animation: crt-sk-pulse 1.3s ease-in-out infinite;
-  box-shadow: 0 0 8px rgba(157, 255, 157, 0.15);
-}
-.crt-sk-title {
-  height: clamp(14px, 2vh, 20px);
-  width: clamp(120px, 35%, 220px);
-}
-.crt-sk-line {
-  height: clamp(8px, 1.2vh, 12px);
-  width: 100%;
-}
-.crt-sk-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.crt-sk-row {
-  display: flex;
-  gap: 10px;
-  margin-top: 6px;
-}
-.crt-sk-box {
-  flex: 1;
-  height: clamp(40px, 7vh, 60px);
+
+.crt-sk-el {
   background: rgba(157, 255, 157, 0.12);
-  border: 1px solid rgba(157, 255, 157, 0.25);
-  border-radius: 4px;
-  animation: crt-sk-pulse 1.3s ease-in-out infinite;
+  border: 1px solid rgba(157, 255, 157, 0.28);
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(157, 255, 157, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-sk-el::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(157, 255, 157, 0.25), transparent);
+  animation: crt-sk-sweep 1.6s infinite;
+  transform: translateX(-100%);
+}
+
+@keyframes crt-sk-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .term-line {
@@ -3543,19 +3534,126 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
                 </div>
                 <div class="content-scroll" id="contentScroll">
 
-                  <!-- Arcade Panel Skeleton Preview (Anti-Slop R-27 & R-40) -->
-                  <div class="crt-panel-skeleton" id="crtPanelSkeleton" hidden aria-hidden="true">
-                    <div class="crt-sk-bar crt-sk-title"></div>
-                    <div class="crt-sk-grid">
-                      <div class="crt-sk-bar crt-sk-line"></div>
-                      <div class="crt-sk-bar crt-sk-line" style="width: 88%;"></div>
-                      <div class="crt-sk-bar crt-sk-line" style="width: 72%;"></div>
+                  <!-- Arcade Panel 1:1 Silhouette Shadows (Exact Screen Footprints) -->
+                  <div id="crtPanelSkeleton" hidden aria-hidden="true">
+                    
+                    <!-- Radio Exact Silhouette Shadow -->
+                    <div class="crt-shadow-sk" id="crtSkRadio" hidden>
+                      <div class="radio-shell" style="opacity: 0.6; border-color: rgba(157,255,157,0.35);">
+                        <div class="radio-tuner-bar">
+                          <div class="crt-sk-el" style="width: 85px; height: 18px;"></div>
+                          <div class="crt-sk-el" style="width: 105px; height: 16px;"></div>
+                          <div class="crt-sk-el" style="width: 85px; height: 18px;"></div>
+                        </div>
+                        <div class="radio-dial-bar" style="gap: 4px; display: flex;">
+                          <div class="crt-sk-el" style="width: 72px; height: 18px; border-radius: 4px;"></div>
+                          <div class="crt-sk-el" style="width: 82px; height: 18px; border-radius: 4px;"></div>
+                          <div class="crt-sk-el" style="width: 76px; height: 18px; border-radius: 4px;"></div>
+                          <div class="crt-sk-el" style="width: 86px; height: 18px; border-radius: 4px;"></div>
+                        </div>
+                        <div class="radio-header-meta">
+                          <div class="crt-sk-el" style="width: 190px; height: 16px;"></div>
+                          <div class="crt-sk-el" style="width: 60px; height: 18px; border-radius: 9999px;"></div>
+                        </div>
+                        <!-- 24-bar Equalizer Silhouette -->
+                        <div class="radio-wave" style="border-color: rgba(157,255,157,0.25);">
+                          <i style="height: 40%"></i><i style="height: 70%"></i><i style="height: 30%"></i><i style="height: 85%"></i>
+                          <i style="height: 50%"></i><i style="height: 90%"></i><i style="height: 45%"></i><i style="height: 60%"></i>
+                          <i style="height: 75%"></i><i style="height: 35%"></i><i style="height: 95%"></i><i style="height: 55%"></i>
+                          <i style="height: 40%"></i><i style="height: 80%"></i><i style="height: 65%"></i><i style="height: 30%"></i>
+                          <i style="height: 85%"></i><i style="height: 50%"></i><i style="height: 70%"></i><i style="height: 40%"></i>
+                          <i style="height: 90%"></i><i style="height: 60%"></i><i style="height: 35%"></i><i style="height: 75%"></i>
+                        </div>
+                        <!-- Cassette Shell Silhouette -->
+                        <div class="radio-cassette" style="height: 90px; border-color: rgba(157,255,157,0.3); display: flex; align-items: center; justify-content: space-around; padding: 10px;">
+                          <div class="crt-sk-el" style="width: 36px; height: 36px; border-radius: 50%;"></div>
+                          <div class="crt-sk-el" style="width: 70px; height: 16px;"></div>
+                          <div class="crt-sk-el" style="width: 36px; height: 36px; border-radius: 50%;"></div>
+                        </div>
+                        <!-- 3 Buttons Silhouette -->
+                        <div class="radio-controls" style="display: flex; gap: 6px;">
+                          <div class="crt-sk-el" style="flex:1; height: 26px;"></div>
+                          <div class="crt-sk-el" style="flex:1.4; height: 26px;"></div>
+                          <div class="crt-sk-el" style="flex:1; height: 26px;"></div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="crt-sk-row">
-                      <div class="crt-sk-box"></div>
-                      <div class="crt-sk-box"></div>
-                      <div class="crt-sk-box"></div>
+
+                    <!-- Sobre Mí Exact Silhouette Shadow -->
+                    <div class="crt-shadow-sk" id="crtSkAbout" hidden style="gap: 12px;">
+                      <div class="crt-sk-el" style="width: 140px; height: 12px;"></div>
+                      <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div class="crt-sk-el" style="width: 100%; height: 12px;"></div>
+                        <div class="crt-sk-el" style="width: 94%; height: 12px;"></div>
+                        <div class="crt-sk-el" style="width: 86%; height: 12px;"></div>
+                        <div class="crt-sk-el" style="width: 68%; height: 12px;"></div>
+                      </div>
+                      <div class="crt-sk-el" style="width: 220px; height: 36px; border-radius: 6px; margin-top: 6px;"></div>
+                      <div class="crt-sk-el" style="width: 100%; height: 40px; border-radius: 4px;"></div>
                     </div>
+
+                    <!-- Archivo Exact Silhouette Shadow (5 Rows) -->
+                    <div class="crt-shadow-sk" id="crtSkArchive" hidden style="gap: 2px;">
+                      <div class="archive-row" style="border-bottom: 1px solid rgba(157,255,157,0.2); padding: 8px 4px; display: flex; align-items: center;">
+                        <span class="crt-sk-el" style="width: 24px; height: 12px;"></span>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 0 10px;">
+                          <div class="crt-sk-el" style="width: 210px; height: 12px;"></div>
+                          <div class="crt-sk-el" style="width: 260px; height: 9px;"></div>
+                        </div>
+                        <span class="crt-sk-el" style="width: 14px; height: 14px;"></span>
+                      </div>
+                      <div class="archive-row" style="border-bottom: 1px solid rgba(157,255,157,0.2); padding: 8px 4px; display: flex; align-items: center;">
+                        <span class="crt-sk-el" style="width: 24px; height: 12px;"></span>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 0 10px;">
+                          <div class="crt-sk-el" style="width: 160px; height: 12px;"></div>
+                          <div class="crt-sk-el" style="width: 180px; height: 9px;"></div>
+                        </div>
+                        <span class="crt-sk-el" style="width: 14px; height: 14px;"></span>
+                      </div>
+                      <div class="archive-row" style="border-bottom: 1px solid rgba(157,255,157,0.2); padding: 8px 4px; display: flex; align-items: center;">
+                        <span class="crt-sk-el" style="width: 24px; height: 12px;"></span>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 0 10px;">
+                          <div class="crt-sk-el" style="width: 140px; height: 12px;"></div>
+                          <div class="crt-sk-el" style="width: 170px; height: 9px;"></div>
+                        </div>
+                        <span class="crt-sk-el" style="width: 14px; height: 14px;"></span>
+                      </div>
+                      <div class="archive-row" style="border-bottom: 1px solid rgba(157,255,157,0.2); padding: 8px 4px; display: flex; align-items: center;">
+                        <span class="crt-sk-el" style="width: 24px; height: 12px;"></span>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 0 10px;">
+                          <div class="crt-sk-el" style="width: 130px; height: 12px;"></div>
+                          <div class="crt-sk-el" style="width: 160px; height: 9px;"></div>
+                        </div>
+                        <span class="crt-sk-el" style="width: 14px; height: 14px;"></span>
+                      </div>
+                      <div class="archive-row" style="padding: 8px 4px; display: flex; align-items: center;">
+                        <span class="crt-sk-el" style="width: 24px; height: 12px;"></span>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 0 10px;">
+                          <div class="crt-sk-el" style="width: 100px; height: 12px;"></div>
+                          <div class="crt-sk-el" style="width: 140px; height: 9px;"></div>
+                        </div>
+                        <span class="crt-sk-el" style="width: 14px; height: 14px;"></span>
+                      </div>
+                    </div>
+
+                    <!-- Contacto Exact Silhouette Shadow -->
+                    <div class="crt-shadow-sk" id="crtSkContact" hidden style="gap: 10px;">
+                      <div class="contact-header-card" style="border-color: rgba(157,255,157,0.3); display: flex; align-items: center; padding: 8px;">
+                        <div class="crt-sk-el" style="width: 36px; height: 36px; border-radius: 4px;"></div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px; padding-left: 10px;">
+                          <div class="crt-sk-el" style="width: 190px; height: 12px;"></div>
+                          <div class="crt-sk-el" style="width: 230px; height: 9px;"></div>
+                          <div class="crt-sk-el" style="width: 140px; height: 9px;"></div>
+                        </div>
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <div class="crt-sk-el" style="width: 100%; height: 32px; border-radius: 4px;"></div>
+                        <div class="crt-sk-el" style="width: 100%; height: 32px; border-radius: 4px;"></div>
+                        <div class="crt-sk-el" style="width: 100%; height: 32px; border-radius: 4px;"></div>
+                        <div class="crt-sk-el" style="width: 100%; height: 32px; border-radius: 4px;"></div>
+                      </div>
+                    </div>
+
                   </div>
 
                   <div class="content-panel" data-panel="RADIO" hidden>
@@ -5578,17 +5676,30 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
     contentIndex.textContent = (index + 1) + "/5";
 
     const crtSk = $("#crtPanelSkeleton");
+    const skRadio = $("#crtSkRadio");
+    const skAbout = $("#crtSkAbout");
+    const skArchive = $("#crtSkArchive");
+    const skContact = $("#crtSkContact");
+
     if (crtSk) {
       crtSk.hidden = false;
+      if (skRadio) skRadio.hidden = mode !== "RADIO";
+      if (skAbout) skAbout.hidden = mode !== "SOBRE MÍ";
+      if (skArchive) skArchive.hidden = mode !== "ARCHIVO";
+      if (skContact) skContact.hidden = mode !== "CONTACTO";
       panels.forEach((panel) => panel.hidden = true);
       setTimeout(() => {
         crtSk.hidden = true;
+        if (skRadio) skRadio.hidden = true;
+        if (skAbout) skAbout.hidden = true;
+        if (skArchive) skArchive.hidden = true;
+        if (skContact) skContact.hidden = true;
         panels.forEach((panel) => {
           panel.hidden = panel.dataset.panel !== mode;
         });
         contentScroll.scrollTop = 0;
         if (mode === "SOBRE MÍ") startTyping();
-      }, 90);
+      }, 140);
     } else {
       panels.forEach((panel) => {
         panel.hidden = panel.dataset.panel !== mode;
