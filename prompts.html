@@ -629,90 +629,83 @@
   font-weight: 800 !important;
 }
 
-.intro-video-edit-container {
+.intro-sonic-ring-wrap {
   position: relative !important;
-  z-index: 20 !important;
+  z-index: 25 !important;
   display: flex !important;
-  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  text-align: center !important;
-  padding: 2.5rem !important;
-  max-width: 1050px !important;
-  width: 90vw !important;
-  box-sizing: border-box !important;
+  pointer-events: none !important;
 }
 
-.video-edit-hud-top {
+.intro-sonic-halo {
+  width: 140px !important;
+  height: 140px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
   display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  width: 100% !important;
-  margin-bottom: 2.5rem !important;
-  font-family: monospace !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0.2em !important;
-  text-transform: uppercase !important;
-  opacity: 0.7 !important;
-}
-
-.video-edit-rec-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.45rem !important;
-  color: #ef4444 !important;
-  font-weight: 800 !important;
-}
-.rec-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ef4444;
-  animation: pulseDot 1s infinite;
-}
-
-.kinetic-lyrics-box {
-  min-height: 220px !important;
-  display: flex !important;
-  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.15) !important;
+  transition: transform 0.08s ease-out, border-color 0.2s ease !important;
+}
+
+.intro-sonic-core {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.1) 70%, transparent 100%) !important;
+  filter: blur(2px) !important;
   transition: transform 0.08s ease-out !important;
 }
 
-.kinetic-line-1 {
-  font-size: clamp(2rem, 5vw, 3.8rem) !important;
+.stage-theme-anime .intro-sonic-halo { border-color: rgba(56, 189, 248, 0.65) !important; box-shadow: 0 0 60px rgba(2, 132, 199, 0.65) !important; }
+.stage-theme-anime .intro-sonic-core { background: radial-gradient(circle, #38bdf8 0%, rgba(2, 132, 199, 0.3) 70%, transparent 100%) !important; }
+
+.stage-theme-caricatura .intro-sonic-halo { border-color: rgba(251, 113, 133, 0.65) !important; box-shadow: 0 0 60px rgba(224, 72, 72, 0.65) !important; }
+.stage-theme-caricatura .intro-sonic-core { background: radial-gradient(circle, #fb7185 0%, rgba(224, 72, 72, 0.3) 70%, transparent 100%) !important; }
+
+.stage-theme-elegancia .intro-sonic-halo { border-color: rgba(233, 221, 194, 0.65) !important; box-shadow: 0 0 60px rgba(197, 160, 89, 0.65) !important; }
+.stage-theme-elegancia .intro-sonic-core { background: radial-gradient(circle, #e9ddc2 0%, rgba(197, 160, 89, 0.3) 70%, transparent 100%) !important; }
+
+.stage-theme-edicion .intro-sonic-halo { border-color: rgba(34, 211, 238, 0.65) !important; box-shadow: 0 0 60px rgba(14, 116, 144, 0.65) !important; }
+.stage-theme-edicion .intro-sonic-core { background: radial-gradient(circle, #22d3ee 0%, rgba(14, 116, 144, 0.3) 70%, transparent 100%) !important; }
+
+.stage-theme-superheroe .intro-sonic-halo { border-color: rgba(96, 165, 250, 0.65) !important; box-shadow: 0 0 60px rgba(37, 99, 235, 0.65) !important; }
+.stage-theme-superheroe .intro-sonic-core { background: radial-gradient(circle, #60a5fa 0%, rgba(37, 99, 235, 0.3) 70%, transparent 100%) !important; }
+
+.intro-unmute-btn {
+  position: absolute !important;
+  bottom: 3.5rem !important;
+  z-index: 50 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #ffffff !important;
+  padding: 0.75rem 1.6rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.85rem !important;
   font-weight: 800 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  margin: 0 !important;
-  line-height: 1.2 !important;
-  transition: all 0.15s ease-out !important;
+  cursor: pointer !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.2) !important;
+  animation: pulseUnmute 1.8s ease-in-out infinite !important;
+  transition: transform 0.2s ease, background 0.2s ease !important;
 }
-.kinetic-line-2 {
-  font-size: clamp(2.5rem, 6.5vw, 5rem) !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  margin-top: 0.65rem !important;
-  line-height: 1.15 !important;
-  transition: all 0.12s ease-out !important;
+.intro-unmute-btn:hover {
+  transform: scale(1.05) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: #ffffff !important;
 }
-
-.stage-theme-anime .kinetic-line-1 { color: #e2e8f0 !important; font-family: 'Comic Sans MS', cursive, sans-serif !important; text-shadow: 0 0 30px rgba(2, 132, 199, 0.6) !important; }
-.stage-theme-anime .kinetic-line-2 { color: #ffffff !important; font-family: 'Comic Sans MS', cursive, sans-serif !important; text-shadow: 0 0 50px rgba(2, 132, 199, 0.9), 0 0 80px rgba(56, 189, 248, 0.6) !important; }
-
-.stage-theme-caricatura .kinetic-line-1 { color: #fecaca !important; font-family: 'Comic Sans MS', 'Inter', cursive, sans-serif !important; text-shadow: 0 0 30px rgba(224, 72, 72, 0.6) !important; }
-.stage-theme-caricatura .kinetic-line-2 { color: #ffffff !important; font-family: 'Comic Sans MS', 'Inter', cursive, sans-serif !important; text-shadow: 0 0 50px rgba(224, 72, 72, 0.9), 0 0 80px rgba(251, 113, 133, 0.6) !important; }
-
-.stage-theme-elegancia .kinetic-line-1 { color: #f7f3ea !important; font-family: 'Times New Roman', Georgia, serif !important; font-weight: 400 !important; letter-spacing: 0.18em !important; text-shadow: 0 0 30px rgba(197, 160, 89, 0.5) !important; }
-.stage-theme-elegancia .kinetic-line-2 { color: #ffffff !important; font-family: 'Times New Roman', Georgia, serif !important; font-style: italic !important; letter-spacing: 0.12em !important; text-shadow: 0 0 50px rgba(197, 160, 89, 0.9), 0 0 80px rgba(255, 255, 255, 0.6) !important; }
-
-.stage-theme-edicion .kinetic-line-1 { color: #cffafe !important; font-family: 'Space Grotesk', monospace, sans-serif !important; text-shadow: 0 0 30px rgba(14, 116, 144, 0.6) !important; }
-.stage-theme-edicion .kinetic-line-2 { color: #ffffff !important; font-family: 'Space Grotesk', monospace, sans-serif !important; text-shadow: 0 0 50px rgba(6, 182, 212, 0.9), 0 0 80px rgba(14, 116, 144, 0.6) !important; }
-
-.stage-theme-superheroe .kinetic-line-1 { color: #dbeafe !important; font-family: 'Inter', sans-serif !important; letter-spacing: 0.14em !important; text-shadow: 0 0 30px rgba(37, 99, 235, 0.6) !important; }
-.stage-theme-superheroe .kinetic-line-2 { color: #ffffff !important; font-family: 'Inter', sans-serif !important; letter-spacing: 0.08em !important; text-shadow: 0 0 50px rgba(37, 99, 235, 0.9), 0 0 80px rgba(96, 165, 250, 0.6) !important; }
+@keyframes pulseUnmute {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); }
+  50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.45); }
+}
 
 
 /* =========================================================
@@ -942,13 +935,30 @@ function fadeAudio(type, targetVol, duration, onComplete) {
   cancelFade(type);
   var audio = getAudio(type);
   if (!audio) return;
-  if (targetVol > 0 && audio.paused) {
-    audio.volume = 0;
-    var playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(function() {});
+  targetVol = Math.max(0, Math.min(0.12, targetVol)); // safety ceiling for hover volume
+
+  if (targetVol > 0) {
+    // Exclusivity: pause all other audios immediately so volume never accumulates
+    Object.keys(AUDIO_SOURCES).forEach(function(k) {
+      if (k !== type) {
+        cancelFade(k);
+        var other = getAudio(k);
+        if (other && !other.paused) {
+          other.pause();
+          other.volume = 0;
+        }
+      }
+    });
+
+    if (audio.paused) {
+      audio.volume = 0;
+      var playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function() {});
+      }
     }
   }
+
   var startVol = audio.volume;
   var startTime = performance.now();
   function tick(now) {
@@ -956,7 +966,7 @@ function fadeAudio(type, targetVol, duration, onComplete) {
     var p = Math.min(1, elapsed / duration);
     var ease = p * (2 - p);
     var v = startVol + (targetVol - startVol) * ease;
-    audio.volume = Math.max(0, Math.min(1, v));
+    audio.volume = Math.max(0, Math.min(targetVol, v));
     if (p < 1) {
       _activeFade[type] = requestAnimationFrame(tick);
     } else {
@@ -987,23 +997,26 @@ function playAudioFull(type) {
     audio.volume = 1.0;
     var p = audio.play();
     if (p !== undefined) {
-      p.catch(function(e) { console.warn("Audio play error:", e); });
+      return p.catch(function(e) {
+        console.warn("Audio play blocked/error:", e);
+        throw e;
+      });
     }
   }
+  return Promise.resolve();
 }
 
 function stopAllAudios(fadeDuration) {
   Object.keys(AUDIO_SOURCES).forEach(function(key) {
     cancelFade(key);
-    if (fadeDuration && fadeDuration > 0) {
+    var a = getAudio(key);
+    if (!a) return;
+    if (fadeDuration && fadeDuration > 0 && !a.paused) {
       fadeAudio(key, 0, fadeDuration);
     } else {
-      var a = getAudio(key);
-      if (a) {
-        a.pause();
-        a.currentTime = 0;
-        a.volume = 0;
-      }
+      a.pause();
+      a.currentTime = 0;
+      a.volume = 0;
     }
   });
 }
@@ -1665,8 +1678,43 @@ function MasterPromptsExperience(props) {
   var [stagePhase, setStagePhase] = uA.useState("intro"); // "intro" | "library"
   var [progressPct, setProgressPct] = uA.useState(0);
   var [strobeScale, setStrobeScale] = uA.useState(0);
-  var [currentLyrics, setCurrentLyrics] = uA.useState(config.lyrics && config.lyrics[0] ? { line1: config.lyrics[0].line1, line2: config.lyrics[0].line2 } : { line1: "", line2: "" });
-  var [timecode, setTimecode] = uA.useState("00:00:00:00");
+  var [autoplayBlocked, setAutoplayBlocked] = uA.useState(false);
+
+  // Audio Playback & Browser Policy Resilience (Plays audio on direct URL entry and click)
+  function tryPlayAudio() {
+    var audio = getAudio(type);
+    if (!audio) return;
+    audio.currentTime = 0;
+    audio.volume = 1.0;
+    var p = audio.play();
+    if (p !== undefined) {
+      p.then(function() {
+        setAutoplayBlocked(false);
+      }).catch(function(err) {
+        console.warn("Direct URL audio autoplay blocked by browser policy:", err);
+        setAutoplayBlocked(true);
+      });
+    }
+  }
+
+  uA.useEffect(function() {
+    tryPlayAudio();
+
+    // Fallback if browser blocked autoplay on cold URL entry:
+    // Listen for the very first interaction anywhere in the document to immediately start audio
+    function onFirstUserGesture() {
+      tryPlayAudio();
+      window.removeEventListener("pointerdown", onFirstUserGesture);
+      window.removeEventListener("keydown", onFirstUserGesture);
+    }
+    window.addEventListener("pointerdown", onFirstUserGesture);
+    window.addEventListener("keydown", onFirstUserGesture);
+
+    return function() {
+      window.removeEventListener("pointerdown", onFirstUserGesture);
+      window.removeEventListener("keydown", onFirstUserGesture);
+    };
+  }, [type]);
 
   // Skip Intro Handler: mutes/stops audio instantly and shows prompts library
   function handleSkipIntro() {
@@ -1674,10 +1722,10 @@ function MasterPromptsExperience(props) {
     setStagePhase("library");
   }
 
-  // 5-Second Intro Loop
+  // Clean Entrance Animation Loop (3.5s duration, text-free, visual pulse)
   uA.useEffect(function() {
     var startTime = performance.now();
-    var INTRO_DURATION = 5.0;
+    var INTRO_DURATION = 3.5;
     var rafId = null;
     var mounted = true;
 
@@ -1686,6 +1734,7 @@ function MasterPromptsExperience(props) {
       var elapsed = (now - startTime) / 1000;
 
       if (elapsed >= INTRO_DURATION) {
+        fadeAudio(type, 0, 800);
         setStagePhase("library");
         return;
       }
@@ -1698,24 +1747,6 @@ function MasterPromptsExperience(props) {
       var strobeVal = kick * 0.85 + sub * 0.45;
       setStrobeScale(strobeVal);
 
-      // HUD timecode
-      var sec = Math.floor(elapsed);
-      var frames = Math.floor((elapsed % 1) * 60);
-      setTimecode("00:00:0" + sec + ":" + (frames < 10 ? "0" + frames : frames));
-
-      // Match lyrics
-      var matched = null;
-      for (var i = 0; i < config.lyrics.length; i++) {
-        var item = config.lyrics[i];
-        if (elapsed >= item.start && elapsed < item.end) {
-          matched = item;
-          break;
-        }
-      }
-      if (matched) {
-        setCurrentLyrics({ line1: matched.line1, line2: matched.line2 });
-      }
-
       rafId = requestAnimationFrame(loop);
     }
 
@@ -1727,7 +1758,7 @@ function MasterPromptsExperience(props) {
       mounted = false;
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [type, stagePhase, config]);
+  }, [type, stagePhase]);
 
   // Keyboard Escape Handler
   uA.useEffect(function() {
@@ -1752,7 +1783,7 @@ function MasterPromptsExperience(props) {
   return Z("div", {
     className: "immersive-stage-wrapper " + config.themeClass + (" " + (stagePhase === "intro" ? "phase-intro" : "phase-library")),
     children: [
-      // 1. VIDEO EDIT INTRO SCREEN (Active during first 5 seconds)
+      // 1. MINIMALIST ENTRANCE ANIMATION (Text-free, clean visual pulse)
       stagePhase === "intro" ? Z("div", {
         className: "intro-stage",
         children: [
@@ -1765,6 +1796,38 @@ function MasterPromptsExperience(props) {
           // Background Video-Edit Audio Canvas
           Z(VideoEditAudioCanvas, { type: type, audio: audioInstance }),
 
+          // Geometric Sonic Pulse Ring (Pure visual, no text)
+          Z("div", {
+            className: "intro-sonic-ring-wrap",
+            children: [
+              Z("div", {
+                className: "intro-sonic-halo",
+                style: {
+                  transform: "scale(" + (1 + strobeScale * 0.22) + ")"
+                },
+                children: [
+                  Z("div", {
+                    className: "intro-sonic-core",
+                    style: {
+                      transform: "scale(" + (1 + strobeScale * 0.35) + ")"
+                    }
+                  })
+                ]
+              })
+            ]
+          }),
+
+          // Unmute button if autoplay was blocked by browser
+          autoplayBlocked ? Z("button", {
+            type: "button",
+            onClick: function(e) {
+              e.stopPropagation();
+              tryPlayAudio();
+            },
+            className: "intro-unmute-btn",
+            children: "🔊 ACTIVAR AUDIO"
+          }) : null,
+
           // Skip Intro Button
           Z("button", {
             type: "button",
@@ -1774,46 +1837,6 @@ function MasterPromptsExperience(props) {
             children: [
               Z("span", { className: "intro-skip-badge", children: "ESC" }),
               "saltar intro"
-            ]
-          }),
-
-          // Center Kinetic Lyrics Edit Box
-          Z("div", {
-            className: "intro-video-edit-container",
-            children: [
-              // HUD Top Row
-              Z("div", {
-                className: "video-edit-hud-top",
-                children: [
-                  Z("div", {
-                    className: "video-edit-rec-badge",
-                    children: [
-                      Z("span", { className: "rec-dot" }),
-                      "REC // 4K 60FPS"
-                    ]
-                  }),
-                  Z("span", { children: timecode }),
-                  Z("span", { children: "BEAT LOCKED // " + type.toUpperCase() })
-                ]
-              }),
-
-              // Kinetic Typography Lyrics (Scaling with beat kicks, video-edit style)
-              Z("div", {
-                className: "kinetic-lyrics-box",
-                style: {
-                  transform: "scale(" + (1 + strobeScale * 0.08) + ")"
-                },
-                children: [
-                  Z("h2", {
-                    className: "kinetic-line-1",
-                    children: currentLyrics.line1
-                  }),
-                  Z("h1", {
-                    className: "kinetic-line-2",
-                    children: currentLyrics.line2
-                  })
-                ]
-              })
             ]
           })
         ]
@@ -1965,26 +1988,71 @@ function $V(){
       J=y(T,c,ea.length),x=o(T),
       h=y(b,n,Xa.length),N=o(b);
 
-  // Column Audio & Interaction Handlers
-  let onAnimeEnter=()=>{ a(); if(!activeModalRef.current){ stopAllAudios(150); fadeAudio("anime", 0.12, 350); } };
-  let onAnimeLeave=()=>{ j(); if(!activeModalRef.current){ fadeAudio("anime", 0, 350); } };
-  let onAnimeClick=()=>{ playAudioFull("anime"); setActiveModal("anime"); if(window.syncExplicitUrl) window.syncExplicitUrl("anime"); };
+  let [activeHoverCol, setActiveHoverCol] = uA.useState(null);
+  let activeHoverRef = uA.useRef(null);
+  activeHoverRef.current = activeHoverCol;
+  let hoverTimer = uA.useRef(null);
+  let leaveTimer = uA.useRef(null);
 
-  let onCaricaturaEnter=()=>{ u(); if(!activeModalRef.current){ stopAllAudios(150); fadeAudio("caricatura", 0.12, 350); } };
-  let onCaricaturaLeave=()=>{ d(); if(!activeModalRef.current){ fadeAudio("caricatura", 0, 350); } };
-  let onCaricaturaClick=()=>{ playAudioFull("caricatura"); setActiveModal("caricatura"); if(window.syncExplicitUrl) window.syncExplicitUrl("caricatura"); };
+  function stopAllIntervals() {
+    if (k.current) { window.clearInterval(k.current); k.current = null; }
+    if (r.current) { window.clearInterval(r.current); r.current = null; }
+    if (O.current) { window.clearInterval(O.current); O.current = null; }
+    if (T.current) { window.clearInterval(T.current); T.current = null; }
+    if (b.current) { window.clearInterval(b.current); b.current = null; }
+  }
 
-  let onEleganciaEnter=()=>{ P(); if(!activeModalRef.current){ stopAllAudios(150); fadeAudio("elegancia", 0.12, 350); } };
-  let onEleganciaLeave=()=>{ W(); if(!activeModalRef.current){ fadeAudio("elegancia", 0, 350); } };
-  let onEleganciaClick=()=>{ playAudioFull("elegancia"); setActiveModal("elegancia"); if(window.syncExplicitUrl) window.syncExplicitUrl("elegancia"); };
+  function startIntervalForCol(type) {
+    if (type === "anime") a();
+    else if (type === "caricatura") u();
+    else if (type === "elegancia") P();
+    else if (type === "edicion") J();
+    else if (type === "superheroe") h();
+  }
 
-  let onEdicionEnter=()=>{ J(); if(!activeModalRef.current){ stopAllAudios(150); fadeAudio("edicion", 0.12, 350); } };
-  let onEdicionLeave=()=>{ x(); if(!activeModalRef.current){ fadeAudio("edicion", 0, 350); } };
-  let onEdicionClick=()=>{ playAudioFull("edicion"); setActiveModal("edicion"); if(window.syncExplicitUrl) window.syncExplicitUrl("edicion"); };
+  // Stabilized column hover:
+  // Requires cursor to remain 75ms inside a column before committing expansion and audio
+  // Completely eliminates boundary flutter, visual glitch, and volume surge!
+  function handleColEnter(type) {
+    if (activeModalRef.current) return;
+    if (leaveTimer.current) {
+      clearTimeout(leaveTimer.current);
+      leaveTimer.current = null;
+    }
+    if (activeHoverRef.current === type) return;
 
-  let onSuperheroeEnter=()=>{ h(); if(!activeModalRef.current){ stopAllAudios(150); fadeAudio("superheroe", 0.12, 350); } };
-  let onSuperheroeLeave=()=>{ N(); if(!activeModalRef.current){ fadeAudio("superheroe", 0, 350); } };
-  let onSuperheroeClick=()=>{ playAudioFull("superheroe"); setActiveModal("superheroe"); if(window.syncExplicitUrl) window.syncExplicitUrl("superheroe"); };
+    if (hoverTimer.current) {
+      clearTimeout(hoverTimer.current);
+    }
+    hoverTimer.current = setTimeout(function() {
+      if (activeModalRef.current) return;
+      stopAllIntervals();
+      stopAllAudios(100);
+      setActiveHoverCol(type);
+      startIntervalForCol(type);
+      fadeAudio(type, 0.12, 280);
+    }, 75);
+  }
+
+  function handlePortfolioLeave() {
+    if (activeModalRef.current) return;
+    if (hoverTimer.current) {
+      clearTimeout(hoverTimer.current);
+      hoverTimer.current = null;
+    }
+    leaveTimer.current = setTimeout(function() {
+      if (activeModalRef.current) return;
+      stopAllIntervals();
+      stopAllAudios(250);
+      setActiveHoverCol(null);
+    }, 90);
+  }
+
+  let onAnimeClick=()=>{ stopAllIntervals(); playAudioFull("anime"); setActiveModal("anime"); if(window.syncExplicitUrl) window.syncExplicitUrl("anime"); };
+  let onCaricaturaClick=()=>{ stopAllIntervals(); playAudioFull("caricatura"); setActiveModal("caricatura"); if(window.syncExplicitUrl) window.syncExplicitUrl("caricatura"); };
+  let onEleganciaClick=()=>{ stopAllIntervals(); playAudioFull("elegancia"); setActiveModal("elegancia"); if(window.syncExplicitUrl) window.syncExplicitUrl("elegancia"); };
+  let onEdicionClick=()=>{ stopAllIntervals(); playAudioFull("edicion"); setActiveModal("edicion"); if(window.syncExplicitUrl) window.syncExplicitUrl("edicion"); };
+  let onSuperheroeClick=()=>{ stopAllIntervals(); playAudioFull("superheroe"); setActiveModal("superheroe"); if(window.syncExplicitUrl) window.syncExplicitUrl("superheroe"); };
 
   let handleCloseModal=()=>{
     stopAllAudios(0);
@@ -2056,19 +2124,19 @@ function $V(){
         }
 
         @media (min-width: 768px) {
-          .col:hover {
+          .col.is-expanded {
             flex: 0 0 77.78vh;
             width: 77.78vh;
             max-width: min(77.78vh, 38vw);
           }
-          .portfolio:has(.col:hover) .col:not(:hover) {
+          .portfolio:has(.col.is-expanded) .col:not(.is-expanded) {
             flex: 1 1 0;
           }
-          .col-anime:hover .anime-container,
-          .col-caricatura:hover .caricatura-container,
-          .col-elegancia:hover .elegancia-container,
-          .col-edicion:hover .edicion-container,
-          .col-superheroe:hover .frame-container {
+          .col-anime.is-expanded .anime-container,
+          .col-caricatura.is-expanded .caricatura-container,
+          .col-elegancia.is-expanded .elegancia-container,
+          .col-edicion.is-expanded .edicion-container,
+          .col-superheroe.is-expanded .frame-container {
             transform: scale(1.03);
           }
         }
@@ -2076,7 +2144,7 @@ function $V(){
         @media (max-width: 767px) {
           .portfolio { flex-direction: column; height: auto; min-height: auto; width: 100vw; }
           .col { width: 100vw; height: 92vh; min-height: 92vh; flex: none !important; }
-          .portfolio:has(.col:hover) .col, .col:hover { flex: none !important; width: 100vw !important; max-width: none !important; }
+          .portfolio:has(.col.is-expanded) .col, .col.is-expanded { flex: none !important; width: 100vw !important; max-width: none !important; }
         }
 
         @keyframes arcadeBootEntrance {
@@ -2131,12 +2199,12 @@ function $V(){
         "ARCADE"
       ]
     }) : null,
-    Z("div",{className:"portfolio-shell",children:EA("div",{className:"portfolio",children:[
+    Z("div",{className:"portfolio-shell",children:EA("div",{className:"portfolio",onPointerLeave:handlePortfolioLeave,children:[
       EA("div",{
-        className:"col col-anime group",
+        className:"col col-anime group " + (activeHoverCol === "anime" ? "is-expanded" : ""),
         style:{backgroundColor:"#243447"},
-        onMouseEnter:onAnimeEnter,onMouseLeave:onAnimeLeave,
-        onTouchStart:onAnimeEnter,onTouchEnd:onAnimeLeave,
+        onPointerEnter:()=>handleColEnter("anime"),
+        onTouchStart:()=>handleColEnter("anime"),
         onClick:onAnimeClick,
         children:[
           Z("div",{className:"anime-container",children:xa.map((f,X)=>Z("img",{src:f,alt:`Anime frame ${X+1}`,className:`anime-frame ${X===A?"active":""}`,draggable:!1,style:{opacity:X===A?1:0}},X))}),
@@ -2144,10 +2212,10 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-caricatura group",
+        className:"col col-caricatura group " + (activeHoverCol === "caricatura" ? "is-expanded" : ""),
         style:{backgroundColor:"#FF6B6B"},
-        onMouseEnter:onCaricaturaEnter,onMouseLeave:onCaricaturaLeave,
-        onTouchStart:onCaricaturaEnter,onTouchEnd:onCaricaturaLeave,
+        onPointerEnter:()=>handleColEnter("caricatura"),
+        onTouchStart:()=>handleColEnter("caricatura"),
         onClick:onCaricaturaClick,
         children:[
           Z("div",{className:"caricatura-container",children:Na.map((f,X)=>Z("img",{src:f,alt:`Caricatura frame ${X+1}`,className:`caricatura-frame ${X===q?"active":""}`,draggable:!1,style:{opacity:X===q?1:0}},X))}),
@@ -2155,10 +2223,10 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-elegancia group",
+        className:"col col-elegancia group " + (activeHoverCol === "elegancia" ? "is-expanded" : ""),
         style:{backgroundColor:"#E9DDC2"},
-        onMouseEnter:onEleganciaEnter,onMouseLeave:onEleganciaLeave,
-        onTouchStart:onEleganciaEnter,onTouchEnd:onEleganciaLeave,
+        onPointerEnter:()=>handleColEnter("elegancia"),
+        onTouchStart:()=>handleColEnter("elegancia"),
         onClick:onEleganciaClick,
         children:[
           Z("div",{className:"elegancia-container",children:Ra.map((f,X)=>Z("img",{src:f,alt:`Elegancia frame ${X+1}`,className:`elegancia-frame ${X===S?"active":""}`,draggable:!1,style:{opacity:X===S?1:0}},X))}),
@@ -2166,10 +2234,10 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-edicion group",
+        className:"col col-edicion group " + (activeHoverCol === "edicion" ? "is-expanded" : ""),
         style:{backgroundColor:"#143F54"},
-        onMouseEnter:onEdicionEnter,onMouseLeave:onEdicionLeave,
-        onTouchStart:onEdicionEnter,onTouchEnd:onEdicionLeave,
+        onPointerEnter:()=>handleColEnter("edicion"),
+        onTouchStart:()=>handleColEnter("edicion"),
         onClick:onEdicionClick,
         children:[
           Z("div",{className:"edicion-container",children:ea.map((f,X)=>Z("img",{src:f,alt:`Edicion frame ${X+1}`,className:`edicion-frame ${X===V?"active":""}`,draggable:!1,style:{opacity:X===V?1:0}},X))}),
@@ -2177,10 +2245,10 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-superheroe group",
+        className:"col col-superheroe group " + (activeHoverCol === "superheroe" ? "is-expanded" : ""),
         style:{backgroundColor:"#5AB0E6"},
-        onMouseEnter:onSuperheroeEnter,onMouseLeave:onSuperheroeLeave,
-        onTouchStart:onSuperheroeEnter,onTouchEnd:onSuperheroeLeave,
+        onPointerEnter:()=>handleColEnter("superheroe"),
+        onTouchStart:()=>handleColEnter("superheroe"),
         onClick:onSuperheroeClick,
         children:[
           Z("div",{className:"frame-container",children:Xa.map((f,X)=>Z("img",{src:f,alt:`Superheroe frame ${X+1}`,className:`superheroe-frame ${X===U?"active":""}`,draggable:!1,style:{opacity:X===U?1:0}},X))}),
