@@ -55,6 +55,10 @@
       "dest": "/assets/$1"
     },
     {
+      "src": "/INFORMACION_CONTACTO\\.txt",
+      "status": 404
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1",
       "headers": {
