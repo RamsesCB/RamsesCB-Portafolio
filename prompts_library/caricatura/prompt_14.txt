@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: CARICATURA | PROMPT #14: Astronauta Toon en la Luna de Queso Gruyer
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro dentro de un círculo)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the reference photo, caricature their face and curious gaze inside a crystal-clear spherical fishbowl space helmet. Bouncing weightlessly across a cartoon yellow moon surface with Swiss cheese craters, planting a cheerful smiling cartoon flag into the lunar dust, stars drawn as sparkling four-pointed cartoon twinkles, 1960s retro space cartoon aesthetic --ar 4:5 --v 6.1`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the reference photo, caricature their face and curious gaze inside a crystal-clear spherical fishbowl space helmet. Bouncing weightlessly across a cartoon yellow moon surface with Swiss cheese craters, planting a cheerful smiling cartoon flag into the lunar dust, stars drawn as sparkling four-pointed cartoon twinkles, 1960s retro space cartoon aesthetic --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+whimsical retro cartoon astronaut in a puffy white space suit with a round fishbowl helmet bouncing joyfully across a Swiss cheese lunar surface, tiny green alien waving from behind a rock, sparkling cartoon stars in deep navy space, vintage storybook art --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

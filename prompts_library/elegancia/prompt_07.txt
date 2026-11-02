@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ELEGANCIA | PROMPT #07: Retrato B&W Editorial de Alto Contraste (Peter Lindbergh)
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro en primer plano sin maquillaje excesivo)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the subject, preserve their genuine facial characteristics, freckles, gaze, and raw emotion in a legendary black and white fashion portrait in the style of Peter Lindbergh. Wearing an oversized black ribbed turtleneck knit, natural windswept hair, side-lit by diffused daylight from a massive studio warehouse window, deep velvety blacks and clean silver highlights, medium format Kodak Tri-X 400 film grain, Vogue Paris cover standard --ar 4:5 --v 6.1 --style raw`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the subject, preserve their genuine facial characteristics, freckles, gaze, and raw emotion in a legendary black and white fashion portrait in the style of Peter Lindbergh. Wearing an oversized black ribbed turtleneck knit, natural windswept hair, side-lit by diffused daylight from a massive studio warehouse window, deep velvety blacks and clean silver highlights, medium format Kodak Tri-X 400 film grain, Vogue Paris cover standard --ar 4:5 --v 6.1 --style raw
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+timeless black and white fashion portrait in the style of Peter Lindbergh, model in a simple black ribbed knit turtleneck, natural wind-blown hair, candid intense gaze, side-lit by soft studio window light, rich silver gelatin shadows, fine Kodak Tri-X 400 film grain texture, pure timeless elegance --ar 4:5 --v 6.1 --style raw
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1 --style raw
+================================================================================

@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #04: Piloto de Mecha Orbital
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+epic sci-fi anime splash art of an orbital mecha guardian floating above Earth's glowing blue curvature, aerodynamic articulated titanium armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --niji 6 --stylize 250
+================================================================================

@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #02: Mago Cyberpunk de Neón
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro o medio cuerpo con expresión seria/intensa)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, faithfully capture and translate their facial anatomy, expression, eye structure, and hairstyle into cinematic anime concept art of a futuristic cyber-sorcerer standing atop a rain-soaked Neo-Tokyo skyscraper. Intricate glowing cyan holographic runic circles orbiting mechanical cybernetic fingers, high-collar techwear trench coat with illuminated fiber-optic trim, wet asphalt reflections, dense volumetric neon fog, moody atmospheric rain streaks, low-angle telephoto framing, deep midnight purple, electric magenta and cyan color grading, hyper-detailed anime illustration in Studio Trigger style --ar 4:5 --niji 6 --style expressive`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the primary subject, faithfully capture and translate their facial anatomy, expression, eye structure, and hairstyle into cinematic anime concept art of a futuristic cyber-sorcerer standing atop a rain-soaked Neo-Tokyo skyscraper. Intricate glowing cyan holographic runic circles orbiting mechanical cybernetic fingers, high-collar techwear trench coat with illuminated fiber-optic trim, wet asphalt reflections, dense volumetric neon fog, moody atmospheric rain streaks, low-angle telephoto framing, deep midnight purple, electric magenta and cyan color grading, hyper-detailed anime illustration in Studio Trigger style --ar 4:5 --niji 6 --style expressive
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+cinematic anime concept art of a futuristic cyber-sorcerer standing atop a rain-soaked Neo-Tokyo skyscraper, intricate glowing cyan holographic runic circles orbiting mechanical cybernetic fingers, high-collar techwear trench coat with illuminated fiber-optic trim, wet asphalt reflections, dense volumetric neon fog, moody atmospheric rain streaks, low-angle telephoto framing, deep midnight purple, electric magenta and cyan color grading, hyper-detailed anime illustration --ar 4:5 --niji 6 --style expressive
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --niji 6 --style expressive
+================================================================================

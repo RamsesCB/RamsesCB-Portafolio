@@ -1375,54 +1375,112 @@ var CATEGORY_DATA = {
     introClass: "intro-prog-anime",
     bio: "Este es un rincón creado con mucho cariño y dedicación enfocado exclusivamente en el fascinante universo del anime y la animación shonen. He puesto gran esfuerzo en recopilar y estructurar una amplia diversidad de estilos: desde batallas con energía desbordante hasta composiciones conceptuales de alta velocidad. Espero de corazón que te guste y potencie al máximo tus creaciones.",
     tags: ["COLECCIÓN ANIME", "SHONEN", "ILUSTRACIÓN DIGITAL", "ALTA VELOCIDAD", "NIJI 6"],
-    lyrics: [
-      { start: 0.0, end: 1.3, line1: "¿ESTÁS LISTO...", line2: "PARA EL IMPACTO?" },
-      { start: 1.3, end: 2.6, line1: "DESPIERTA TU ENERGÍA", line2: "ROMPE TUS LÍMITES" },
-      { start: 2.6, end: 3.8, line1: "VELOCIDAD CINÉTICA", line2: "PODER DESBORDADO" },
-      { start: 3.8, end: 5.0, line1: "SHONEN AL MÁXIMO", line2: "¡VAMOS CON TODO!" }
-    ],
+    lyrics: [{"start": 0.0, "end": 1.3, "line1": "¿ESTÁS LISTO...", "line2": "PARA EL IMPACTO?"}, {"start": 1.3, "end": 2.6, "line1": "DESPIERTA TU ENERGÍA", "line2": "ROMPE TUS LÍMITES"}, {"start": 2.6, "end": 3.8, "line1": "VELOCIDAD CINÉTICA", "line2": "PODER DESBORDADO"}, {"start": 3.8, "end": 5.0, "line1": "SHONEN AL MÁXIMO", "line2": "¡VAMOS CON TODO!"}],
     prompts: [
       {
         badge: "#01",
-        image: xa[0],
+        image: xa[0 % xa.length],
         title: "Guerrero Celestial Shonen",
-        description: "Composición dinámica con aura de energía azul cobalto, velocidad cinética y relámpagos estilizados en trazo niji.",
-        prompt: "masterpiece anime key visual of a determined young shonen warrior unleashing an explosive celestial lightning aura, crackling electric arcs curling around clenched fists, intense luminous golden-blue irises, sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300"
+        description: "[1 Foto (Tu rostro de frente con buena iluminación)] Composición dinámica con aura de energía celestial azul cobalto, velocidad cinética y relámpagos estilizados en trazo niji de Ufotable.",
+        prompt: "Using the person in the uploaded reference photo as the primary subject, accurately preserve and translate their exact facial features, facial bone structure, jawline, eye shape, hairstyle, and authentic likeness into a masterpiece anime key visual of a determined young shonen warrior. The warrior is unleashing an explosive celestial lightning aura with crackling electric arcs curling around clenched fists and luminous glowing golden-blue irises. Sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300"
       },
       {
         badge: "#02",
-        image: xa[1],
+        image: xa[1 % xa.length],
         title: "Mago Cyberpunk de Neón",
-        description: "Retrato cyberpunk con circuitos holográficos fluorescentes y desenfoque de movimiento en atmósfera nocturna.",
-        prompt: "cinematic anime concept art of a futuristic cyber-sorcerer standing atop a rain-soaked Neo-Tokyo skyscraper, intricate glowing cyan holographic runic circles orbiting mechanical cybernetic fingers, high-collar techwear trench coat with illuminated fiber-optic trim, wet asphalt reflections, dense volumetric neon fog, moody atmospheric rain streaks, low-angle telephoto framing, deep midnight purple, electric magenta and cyan color grading, hyper-detailed anime illustration --ar 4:5 --niji 6 --style expressive"
+        description: "[1 Foto (Tu rostro o medio cuerpo con expresión seria/intensa)] Retrato cyberpunk con circuitos holográficos fluorescentes, runas de energía y lluvia de neón sobre azotea en Neo-Tokyo.",
+        prompt: "Using the person in the uploaded reference photo as the primary subject, faithfully capture and translate their facial anatomy, expression, eye structure, and hairstyle into cinematic anime concept art of a futuristic cyber-sorcerer standing atop a rain-soaked Neo-Tokyo skyscraper. Intricate glowing cyan holographic runic circles orbiting mechanical cybernetic fingers, high-collar techwear trench coat with illuminated fiber-optic trim, wet asphalt reflections, dense volumetric neon fog, moody atmospheric rain streaks, low-angle telephoto framing, deep midnight purple, electric magenta and cyan color grading, hyper-detailed anime illustration in Studio Trigger style --ar 4:5 --niji 6 --style expressive"
       },
       {
         badge: "#03",
-        image: xa[2],
-        title: "Espadachina del Amanecer",
-        description: "Katana con reflejos dorados al amanecer, pétalos de cerezo flotando y perspectiva cinemática de combate.",
-        prompt: "breathtaking anime action still of an elegant samurai swordswoman executing a high-speed iaido slash at sunrise, cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6"
+        image: xa[2 % xa.length],
+        title: "Espadachín / Espadachina del Amanecer",
+        description: "[1 Foto (Tu rostro de frente o perfil tres cuartos)] Katana con reflejos dorados al amanecer, pétalos de cerezo flotando y perspectiva cinemática de combate estilo Makoto Shinkai.",
+        prompt: "Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6"
       },
       {
         badge: "#04",
-        image: xa[3],
-        title: "Guardiana Mecánica Shonen",
-        description: "Armadura mecha aerodinámica con propulsores de iones y halo energético en el horizonte orbital.",
-        prompt: "epic sci-fi anime splash art of an orbital mecha guardian floating above Earth's glowing blue curvature, aerodynamic articulated titanium armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250"
+        image: xa[3 % xa.length],
+        title: "Piloto de Mecha Orbital",
+        description: "[1 Foto (Tu rostro de frente)] Armadura mecha aerodinámica con propulsores de iones, visor táctico y halo energético en el horizonte orbital de la Tierra.",
+        prompt: "Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250"
       },
       {
         badge: "#05",
-        image: xa[4],
+        image: xa[4 % xa.length],
         title: "Invocador de Sombras Épico",
-        description: "Bestia espectral surgiendo de vórtice umbrío con fuego espectral y contraste lumínico dramático.",
-        prompt: "dramatic shonen battle keyframe of a dark shadow summoner opening a dimensional abyss, colossal spectral beast with luminous violet eyes emerging from twisting shadow tendrils, crackling purple flame vortex, extreme contrapicado worm's-eye perspective, explosive motion blur on foreground rubble, dark fantasy aesthetic, ominous high-contrast lighting, deep ink-black and spectral amethyst tones, ultra-detailed anime rendering --ar 4:5 --niji 6"
+        description: "[1 Foto (Tu rostro con mirada decidida o desafiante)] Bestia espectral surgiendo de vórtice umbrío con fuego espectral y contraste lumínico dramático estilo Solo Leveling.",
+        prompt: "Using the person in the uploaded reference photo as the main character, retain and adapt their exact facial features, jawline, and determined expression into a dramatic shonen battle keyframe of a dark shadow summoner opening a dimensional abyss. Colossal spectral shadow beast with luminous violet eyes emerging from twisting dark tendrils behind the summoner, crackling purple flame vortex swirling around their hands, extreme contrapicado worm's-eye perspective, explosive motion blur on foreground rubble, dark fantasy aesthetic, ominous high-contrast lighting, deep ink-black and spectral amethyst tones, ultra-detailed anime rendering --ar 4:5 --niji 6"
       },
       {
         badge: "#06",
-        image: xa[5],
+        image: xa[5 % xa.length],
         title: "Trascendencia Cósmica Anime",
-        description: "Figura en suspensión gravitatoria rodeada de constelaciones y runas estelares resplandecientes.",
-        prompt: "ethereal anime masterpiece of an enlightened celestial entity levitating in zero gravity amidst deep space nebula dust, glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350"
+        description: "[1 Foto (Tu rostro sereno o de perfil)] Figura en suspensión gravitatoria rodeada de constelaciones, anillos de geometría sagrada y runas estelares resplandecientes.",
+        prompt: "Using the person in the uploaded reference photo as the main subject, preserve their true facial contours, nose, lips, and serene expression while transforming them into an ethereal anime celestial entity levitating in zero gravity amidst deep space nebula dust. Glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350"
+      },
+      {
+        badge: "#07",
+        image: xa[6 % xa.length],
+        title: "Alquimista Elemental de Fuego & Viento",
+        description: "[1 Foto (Tu rostro con mirada intensa)] Torbellino de llamas incandescentes y ascuas ardientes rodeando los brazos, gabardina roja ondeando al viento.",
+        prompt: "Using the person in the uploaded reference photo as the primary character, maintain their exact facial features, sharp gaze, and personal likeness while illustrating them as an elite elemental alchemist transmuting roaring crimson and gold firestorm vortexes. Swirling ember sparks orbiting open palms, billowing high-collar crimson trench coat with golden alchemy crests, cracked volcanic ground radiating molten fissures beneath boots, dynamic low-angle framing, intense fiery rim lighting, Studio Bones anime quality, saturated vermilion, amber, and obsidian color grading --ar 4:5 --niji 6"
+      },
+      {
+        badge: "#08",
+        image: xa[7 % xa.length],
+        title: "Arquero Espiritual del Bosque Ancestral",
+        description: "[1 Foto (Tu rostro de perfil o tres cuartos)] Arco místico de energía pura tensado en un bosque milenario con espíritus luminiscentes estilo Studio Ghibli.",
+        prompt: "Using the person in the uploaded reference photo as the protagonist, faithfully reproduce their facial bone structure, eye shape, and focused expression as a legendary spirit archer drawing a bow made of crystalline starlight. Perched high on an ancient moss-covered cedar branch in a mystical fog-draped primordial forest, glowing ethereal forest spirits floating like fireflies, sunbeams slicing through giant canopy leaves, flowing traveler tunic with leather bracers, Studio Ghibli inspired magical realism, tranquil emerald, sage, and golden dust palette --ar 4:5 --niji 6"
+      },
+      {
+        badge: "#09",
+        image: xa[8 % xa.length],
+        title: "Cazador de Demonios en la Noche Nevada",
+        description: "[1 Foto (Tu rostro de frente o perfil)] Respiración helada visible, copos de nieve suspendidos, haori tradicional y espada nichirin resplandeciente estilo Demon Slayer.",
+        prompt: "Using the person in the uploaded reference photo as the subject, preserve their authentic facial features, jawline, and determined grimace while transforming them into a demon slayer swordsman standing resolute in a blizzard-swept cedar mountain at midnight. Visible mist condensation from cold breathing, individual snowflakes frozen mid-air around the blade, traditional geometric patterned haori flapping in freezing gales, glowing cyan mist dragon wrapping around the nichirin katana, Ufotable visual effects style, midnight navy and crisp frost-white palette --ar 4:5 --niji 6 --stylize 250"
+      },
+      {
+        badge: "#10",
+        image: xa[9 % xa.length],
+        title: "Comandante Militar de Maniobras Tácticas",
+        description: "[1 Foto (Tu rostro con mirada seria y decidida)] Capa verde ondeando con escudo bordado, equipo de maniobras tridimensionales a vapor y murallas al atardecer estilo Attack on Titan.",
+        prompt: "Using the person in the uploaded reference photo as the model, accurately preserve their facial geometry, eye intensity, and personal hairstyle while illustrating them as a veteran military scout commander perched on high medieval fortress battlements at sunset. Billowing dark green scout cape with embroidered wings insignia, dual omni-directional steel blades reflecting fiery crimson sunset clouds, pressurized steam plumes venting from gas gear mechanisms, dramatic Dutch tilt wide shot, gritty anime war aesthetic, rich warm sepia and fiery orange lighting --ar 4:5 --niji 6"
+      },
+      {
+        badge: "#11",
+        image: xa[10 % xa.length],
+        title: "Cyber-Hacker Callejero con Drones de Asalto",
+        description: "[1 Foto (Tu rostro de frente o tres cuartos)] Implantes biocibernéticos sutiles en la sien, pantallas de realidad aumentada flotantes y callejón lluvioso de Shibuya.",
+        prompt: "Using the person in the uploaded reference photo as the primary subject, seamlessly retain their facial structure, nose, lips, and focused eyes while styling them into a rogue cyberpunk netrunner crouched in a rain-slicked Tokyo alleyway. Sleek glowing neural port implants at the temple emitting faint neon cyan light, dual floating miniature stealth drones hovering at shoulder level, transparent holographic terminal windows displaying code cascades, techwear oversized parka with tactical straps, neon kanji sign reflections in puddles, atmospheric cyberpunk anime noir --ar 4:5 --niji 6"
+      },
+      {
+        badge: "#12",
+        image: xa[11 % xa.length],
+        title: "Guardián del Dragón del Templo Dorado",
+        description: "[1 Foto (Tu rostro sereno o de perfil)] Dragón oriental serpentino con escamas de jade y oro flotando alrededor de los hombros, linternas de papel encendidas.",
+        prompt: "Using the person in the uploaded reference photo as the hero subject, keep their recognizable facial features, calm expression, and likeness while creating an exquisite anime painting of a temple guardian with a majestic serpentine spirit dragon coiled gracefully around their shoulders. The dragon possesses iridescent jade and gold scales with whisker tendrils drifting in soft mountain breeze, vermilion torii gates and glowing paper lanterns floating in background mist, traditional silk robes with lotus embroidery, Kyoto Animation aesthetic, warm atmospheric twilight illumination --ar 4:5 --niji 6"
+      },
+      {
+        badge: "#13",
+        image: xa[12 % xa.length],
+        title: "Asesino Sombrío en la Azotea Bajo la Luna Roja",
+        description: "[1 Foto (Tu rostro con mirada penetrante)] Máscara ninja entreabierta, luna llena roja gigantesca de fondo, silueta estilizada sobre tejado feudal estilo Bleach.",
+        prompt: "Using the person in the uploaded reference photo as the central character, preserve their authentic facial features, intense gaze, and jawline while depicting them as an elite shadow assassin perched on curved Japanese roof tiles. Half-removed black porcelain oni mask revealing their recognizable eyes, a colossal blood-red harvest moon illuminating the dark midnight skyline, billowing tattered scarf trailing into shadowy mist, twin ninjato swords strapped across back, high-contrast chiaroscuro silhouette, classic 90s dark anime OVA aesthetic --ar 4:5 --niji 6"
+      },
+      {
+        badge: "#14",
+        image: xa[13 % xa.length],
+        title: "Místico del Trueno y los Relámpagos",
+        description: "[1 Foto (Tu rostro con expresión feroz o enérgica)] Rayos púrpuras y dorados concentrados en la palma de la mano, cabello erizado por estática, ondas de choque en el suelo.",
+        prompt: "Using the person in the uploaded reference photo as the character, accurately preserve their facial bone structure, mouth, and fierce expression while illustrating them as an electrified thunder sovereign charging high-voltage lightning in both hands. Forked purple and golden electric arcs violently shattering the cracked stone ground, static electricity lifting hair and jacket fringes, glowing luminescent irises radiating electrical current, intense dynamic fish-eye perspective, crisp studio anime keyframe, saturated violet, gold, and pitch-black palette --ar 4:5 --niji 6 --stylize 300"
+      },
+      {
+        badge: "#15",
+        image: xa[14 % xa.length],
+        title: "Duelista Dimensional en el Vórtice del Tiempo",
+        description: "[1 Foto (Tu rostro con mirada mística o reflexiva)] Relojes gigantescos transparentes y engranajes fracturados flotando en un vacío cuántico, ojos que ven el infinito.",
+        prompt: "Using the person in the uploaded reference photo as the protagonist, preserve their true facial features, eye shape, and contemplation while depicting them as a time traveler standing in the nexus of fractured chronal timelines. Translucent giant clockfaces and golden clockwork gears floating in a deep space quantum vortex, glowing strands of golden destiny threads weaving through fingertips, long cosmic overcoat decorated with constellations, cinematic wide angle, radiant astral lighting, deep navy, bronze, and shimmering amber hues --ar 4:5 --niji 6"
       }
     ]
   },
@@ -1430,56 +1488,114 @@ var CATEGORY_DATA = {
     title: "Prompts de Caricatura",
     themeClass: "stage-theme-caricatura",
     introClass: "intro-prog-caricatura",
-    bio: "Un rincón creado con mucho entusiasmo para rendir homenaje a la animación clásica, los gestos elásticos y la alegría espontánea de los dibujos animados que marcaron épocas. Cada prompt captura la esencia de la comedia visual, el trazo expresivo y el dinamismo toon con gran riqueza cromática y cariño en cada detalle.",
-    tags: ["DIBUJOS ANIMADOS", "LOONEY TUNES", "DINAMISMO TOON", "EXPRESIONES ELÁSTICAS", "COLOR VIBRANTE"],
-    lyrics: [
-      { start: 0.0, end: 1.2, line1: "¡MÚSICA, MAESTRO!", line2: "ARRANCA EL SHOW" },
-      { start: 1.2, end: 2.5, line1: "DESATANDO LA LOCURA", line2: "DINAMISMO TOON" },
-      { start: 2.5, end: 3.7, line1: "¡PREPÁRATE PARA REÍR!", line2: "EXPRESIONES PURAS" },
-      { start: 3.7, end: 5.0, line1: "¡ESTO ES TODO, AMIGOS!", line2: "LA MAGIA DE LA RISA" }
-    ],
+    bio: "Diseñado con pasión y una profunda nostalgia por la época dorada de la animación tradicional. Esta colección rinde tributo a las siluetas elásticas, el slapstick cómico y la expresividad sin límites. Es un espacio pensado para divertir, despertar sonrisas y dotar a cada trazo de una personalidad única y entrañable.",
+    tags: ["ANIMACIÓN CLÁSICA", "RUBBER-HOSE", "SLAPSTICK COMEDY", "VINTAGE TOON", "EXPRESIONES VIVAS"],
+    lyrics: [{"start": 0.0, "end": 1.3, "line1": "SMILE AND LAUGH", "line2": "VINTAGE FUN"}, {"start": 1.3, "end": 2.6, "line1": "HAPPY TOONS", "line2": "EVERYONE"}, {"start": 2.6, "end": 3.8, "line1": "RISAS Y RITMO", "line2": "EN CADA COLOR"}, {"start": 3.8, "end": 5.0, "line1": "ANIMACIÓN PURA", "line2": "DIVERSIÓN TOTAL"}],
     prompts: [
       {
         badge: "#01",
-        image: Na[0],
+        image: Na[0 % Na.length],
         title: "Conejo Travieso Looney Tunes",
-        description: "Estilo clásico de la edad de oro de la animación americana, expresiones faciales elásticas y paleta viva.",
-        prompt: "classic 1950s American golden age cartoon rabbit popping out of an underground burrow with a mischievous toothy grin, exaggerated rubber-hose anatomy, oversized floppy paws gesturing with a crunchy carrot, hand-painted gouache background of lush pastoral rolling hills, authentic technicolor 3-strip color palette, bold hand-inked line art, vintage Warner Bros animation studio aesthetic, warm grain texture --ar 4:5 --v 6.1"
+        description: "[1 Foto (Tu rostro sonriendo o haciendo un gesto divertido)] Estilo clásico de la edad de oro de la animación americana 1950s, expresiones faciales elásticas y paleta gouache viva.",
+        prompt: "Using the person in the uploaded reference photo as the character inspiration, translate their distinctive smile, facial features, and playful expression into a classic 1950s American golden age cartoon character. Popping out of an underground burrow with a mischievous toothy grin, exaggerated rubber-hose anatomy, oversized cartoon gloves gesturing, hand-painted gouache background of lush pastoral rolling hills, authentic technicolor 3-strip color palette, bold hand-inked line art, vintage Warner Bros animation studio aesthetic, warm film grain texture --ar 4:5 --v 6.1"
       },
       {
         badge: "#02",
-        image: Na[1],
-        title: "Pato Neurótico en Acción",
-        description: "Pose de cómica sorpresa con plumas desordenadas, humo de velocidad en espiral y fondo de estudio pintado.",
-        prompt: "hyper-expressive frantic cartoon duck frozen mid-air in comedy panic, eyes popping out on coiled springs, feathers blasting outward in a puff of smoke, spinning tornado feet leaving a dusty trail, vintage theatrical animated short style, vibrant retro hand-painted animation cel, expressive slapstick staging, high-energy Saturday morning cartoon nostalgia --ar 4:5 --v 6.1"
+        image: Na[1 % Na.length],
+        title: "Detective Noir Toon en Callejón de Lluvia",
+        description: "[1 Foto (Tu rostro con sombrero o mirada sospechosa)] Parodia de cine negro animado, sombrero fedora inclinado, gabardina clásica y farola de luz dramática con humo.",
+        prompt: "Using the person in the uploaded reference photo, caricature their facial features, jawline, and nose into a stylized 1940s animated cartoon private detective. Tilted felt fedora casting a comical shadow over one eye, classic cartoon trench coat with oversized lapels, leaning under a flickering street lamp in a puddle-strewn alleyway, exaggerated cartoon proportions, hand-painted matte background, Tex Avery meets Looney Tunes aesthetic, rich theatrical sepia and charcoal tones --ar 4:5 --v 6.1"
       },
       {
         badge: "#03",
-        image: Na[2],
-        title: "Coyote Ingeniero Acme",
-        description: "Planos con dinamita Acme, expresiones de determinación cómica y texturas de desierto ilustrado.",
-        prompt: "humorous vintage cartoon coyote at a wooden workbench frantically assembling a giant Acme rocket-powered roller skate, blueprint schematics pinned to red desert canyon sandstone, sticks of dynamite with burning spark fuses, exaggerated squinting concentration, painted gouache desert landscape, vibrant retro Technicolor palette, classic Chuck Jones directing style --ar 4:5 --v 6.1"
+        image: Na[2 % Na.length],
+        title: "Científico Chiflado con Invento de Cohete Acme",
+        description: "[1 Foto (Tu rostro con expresión de asombro o sorpresa)] Planos técnicos con cohetes y dinamita Acme, expresiones de determinación cómica y texturas de desierto ilustrado.",
+        prompt: "Using the person in the uploaded reference photo as inspiration, humorously adapt their facial likeness, hair, and expression into a manic cartoon inventor at a cluttered wooden workbench. Assembling a giant Acme rocket-powered roller skate, blueprint schematics pinned to sandstone canyon wall, sticks of cartoon dynamite with sizzling spark fuses, exaggerated squinting concentration, painted gouache desert landscape, vibrant retro Technicolor palette, classic Chuck Jones directing style --ar 4:5 --v 6.1"
       },
       {
         badge: "#04",
-        image: Na[3],
-        title: "Canario Silvestre Persecución",
-        description: "Encuentro cómico entre felino sigiloso y pajarito inocente con iluminación teatral y trazo retro.",
-        prompt: "nostalgic 1940s animation still of a tiny innocent yellow cartoon canary perched peacefully on an ornate brass birdcage swing, dramatic giant cat paw shadow creeping across pastel floral wallpaper, theatrical spotlight illumination, vintage hand-inked animation cel over painted watercolor background, charming timeless comedy composition --ar 4:5 --v 6.1"
+        image: Na[3 % Na.length],
+        title: "Pato Neurótico en Acción de Pánico",
+        description: "[1 Foto o Generación directa sin foto] Pose de cómica sorpresa con plumas desordenadas, humo de velocidad en espiral y fondo de estudio pintado.",
+        prompt: "Using the facial emotion and comedic energy of the person in the reference photo, translate their wide-eyed expression into a hyper-expressive frantic cartoon duck frozen mid-air in slapstick panic. Eyes popping out on springy cartoon stalks, bill spinning upside down, spinning tornado feet leaving a dusty chalk trail, vintage theatrical animated short style, vibrant retro hand-painted animation cel, high-energy Saturday morning cartoon nostalgia --ar 4:5 --v 6.1"
       },
       {
         badge: "#05",
-        image: Na[4],
-        title: "Locomotora Animada en Fuga",
-        description: "Tren antropomórfico con ojos expresivos y chimenea bufante atravesando un puente curvo imposible.",
-        prompt: "exuberant anthropomorphic vintage cartoon steam train chugging playfully over a teetering wooden curved trestle bridge, expressive cartoon eyes on the smokebox, chimney puffing fluffy musical note steam rings, extreme squash-and-stretch bend on the boiler, golden age Fleischer and Disney 1930s inspired charm, vibrant saturated storybook palette --ar 4:5 --v 6.1"
+        image: Na[4 % Na.length],
+        title: "Piloto de Biplano en Carreras Alocadas",
+        description: "[1 Foto (Tu rostro con gafas de sol o sonrisa pícara)] Gafas de aviador de cuero cómicas, bufanda blanca larguísima ondeando y avioneta de hélice estilo Wacky Races.",
+        prompt: "Using the person in the uploaded reference photo, caricature their facial features, jaw, and grinning expression into a dashing cartoon biplane racer. Wearing vintage leather flight goggles pushed over the forehead, a comically long white aviator silk scarf whipping twenty feet behind in the wind, sitting in a tiny red cartoon propeller biplane banking steeply over cartoon mountains, bright cheerful Hanna-Barbera racing animation style, saturated primary colors --ar 4:5 --v 6.1"
       },
       {
         badge: "#06",
-        image: Na[5],
-        title: "Concierto Toon Orquestal",
-        description: "Director de orquesta caricaturesco con frac rasgado y batuta reluciente bajo reflector cenital.",
-        prompt: "frenetic maestro cartoon animal in a comically frayed tuxedo frantically conducting an orchestra of mischievous sentient musical instruments, swirling musical sheet paper vortex, dramatic stage spotlight cutting through theatrical hall haze, expressive cartoon facial distortion, classic Merrie Melodies musical short atmosphere, masterpiece animation art --ar 4:5 --v 6.1"
+        image: Na[5 % Na.length],
+        title: "Chef Italiano en Cocina de Spaghetti Caótico",
+        description: "[1 Foto (Tu rostro sonriente o guiñando un ojo)] Gorro de chef hinchado, bigote cómico, fideos de spaghetti volando en el aire y salsa de tomate en las paredes.",
+        prompt: "Using the person in the uploaded reference photo, exaggerate their facial likeness and joyful expression into a lively cartoon master chef tossing a colossal flying pizza dough in an animated rustic kitchen. Oversized puffy white toque hat, twirled cartoon mustache, colorful pots whistling steam, dancing garlic bulbs on the counter, 1950s theatrical animation short aesthetic, warm gouache colors, rich humorous staging --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#07",
+        image: Na[6 % Na.length],
+        title: "Músico de Jazz Toon con Trompeta Dorada",
+        description: "[1 Foto (Tu rostro concentrado o de perfil)] Trompeta curvada de latón con notas musicales brillantes saliendo de la campana en un club de jazz retro estilo Fleischer.",
+        prompt: "Using the person in the reference photo, translate their facial structure and soulful gaze into a stylized vintage cartoon jazz trumpeter blowing a high note on a bent golden horn. Glowing colorful musical notes floating like bubbles from the instrument bell, tilted pork pie hat, sharp pinstripe cartoon suit, smoky midnight blue jazz cellar background, Fleischer Studios 1930s swing era animation vibe, dynamic rubber-hose sway --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#08",
+        image: Na[7 % Na.length],
+        title: "Explorador de Safari con Lupa Gigante",
+        description: "[1 Foto (Tu rostro curioso con ojos abiertos)] Salacot de explorador caqui, lupa cósmica que agranda un ojo y mapa arrugado con selva de fantasía.",
+        prompt: "Using the person in the uploaded reference photo, caricature their eye shape, nose, and curious expression into an intrepid cartoon jungle explorer. Holding a comically gigantic magnifying glass that magnifies one eye three times normal size, safari pith helmet with a bird feather, jungle vines and curious colorful toucans peering from giant cartoon leaves, classic vintage theatrical short animation aesthetic --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#09",
+        image: Na[8 % Na.length],
+        title: "Mago de Teatro con Truco de Chistera Fallido",
+        description: "[1 Foto (Tu rostro con ceja levantada o sonrisa cómplice)] Chistera de copa alta con una docena de palomas de colores y serpentinas saliendo disparadas sin control.",
+        prompt: "Using the person in the reference photo, adapt their face, eyes, and hairstyle into an eccentric cartoon stage magician caught in the middle of a chaotic magic trick. White-gloved hands holding a smoking magic wand, dozens of colorful cartoon doves and ribbon streamers exploding out of an upside-down black top hat, classic theatrical velvet stage curtain backdrop, vintage MGM cartoon studio styling, rich technicolor gouache --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#10",
+        image: Na[9 % Na.length],
+        title: "Pirata Cómico con Loro Bromista en el Hombro",
+        description: "[1 Foto (Tu rostro con sonrisa pícara)] Parche de calavera, tricornio de capitán pirata con pluma y un loro verde cómico haciéndole burla.",
+        prompt: "Using the person in the uploaded reference photo, transform their likeness, smile, and jawline into a swaggering, friendly cartoon pirate captain on the wooden deck of a rolling galleon. Feathered tricorn hat, eye patch with a funny skull doodle, a sassy cartoon parrot whispering secrets into their ear, treasure chests overflowing with gold cartoon coins, vibrant Caribbean sea backdrop, classic storybook cartoon illustration --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#11",
+        image: Na[10 % Na.length],
+        title: "Conductor de Tranvía Saltarín 1930s",
+        description: "[1 Foto (Tu rostro de frente)] Tranvía elástico que se dobla en curvas imposibles, gorra de conductor y timbre de campana sonando con notas.",
+        prompt: "Using the person in the uploaded reference photo, stylize their facial proportions and friendly demeanor into a 1930s rubber-hose cartoon cable-car operator ringing the brass bell on a steep San Francisco style cartoon hill. The entire yellow trolley bends and squashes along the curved tracks, musical chime clangs floating as text balloons, sepia-tinted hand-inked vintage animation cel style, authentic nostalgic Fleischer charm --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#12",
+        image: Na[11 % Na.length],
+        title: "Jardinero Toon en Batalla con un Topo Bromista",
+        description: "[1 Foto (Tu rostro con mirada cómica de exasperación)] Peto de jardinero, regadera con agua en arcos de fantasía y un topo burlón asomando entre flores de colores.",
+        prompt: "Using the person in the reference photo, exaggerate their facial features into a determined cartoon gardener in denim overalls caught in a comical standoff with a cheeky cartoon mole poking its head out from a flowerbed. Exaggerated hose pipe knotted into funny pretzel loops, cartoon sunflowers with smiling faces swaying, lush green garden with painted fence, Hanna-Barbera slapstick comedy aesthetic --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#13",
+        image: Na[12 % Na.length],
+        title: "Banquero Toon Bajo Lluvia de Monedas de Oro",
+        description: "[1 Foto (Tu rostro con expresión de triunfo o festejo)] Monóculo cómico, traje de raya diplomática y monedas de oro de fantasía cayendo como cascada luminosa.",
+        prompt: "Using the person in the uploaded reference photo, caricature their facial features and joy into a jolly cartoon tycoon sitting atop an enormous cartoon bank vault. Golden coins raining down like sparkling confetti, top hat balanced precariously, tiny gold rim monóculo over one eye, classic Silly Symphony animated theatrical short style, warm rich golden hues --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#14",
+        image: Na[13 % Na.length],
+        title: "Astronauta Toon en la Luna de Queso Gruyer",
+        description: "[1 Foto (Tu rostro dentro de un círculo)] Escafandra de pecera redonda, traje espacial acolchado con parches cómicos y superficie lunar con cráteres de queso suizo.",
+        prompt: "Using the person in the reference photo, caricature their face and curious gaze inside a crystal-clear spherical fishbowl space helmet. Bouncing weightlessly across a cartoon yellow moon surface with Swiss cheese craters, planting a cheerful smiling cartoon flag into the lunar dust, stars drawn as sparkling four-pointed cartoon twinkles, 1960s retro space cartoon aesthetic --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#15",
+        image: Na[14 % Na.length],
+        title: "Director de Orquesta en Concierto Caótico",
+        description: "[1 Foto (Tu rostro con máxima expresión y energía)] Frac rasgado, batuta chispeante y partituras volando en torbellino mientras los instrumentos cobran vida propia.",
+        prompt: "Using the person in the uploaded reference photo, translate their facial likeness and dynamic intensity into an animated cartoon maestro furiously conducting a symphony of sentient bouncing musical instruments. Tattered tuxedo tails flapping, sparkling magical baton cutting through the air, musical score sheets flying in a chaotic paper cyclone, dramatic stage spotlight, classic Merrie Melodies musical short climax aesthetic --ar 4:5 --v 6.1"
       }
     ]
   },
@@ -1487,56 +1603,114 @@ var CATEGORY_DATA = {
     title: "Prompts de Elegancia",
     themeClass: "stage-theme-elegancia",
     introClass: "intro-prog-elegancia",
-    bio: "Colección concebida con profunda pasión y cuidado por la estética de la alta costura, el drapeado escultórico y la fotografía editorial atemporal. Cada prompt ha sido minuciosamente calibrado para lograr una iluminación suave, paletas cromáticas distinguidas y texturas hiperrealistas. Hecho con esmero para inspirar tus proyectos de mayor distinción.",
-    tags: ["COLECCIÓN ELEGANCIA", "ALTA COSTURA", "ESTILISMO", "ILUMINACIÓN SUAVE", "MIDJOURNEY V6.1"],
-    lyrics: [
-      { start: 0.0, end: 1.3, line1: "ESTÁS LISTO...", line2: "PARA LA ALTA COSTURA" },
-      { start: 1.3, end: 2.6, line1: "LA FORMA ENCUENTRA", line2: "LA ESENCIA PURA" },
-      { start: 2.6, end: 3.8, line1: "DRAPEADO ESCULTURAL", line2: "LUZ ATEMPORAL" },
-      { start: 3.8, end: 5.0, line1: "ELEGANCIA ABSOLUTA", line2: "EDICIÓN DE LUJO" }
-    ],
+    bio: "Una cuidada y esmerada selección orientada al diseño editorial de alta costura, la arquitectura textil y la belleza atemporal. Cada prompt ha sido pulido para lograr un balance perfecto entre sobriedad, texturas nobles y una iluminación natural de estudio. Es un tributo a la sutileza, el minimalismo refinado y la sofisticación.",
+    tags: ["EDITORIAL DE MODA", "QUIET LUXURY", "ALTA COSTURA", "TEXTURAS NOBLES", "MINIMALISMO"],
+    lyrics: [{"start": 0.0, "end": 1.3, "line1": "SUTILEZA Y DISTINCIÓN", "line2": "BELLEZA PURA"}, {"start": 1.3, "end": 2.6, "line1": "LÍNEAS PERFECTAS", "line2": "ARMONÍA Y CALMA"}, {"start": 2.6, "end": 3.8, "line1": "LUJO SILENCIOSO", "line2": "TIEMPO DETENIDO"}, {"start": 3.8, "end": 5.0, "line1": "SOFISTICACIÓN", "line2": "ARTE ETERNO"}],
     prompts: [
       {
         badge: "#01",
-        image: Ra[0],
-        title: "Haute Couture Crema & Oro",
-        description: "Drapeado escultural en seda satinada color marfil con bordados en hilo de oro y luz natural suave de estudio.",
-        prompt: "statuesque high fashion editorial portrait of an elegant model in a sculptural ivory silk gazar gown with hand-embroidered 24k gold filigree threads, architectural cascading pleats catching gentle daylight, minimalist limestone gallery interior, soft chiaroscuro studio lighting, shot on Hasselblad H6D-100c with 85mm f/1.4 lens, natural skin texture with dewy luminous highlights, Harper's Bazaar cover aesthetic, quiet luxury mood --ar 4:5 --v 6.1 --stylize 250"
+        image: Ra[0 % Ra.length],
+        title: "Haute Couture Crema & Oro Escultural",
+        description: "[1 Foto (Tu rostro con iluminación suave de estudio)] Drapeado escultural en seda satinada color marfil con bordados en hilo de oro de 24k y luz natural suave de estudio.",
+        prompt: "Using the person in the uploaded reference photo as the model, preserve their authentic facial bone structure, delicate skin texture, gaze, and natural likeness in a statuesque high fashion editorial portrait. Dressed in a sculptural ivory silk gazar gown with hand-embroidered 24k gold filigree threads, architectural cascading pleats catching gentle daylight, minimalist limestone gallery interior, soft chiaroscuro studio lighting, shot on Hasselblad H6D-100c with 85mm f/1.4 lens, natural skin texture with dewy luminous highlights, Harper's Bazaar cover aesthetic, quiet luxury mood --ar 4:5 --v 6.1 --stylize 250"
       },
       {
         badge: "#02",
-        image: Ra[1],
-        title: "Arquitectura Textil Monocromática",
-        description: "Sastrería contemporánea con pliegues asimétricos, silueta estructurada y textura de lana virgen de alta gama.",
-        prompt: "avant-garde architectural tailoring editorial, model wearing an asymmetric double-faced cream cashmere coat with origami-folded lapels, clean geometric silhouette against brutalist fluted travertine walls, diffused softbox lighting with subtle warm golden rim light, editorial Vogue Italia styling, monochromatic tonal harmony of sand, oat and warm alabaster, immaculate textile weave --ar 4:5 --v 6.1"
+        image: Ra[1 % Ra.length],
+        title: "Sastrería Arquitectónica en Travertino",
+        description: "[1 Foto (Tu rostro de frente o perfil tres cuartos)] Sastrería contemporánea con pliegues asimétricos, silueta estructurada y textura de lana virgen de alta gama.",
+        prompt: "Using the person in the uploaded reference photo as the subject, preserve their true facial features, jawline, and poised expression while styling them in an avant-garde architectural tailoring editorial. Wearing an asymmetric double-faced cream cashmere coat with origami-folded lapels, clean geometric silhouette against brutalist fluted travertine walls, diffused softbox lighting with subtle warm golden rim light, editorial Vogue Italia styling, monochromatic tonal harmony of sand, oat and warm alabaster, immaculate textile weave --ar 4:5 --v 6.1"
       },
       {
         badge: "#03",
-        image: Ra[2],
-        title: "Velo Translúcido & Joyería Fina",
-        description: "Primer plano con velo de organza vaporosa, pendientes de oro martillado y bokeh cremoso.",
-        prompt: "intimate high-jewelry beauty editorial, portrait photographed through multiple layers of floating translucent silk chiffon veil, handcrafted brushed raw gold drop earrings catching glistening pin-light, serene poised expression, ultra-shallow depth of field with velvety creamy bokeh, shot on 35mm portrait lens, refined aesthetic, high-end fine jewelry campaign --ar 4:5 --v 6.1 --style raw"
+        image: Ra[2 % Ra.length],
+        title: "Velo Translúcido & Joyería Fina de Autor",
+        description: "[1 Foto (Tu rostro en primer plano cerrado)] Primer plano íntimo con velo de organza vaporosa, pendientes de oro martillado y bokeh cremoso.",
+        prompt: "Using the person in the uploaded reference photo as the primary subject, accurately retain their facial contours, eye color, and tranquil expression in an intimate high-jewelry beauty editorial. Photographed through multiple layers of floating translucent silk chiffon veil, handcrafted brushed raw gold drop earrings catching glistening pin-light, serene poised expression, ultra-shallow depth of field with velvety creamy bokeh, shot on 85mm f/1.2 portrait lens, refined aesthetic, high-end fine jewelry campaign --ar 4:5 --v 6.1 --style raw"
       },
       {
         badge: "#04",
-        image: Ra[3],
-        title: "Silueta Esculpida en Mármol",
-        description: "Vestido de noche ceñido con corte griego, iluminación cenital y tonalidades cálidas de piedra pulida.",
-        prompt: "timeless classical fashion portrait, statuesque model draped in a sun-bleached pleated linen Grecian peplos standing beside ancient fluted marble columns, raking golden Mediterranean morning sunlight creating deep sculptural shadows, poised noble posture, warm travertine and aged terracotta color story, editorial Vanity Fair museum shoot quality --ar 4:5 --v 6.1"
+        image: Ra[3 % Ra.length],
+        title: "Retrato Escultural en Mármol Clásico Griego",
+        description: "[1 Foto (Tu rostro con postura noble)] Vestido o túnica con corte griego, iluminación cenital y tonalidades cálidas de piedra pulida en templo antiguo.",
+        prompt: "Using the person in the uploaded reference photo, capture their facial structure, brow line, and dignified posture in a timeless classical fashion portrait. Draped in a sun-bleached pleated linen Grecian peplos standing beside ancient fluted marble columns, raking golden Mediterranean morning sunlight creating deep sculptural shadows, poised noble posture, warm travertine and aged terracotta color story, editorial Vanity Fair museum shoot quality --ar 4:5 --v 6.1"
       },
       {
         badge: "#05",
-        image: Ra[4],
-        title: "Minimalismo de Lujo Atemporal",
-        description: "Composición limpia con abrigo de cachemira color avena, pose relajada y fondo arquitectónico sobrio.",
-        prompt: "refined quiet luxury lifestyle editorial, poised model in an oversized double-breasted oatmeal cashmere trench coat with tailored wide-leg trousers, relaxed confident posture in a sunlit Scandinavian gallery with oak floors, soft natural northern window light, shot on medium format digital camera, muted neutral palette of taupe, ecru and warm beige, effortless sophisticated elegance --ar 4:5 --v 6.1"
+        image: Ra[4 % Ra.length],
+        title: "Minimalismo Escandinavo en Cachemira Avena",
+        description: "[1 Foto (Tu rostro relajado y seguro)] Composición limpia con abrigo de cachemira color avena, pose relajada y fondo arquitectónico nórdico sobrio.",
+        prompt: "Using the person in the uploaded reference photo, preserve their exact facial features, skin tone, and authentic expression in a refined quiet luxury lifestyle editorial. Posed in an oversized double-breasted oatmeal cashmere trench coat with tailored wide-leg trousers, relaxed confident posture in a sunlit Scandinavian gallery with natural oak floors, soft natural northern window light, shot on medium format digital camera, muted neutral palette of taupe, ecru and warm beige, effortless sophisticated elegance --ar 4:5 --v 6.1"
       },
       {
         badge: "#06",
-        image: Ra[5],
-        title: "Elegancia Nocturna en Seda Negra",
-        description: "Vestido fluido en satén negro medianoche con accesorios dorados y contraluz suavemente difuminado.",
-        prompt: "cinematic evening gala luxury portrait, model in a fluid bias-cut obsidian silk charmeuse gown with delicate interwoven gold chain halter neckline, soft warm candlelight reflections dancing on glossy silk ripples, darkened neoclassical ballroom backdrop with blurred crystal chandeliers, moody chiaroscuro lighting, regal opulent atmosphere --ar 4:5 --v 6.1 --stylize 300"
+        image: Ra[5 % Ra.length],
+        title: "Gala Nocturna en Seda Negra & Canales de Venecia",
+        description: "[1 Foto (Tu rostro de noche o con luz tenue)] Vestido o esmoquin fluido en satén negro medianoche con accesorios dorados y contraluz sobre el Gran Canal.",
+        prompt: "Using the person in the uploaded reference photo, retain their facial anatomy, gaze, and sophisticated poise in a cinematic evening gala luxury portrait. Wearing a fluid bias-cut obsidian silk charmeuse gown or midnight tuxedo with delicate tailoring, standing on a private moonlit terrace overlooking Venetian canals, warm candle sconce glow reflecting in dark water, shot on 50mm f/1.2 lens with delicate golden edge flares, timeless allure, luxury fragrance commercial atmosphere --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#07",
+        image: Ra[6 % Ra.length],
+        title: "Retrato B&W Editorial de Alto Contraste (Peter Lindbergh)",
+        description: "[1 Foto (Tu rostro en primer plano sin maquillaje excesivo)] Fotografía analógica blanco y negro atemporal, suéter de lana negra de cuello alto, luz natural de ventana y texturas de piel crudas.",
+        prompt: "Using the person in the uploaded reference photo as the subject, preserve their genuine facial characteristics, freckles, gaze, and raw emotion in a legendary black and white fashion portrait in the style of Peter Lindbergh. Wearing an oversized black ribbed turtleneck knit, natural windswept hair, side-lit by diffused daylight from a massive studio warehouse window, deep velvety blacks and clean silver highlights, medium format Kodak Tri-X 400 film grain, Vogue Paris cover standard --ar 4:5 --v 6.1 --style raw"
+      },
+      {
+        badge: "#08",
+        image: Ra[7 % Ra.length],
+        title: "Sommelier Privado en Cava de Barricas Históricas",
+        description: "[1 Foto (Tu rostro con copa o mirada reflexiva)] Ambiente de bodega subterránea con barricas de roble francés, copa de cristal fino, luz cálida de velas y penumbra sobria.",
+        prompt: "Using the person in the uploaded reference photo, keep their authentic facial likeness and distinguished posture as a private sommelier in a century-old stone vaulted wine cellar. Holding a delicate crystal Burgundy wine glass catching candle reflections, dark tailored wool vest over a crisp white poplin shirt, rustic oak barrels receding into moody background shadows, warm candlelight chiaroscuro, cinematic luxury lifestyle editorial --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#09",
+        image: Ra[8 % Ra.length],
+        title: "Paseo en Lancha Riva Clásica por el Lago de Como",
+        description: "[1 Foto (Tu rostro con gafas de sol o sonrisa serena)] Estética italiana de la Dolce Vita, madera de caoba pulida, brisa en el cabello y villas alpinas al atardecer.",
+        prompt: "Using the person in the uploaded reference photo, translate their facial structure, relaxed smile, and features into an iconic Mediterranean luxury portrait aboard a vintage mahogany Riva Aquarama speedboat gliding across Lake Como. Wearing tortoiseshell sunglasses, crisp white linen resort shirt, lake breeze tousling hair, sun-drenched Italian neoclassical villas and green cypress trees on shoreline, warm late-afternoon golden hour lighting, Slim Aarons vintage photography aesthetic --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#10",
+        image: Ra[9 % Ra.length],
+        title: "Coleccionista de Arte en Galería de Techos Altos",
+        description: "[1 Foto (Tu rostro de perfil contemplando)] Espacio minimalista blanco con pintura abstracta colosal, traje de lino estructurado y suelo de hormigón pulido.",
+        prompt: "Using the person in the uploaded reference photo, maintain their recognizable facial features and intellectual focus as an art connoisseur standing in a soaring minimalist contemporary art museum. Contemplating a massive monochromatic textured canvas, bespoke tailored charcoal wool suit, polished poured concrete floor reflecting diffused skylight beams, clean architectural perspective, sophisticated modern luxury editorial --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#11",
+        image: Ra[10 % Ra.length],
+        title: "Alta Relojería Suiza & Esmoquin de Medianoche",
+        description: "[1 Foto (Tu rostro de frente ajustando muñeca o gemelos)] Esmoquin de solapa en punta de raso negro, reloj tourbillon artesanal en la muñeca y reflejos dorados sutiles.",
+        prompt: "Using the person in the uploaded reference photo, preserve their jawline, eyes, and sharp features in an ultra-high-end horology campaign portrait. Fastening the alligator leather strap of a skeleton tourbillon chronograph watch on their wrist, impeccably fitted midnight blue bespoke tuxedo with silk satin peak lapels, dark mahogany library background with warm ambient lamps, macro detail on watch mechanics, luxury GQ cover quality --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#12",
+        image: Ra[11 % Ra.length],
+        title: "Tarde de Té en Palacio Belle Époque de París",
+        description: "[1 Foto (Tu rostro sereno y elegante)] Salón dorado con molduras barrocas francesas, porcelana fina de Limoges y luz dorada a través de ventanales altos.",
+        prompt: "Using the person in the uploaded reference photo, preserve their exact facial likeness and delicate expression seated in an ornate Belle Époque Parisian salon. Delicate fine bone china teacup in hand, pastel tweed blazer with pearl buttons, soaring gilded boiserie walls and crystal chandelier reflections in tall French mirrors, soft Parisian afternoon light through lace curtains, aristocratic old-world grandeur --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#13",
+        image: Ra[12 % Ra.length],
+        title: "Arquitecto / Diseñador en Estudio Minimalista Japandi",
+        description: "[1 Foto (Tu rostro con mirada reflexiva)] Espacio sereno con madera de roble claro, planos arquitectónicos sobre mesa maciza y jardín zen interior.",
+        prompt: "Using the person in the uploaded reference photo, keep their authentic facial bone structure, gaze, and natural hair in a serene design studio editorial. Wearing a relaxed raw silk mandarin-collar overshirt, reviewing minimalist architectural models on a solid hinoki cypress table, sliding shoji screens opening onto a quiet moss garden, pure natural lighting, Kinfolk magazine aesthetic, understated peaceful luxury --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#14",
+        image: Ra[13 % Ra.length],
+        title: "Velada Privada en Palco de la Ópera de Viena",
+        description: "[1 Foto (Tu rostro mirando hacia abajo o de frente)] Balcón de terciopelo carmesí, prismáticos de ópera de nácar y oro, gran araña de cristal iluminando la sala.",
+        prompt: "Using the person in the uploaded reference photo as the subject, preserve their true facial features and aristocratic poise leaning against the plush crimson velvet railing of a private opera box. Wearing an exquisite tailored evening ensemble with gold embroidery, holding mother-of-pearl antique opera glasses, dazzling crystal chandelier illuminating the gilded opera hall in soft amber bokeh, high-society gala grandeur --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#15",
+        image: Ra[14 % Ra.length],
+        title: "Paseo Ecuestre en Finca Campestre Británica",
+        description: "[1 Foto (Tu rostro en exteriores)] Chaqueta clásica de tweed Harris, caballo pura sangre al lado y niebla matinal dorada entre robles centenarios.",
+        prompt: "Using the person in the uploaded reference photo, maintain their genuine facial features, eye intensity, and posture standing beside a majestic dark bay thoroughbred horse on a rolling English country estate. Tailored olive herringbone tweed hacking jacket, brown leather riding boots, gentle morning ground mist burning off under golden sunrise rays, ancient mossy oak trees, Town & Country equestrian heritage aesthetic --ar 4:5 --v 6.1"
       }
     ]
   },
@@ -1544,65 +1718,116 @@ var CATEGORY_DATA = {
     title: "Prompts de Edición",
     themeClass: "stage-theme-edicion",
     introClass: "intro-prog-edicion",
-    bio: "Sección diseñada meticulosamente para profesionales del montaje audiovisual, la tipografía cinética y el ritmo visual contemporáneo. Creado con dedicación para traducir la energía del beat-sync, las transiciones de impacto y el color grading urbano en prompts visuales de máxima precisión y potencia creativa.",
-    tags: ["KINETIC TYPOGRAPHY", "URBAN EDIT", "MOTION GRAPHICS", "BEAT SYNC", "COLOR GRADING"],
-    lyrics: [
-      { start: 0.0, end: 1.2, line1: "WE ON GO.", line2: "PRECISION CUT" },
-      { start: 1.2, end: 2.5, line1: "EVERYTHING PRETTY", line2: "FRAME BY FRAME" },
-      { start: 2.5, end: 3.7, line1: "I DO WHAT I DO", line2: "SPEED RAMP & GLITCH" },
-      { start: 3.7, end: 5.0, line1: "BEAT SYNC LOCKED", line2: "RENDER COMPLETE" }
-    ],
+    bio: "Creado con devoción por las artes visuales, la postproducción de cine y la experimentación digital. Esta galería combina técnicas de etalonaje, efectos cromáticos y transformaciones texturales como el arte de estambre y collage. Un compendio pensado para quienes valoran el detalle minucioso y la estética cinematográfica contemporánea.",
+    tags: ["POSTPRODUCCIÓN", "COLOR GRADING", "GLITCH ART", "ESTAMBRE 3D", "CINEMATOGRÁFICO"],
+    lyrics: [{"start": 0.0, "end": 1.3, "line1": "CINEMATIC VISION", "line2": "VISUAL POWER"}, {"start": 1.3, "end": 2.6, "line1": "FRAME BY FRAME", "line2": "PRECISION CUT"}, {"start": 2.6, "end": 3.8, "line1": "COLOR Y TEXTURA", "line2": "IMPACTO VISUAL"}, {"start": 3.8, "end": 5.0, "line1": "EDICIÓN PURA", "line2": "ARTE DIGITAL"}],
     prompts: [
       {
-        badge: "#01 • ANTES / DESPUÉS",
-        image: crochetOrig,
-        resultImage: crochetIa,
-        isComparison: true,
-        title: "Transformación Crochet Amigurumi (Yarn Art)",
-        description: "Reimaginación táctil de ilustración 2D a muñeco de lana amigurumi 3D. Mantén presionado sobre la ilustración original para activar la transición y ver el resultado generado por IA.",
-        prompt: CROCHET_PROMPT_STRING
+        badge: "#01",
+        image: crochetIa,
+        isCrochet: true,
+        originalImage: crochetOrig,
+        title: "Transformación Tejida Crochet Amigurumi (Yarn Art)",
+        description: "[1 o 2 Fotos (Foto 1: Tu rostro / Foto 2: Prenda o accesorio de lana)] Reimaginación táctil hiperrealista de una persona o ilustración en un muñeco artesanal de estambre tejido con textura macro de fibras.",
+        prompt: "Using the person in the uploaded reference photo as the exact visual model, translate their facial likeness, hairstyle, skin tone, and distinct characteristics into a photorealistic handcrafted amigurumi crochet figure. Macro close-up shot showcasing authentic thick woolen yarn weave texture, visible fuzzy fiber filaments, delicate hand-stitched black button eyes, hand-knitted miniature clothes matching the photo, sitting on a warm wooden craft table surrounded by spools of thread, soft diffused daylight from window, tactile artisan masterpiece, 8k resolution macro photography --ar 4:5 --v 6.1"
       },
       {
         badge: "#02",
-        image: ea[0],
-        title: "Tipografía Cinética Urbana",
-        description: "Composición de video edit con letras sobredimensionadas en tracking rápido, destellos anamórficos y textura urbana.",
-        prompt: "explosive urban music video freeze frame, colossal bold kinetic sans-serif typography floating and tracking across a gritty neon-lit metropolitan crosswalk, horizontal anamorphic blue streak lens flare, high-contrast teal-and-orange cinematic color grade, Arri Alexa Mini 35mm film grain, motion blur on sprinting streetwear dancer, modern high-budget hip-hop visual production --ar 4:5 --v 6.1"
+        image: ea[1 % ea.length],
+        title: "Doble Exposición Silueta & Bosque de Niebla",
+        description: "[1 Foto (Tu rostro de perfil con fondo liso)] Fusión fotográfica analógica de tu perfil con copas de pinos brumosos, cielo nórdico y aves volando en libertad.",
+        prompt: "Using the person's profile silhouette from the uploaded reference photo, create a fine-art multiple exposure photographic portrait. The person's facial outline, nose, and lips seamlessly merge into a dense pine forest canopy shrouded in mountain mist, flying birds emerging from the crown of hair, monochrome tonality with subtle desaturated cold cyan shadows, pristine negative space, evocative Scandinavian album art aesthetic --ar 4:5 --v 6.1"
       },
       {
         badge: "#03",
-        image: ea[1],
-        title: "Glitch Cromático & Speed Ramp",
-        description: "Efecto de salto temporal con aberración cromática RGB dividida, estelas de luz y desenfoque direccional.",
-        prompt: "high-energy cinematic video transition freeze still, extreme RGB chromatic aberration channel split on athlete executing dynamic jump, trailing neon cyan and magenta light trails, 180-degree shutter angle directional motion blur, precision After Effects composite aesthetics, hyper-stylized digital color grade, razor-sharp center subject focus --ar 4:5 --v 6.1"
+        image: ea[2 % ea.length],
+        title: "Glitch Cromático RGB & Speed Ramp Cinemático",
+        description: "[1 Foto (Tu rostro con pose dinámica)] Efecto de salto temporal con aberración cromática RGB dividida, estelas de luz y desenfoque direccional.",
+        prompt: "Using the person in the uploaded reference photo as the main subject, preserve their facial identity and fierce expression while applying an aggressive high-speed kinetic video edit freeze frame. Heavy RGB channel splitting glitch artifacts, electric magenta and cyan optical separation, directional speed-ramp motion blur streaks, futuristic HUD crosshairs subtly overlaid, dynamic music video transition aesthetic, 4k digital cinema capture --ar 4:5 --v 6.1"
       },
       {
         badge: "#04",
-        image: ea[2],
-        title: "Estudio Color Grade Neón & Humo",
-        description: "Iluminación bicolor en estudio cinematográfico con atmósfera de niebla densa y encuadre centrado.",
-        prompt: "intimate cinematic music video close-up, musician framed between vertical dual-tone electric cyan and warm amber Astera LED light tubes, dense atmospheric haze machine fog catching rim light, anamorphic oval bokeh, rich shadows with preserved skin tone detail, shot by world-class director of photography, authentic Hollywood film still look --ar 4:5 --v 6.1"
+        image: ea[3 % ea.length],
+        title: "Estudio Color Grade Bicolor Neón & Humo",
+        description: "[1 Foto (Tu rostro con fondo oscuro)] Iluminación bicolor en estudio cinematográfico con atmósfera de niebla densa y encuadre centrado de alto impacto.",
+        prompt: "Using the person in the uploaded reference photo, accurately preserve their facial features, jaw structure, and gaze while placing them in a cinematic music video studio set. Flanked by vertical dual-tone electric cyan and warm amber Astera LED light tubes, dense atmospheric haze machine fog catching razor-sharp rim light, anamorphic lens oval bokeh, preserved natural skin tones in the midtones, shot on Arri Alexa Mini LF, high-end commercial aesthetic --ar 4:5 --v 6.1"
       },
       {
         badge: "#05",
-        image: ea[3],
-        title: "Corte de Precisión Frame by Frame",
-        description: "Retícula de múltiples pantallas con líneas de tiempo superpuestas, timecodes flotantes y contrastes nítidos.",
-        prompt: "editorial quad-split screen commercial still, four perfectly synchronized camera angles tracking an intense athletic movement, floating digital timecode HUD overlays and minimal graphic grid lines, ultra-clean commercial broadcast aesthetic, razor-sharp contrast, dynamic sports campaign style --ar 4:5 --v 6.1"
+        image: ea[4 % ea.length],
+        title: "Collage Editorial Rasgado con Tipografía Suiza",
+        description: "[1 Foto (Tu rostro en cualquier ángulo)] Papel fotográfico rasgado artísticamente superpuesto sobre cartulina kraft, cinta adhesiva translúcida y tipografía Helvetica suiza.",
+        prompt: "Using the person in the uploaded reference photo as the portrait, craft a high-concept graphic design editorial collage. The portrait is printed on torn matte paper with authentic fibrous deckled edges, taped with translucent frosted masking tape onto textured concrete and kraft board, bold minimalist Swiss typography layouts layered behind, punchy monochrome with one vivid accent color splash, contemporary art magazine cover layout --ar 4:5 --v 6.1"
       },
       {
         badge: "#06",
-        image: ea[4],
-        title: "Textura Tape VHS 4K Remaster",
-        description: "Estética retro VHS analógica combinada con nitidez moderna 4K, scanlines sutiles y gradación vintage.",
-        prompt: "remastered 1990s analog camcorder still captured on vintage magnetic tape, subtle authentic CRT horizontal scanlines, warm nostalgic color shift, tactile magnetic tape tracking glitch artifacts, contemporary Tokyo night street fashion, organic analog imperfection fused with crisp 4k optical clarity --ar 4:5 --v 6.1"
+        image: ea[5 % ea.length],
+        title: "Textura Cinta VHS Analógica 1994 Remaster 4K",
+        description: "[1 Foto (Tu rostro o pose casual)] Estética retro VHS analógica combinada con nitidez moderna 4K, scanlines sutiles de tubo CRT y gradación vintage.",
+        prompt: "Using the person in the uploaded reference photo as the subject, render them as a 1990s magnetic camcorder video still while maintaining their facial likeness. Subtle horizontal CRT monitor scanlines, magnetic tape tracking glitch lines near bottom edge, warm nostalgic saturation shift, genuine video tape noise and bloom on bright highlights, contemporary streetwear styling, authentic vintage analog feel with crisp modern clarity --ar 4:5 --v 6.1"
       },
       {
         badge: "#07",
-        image: ea[5],
-        title: "Montaje Cinematográfico Beat-Sync",
-        description: "Momento de impacto sincronizado con el bajo: silueta a contraluz, chispas de bengala y ángulo contrapicado.",
-        prompt: "dramatic music video bass drop impact frame, backlit silhouette standing triumphantly against a towering grid of blinding stadium floodlights, suspended sparks and pyro smoke frozen in mid-air by 1000fps high-speed camera, extreme low-angle heroic perspective, epic cinematic commercial grandeur --ar 4:5 --v 6.1"
+        image: ea[6 % ea.length],
+        title: "Montaje Cinemático Beat-Sync a 1000fps",
+        description: "[1 Foto (Tu silueta o cuerpo entero)] Momento de impacto sincronizado con el bajo: silueta a contraluz, chispas de bengala suspendidas y ángulo contrapicado.",
+        prompt: "Using the person in the uploaded reference photo, portray them as an iconic performer frozen in high-speed 1000fps slow-motion capture at the exact climax of a stadium concert. Backlit silhouette standing proudly before a massive blinding grid of floodlights, suspended sparkler embers and pyro smoke drifting like frozen glass crystals around them, heroic low-angle shot, epic commercial grandeur, deep contrasted shadows --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#08",
+        image: ea[7 % ea.length],
+        title: "Disolución de Partículas de Cristal Prisma",
+        description: "[1 Foto (Tu rostro de frente con mirada fija)] Efecto de desintegración conceptual donde un tercio del rostro se fragmenta en prismas de diamante y destellos arcoíris.",
+        prompt: "Using the person in the uploaded reference photo, faithfully retain their facial features on one side while smoothly dissolving the other half into an explosion of floating geometric glass prisms and diamond shards. Light refracting through crystalline facets creating rainbow spectral flares, dark moody background, high-end visual effects composite, conceptual beauty photography, tack-sharp macro detail --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#09",
+        image: ea[8 % ea.length],
+        title: "Retrato a Través de Vidrio Prismático & Gotas de Lluvia",
+        description: "[1 Foto (Tu rostro mirando de cerca a la cámara)] Fotografía tomada a través de un panel de vidrio texturizado con gotas de lluvia y refracciones de luces de ciudad.",
+        prompt: "Using the person in the uploaded reference photo, preserve their facial identity and expressive eyes photographed through a wet textured glass window pane. Raindrops clinging to the glass causing subtle optical distortions and liquid caustics, soft city streetlights blurred into colorful circular bokeh spheres behind, intimate melancholic mood, cinematic film still, moody teal and warm amber grading --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#10",
+        image: ea[9 % ea.length],
+        title: "Portada de Vinilo Grunge 90s con Pegatinas Holográficas",
+        description: "[1 Foto (Tu rostro con pose relajada o rebelde)] Carátula de disco de vinilo de 12 pulgadas con anillo de desgaste circular, etiqueta holográfica y textura de cartón envejecido.",
+        prompt: "Using the person in the uploaded reference photo, design an authentic 1990s grunge alternative rock vinyl record sleeve featuring their portrait. Circular ring wear scuff mark imprinted on the cardboard jacket from the vinyl inside, worn folded edges, shiny prismatic holographic parental advisory sticker in corner, grainy high-contrast monochrome photo with green duotone wash, vintage record store relic aesthetic --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#11",
+        image: ea[10 % ea.length],
+        title: "Escáner 3D Holográfico Wireframe Azul Neón",
+        description: "[1 Foto (Tu rostro de frente bien simétrico)] Malla poligonal tridimensional de alambre azul cian superpuesta a media cara con códigos de datos y coordenadas.",
+        prompt: "Using the person in the uploaded reference photo, maintain their true facial likeness on one side while the opposite side is overlaid with an intricate glowing cyan 3D wireframe mesh polygon grid. Laser scanning lines sweeping across cheekbones, subtle numerical spatial coordinates and vector nodes floating beside the face, dark high-tech laboratory backdrop, futuristic biometric scanning UI concept, ultra-clean sci-fi composite --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#12",
+        image: ea[11 % ea.length],
+        title: "Pintura al Óleo Digital Impasto con Relieve Real",
+        description: "[1 Foto (Tu rostro con buena iluminación de tres cuartos)] Lienzo al óleo expresionista con empastes gruesos aplicados a espátula, relieve tridimensional de pintura y textura de tela de lino.",
+        prompt: "Using the person in the uploaded reference photo as the subject, preserve their facial likeness while recreating the portrait as a physical oil painting on stretched linen canvas with heavy impasto knife strokes. Visible thick ridges of oil paint catching raking side light, rich tactile pigment textures blending across cheekbones and hair, expressive brushstrokes in the style of John Singer Sargent and Lucian Freud, authentic art gallery oil masterpiece --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#13",
+        image: ea[12 % ea.length],
+        title: "Mapa Térmico Infrarrojo de Visión Termográfica",
+        description: "[1 Foto (Tu rostro de frente)] Gradiente térmico de calor psicodélico de azul frío a naranja incandescente y blanco en puntos de mayor temperatura.",
+        prompt: "Using the person in the uploaded reference photo, preserve their facial contours and recognizable profile while processing the image through a military-grade thermal infrared heat vision filter. Heat signatures shifting from deep violet and cobalt blue on cooler zones to radiant glowing magenta, blazing orange, and blinding white-hot highlights on forehead and lips, technical temperature scale HUD bar on side, experimental fashion art direction --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#14",
+        image: ea[13 % ea.length],
+        title: "Secuencia Estroboscópica de Movimiento Continuo",
+        description: "[1 Foto (Tu rostro con giro de cabeza o gesto con manos)] Múltiples exposiciones congeladas en un solo fotograma capturando el rastro del movimiento como un eco visual translúcido.",
+        prompt: "Using the person in the uploaded reference photo, capture a stroboscopic multiple-flash photographic study of their movement across the frame. Five distinct overlapping translucent exposures of their face turning smoothly from profile to front view, subtle colored gels (amber, cyan, rose) tinting each consecutive flash phase, black velvet studio backdrop, dynamic frozen motion, award-winning editorial dance photography --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#15",
+        image: ea[14 % ea.length],
+        title: "Diorama Miniatura Tilt-Shift con Bokeh Esférico",
+        description: "[1 Foto (Tu rostro o cuerpo entero en exterior)] Desenfoque óptico de lente basculante tilt-shift con plano de enfoque extremadamente estrecho y esferas de luz dorada.",
+        prompt: "Using the person in the uploaded reference photo, render them within an enchanting miniature diorama world using an extreme tilt-shift optical perspective. Razor-thin horizontal plane of sharp focus right across the eyes, while the top and bottom of the frame melt into creamy cinematic blur and glowing golden circular bokeh balls, miniature city street setting with warm whimsical night lighting, magical toy-like photographic aesthetic --ar 4:5 --v 6.1"
       }
     ]
   },
@@ -1612,54 +1837,112 @@ var CATEGORY_DATA = {
     introClass: "intro-prog-superheroe",
     bio: "Desarrollado con genuina admiración por las viñetas épicas, el claroscuro cinematográfico y la imponencia heroica. Estos prompts reúnen la fuerza del cómic moderno con la escala colosal de las grandes producciones: poses dinámicas, efectos lumínicos teatrales y una atmósfera legendaria pensada para asombrar.",
     tags: ["CÓMIC ÉPICO", "CLAROSCURO HEROICO", "ILUMINACIÓN VOLUMÉTRICA", "POSE DINÁMICA", "CINEMÁTICA"],
-    lyrics: [
-      { start: 0.0, end: 1.3, line1: "FLY IN THE SKY", line2: "SOARING HIGH" },
-      { start: 1.3, end: 2.6, line1: "FLY IN THE RAIN", line2: "NEVER SURRENDER" },
-      { start: 2.6, end: 3.8, line1: "DESPIERTA EL PODER", line2: "QUE LLEVAS DENTRO" },
-      { start: 3.8, end: 5.0, line1: "NACE UNA LEYENDA", line2: "EL HÉROE DESPIERTA" }
-    ],
+    lyrics: [{"start": 0.0, "end": 1.3, "line1": "FLY IN THE SKY", "line2": "SOARING HIGH"}, {"start": 1.3, "end": 2.6, "line1": "FLY IN THE RAIN", "line2": "NEVER SURRENDER"}, {"start": 2.6, "end": 3.8, "line1": "DESPIERTA EL PODER", "line2": "QUE LLEVAS DENTRO"}, {"start": 3.8, "end": 5.0, "line1": "NACE UNA LEYENDA", "line2": "EL HÉROE DESPIERTA"}],
     prompts: [
       {
         badge: "#01",
-        image: Xa[0],
-        title: "Vuelo Ascendente en la Tormenta",
-        description: "Héroe surcando un cielo de tempestad con relámpagos iluminando la armadura y gotas de lluvia congeladas en el aire.",
-        prompt: "colossal cinematic IMAX still of an armored superhero surging upward through a violent supercell thunderstorm, individual rain droplets suspended and illuminated by lightning flashes, intricately paneled titanium and carbon composite suit, billowing tattered crimson cape whipping in gale-force winds, high-contrast rim lighting, cinematic photo-realism, Zack Snyder aesthetic --ar 4:5 --v 6.1 --stylize 300"
+        image: Xa[0 % Xa.length],
+        title: "Vuelo Ascendente en Supercélula de Tormenta",
+        description: "[1 Foto (Tu rostro mirando hacia arriba con determinación)] Héroe surcando un cielo de tempestad con relámpagos iluminando la armadura de titanio y gotas de lluvia congeladas en el aire.",
+        prompt: "Using the person in the uploaded reference photo as the superhero, accurately preserve their facial features, jawline, and determined expression in a colossal cinematic IMAX still surging upward through a violent supercell thunderstorm. Individual raindrops suspended and illuminated by purple-white lightning flashes, intricately paneled titanium and carbon composite suit, billowing tattered crimson cape whipping in gale-force winds, high-contrast rim lighting, cinematic photo-realism, Zack Snyder blockbuster aesthetic --ar 4:5 --v 6.1 --stylize 300"
       },
       {
         badge: "#02",
-        image: Xa[1],
-        title: "Aterrizaje Heroico de Impacto",
-        description: "Impacto contra el asfalto con cráter agrietado, polvo en suspensión y ojos resplandecientes en pose de tres puntos.",
-        prompt: "dynamic superhero three-point ground landing impact, deep fractured pavement crater radiating glowing energy shockwaves, airborne asphalt boulders frozen in mid-air, glowing luminescent heroic eyes, low-angle ground perspective, dramatic volumetric dust cloud backlit by amber city fires, photorealistic Marvel blockbuster VFX quality --ar 4:5 --v 6.1"
+        image: Xa[1 % Xa.length],
+        title: "Aterrizaje Heroico de Tres Puntos en Cráter con Energía",
+        description: "[1 Foto (Tu rostro inclinado hacia abajo con ojos intensos)] Impacto demoledor contra el asfalto con cráter agrietado, polvo en suspensión y ojos resplandecientes en pose de tres puntos.",
+        prompt: "Using the person in the uploaded reference photo, retain their facial likeness and fierce gaze in a dynamic superhero three-point ground landing impact scene. One fist buried into a deep fractured pavement crater radiating glowing blue energy shockwaves, airborne asphalt chunks frozen mid-air, luminescent heroic eyes, low-angle ground perspective, dramatic volumetric dust cloud backlit by amber city fires, photorealistic Marvel blockbuster VFX quality --ar 4:5 --v 6.1"
       },
       {
         badge: "#03",
-        image: Xa[2],
-        title: "Guardián en la Cima del Rascacielos",
-        description: "Silueta vigilante sobre una gárgola de rascacielos art déco con la metrópolis iluminada bajo la niebla nocturna.",
-        prompt: "moody comic noir masterwork of a dark vigilante superhero perched atop an art deco gargoyle statue, overlooking a sprawling rain-slicked Gotham metropolis shrouded in low fog, trench-coat style cape fluttering in night wind, distant neon skyscrapers piercing misty clouds, high-contrast chiaroscuro, cinematic comic book realism --ar 4:5 --v 6.1"
+        image: Xa[2 % Xa.length],
+        title: "Guardián Vigilante en Gárgola de Metrópolis Nocturna",
+        description: "[1 Foto (Tu rostro de perfil o con mirada sombría)] Silueta vigilante sobre una gárgola de rascacielos art déco con la metrópolis lluviosa bajo niebla nocturna estilo Comic Noir.",
+        prompt: "Using the person in the uploaded reference photo, capture their facial structure, brow line, and solemn intensity into a moody comic noir masterwork of a dark vigilante superhero. Perched atop an art deco stone gargoyle statue overlooking a sprawling rain-slicked Gotham metropolis shrouded in low fog, trench-coat style armored cape fluttering in the freezing night wind, distant neon skyscrapers piercing misty clouds, high-contrast chiaroscuro, cinematic comic book realism --ar 4:5 --v 6.1"
       },
       {
         badge: "#04",
-        image: Xa[3],
-        title: "Carga de Poder Fotónico",
-        description: "Energía cósmica acumulándose en los puños con rayos de luz volumétrica y aura de plasma pulsante.",
-        prompt: "jaw-dropping IMAX shot of a cosmic superhero charging concentrated photonic energy between clenched fists, blinding white-gold plasma arcs spiraling around armored gauntlets, intense focused expression reflecting pure cosmic power, micro-textures on brushed metal suit, volumetric god rays piercing dark atmosphere, photorealistic 8k render --ar 4:5 --v 6.1"
+        image: Xa[3 % Xa.length],
+        title: "Carga de Poder Fotónico Cósmico en Guanteletes",
+        description: "[1 Foto (Tu rostro concentrado al máximo)] Energía cósmica acumulándose en los puños con rayos de luz volumétrica y aura de plasma pulsante.",
+        prompt: "Using the person in the uploaded reference photo as the superhero, preserve their authentic facial features, intense gaze, and fierce grit in a jaw-dropping IMAX action shot. Charging concentrated photonic energy between clenched armored fists, blinding white-gold plasma arcs spiraling around high-tech gauntlets, micro-textures on brushed gunmetal suit, volumetric god rays piercing dark atmospheric haze, photorealistic 8k render, epic Marvel grandeur --ar 4:5 --v 6.1"
       },
       {
         badge: "#05",
-        image: Xa[4],
-        title: "El Rescate entre los Escombros",
-        description: "Pose protectora sosteniendo una columna colapsada con rayos de sol filtrándose a través del humo.",
-        prompt: "powerful emotional superhero rescue scene, hero straining under immense weight to support a collapsing steel skyscraper girder protecting civilians below, dust motes and embers dancing in dramatic morning sunbeams cutting through smoke plumes, gritty realistic suit damage, cinematic heroism masterpiece --ar 4:5 --v 6.1"
+        image: Xa[4 % Xa.length],
+        title: "Rescate Épico Sosteniendo Viga de Edificio Colapsado",
+        description: "[1 Foto (Tu rostro haciendo esfuerzo hercúleo)] Pose protectora sosteniendo una columna de acero colapsada con rayos de sol filtrándose a través del humo y escombros.",
+        prompt: "Using the person in the uploaded reference photo, maintain their recognizable facial features and raw emotional heroism straining under immense weight to support a collapsing steel skyscraper girder to protect civilians below. Dust motes and fiery embers dancing in dramatic morning sunbeams cutting through plumes of smoke, gritty realistic suit battle damage, cinematic heroism masterpiece, emotional cinematic storytelling --ar 4:5 --v 6.1"
       },
       {
         badge: "#06",
-        image: Xa[5],
-        title: "Nacimiento de la Leyenda",
-        description: "Retrato épico con máscara dañada por la batalla, mirada firme al horizonte y amanecer triunfal de fondo.",
-        prompt: "epic battle-damaged superhero close-up portrait at dawn, cracked metallic helmet revealing a fiercely determined eye, rising golden sun crowning a mountainous horizon behind the silhouette, soot and rain streaks on battered armor plates, triumphant majestic mood, painted cinematic digital masterpiece --ar 4:5 --v 6.1 --stylize 350"
+        image: Xa[5 % Xa.length],
+        title: "Nacimiento de la Leyenda: Casco Fracturado al Amanecer",
+        description: "[1 Foto (Tu rostro de primer plano con mirada fija)] Retrato épico con máscara o casco metálico roto por la batalla, mirada firme al horizonte y amanecer triunfal de fondo.",
+        prompt: "Using the person in the uploaded reference photo, preserve their exact facial features, eye, and jawline in an epic close-up battle portrait at dawn. A cracked metallic helmet partially broken away to reveal their determined human eye, rising golden sun crowning a mountainous horizon behind the silhouette, soot and rain streaks running down battered armor plates, triumphant majestic mood, painted cinematic digital masterpiece --ar 4:5 --v 6.1 --stylize 350"
+      },
+      {
+        badge: "#07",
+        image: Xa[6 % Xa.length],
+        title: "Velocista Escarlata Rompiendo la Barrera Temporal",
+        description: "[1 Foto (Tu rostro de perfil o en carrera)] Héroe en carrera hipersónica con relámpagos ámbar envolventes, distorsión gravitatoria y fragmentos de tiempo suspendidos.",
+        prompt: "Using the person in the uploaded reference photo, preserve their facial likeness and aerodynamic focus in a mind-bending cinematic still of a speedster superhero sprinting at relativistic speed. Swirling vortex of amber and electric scarlet lightning arcing around the streamlined friction-proof suit, surrounding city street warped by gravitational time dilation, individual shattered glass fragments floating motionless in hyper-slow motion, Zack Snyder Speed Force visual aesthetic --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#08",
+        image: Xa[7 % Xa.length],
+        title: "Hechicero Supremo Conjurando Portales Místicos",
+        description: "[1 Foto (Tu rostro con mirada mística y manos levantadas)] Mandalas geométricos de chispas doradas girando en el aire, túnica arcana ondeando y multiverso fractal de fondo.",
+        prompt: "Using the person in the uploaded reference photo, faithfully retain their facial features, cheekbones, and focused gaze as an omnipotent mystic sorcerer conjuring dimensional portals. Swirling mandalas of sparkling eldritch golden embers orbiting open hands, ornate velvet arcane tunic with floating levitation cloak, reality folding into kaleidoscope fractal mirror dimensions in background, Doctor Strange visual effects aesthetic, hyper-detailed volumetric illumination --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#09",
+        image: Xa[8 % Xa.length],
+        title: "Armadura Nanotecnológica Ensamblándose en Vuelo",
+        description: "[1 Foto (Tu rostro mirando al frente)] Placas de nano-armadura hexagonal de titanio y oro líquido cerrándose sobre el rostro a miles de metros de altura.",
+        prompt: "Using the person in the uploaded reference photo as the hero, preserve their authentic facial features as a state-of-the-art nanotech powered armor fluidly forms across their body in mid-air. Liquid metal hexagonal armor tiles flowing across the neck and jawline, glowing blue arc power core illuminated on chest, stratospheric clouds and sunset horizon reflected in chrome surfaces, high-octane Iron Man suit-up sequence realism --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#10",
+        image: Xa[9 % Xa.length],
+        title: "Soberano de las Profundidades Abisales con Tridente",
+        description: "[1 Foto (Tu rostro con porte regio y mirada profunda)] Armadura de escamas de oricalco dorado bajo el océano, tridente luminoso, bioluminiscencia marina y corrientes submarinas.",
+        prompt: "Using the person in the uploaded reference photo, preserve their facial bone structure, jawline, and commanding presence as a legendary aquatic monarch in the depths of the ocean. Holding an ornate glowing golden trident radiating ethereal cyan shockwaves, armored suit of carved iridescent dragon scales, hair floating weightlessly in deep ocean currents, bioluminescent coral reefs and manta ray silhouettes in misty blue abyss, Aquaman cinematic grandeur --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#11",
+        image: Xa[10 % Xa.length],
+        title: "Vigilante Táctico de Nieve con Visor de Asalto",
+        description: "[1 Foto (Tu rostro con mirada táctica)] Traje táctico de kevlar ártico con camuflaje de nieve, pasamontañas entreabierto y visor infrarrojo en ventisca montañosa.",
+        prompt: "Using the person in the uploaded reference photo, keep their authentic eyes, nose, and facial contours in a gritty realistic tactical superhero portrait. Battered tactical white and slate-grey winter armor with modular pouches, high-tech night-vision monocle tilted up, heavy blizzard snow sticking to collar and shoulders, frozen alpine mountain fortress backdrop, realistic Christopher Nolan style grounded superhero cinema --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#12",
+        image: Xa[11 % Xa.length],
+        title: "Semidiós del Trueno Forjando Arma Cósmica",
+        description: "[1 Foto (Tu rostro con expresión imponente)] Rodeado de plasma estelar incandescente, sosteniendo el mango de un martillo de batalla forjado en el corazón de una estrella.",
+        prompt: "Using the person in the uploaded reference photo, preserve their facial proportions and godly warrior intensity as a mythical thunder god standing inside an alien celestial forge. Raw stellar plasma and molten gold liquid metal swirling around a massive war hammer held high, brilliant blue lightning crackling through armored vambraces, glowing divine eyes, colossal cosmic ring architecture orbiting a dying star, epic Marvel Thor cinematic scale --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#13",
+        image: Xa[12 % Xa.length],
+        title: "Fusión con Traje Simbionte Alienígena Biomecánico",
+        description: "[1 Foto (Tu rostro de frente con expresión desafiante)] Zarcillos líquidos de masa oscura biomecánica trepando por el cuello y hombros, ojos blancos alargados y colmillos.",
+        prompt: "Using the person in the uploaded reference photo, preserve their exact facial features on one side while glistening liquid black alien symbiote tendrils aggressively creep across the other side of the face and neck. Glossy oil-slick organic textures reflecting streetlights, white liquid symbiote eye beginning to form over the cheek, wet dark alleyway backdrop, intense visceral body-horror superhero transformation, photorealistic movie render --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#14",
+        image: Xa[13 % Xa.length],
+        title: "Psíquico Telequinético Deteniendo Salva de Misiles",
+        description: "[1 Foto (Tu rostro con dos dedos en la sien)] Ojos brillantes de luz blanca pura, ondas gravitatorias distorsionando el aire y proyectiles militares congelados a metros.",
+        prompt: "Using the person in the uploaded reference photo, capture their facial structure and intense telekinetic concentration with two fingers touching the temple. Luminous solid white eyes emitting soft mental aura waves, an entire barrage of military artillery shells and missiles frozen dead in mid-air in front of them with air rippling in shockwave ripples, smoke and embers suspended, grand cinematic superhero scale --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#15",
+        image: Xa[14 % Xa.length],
+        title: "El Héroe Solitario Caminando Hacia el Horizonte Triunfal",
+        description: "[1 Foto (Tu rostro o cuerpo de espaldas/perfil)] Silueta majestuosa alejándose de la zona de combate, capa desgarrada ondeando al viento y cielo despejado tras la tormenta.",
+        prompt: "Using the person in the uploaded reference photo, preserve their silhouette, posture, and facial profile in a legendary wide cinematic closing frame. Walking tall across a cleared battlefield towards a glorious rising sun breaking through departing thunderclouds, battered armor glinting with morning dew, billowing cape trailing behind, heroic lone savior triumph, timeless cinematic comic book finale --ar 4:5 --v 6.1 --stylize 350"
       }
     ]
   }

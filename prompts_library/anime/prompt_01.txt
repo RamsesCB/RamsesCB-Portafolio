@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #01: Guerrero Celestial Shonen
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente con buena iluminación)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, accurately preserve and translate their exact facial features, facial bone structure, jawline, eye shape, hairstyle, and authentic likeness into a masterpiece anime key visual of a determined young shonen warrior. The warrior is unleashing an explosive celestial lightning aura with crackling electric arcs curling around clenched fists and luminous glowing golden-blue irises. Sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the primary subject, accurately preserve and translate their exact facial features, facial bone structure, jawline, eye shape, hairstyle, and authentic likeness into a masterpiece anime key visual of a determined young shonen warrior. The warrior is unleashing an explosive celestial lightning aura with crackling electric arcs curling around clenched fists and luminous glowing golden-blue irises. Sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+masterpiece anime key visual of a determined young shonen warrior unleashing an explosive celestial lightning aura, crackling electric arcs curling around clenched fists, intense luminous golden-blue irises, sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --niji 6 --stylize 300
+================================================================================

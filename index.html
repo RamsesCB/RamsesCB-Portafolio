@@ -5382,13 +5382,19 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
   function openPersonalPortfolio() {
     tone(880, 0.12, "square", 0.1);
     window.setTimeout(() => tone(1320, 0.16, "square", 0.08), 80);
-    window.location.href = "/portafolio";
+    const target = window.location.protocol === "file:" ? "portafolio.html" : "/portafolio";
+    window.setTimeout(() => {
+      window.location.href = target;
+    }, 120);
   }
 
   function openRenders3d() {
     tone(920, 0.08, "square", 0.08);
     window.setTimeout(() => tone(1240, 0.12, "square", 0.07), 70);
-    window.location.href = "/archivos-render3d";
+    const target = window.location.protocol === "file:" ? "archivos-render3d.html" : "/archivos-render3d";
+    window.setTimeout(() => {
+      window.location.href = target;
+    }, 120);
   }
 
   function getOrCreateRadioAudio() {
@@ -5656,15 +5662,23 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
   function openItem(index, force = false) {
     const mode = ITEMS[index];
     if (!mode) return;
-    if (current === mode) return;
     if (mode === "PROMPTS" && !force) {
       showConfirm(index);
       return;
     }
     if (mode === "PROMPTS") {
-      window.location.href = "prompts.html";
+      window.location.href = window.location.protocol === "file:" ? "prompts.html" : "/prompts";
       return;
     }
+    if (mode === "SOBRE MÍ") {
+      openPersonalPortfolio();
+      return;
+    }
+    if (mode === "ARCHIVO") {
+      openRenders3d();
+      return;
+    }
+    if (current === mode) return;
     selected = index;
     current = mode;
     visited.add(index);
@@ -6093,6 +6107,35 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
       window.setTimeout(() => button.classList.remove("is-pressed"), 120);
     });
   });
+
+  const btnA = $('button[aria-label="Botón A"]');
+  const btnB = $('button[aria-label="Botón B"]');
+  if (btnA) {
+    btnA.addEventListener("click", () => {
+      ensureAudio();
+      registerFirstInteraction();
+      if (overlayState === "confirm") {
+        confirmNavigation();
+        return;
+      }
+      if (current === "menu") {
+        openItem(selected);
+      }
+    });
+  }
+  if (btnB) {
+    btnB.addEventListener("click", () => {
+      ensureAudio();
+      registerFirstInteraction();
+      if (overlayState === "confirm") {
+        cancelConfirm();
+        return;
+      }
+      if (current !== "menu") {
+        backToMenu();
+      }
+    });
+  }
 
   let hintTimer = null;
   let hintHideTimer = null;

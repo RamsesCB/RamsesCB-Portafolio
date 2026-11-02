@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ELEGANCIA | PROMPT #06: Gala Nocturna en Seda Negra & Canales de Venecia
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de noche o con luz tenue)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, retain their facial anatomy, gaze, and sophisticated poise in a cinematic evening gala luxury portrait. Wearing a fluid bias-cut obsidian silk charmeuse gown or midnight tuxedo with delicate tailoring, standing on a private moonlit terrace overlooking Venetian canals, warm candle sconce glow reflecting in dark water, shot on 50mm f/1.2 lens with delicate golden edge flares, timeless allure, luxury fragrance commercial atmosphere --ar 4:5 --v 6.1`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo, retain their facial anatomy, gaze, and sophisticated poise in a cinematic evening gala luxury portrait. Wearing a fluid bias-cut obsidian silk charmeuse gown or midnight tuxedo with delicate tailoring, standing on a private moonlit terrace overlooking Venetian canals, warm candle sconce glow reflecting in dark water, shot on 50mm f/1.2 lens with delicate golden edge flares, timeless allure, luxury fragrance commercial atmosphere --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+cinematic evening gala luxury portrait, model in a fluid bias-cut obsidian silk charmeuse gown with delicate open back, standing on a private moonlit terrace overlooking Venetian canals, warm candle sconce glow reflecting in dark water, shot on 50mm f/1.2 lens with delicate golden edge flares, timeless allure, luxury fragrance commercial atmosphere --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: EDICION | PROMPT #03: Glitch Cromático RGB & Speed Ramp Cinemático
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro con pose dinámica)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the main subject, preserve their facial identity and fierce expression while applying an aggressive high-speed kinetic video edit freeze frame. Heavy RGB channel splitting glitch artifacts, electric magenta and cyan optical separation, directional speed-ramp motion blur streaks, futuristic HUD crosshairs subtly overlaid, dynamic music video transition aesthetic, 4k digital cinema capture --ar 4:5 --v 6.1`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the main subject, preserve their facial identity and fierce expression while applying an aggressive high-speed kinetic video edit freeze frame. Heavy RGB channel splitting glitch artifacts, electric magenta and cyan optical separation, directional speed-ramp motion blur streaks, futuristic HUD crosshairs subtly overlaid, dynamic music video transition aesthetic, 4k digital cinema capture --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+cinematic action freeze frame with aggressive chromatic aberration glitch effect, RGB channel separation distortion, high-speed directional motion blur trails, neon green and electric magenta color offset, hyper-kinetic music video edit aesthetic, 4k digital cinema capture, gritty dynamic composition --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

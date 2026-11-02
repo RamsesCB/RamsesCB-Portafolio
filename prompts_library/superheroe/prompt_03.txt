@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: SUPERHEROE | PROMPT #03: Guardián Vigilante en Gárgola de Metrópolis Nocturna
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de perfil o con mirada sombría)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, capture their facial structure, brow line, and solemn intensity into a moody comic noir masterwork of a dark vigilante superhero. Perched atop an art deco stone gargoyle statue overlooking a sprawling rain-slicked Gotham metropolis shrouded in low fog, trench-coat style armored cape fluttering in the freezing night wind, distant neon skyscrapers piercing misty clouds, high-contrast chiaroscuro, cinematic comic book realism --ar 4:5 --v 6.1`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo, capture their facial structure, brow line, and solemn intensity into a moody comic noir masterwork of a dark vigilante superhero. Perched atop an art deco stone gargoyle statue overlooking a sprawling rain-slicked Gotham metropolis shrouded in low fog, trench-coat style armored cape fluttering in the freezing night wind, distant neon skyscrapers piercing misty clouds, high-contrast chiaroscuro, cinematic comic book realism --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+moody comic noir masterwork of a dark vigilante superhero perched atop an art deco gargoyle statue, overlooking a sprawling rain-slicked Gotham metropolis shrouded in low fog, trench-coat style cape fluttering in night wind, distant neon skyscrapers piercing misty clouds, high-contrast chiaroscuro, cinematic comic book realism --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

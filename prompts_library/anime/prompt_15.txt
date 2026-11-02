@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #15: Duelista Dimensional en el Vórtice del Tiempo
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro con mirada mística o reflexiva)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the protagonist, preserve their true facial features, eye shape, and contemplation while depicting them as a time traveler standing in the nexus of fractured chronal timelines. Translucent giant clockfaces and golden clockwork gears floating in a deep space quantum vortex, glowing strands of golden destiny threads weaving through fingertips, long cosmic overcoat decorated with constellations, cinematic wide angle, radiant astral lighting, deep navy, bronze, and shimmering amber hues --ar 4:5 --niji 6`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the protagonist, preserve their true facial features, eye shape, and contemplation while depicting them as a time traveler standing in the nexus of fractured chronal timelines. Translucent giant clockfaces and golden clockwork gears floating in a deep space quantum vortex, glowing strands of golden destiny threads weaving through fingertips, long cosmic overcoat decorated with constellations, cinematic wide angle, radiant astral lighting, deep navy, bronze, and shimmering amber hues --ar 4:5 --niji 6
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+spectacular anime key visual of a dimensional chronomancer standing amidst shattered giant translucent clock dials and floating brass gears suspended in a cosmic space vortex, golden time threads swirling between fingers, breathtaking astral depth, radiant celestial lighting, intricate masterpiece digital painting --ar 4:5 --niji 6
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --niji 6
+================================================================================

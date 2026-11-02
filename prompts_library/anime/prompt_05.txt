@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #05: Invocador de Sombras Épico
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro con mirada decidida o desafiante)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the main character, retain and adapt their exact facial features, jawline, and determined expression into a dramatic shonen battle keyframe of a dark shadow summoner opening a dimensional abyss. Colossal spectral shadow beast with luminous violet eyes emerging from twisting dark tendrils behind the summoner, crackling purple flame vortex swirling around their hands, extreme contrapicado worm's-eye perspective, explosive motion blur on foreground rubble, dark fantasy aesthetic, ominous high-contrast lighting, deep ink-black and spectral amethyst tones, ultra-detailed anime rendering --ar 4:5 --niji 6`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the main character, retain and adapt their exact facial features, jawline, and determined expression into a dramatic shonen battle keyframe of a dark shadow summoner opening a dimensional abyss. Colossal spectral shadow beast with luminous violet eyes emerging from twisting dark tendrils behind the summoner, crackling purple flame vortex swirling around their hands, extreme contrapicado worm's-eye perspective, explosive motion blur on foreground rubble, dark fantasy aesthetic, ominous high-contrast lighting, deep ink-black and spectral amethyst tones, ultra-detailed anime rendering --ar 4:5 --niji 6
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+dramatic shonen battle keyframe of a dark shadow summoner opening a dimensional abyss, colossal spectral beast with luminous violet eyes emerging from twisting shadow tendrils, crackling purple flame vortex, extreme contrapicado worm's-eye perspective, explosive motion blur on foreground rubble, dark fantasy aesthetic, ominous high-contrast lighting, deep ink-black and spectral amethyst tones, ultra-detailed anime rendering --ar 4:5 --niji 6
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --niji 6
+================================================================================

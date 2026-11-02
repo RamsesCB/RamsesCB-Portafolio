@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: CARICATURA | PROMPT #11: Conductor de Tranvía Saltarín 1930s
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, stylize their facial proportions and friendly demeanor into a 1930s rubber-hose cartoon cable-car operator ringing the brass bell on a steep San Francisco style cartoon hill. The entire yellow trolley bends and squashes along the curved tracks, musical chime clangs floating as text balloons, sepia-tinted hand-inked vintage animation cel style, authentic nostalgic Fleischer charm --ar 4:5 --v 6.1`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo, stylize their facial proportions and friendly demeanor into a 1930s rubber-hose cartoon cable-car operator ringing the brass bell on a steep San Francisco style cartoon hill. The entire yellow trolley bends and squashes along the curved tracks, musical chime clangs floating as text balloons, sepia-tinted hand-inked vintage animation cel style, authentic nostalgic Fleischer charm --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+exuberant 1930s rubber-hose cartoon cable car operator clanging a brass bell as the yellow trolley car stretches and squashes down a steep cartoon hill, vintage sepia and pastel gouache background, charming Fleischer and Disney 1930s short animation style --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

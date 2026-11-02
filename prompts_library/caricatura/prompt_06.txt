@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: CARICATURA | PROMPT #06: Chef Italiano en Cocina de Spaghetti Caótico
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro sonriente o guiñando un ojo)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, exaggerate their facial likeness and joyful expression into a lively cartoon master chef tossing a colossal flying pizza dough in an animated rustic kitchen. Oversized puffy white toque hat, twirled cartoon mustache, colorful pots whistling steam, dancing garlic bulbs on the counter, 1950s theatrical animation short aesthetic, warm gouache colors, rich humorous staging --ar 4:5 --v 6.1`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo, exaggerate their facial likeness and joyful expression into a lively cartoon master chef tossing a colossal flying pizza dough in an animated rustic kitchen. Oversized puffy white toque hat, twirled cartoon mustache, colorful pots whistling steam, dancing garlic bulbs on the counter, 1950s theatrical animation short aesthetic, warm gouache colors, rich humorous staging --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+cheerful vintage cartoon Italian chef in an energetic kitchen tossing a massive spinning pizza crust toward the ceiling, whistling copper kettles, flying spaghetti strands, exaggerated rubber-hose character animation, warm hand-painted watercolor background, Golden Age cartoon charm --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

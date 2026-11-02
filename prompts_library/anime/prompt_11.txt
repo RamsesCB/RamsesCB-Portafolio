@@ -1,0 +1,33 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #11: Cyber-Hacker Callejero con Drones de Asalto
+================================================================================
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tres cuartos)
+
+💡 GUÍA RÁPIDA DE USO:
+1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
+2. Si usas MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, seamlessly retain their facial structure, nose, lips, and focused eyes while styling them into a rogue cyberpunk netrunner crouched in a rain-slicked Tokyo alleyway. Sleek glowing neural port implants at the temple emitting faint neon cyan light, dual floating miniature stealth drones hovering at shoulder level, transparent holographic terminal windows displaying code cascades, techwear oversized parka with tactical straps, neon kanji sign reflections in puddles, atmospheric cyberpunk anime noir --ar 4:5 --niji 6`.
+3. Si NO tienes foto o quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Using the person in the uploaded reference photo as the primary subject, seamlessly retain their facial structure, nose, lips, and focused eyes while styling them into a rogue cyberpunk netrunner crouched in a rain-slicked Tokyo alleyway. Sleek glowing neural port implants at the temple emitting faint neon cyan light, dual floating miniature stealth drones hovering at shoulder level, transparent holographic terminal windows displaying code cascades, techwear oversized parka with tactical straps, neon kanji sign reflections in puddles, atmospheric cyberpunk anime noir --ar 4:5 --niji 6
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+atmospheric anime concept art of a rogue cyberpunk netrunner operating in a neon-drenched alleyway, luminous cybernetic neural implants on the temple, hovering stealth drones with glowing scanning beams, floating holographic HUD data streams, reflective rain puddles, high-contrast neon lighting --ar 4:5 --niji 6
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --niji 6
+================================================================================
