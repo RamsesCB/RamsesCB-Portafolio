@@ -219,6 +219,145 @@
 }
 
 /* =========================================================
+   INTRO STAGE & AESTHETIC APPLE SKIP BUTTON (Pill Glass)
+   ========================================================= */
+.intro-stage {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  z-index: 50 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.intro-top-progress {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, rgba(255,255,255,0.4), #FFFFFF) !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
+  z-index: 1000 !important;
+  transition: width 0.1s linear !important;
+}
+
+.intro-skip-btn {
+  position: fixed !important;
+  top: calc(1.15rem + var(--sat, 0px)) !important;
+  right: calc(1.25rem + var(--sar, 0px)) !important;
+  z-index: 1000 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.55rem !important;
+  padding: 0.42rem 1rem !important;
+  min-height: 40px !important;
+  border-radius: 9999px !important;
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  color: #F8FAFC !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.intro-skip-btn:hover {
+  background: rgba(30, 41, 59, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55) !important;
+  color: #FFFFFF !important;
+}
+
+.intro-skip-btn:active {
+  transform: scale(0.96) !important;
+}
+
+.intro-skip-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.14rem 0.4rem !important;
+  border-radius: 5px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  color: #94A3B8 !important;
+  line-height: 1 !important;
+}
+
+.intro-skip-text {
+  font-size: 0.73rem !important;
+  font-weight: 600 !important;
+  color: #F1F5F9 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.intro-skip-arrow {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #94A3B8 !important;
+  line-height: 1 !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.intro-skip-btn:hover .intro-skip-arrow {
+  color: #FFFFFF !important;
+  transform: translateX(2px) !important;
+}
+
+.intro-unmute-btn {
+  position: fixed !important;
+  top: calc(1.15rem + var(--sat, 0px)) !important;
+  left: calc(1.25rem + var(--sal, 0px)) !important;
+  z-index: 1000 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.45rem 1rem !important;
+  min-height: 40px !important;
+  border-radius: 9999px !important;
+  background: rgba(16, 185, 129, 0.25) !important;
+  border: 1px solid rgba(52, 211, 153, 0.4) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  color: #A7F3D0 !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+@media (max-width: 768px), (hover: none) {
+  .intro-skip-btn .intro-skip-badge {
+    display: none !important;
+  }
+  .intro-skip-btn {
+    top: calc(0.85rem + var(--sat, 0px)) !important;
+    right: calc(0.85rem + var(--sar, 0px)) !important;
+    padding: 0.42rem 0.9rem !important;
+  }
+}
+
+/* =========================================================
    PERIPHERAL CORNER METADATA
    ========================================================= */
 .prompts-corner-meta {
@@ -447,16 +586,22 @@
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
 }
 
+.prompt-box,
+.prompt-box:focus,
+.prompt-box:focus-visible {
+  outline: none !important;
+}
+
 .prompt-box:hover, .prompt-box.box-active-hover {
   transform: translateY(-5px) !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
-  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.75), 0 0 35px var(--theme-glow) !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.75) !important;
 }
 
 .prompt-box.box-keyboard-focused {
   outline: none !important;
-  border-color: var(--theme-accent, #38BDF8) !important;
-  box-shadow: 0 0 0 2px var(--theme-accent, #38BDF8), 0 25px 60px -12px rgba(0, 0, 0, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.85), inset 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
   transform: translateY(-4px) scale(1.01) !important;
 }
 
@@ -543,7 +688,7 @@
   font-weight: 800 !important;
   z-index: 5 !important;
   background: rgba(15, 23, 42, 0.85) !important;
-  border: 1px solid var(--theme-accent, #38BDF8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   color: #FFFFFF !important;
   backdrop-filter: blur(12px) !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
@@ -2006,7 +2151,7 @@ function MasterPromptsExperience(props) {
   var [progressPct, setProgressPct] = uA.useState(0);
   var [strobeScale, setStrobeScale] = uA.useState(0);
   var [autoplayBlocked, setAutoplayBlocked] = uA.useState(false);
-  var [focusedCardIndex, setFocusedCardIndex] = uA.useState(0);
+  var [focusedCardIndex, setFocusedCardIndex] = uA.useState(-1);
   var cardElementsRef = uA.useRef([]);
 
   // Audio Playback & Browser Policy Resilience (Plays audio ONCE, NEVER loops or repeats)
@@ -2109,7 +2254,7 @@ function MasterPromptsExperience(props) {
       if (e.key === "ArrowDown" || e.key === "ArrowRight") {
         e.preventDefault();
         setFocusedCardIndex(function(prev) {
-          var next = (prev + 1) % total;
+          var next = prev < 0 ? 0 : (prev + 1) % total;
           if (cardElementsRef.current[next]) {
             cardElementsRef.current[next].scrollIntoView({ behavior: "smooth", block: "nearest" });
           }
@@ -2118,7 +2263,7 @@ function MasterPromptsExperience(props) {
       } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
         e.preventDefault();
         setFocusedCardIndex(function(prev) {
-          var prevIdx = (prev - 1 + total) % total;
+          var prevIdx = prev <= 0 ? total - 1 : prev - 1;
           if (cardElementsRef.current[prevIdx]) {
             cardElementsRef.current[prevIdx].scrollIntoView({ behavior: "smooth", block: "nearest" });
           }
@@ -2189,7 +2334,7 @@ function MasterPromptsExperience(props) {
             children: "🔊 ACTIVAR AUDIO"
           }) : null,
 
-          // Skip Intro Button
+          // Skip Intro Button (Aesthetic Apple Glass Pill)
           Z("button", {
             type: "button",
             onClick: handleSkipIntro,
@@ -2197,7 +2342,8 @@ function MasterPromptsExperience(props) {
             title: "Saltar intro (Esc)",
             children: [
               Z("span", { className: "intro-skip-badge", children: "ESC" }),
-              "saltar intro"
+              Z("span", { className: "intro-skip-text", children: "Saltar intro" }),
+              Z("span", { className: "intro-skip-arrow", children: "›" })
             ]
           })
         ]
