@@ -62,773 +62,570 @@
 }
 
 /* =========================================================
-   IMMERSIVE STAGE THEMES (INTRO & LIBRARY PHASES)
+   IMMERSIVE STAGE THEMES (APPLE LUXURY DARK AESTHETIC)
    ========================================================= */
-.stage-theme-anime.phase-intro { background: #090f18 !important; color: #f0f6fc !important; }
+.stage-theme-anime { --theme-accent: #38BDF8; --theme-glow: rgba(56, 189, 248, 0.25); }
+.stage-theme-caricatura { --theme-accent: #F87171; --theme-glow: rgba(248, 113, 113, 0.25); }
+.stage-theme-elegancia { --theme-accent: #FBBF24; --theme-glow: rgba(251, 191, 36, 0.25); }
+.stage-theme-edicion { --theme-accent: #2DD4BF; --theme-glow: rgba(45, 212, 191, 0.25); }
+.stage-theme-superheroe { --theme-accent: #60A5FA; --theme-glow: rgba(96, 165, 250, 0.25); }
+
+.immersive-stage-wrapper {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: #07090E !important;
+  color: #F8FAFC !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  scroll-behavior: smooth !important;
+}
+
+.stage-theme-anime.phase-intro { background: #060910 !important; }
 .stage-theme-anime.phase-library {
-  background: radial-gradient(ellipse at 50% 15%, #FFFFFF 0%, #F1F5F9 65%, #E2E8F0 100%) !important;
-  color: #0F172A !important;
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(56, 189, 248, 0.15) 0%, #07090E 70%) !important;
 }
 
-.stage-theme-caricatura.phase-intro { background: #1a0909 !important; color: #fff1f1 !important; }
+.stage-theme-caricatura.phase-intro { background: #120708 !important; }
 .stage-theme-caricatura.phase-library {
-  background: radial-gradient(ellipse at 50% 15%, #FFFFFF 0%, #FFF2EE 65%, #FFE2D8 100%) !important;
-  color: #1C1917 !important;
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(248, 113, 113, 0.15) 0%, #07090E 70%) !important;
 }
 
-.stage-theme-elegancia.phase-intro { background: #0d0c0a !important; color: #f7f3ea !important; }
+.stage-theme-elegancia.phase-intro { background: #0E0C08 !important; }
 .stage-theme-elegancia.phase-library {
-  background: radial-gradient(ellipse at 50% 15%, #FFFFFF 0%, #FAF7F2 65%, #F0E8D8 100%) !important;
-  color: #1A1612 !important;
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(251, 191, 36, 0.14) 0%, #07090E 70%) !important;
 }
 
-.stage-theme-edicion.phase-intro { background: #060d14 !important; color: #ecfeff !important; }
+.stage-theme-edicion.phase-intro { background: #050E0E !important; }
 .stage-theme-edicion.phase-library {
-  background: radial-gradient(ellipse at 50% 15%, #FFFFFF 0%, #F0F5F8 65%, #E2EBF0 100%) !important;
-  color: #0F172A !important;
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(45, 212, 191, 0.14) 0%, #07090E 70%) !important;
 }
 
-.stage-theme-superheroe.phase-intro { background: #080f1e !important; color: #eff6ff !important; }
+.stage-theme-superheroe.phase-intro { background: #060A14 !important; }
 .stage-theme-superheroe.phase-library {
-  background: radial-gradient(ellipse at 50% 15%, #FFFFFF 0%, #EFF6FF 65%, #DBEAFE 100%) !important;
-  color: #0B192C !important;
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(96, 165, 250, 0.16) 0%, #07090E 70%) !important;
 }
 
 /* =========================================================
-   LIBRARY TOP-LEFT RETURN BUTTON (All 5 Categories)
+   COMPACT APPLE-STYLE BACK PILL BUTTON (Trimmed & Sleek)
    ========================================================= */
-.library-floating-exit-btn {
+.apple-compact-back-btn {
   position: fixed !important;
-  top: 1.75rem !important;
-  left: 2rem !important;
-  z-index: 100 !important;
+  top: 1.25rem !important;
+  left: 1.5rem !important;
+  z-index: 1000 !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 0.65rem !important;
-  background: #FFFFFF !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  padding: 0.55rem 1.35rem !important;
+  gap: 0.5rem !important;
+  padding: 0.38rem 0.85rem !important;
   border-radius: 9999px !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase !important;
-  cursor: pointer !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
-}
-.library-floating-exit-btn:hover {
-  transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16) !important;
-}
-.exit-arrow {
-  font-size: 0.95rem;
-  line-height: 1;
-}
-.exit-key-badge {
-  padding: 0.15rem 0.45rem !important;
-  border-radius: 4px !important;
-  font-size: 0.65rem !important;
-  font-family: monospace !important;
-  font-weight: 800 !important;
-}
-
-/* Exit button accents per category */
-.stage-theme-anime.phase-library .library-floating-exit-btn {
-  border: 1.5px solid #0284C7 !important;
-  color: #0F172A !important;
-}
-.stage-theme-anime.phase-library .exit-key-badge {
-  background: rgba(2, 132, 199, 0.15) !important;
-  color: #0284C7 !important;
-}
-.stage-theme-anime.phase-library .library-floating-exit-btn:hover {
-  background: #0F172A !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
   color: #F8FAFC !important;
-  border-color: #0F172A !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
 }
-
-.stage-theme-caricatura.phase-library .library-floating-exit-btn {
-  border: 1.5px solid #E04848 !important;
-  color: #1C1917 !important;
+.apple-compact-back-btn:hover {
+  background: rgba(30, 41, 59, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
 }
-.stage-theme-caricatura.phase-library .exit-key-badge {
-  background: rgba(224, 72, 72, 0.15) !important;
-  color: #E04848 !important;
+.apple-compact-back-btn:active {
+  transform: scale(0.96) !important;
 }
-.stage-theme-caricatura.phase-library .library-floating-exit-btn:hover {
-  background: #1C1917 !important;
-  color: #FFF5F5 !important;
-  border-color: #1C1917 !important;
+.apple-kbd {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.12rem 0.38rem !important;
+  border-radius: 5px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  color: #94A3B8 !important;
 }
-
-.stage-theme-elegancia.phase-library .library-floating-exit-btn {
-  border: 1.5px solid #C5A059 !important;
-  color: #1A1612 !important;
-}
-.stage-theme-elegancia.phase-library .exit-key-badge {
-  background: rgba(197, 160, 89, 0.18) !important;
-  color: #996515 !important;
-}
-.stage-theme-elegancia.phase-library .library-floating-exit-btn:hover {
-  background: #1A1612 !important;
-  color: #FAF8F5 !important;
-  border-color: #1A1612 !important;
-}
-
-.stage-theme-edicion.phase-library .library-floating-exit-btn {
-  border: 1.5px solid #0E7490 !important;
-  color: #0F172A !important;
-}
-.stage-theme-edicion.phase-library .exit-key-badge {
-  background: rgba(14, 116, 144, 0.15) !important;
-  color: #0E7490 !important;
-}
-.stage-theme-edicion.phase-library .library-floating-exit-btn:hover {
-  background: #0F172A !important;
-  color: #ECFEFF !important;
-  border-color: #0F172A !important;
-}
-
-.stage-theme-superheroe.phase-library .library-floating-exit-btn {
-  border: 1.5px solid #2563EB !important;
-  color: #0B192C !important;
-}
-.stage-theme-superheroe.phase-library .exit-key-badge {
-  background: rgba(37, 99, 235, 0.15) !important;
-  color: #2563EB !important;
-}
-.stage-theme-superheroe.phase-library .library-floating-exit-btn:hover {
-  background: #0B192C !important;
-  color: #EFF6FF !important;
-  border-color: #0B192C !important;
+.back-label {
+  font-size: 0.72rem !important;
+  color: #F1F5F9 !important;
 }
 
 /* =========================================================
-   PERIPHERAL CORNER METADATA (Fill empty corners minimally)
+   PERIPHERAL CORNER METADATA
    ========================================================= */
 .prompts-corner-meta {
   position: fixed !important;
-  z-index: 90 !important;
+  z-index: 50 !important;
   display: flex !important;
   flex-direction: column !important;
+  gap: 0.2rem !important;
   pointer-events: none !important;
+  opacity: 0.35 !important;
+  transition: opacity 0.3s ease !important;
 }
-.corner-tr {
-  top: 1.85rem !important;
-  right: 2.25rem !important;
-  text-align: right !important;
-}
-.corner-bl {
-  bottom: 1.6rem !important;
-  left: 2.25rem !important;
-  text-align: left !important;
-}
-.corner-br {
-  bottom: 1.6rem !important;
-  right: 2.25rem !important;
-  text-align: right !important;
-}
+.prompts-corner-meta:hover { opacity: 0.85 !important; }
+.corner-tr { top: 1.5rem !important; right: 2rem !important; text-align: right !important; }
+.corner-bl { bottom: 1.5rem !important; left: 2rem !important; text-align: left !important; }
+.corner-br { bottom: 1.5rem !important; right: 2rem !important; text-align: right !important; }
+
 .meta-tag {
-  font-family: monospace !important;
-  font-size: 0.72rem !important;
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
+  font-size: 0.66rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.16em !important;
-  text-transform: uppercase !important;
-  opacity: 0.82 !important;
+  letter-spacing: 0.12em !important;
+  color: #94A3B8 !important;
 }
 .meta-sub {
-  font-family: monospace !important;
   font-size: 0.62rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
-  opacity: 0.55 !important;
-  margin-top: 0.2rem !important;
+  color: #64748B !important;
+  letter-spacing: 0.08em !important;
 }
-@media (max-width: 900px) {
+
+@media (max-width: 1024px) {
   .prompts-corner-meta { display: none !important; }
 }
 
 /* =========================================================
-   PROMPTS HEADER, HERO, & BIO STYLES
+   PROMPTS LIBRARY HERO HEADER
    ========================================================= */
 .prompts-hero-center {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  max-width: 900px !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-  margin-top: clamp(80px, 15vh, 150px) !important;
-  margin-bottom: 2.8rem !important;
+  padding: 5rem 1.5rem 2rem 1.5rem !important;
   text-align: center !important;
-  box-sizing: border-box !important;
+  max-width: 920px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 10 !important;
 }
 
 .hero-title-main {
-  font-size: clamp(2.4rem, 4.8vw, 3.8rem) !important;
+  font-size: clamp(2.2rem, 5vw, 3.4rem) !important;
   font-weight: 800 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: -0.035em !important;
   line-height: 1.15 !important;
-  margin: 0 !important;
+  margin: 0 0 1rem 0 !important;
+  background: linear-gradient(180deg, #FFFFFF 20%, #94A3B8 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
-.stage-theme-anime .hero-title-main { font-family: 'Comic Sans MS', cursive, sans-serif !important; color: #0F172A !important; }
-.stage-theme-caricatura .hero-title-main { font-family: 'Comic Sans MS', 'Inter', cursive, sans-serif !important; color: #1C1917 !important; }
-.stage-theme-elegancia .hero-title-main { font-family: 'Times New Roman', Georgia, serif !important; font-weight: 400 !important; color: #1A1612 !important; letter-spacing: 0.08em !important; }
-.stage-theme-edicion .hero-title-main { font-family: 'Space Grotesk', sans-serif !important; color: #0F172A !important; text-transform: uppercase !important; }
-.stage-theme-superheroe .hero-title-main { font-family: 'Inter', sans-serif !important; color: #0B192C !important; text-transform: uppercase !important; letter-spacing: 0.06em !important; }
 
-/* Divider line */
-.prompts-divider-wrapper { width: 100% !important; box-sizing: border-box !important; }
+.prompts-divider-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 0 1.25rem 0 !important;
+}
 .prompts-divider-line {
-  width: 100% !important;
-  height: 3px !important;
+  width: 90px !important;
+  height: 2px !important;
   border: none !important;
-  margin: 1.5rem 0 1.35rem 0 !important;
+  background: linear-gradient(90deg, transparent, var(--theme-accent, #38BDF8), transparent) !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 12px var(--theme-accent, #38BDF8) !important;
 }
-.stage-theme-anime .prompts-divider-line { background: linear-gradient(90deg, transparent, #0284C7 20%, #0369A1 50%, #0284C7 80%, transparent) !important; }
-.stage-theme-caricatura .prompts-divider-line { background: linear-gradient(90deg, transparent, #E04848 20%, #B91C1C 50%, #E04848 80%, transparent) !important; }
-.stage-theme-elegancia .prompts-divider-line { background: linear-gradient(90deg, transparent, #C5A059 20%, #996515 50%, #C5A059 80%, transparent) !important; }
-.stage-theme-edicion .prompts-divider-line { background: linear-gradient(90deg, transparent, #0E7490 20%, #0891B2 50%, #0E7490 80%, transparent) !important; }
-.stage-theme-superheroe .prompts-divider-line { background: linear-gradient(90deg, transparent, #2563EB 20%, #1D4ED8 50%, #2563EB 80%, transparent) !important; }
 
-/* Bio Description: Warm, extensive, well formatted */
 .prompts-bio-container {
-  text-align: left !important;
-  margin: 1.35rem 0 1.85rem 0 !important;
-  box-sizing: border-box !important;
+  max-width: 780px !important;
+  margin: 0 auto 1.5rem auto !important;
 }
 .prompts-bio-text {
-  font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
+  font-size: 1rem !important;
   line-height: 1.7 !important;
+  color: #94A3B8 !important;
+  font-weight: 400 !important;
   margin: 0 !important;
 }
-.stage-theme-anime .prompts-bio-text { font-family: 'Inter', sans-serif !important; color: #334155 !important; }
-.stage-theme-caricatura .prompts-bio-text { font-family: 'Inter', sans-serif !important; color: #3F3F46 !important; }
-.stage-theme-elegancia .prompts-bio-text { font-family: 'Times New Roman', Georgia, serif !important; font-style: italic !important; color: #44372C !important; }
-.stage-theme-edicion .prompts-bio-text { font-family: 'Inter', sans-serif !important; color: #334155 !important; }
-.stage-theme-superheroe .prompts-bio-text { font-family: 'Inter', sans-serif !important; color: #1E293B !important; }
 
-/* Tags row */
 .prompts-article-tags {
   display: flex !important;
   flex-wrap: wrap !important;
-  align-items: center !important;
-  gap: 0.65rem !important;
-  padding: 1.15rem 0 !important;
-  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-  margin-bottom: 3.5rem !important;
+  justify-content: center !important;
+  gap: 0.55rem !important;
+  margin-top: 1rem !important;
 }
 .article-tag-item {
-  padding: 0.4rem 0.95rem !important;
+  padding: 0.32rem 0.85rem !important;
   border-radius: 9999px !important;
   font-size: 0.7rem !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase !important;
-  font-weight: 700 !important;
-  background: #FFFFFF !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  color: #CBD5E1 !important;
+  backdrop-filter: blur(12px) !important;
+  transition: all 0.25s ease !important;
 }
-.stage-theme-anime .article-tag-item { border: 1px solid rgba(2, 132, 199, 0.35) !important; color: #0369A1 !important; font-family: 'Comic Sans MS', cursive, sans-serif !important; }
-.stage-theme-caricatura .article-tag-item { border: 1px solid rgba(224, 72, 72, 0.35) !important; color: #B91C1C !important; }
-.stage-theme-elegancia .article-tag-item { border: 1px solid rgba(197, 160, 89, 0.45) !important; color: #785A28 !important; font-family: 'Times New Roman', Georgia, serif !important; }
-.stage-theme-edicion .article-tag-item { border: 1px solid rgba(14, 116, 144, 0.35) !important; color: #0E7490 !important; }
-.stage-theme-superheroe .article-tag-item { border: 1px solid rgba(37, 99, 235, 0.35) !important; color: #1D4ED8 !important; }
+.article-tag-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--theme-accent, #38BDF8) !important;
+  color: #FFFFFF !important;
+}
 
 /* =========================================================
-   PROMPTS GRID & LUXURY CARDS (All 5 Categories)
+   PROMPTS GRID & APPLE CARDS (Zero Cropping & Performant)
    ========================================================= */
 .prompts-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-  gap: 5% !important;
-  padding: 0 4vw !important;
-  box-sizing: border-box !important;
-  width: 100% !important;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
+  gap: 2rem !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 1.5rem 1.5rem 6rem 1.5rem !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+@media (max-width: 640px) {
+  .prompts-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 1rem 1rem 5rem 1rem !important;
+  }
 }
 
 .prompt-box {
   position: relative !important;
-  background: #FFFFFF !important;
-  border-radius: 16px !important;
+  background: rgba(15, 23, 42, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
   overflow: hidden !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   box-sizing: border-box !important;
-  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.07), 0 4px 10px -2px rgba(0, 0, 0, 0.03) !important;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  content-visibility: auto !important;
+  contain-intrinsic-size: 0 540px !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
 }
+
 .prompt-box:hover, .prompt-box.box-active-hover {
-  transform: translateY(-6px) !important;
+  transform: translateY(-5px) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.75), 0 0 35px var(--theme-glow) !important;
 }
 
-.stage-theme-anime .prompt-box { border: 1.5px solid rgba(2, 132, 199, 0.35) !important; }
-.stage-theme-anime .prompt-box:hover, .stage-theme-anime .prompt-box.box-active-hover {
-  background: #F0F9FF !important;
-  border-color: #0284C7 !important;
-  box-shadow: 0 24px 55px -6px rgba(2, 132, 199, 0.28) !important;
+.prompt-box.box-keyboard-focused {
+  outline: none !important;
+  border-color: var(--theme-accent, #38BDF8) !important;
+  box-shadow: 0 0 0 2px var(--theme-accent, #38BDF8), 0 25px 60px -12px rgba(0, 0, 0, 0.85) !important;
+  transform: translateY(-4px) scale(1.01) !important;
 }
 
-.stage-theme-caricatura .prompt-box { border: 1.5px solid rgba(224, 72, 72, 0.35) !important; }
-.stage-theme-caricatura .prompt-box:hover, .stage-theme-caricatura .prompt-box.box-active-hover {
-  background: #FFF5F5 !important;
-  border-color: #E04848 !important;
-  box-shadow: 0 24px 55px -6px rgba(224, 72, 72, 0.28) !important;
-}
-
-.stage-theme-elegancia .prompt-box { border: 1.5px solid rgba(197, 160, 89, 0.42) !important; }
-.stage-theme-elegancia .prompt-box:hover, .stage-theme-elegancia .prompt-box.box-active-hover {
-  background: #FFFDF8 !important;
-  border-color: #B8860B !important;
-  box-shadow: 0 24px 55px -6px rgba(184, 134, 11, 0.3) !important;
-}
-
-.stage-theme-edicion .prompt-box { border: 1.5px solid rgba(14, 116, 144, 0.35) !important; }
-.stage-theme-edicion .prompt-box:hover, .stage-theme-edicion .prompt-box.box-active-hover {
-  background: #F0FDFA !important;
-  border-color: #0E7490 !important;
-  box-shadow: 0 24px 55px -6px rgba(14, 116, 144, 0.28) !important;
-}
-
-.stage-theme-superheroe .prompt-box { border: 1.5px solid rgba(37, 99, 235, 0.35) !important; }
-.stage-theme-superheroe .prompt-box:hover, .stage-theme-superheroe .prompt-box.box-active-hover {
-  background: #EFF6FF !important;
-  border-color: #2563EB !important;
-  box-shadow: 0 24px 55px -6px rgba(37, 99, 235, 0.28) !important;
-}
-
+/* Image Wrap (Apple Ambient Framing - Proporción Original Sin Recortes) */
 .prompt-box-image-wrap {
   position: relative !important;
   width: 100% !important;
-  aspect-ratio: 4 / 4.7 !important;
+  min-height: 320px !important;
+  max-height: 520px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #050811 !important;
+  border-radius: 19px 19px 0 0 !important;
   overflow: hidden !important;
-  background: #E5E7EB !important;
+  padding: 0.85rem !important;
+  box-sizing: border-box !important;
 }
-.prompt-box-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-.prompt-box:hover .prompt-box-img { transform: scale(1.05) !important; }
 
+.prompt-box-ambient-blur {
+  position: absolute !important;
+  inset: -20px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  filter: blur(35px) brightness(0.35) saturate(1.4) !important;
+  opacity: 0.65 !important;
+  pointer-events: none !important;
+  transform: scale(1.15) !important;
+}
+
+.prompt-box-img {
+  position: relative !important;
+  z-index: 2 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 480px !important;
+  object-fit: contain !important;
+  border-radius: 12px !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55) !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease !important;
+}
+.prompt-box-img.img-loading {
+  opacity: 0 !important;
+}
+.prompt-box-img.img-visible {
+  opacity: 1 !important;
+}
+.prompt-box:hover .prompt-box-img {
+  transform: scale(1.025) !important;
+}
+
+/* Skeleton Loading Shimmer */
+@keyframes appleShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.apple-skeleton-wrapper {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background: #090D18 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.apple-skeleton-shimmer {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.07) 50%, transparent 100%) !important;
+  animation: appleShimmer 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Badges */
 .prompt-box-badge {
   position: absolute !important;
-  top: 0.9rem !important;
-  left: 0.9rem !important;
+  top: 1rem !important;
+  left: 1rem !important;
   padding: 0.25rem 0.65rem !important;
-  border-radius: 6px !important;
-  font-family: monospace !important;
+  border-radius: 8px !important;
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
   font-size: 0.72rem !important;
   font-weight: 800 !important;
-  z-index: 2 !important;
-  background: rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  z-index: 5 !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid var(--theme-accent, #38BDF8) !important;
+  color: #FFFFFF !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
 }
-.stage-theme-anime .prompt-box-badge { color: #0284C7 !important; border: 1px solid rgba(2, 132, 199, 0.4) !important; }
-.stage-theme-caricatura .prompt-box-badge { color: #E04848 !important; border: 1px solid rgba(224, 72, 72, 0.4) !important; }
-.stage-theme-elegancia .prompt-box-badge { color: #1A1612 !important; border: 1px solid rgba(197, 160, 89, 0.5) !important; }
-.stage-theme-edicion .prompt-box-badge { color: #0E7490 !important; border: 1px solid rgba(14, 116, 144, 0.4) !important; }
-.stage-theme-superheroe .prompt-box-badge { color: #2563EB !important; border: 1px solid rgba(37, 99, 235, 0.4) !important; }
 
+.prompt-box-format-badge {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  padding: 0.22rem 0.6rem !important;
+  border-radius: 6px !important;
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  z-index: 5 !important;
+  background: rgba(0, 0, 0, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #94A3B8 !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Card Content */
 .prompt-box-content {
   padding: 1.45rem !important;
   display: flex !important;
   flex-direction: column !important;
   flex: 1 !important;
   justify-content: space-between !important;
-  background: #FFFFFF !important;
-  transition: background 0.3s ease !important;
-}
-.prompt-box:hover .prompt-box-content, .prompt-box.box-active-hover .prompt-box-content {
   background: transparent !important;
 }
 
 .prompt-box-title {
-  font-size: 1.22rem !important;
+  font-size: 1.16rem !important;
   font-weight: 700 !important;
-  margin: 0 0 0.55rem 0 !important;
+  margin: 0 0 0.5rem 0 !important;
   line-height: 1.35 !important;
+  color: #F8FAFC !important;
+  letter-spacing: -0.015em !important;
 }
-.stage-theme-anime .prompt-box-title { font-family: 'Comic Sans MS', cursive, sans-serif !important; color: #0F172A !important; }
-.stage-theme-caricatura .prompt-box-title { font-family: 'Comic Sans MS', 'Inter', cursive, sans-serif !important; color: #1C1917 !important; }
-.stage-theme-elegancia .prompt-box-title { font-family: 'Times New Roman', Georgia, serif !important; color: #1A1612 !important; font-size: 1.25rem !important; }
-.stage-theme-edicion .prompt-box-title { font-family: 'Space Grotesk', sans-serif !important; color: #0F172A !important; }
-.stage-theme-superheroe .prompt-box-title { font-family: 'Inter', sans-serif !important; color: #0B192C !important; }
 
 .prompt-box-desc {
   font-size: 0.88rem !important;
   line-height: 1.6 !important;
-  margin: 0 0 1.35rem 0 !important;
+  color: #94A3B8 !important;
+  margin: 0 0 1.25rem 0 !important;
 }
-.stage-theme-anime .prompt-box-desc { color: #475569 !important; }
-.stage-theme-caricatura .prompt-box-desc { color: #52525B !important; }
-.stage-theme-elegancia .prompt-box-desc { color: #574B3C !important; }
-.stage-theme-edicion .prompt-box-desc { color: #475569 !important; }
-.stage-theme-superheroe .prompt-box-desc { color: #334155 !important; }
 
-/* Prompt Command Button */
+/* Metadata Tag Pills in Card */
+.prompt-card-pills-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.4rem !important;
+  margin-bottom: 1.2rem !important;
+}
+.prompt-card-pill {
+  padding: 0.18rem 0.55rem !important;
+  border-radius: 6px !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #CBD5E1 !important;
+}
+
+/* Action Button */
 .prompt-command-btn {
   width: 100% !important;
-  padding: 0.82rem 1.25rem !important;
-  border-radius: 8px !important;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 12px !important;
   font-size: 0.78rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
   cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 0.55rem !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
-  transition: all 0.25s ease !important;
-}
-.prompt-command-btn:hover {
-  transform: translateY(-2px) !important;
-}
-
-.stage-theme-anime .prompt-command-btn {
-  background: #0F172A !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
   color: #F8FAFC !important;
-  border: 1.5px solid #0284C7 !important;
-  font-family: 'Comic Sans MS', cursive, sans-serif !important;
-}
-.stage-theme-anime .prompt-command-btn:hover {
-  background: #0284C7 !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4) !important;
-}
-
-.stage-theme-caricatura .prompt-command-btn {
-  background: #1C1917 !important;
-  color: #FFF5F5 !important;
-  border: 1.5px solid #E04848 !important;
-}
-.stage-theme-caricatura .prompt-command-btn:hover {
-  background: #E04848 !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 8px 24px rgba(224, 72, 72, 0.4) !important;
-}
-
-.stage-theme-elegancia .prompt-command-btn {
-  background: #1C1917 !important;
-  color: #FAF8F5 !important;
-  border: 1.5px solid #C5A059 !important;
-  font-family: 'Times New Roman', Georgia, serif !important;
-}
-.stage-theme-elegancia .prompt-command-btn:hover {
-  background: #C5A059 !important;
-  color: #FFFFFF !important;
-  border-color: #B8860B !important;
-  box-shadow: 0 8px 24px rgba(184, 134, 11, 0.4) !important;
-}
-
-.stage-theme-edicion .prompt-command-btn {
-  background: #0F172A !important;
-  color: #ECFEFF !important;
-  border: 1.5px solid #0E7490 !important;
-  font-family: 'Space Grotesk', sans-serif !important;
-}
-.stage-theme-edicion .prompt-command-btn:hover {
-  background: #0E7490 !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 8px 24px rgba(14, 116, 144, 0.4) !important;
-}
-
-.stage-theme-superheroe .prompt-command-btn {
-  background: #0B192C !important;
-  color: #EFF6FF !important;
-  border: 1.5px solid #2563EB !important;
-}
-.stage-theme-superheroe .prompt-command-btn:hover {
-  background: #2563EB !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4) !important;
-}
-
-.prompt-command-btn.btn-copied {
-  background: #059669 !important;
-  color: #FFFFFF !important;
-  border-color: #059669 !important;
-  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.4) !important;
-}
-
-/* =========================================================
-   VIDEO EDIT INTRO STYLES (NO CENTER EMBLEM / KINETIC LYRICS)
-   ========================================================= */
-.intro-stage {
-  position: fixed !important;
-  inset: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  height: 100dvh !important;
-  z-index: 1000 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
   user-select: none !important;
 }
-
-.intro-top-progress {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  height: 3.5px !important;
-  z-index: 40 !important;
-  transition: width 0.04s linear !important;
+.prompt-command-btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
 }
-.intro-prog-anime { background: linear-gradient(90deg, #1f426d, #0284C7, #38BDF8, #ffffff) !important; box-shadow: 0 0 14px rgba(2, 132, 199, 0.9) !important; }
-.intro-prog-caricatura { background: linear-gradient(90deg, #7f1d1d, #E04848, #f87171, #ffffff) !important; box-shadow: 0 0 14px rgba(224, 72, 72, 0.9) !important; }
-.intro-prog-elegancia { background: linear-gradient(90deg, #785A28, #C5A059, #E9DDC2, #ffffff) !important; box-shadow: 0 0 14px rgba(197, 160, 89, 0.9) !important; }
-.intro-prog-edicion { background: linear-gradient(90deg, #164e63, #0E7490, #22d3ee, #ffffff) !important; box-shadow: 0 0 14px rgba(14, 116, 144, 0.9) !important; }
-.intro-prog-superheroe { background: linear-gradient(90deg, #1e3a8a, #2563EB, #60a5fa, #ffffff) !important; box-shadow: 0 0 14px rgba(37, 99, 235, 0.9) !important; }
-
-.intro-skip-btn {
-  position: absolute !important;
-  top: 1.75rem !important;
-  right: 2rem !important;
-  z-index: 50 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.55rem !important;
-  background: rgba(0, 0, 0, 0.55) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  color: #e4e4e7 !important;
-  padding: 0.5rem 1.15rem !important;
-  border-radius: 9999px !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+.prompt-command-btn:active {
+  transform: scale(0.97) !important;
 }
-.intro-skip-btn:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border-color: rgba(255, 255, 255, 0.6) !important;
-  color: #ffffff !important;
-  transform: translateX(-3px) !important;
-}
-.intro-skip-badge {
-  background: rgba(255, 255, 255, 0.2) !important;
-  color: #ffffff !important;
-  padding: 0.15rem 0.42rem !important;
-  border-radius: 4px !important;
-  font-size: 0.65rem !important;
-  font-family: monospace !important;
-  font-weight: 800 !important;
+.prompt-command-btn.btn-copied {
+  background: #059669 !important;
+  border-color: #10B981 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.5) !important;
 }
 
-.intro-sonic-ring-wrap {
-  position: relative !important;
-  z-index: 25 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  pointer-events: none !important;
-}
-
-.intro-sonic-halo {
-  width: 140px !important;
-  height: 140px !important;
-  border-radius: 50% !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.15) !important;
-  transition: transform 0.08s ease-out, border-color 0.2s ease !important;
-}
-
-.intro-sonic-core {
-  width: 64px !important;
-  height: 64px !important;
-  border-radius: 50% !important;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.1) 70%, transparent 100%) !important;
-  filter: blur(2px) !important;
-  transition: transform 0.08s ease-out !important;
-}
-
-.stage-theme-anime .intro-sonic-halo { border-color: rgba(56, 189, 248, 0.65) !important; box-shadow: 0 0 60px rgba(2, 132, 199, 0.65) !important; }
-.stage-theme-anime .intro-sonic-core { background: radial-gradient(circle, #38bdf8 0%, rgba(2, 132, 199, 0.3) 70%, transparent 100%) !important; }
-
-.stage-theme-caricatura .intro-sonic-halo { border-color: rgba(251, 113, 133, 0.65) !important; box-shadow: 0 0 60px rgba(224, 72, 72, 0.65) !important; }
-.stage-theme-caricatura .intro-sonic-core { background: radial-gradient(circle, #fb7185 0%, rgba(224, 72, 72, 0.3) 70%, transparent 100%) !important; }
-
-.stage-theme-elegancia .intro-sonic-halo { border-color: rgba(233, 221, 194, 0.65) !important; box-shadow: 0 0 60px rgba(197, 160, 89, 0.65) !important; }
-.stage-theme-elegancia .intro-sonic-core { background: radial-gradient(circle, #e9ddc2 0%, rgba(197, 160, 89, 0.3) 70%, transparent 100%) !important; }
-
-.stage-theme-edicion .intro-sonic-halo { border-color: rgba(34, 211, 238, 0.65) !important; box-shadow: 0 0 60px rgba(14, 116, 144, 0.65) !important; }
-.stage-theme-edicion .intro-sonic-core { background: radial-gradient(circle, #22d3ee 0%, rgba(14, 116, 144, 0.3) 70%, transparent 100%) !important; }
-
-.stage-theme-superheroe .intro-sonic-halo { border-color: rgba(96, 165, 250, 0.65) !important; box-shadow: 0 0 60px rgba(37, 99, 235, 0.65) !important; }
-.stage-theme-superheroe .intro-sonic-core { background: radial-gradient(circle, #60a5fa 0%, rgba(37, 99, 235, 0.3) 70%, transparent 100%) !important; }
-
-.intro-unmute-btn {
-  position: absolute !important;
-  bottom: 3.5rem !important;
-  z-index: 50 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.6rem !important;
-  background: rgba(0, 0, 0, 0.75) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  color: #ffffff !important;
-  padding: 0.75rem 1.6rem !important;
-  border-radius: 9999px !important;
-  font-size: 0.85rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
-  cursor: pointer !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.2) !important;
-  animation: pulseUnmute 1.8s ease-in-out infinite !important;
-  transition: transform 0.2s ease, background 0.2s ease !important;
-}
-.intro-unmute-btn:hover {
-  transform: scale(1.05) !important;
-  background: rgba(255, 255, 255, 0.18) !important;
-  border-color: #ffffff !important;
-}
-@keyframes pulseUnmute {
-  0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); }
-  50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.45); }
-}
-
-
-/* =========================================================
-   BEFORE / AFTER COMPARISON SLIDER & TRANSITION (EDICION)
-   ========================================================= */
+/* Comparison Card (Edición) */
 .prompt-box-comparison {
-  border: 2px solid rgba(14, 116, 144, 0.5) !important;
-  background: #F8FAFC !important;
-}
-.prompt-box-comparison:hover, .prompt-box-comparison.box-active-hover {
-  border-color: #0E7490 !important;
-  box-shadow: 0 24px 60px -6px rgba(14, 116, 144, 0.35) !important;
+  border: 1px solid rgba(45, 212, 191, 0.3) !important;
 }
 .comparison-card-wrap {
   position: relative !important;
   width: 100% !important;
-  aspect-ratio: 1 / 1 !important;
+  min-height: 320px !important;
+  max-height: 520px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   overflow: hidden !important;
-  background: #F1F5F9 !important;
+  background: #050811 !important;
   user-select: none !important;
   -webkit-user-select: none !important;
   touch-action: none !important;
   cursor: grab !important;
+  border-radius: 19px 19px 0 0 !important;
+  padding: 0.85rem !important;
+  box-sizing: border-box !important;
 }
 .comparison-card-wrap.is-holding {
   cursor: ew-resize !important;
 }
 .comparison-img-ia {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
-  pointer-events: none !important;
-  transform: none !important;
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 100% !important;
+  max-height: 480px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 12px !important;
 }
 .comparison-img-orig-wrap {
   position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
+  inset: 0.85rem !important;
   z-index: 2 !important;
-  will-change: clip-path;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 .comparison-img-orig {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
-  pointer-events: none !important;
-  transform: none !important;
+  max-width: 100% !important;
+  max-height: 480px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 12px !important;
 }
 .comparison-divider-line {
   position: absolute !important;
   top: 0 !important;
   bottom: 0 !important;
-  width: 2.5px !important;
+  width: 2px !important;
   background: #FFFFFF !important;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.65), 0 0 3px rgba(0, 0, 0, 0.9) !important;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.9) !important;
   z-index: 10 !important;
   pointer-events: none !important;
-  transform: translateX(-50%) !important;
-  will-change: left;
 }
 .comparison-divider-handle {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
-  width: 34px !important;
-  height: 34px !important;
-  background: #FFFFFF !important;
-  border: 1.5px solid #0F172A !important;
+  width: 36px !important;
+  height: 36px !important;
   border-radius: 50% !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 2px solid #FFFFFF !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: #0F172A !important;
+  color: #FFFFFF !important;
 }
 .comparison-divider-handle svg {
   display: block;
 }
 .comparison-hint-pill {
   position: absolute !important;
-  bottom: 12px !important;
+  bottom: 14px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  background: rgba(15, 23, 42, 0.88) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  color: #F8FAFC !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  padding: 6px 14px !important;
+  padding: 5px 12px !important;
   border-radius: 9999px !important;
-  font-family: 'Space Grotesk', -apple-system, sans-serif !important;
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.04em !important;
-  z-index: 12 !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(12px) !important;
+  color: #E2E8F0 !important;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  z-index: 8 !important;
   pointer-events: none !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.25s ease !important;
-  white-space: nowrap !important;
   display: flex !important;
   align-items: center !important;
-  gap: 7px !important;
+  gap: 6px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
 }
 .comparison-hint-pill.pill-active {
-  background: rgba(14, 116, 144, 0.95) !important;
-  border-color: rgba(6, 182, 212, 0.6) !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 4px 20px rgba(14, 116, 144, 0.5) !important;
+  background: rgba(45, 212, 191, 0.95) !important;
+  color: #042F2E !important;
+  border-color: #2DD4BF !important;
+  font-weight: 700 !important;
 }
 .comparison-hint-pill .pill-icon {
-  font-size: 0.85rem !important;
+  font-size: 0.82rem !important;
 }
 .comparison-label-badge {
   position: absolute !important;
@@ -837,16 +634,12 @@
   border-radius: 6px !important;
   font-size: 0.65rem !important;
   font-weight: 800 !important;
-  font-family: monospace !important;
+  font-family: ui-monospace, monospace !important;
   letter-spacing: 0.06em !important;
   z-index: 12 !important;
   pointer-events: none !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
   animation: fadeInLabel 0.2s ease forwards !important;
-}
-@keyframes fadeInLabel {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 .badge-orig {
   left: 12px !important;
@@ -911,15 +704,20 @@ function getAudio(type) {
   if (!_audioInstances[type]) {
     var a = new Audio(AUDIO_SOURCES[type]);
     a.preload = "auto";
+    a.loop = false;
+    a._hasPlayedOnce = false;
+    a._finished = false;
+    a.onended = function() {
+      a.pause();
+      a._finished = true;
+    };
     a.onerror = function() {
-      // Fallback to wav if mp3 fails
       if (!a._retried) {
         a._retried = true;
         a.src = AUDIO_SOURCES[type].replace('.mp3', '.wav');
         a.load();
       }
     };
-    a.loop = false;
     _audioInstances[type] = a;
   }
   return _audioInstances[type];
@@ -939,7 +737,6 @@ function fadeAudio(type, targetVol, duration, onComplete) {
   targetVol = Math.max(0, Math.min(0.12, targetVol)); // safety ceiling for hover volume
 
   if (targetVol > 0) {
-    // Exclusivity: pause all other audios immediately so volume never accumulates
     Object.keys(AUDIO_SOURCES).forEach(function(k) {
       if (k !== type) {
         cancelFade(k);
@@ -951,7 +748,7 @@ function fadeAudio(type, targetVol, duration, onComplete) {
       }
     });
 
-    if (audio.paused) {
+    if (audio.paused && !audio._finished) {
       audio.volume = 0;
       var playPromise = audio.play();
       if (playPromise !== undefined) {
@@ -994,13 +791,19 @@ function playAudioFull(type) {
   });
   var audio = getAudio(type);
   if (audio) {
+    audio.loop = false;
     audio.currentTime = 0;
     audio.volume = 1.0;
+    audio._hasPlayedOnce = true;
+    audio._finished = false;
+    audio.onended = function() {
+      audio.pause();
+      audio._finished = true;
+    };
     var p = audio.play();
     if (p !== undefined) {
       return p.catch(function(e) {
-        console.warn("Audio play blocked/error:", e);
-        throw e;
+        console.warn("Audio play error:", e);
       });
     }
   }
@@ -1018,6 +821,8 @@ function stopAllAudios(fadeDuration) {
       a.pause();
       a.currentTime = 0;
       a.volume = 0;
+      a._hasPlayedOnce = false;
+      a._finished = false;
     }
   });
 }
@@ -1295,26 +1100,80 @@ function BeforeAfterComparisonImage(props) {
 }
 
 /* =========================================================
-   PROMPT CARD COMPONENT
+   PROMPT CARD COMPONENT (Apple Aesthetic, Zero Crop, Single-Click Copy)
    ========================================================= */
 function PromptCardBox(props) {
   var item = props.item;
   var themeClass = props.themeClass;
+  var isFocused = props.isFocused;
+  var cardIndex = props.cardIndex;
+  var cardRef = props.cardRef;
+
   var [copied, setCopied] = uA.useState(false);
+  var [imgLoaded, setImgLoaded] = uA.useState(false);
   var [isHovered, setIsHovered] = uA.useState(false);
 
-  function copyPrompt(e) {
-    e.stopPropagation();
-    if (navigator && navigator.clipboard) {
-      navigator.clipboard.writeText(item.prompt).then(function() {
-        setCopied(true);
-        setTimeout(function() { setCopied(false); }, 2000);
+  function executeCopy(textToCopy) {
+    var text = textToCopy || item.prompt;
+    var markCopied = function() {
+      setCopied(true);
+      try { if (window.navigator && window.navigator.vibrate) window.navigator.vibrate(25); } catch (_) {}
+      setTimeout(function() { setCopied(false); }, 2200);
+    };
+
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(markCopied).catch(function() {
+        fallbackCopy(text, markCopied);
       });
+    } else {
+      fallbackCopy(text, markCopied);
     }
   }
 
+  function fallbackCopy(str, cb) {
+    try {
+      var t = document.createElement("textarea");
+      t.value = str;
+      t.style.position = "fixed";
+      t.style.left = "-9999px";
+      t.style.top = "0";
+      t.setAttribute("readonly", "");
+      document.body.appendChild(t);
+      t.select();
+      t.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(t);
+      cb();
+    } catch (err) {
+      console.warn("Copy fallback error", err);
+    }
+  }
+
+  function copyPrompt(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    executeCopy(item.prompt);
+  }
+
+  // Bind global keyboard copy for focused card
+  uA.useEffect(function() {
+    if (isFocused) {
+      window.copyPromptGlobal = function(text, idx) {
+        if (idx === cardIndex) {
+          executeCopy(text);
+        }
+      };
+    }
+  }, [isFocused, cardIndex, item.prompt]);
+
   return Z("div", {
-    className: "prompt-box " + (isHovered ? "box-active-hover " : "") + (item.isComparison ? "prompt-box-comparison" : ""),
+    ref: cardRef,
+    tabIndex: 0,
+    className: "prompt-box " + (isHovered ? "box-active-hover " : "") + (isFocused ? "box-keyboard-focused " : "") + (item.isComparison ? "prompt-box-comparison" : ""),
+    onMouseEnter: function() { setIsHovered(true); },
+    onMouseLeave: function() { setIsHovered(false); },
     children: [
       item.isComparison ? Z(BeforeAfterComparisonImage, {
         firstImage: item.image,
@@ -1324,18 +1183,42 @@ function PromptCardBox(props) {
       }) : Z("div", {
         className: "prompt-box-image-wrap",
         children: [
+          // Shimmer Skeleton Placeholder while loading
+          !imgLoaded ? Z("div", {
+            className: "apple-skeleton-wrapper",
+            children: Z("div", { className: "apple-skeleton-shimmer" })
+          }) : null,
+
+          // Ambient Blur Reflection (Behind image)
+          Z("div", {
+            className: "prompt-box-ambient-blur",
+            style: { backgroundImage: "url(" + item.image + ")" }
+          }),
+
+          // Natural Aspect Ratio Image (Zero Cropping, Object-fit contain)
           Z("img", {
             src: item.image,
             alt: item.title,
-            className: "prompt-box-img",
-            draggable: false
+            className: "prompt-box-img " + (imgLoaded ? "img-visible" : "img-loading"),
+            loading: "lazy",
+            decoding: "async",
+            draggable: false,
+            onLoad: function() { setImgLoaded(true); }
           }),
+
+          // Top Badges
           Z("div", {
             className: "prompt-box-badge",
             children: item.badge
+          }),
+          Z("div", {
+            className: "prompt-box-format-badge",
+            children: "4:5 RAW"
           })
         ]
       }),
+
+      // Content
       Z("div", {
         className: "prompt-box-content",
         children: [
@@ -1348,14 +1231,23 @@ function PromptCardBox(props) {
               Z("p", {
                 className: "prompt-box-desc",
                 children: item.description
+              }),
+              // Tag pills row
+              Z("div", {
+                className: "prompt-card-pills-row",
+                children: [
+                  Z("span", { className: "prompt-card-pill", children: "📸 1 FOTO / 4 VISTAS" }),
+                  Z("span", { className: "prompt-card-pill", children: "MIDJOURNEY / FLUX" }),
+                  Z("span", { className: "prompt-card-pill", children: "8K UHD RAW" })
+                ]
               })
             ]
           }),
+
+          // Single-Click Copy Button
           Z("button", {
             type: "button",
             onClick: copyPrompt,
-            onMouseEnter: function() { setIsHovered(true); },
-            onMouseLeave: function() { setIsHovered(false); },
             className: "prompt-command-btn" + (copied ? " btn-copied" : ""),
             children: copied ? "✓ ¡PROMPT COPIADO!" : "+ COPIAR PROMPT"
           })
@@ -1364,7 +1256,6 @@ function PromptCardBox(props) {
     ]
   });
 }
-
 
 /* =========================================================
    CATEGORY CONFIG & PROMPT DATABASE (All 5 Categories)
@@ -1950,7 +1841,7 @@ var CATEGORY_DATA = {
 };
 
 /* =========================================================
-   MASTER PROMPTS EXPERIENCE (5s Intro -> Clean Library)
+   MASTER PROMPTS EXPERIENCE (5s Intro -> Apple Luxury Library)
    ========================================================= */
 function MasterPromptsExperience(props) {
   var type = props.type;
@@ -1963,19 +1854,34 @@ function MasterPromptsExperience(props) {
   var [progressPct, setProgressPct] = uA.useState(0);
   var [strobeScale, setStrobeScale] = uA.useState(0);
   var [autoplayBlocked, setAutoplayBlocked] = uA.useState(false);
+  var [focusedCardIndex, setFocusedCardIndex] = uA.useState(0);
+  var cardElementsRef = uA.useRef([]);
 
-  // Audio Playback & Browser Policy Resilience (Plays audio on direct URL entry and click)
+  // Audio Playback & Browser Policy Resilience (Plays audio ONCE, NEVER loops or repeats)
   function tryPlayAudio() {
     var audio = getAudio(type);
     if (!audio) return;
+    if (audio._hasPlayedOnce) {
+      if (!audio._finished && audio.paused) {
+        audio.play().catch(function() {});
+      }
+      return;
+    }
+    audio._hasPlayedOnce = true;
+    audio._finished = false;
+    audio.loop = false;
     audio.currentTime = 0;
     audio.volume = 1.0;
+    audio.onended = function() {
+      audio.pause();
+      audio._finished = true;
+    };
     var p = audio.play();
     if (p !== undefined) {
       p.then(function() {
         setAutoplayBlocked(false);
       }).catch(function(err) {
-        console.warn("Direct URL audio autoplay blocked by browser policy:", err);
+        console.warn("Autoplay blocked by browser policy:", err);
         setAutoplayBlocked(true);
       });
     }
@@ -1983,21 +1889,6 @@ function MasterPromptsExperience(props) {
 
   uA.useEffect(function() {
     tryPlayAudio();
-
-    // Fallback if browser blocked autoplay on cold URL entry:
-    // Listen for the very first interaction anywhere in the document to immediately start audio
-    function onFirstUserGesture() {
-      tryPlayAudio();
-      window.removeEventListener("pointerdown", onFirstUserGesture);
-      window.removeEventListener("keydown", onFirstUserGesture);
-    }
-    window.addEventListener("pointerdown", onFirstUserGesture);
-    window.addEventListener("keydown", onFirstUserGesture);
-
-    return function() {
-      window.removeEventListener("pointerdown", onFirstUserGesture);
-      window.removeEventListener("keydown", onFirstUserGesture);
-    };
   }, [type]);
 
   // Skip Intro Handler: transitions directly to library while keeping the audio playing continuously
@@ -2018,7 +1909,7 @@ function MasterPromptsExperience(props) {
       var elapsed = (now - startTime) / 1000;
 
       if (elapsed >= INTRO_DURATION) {
-        // Do not cut or fade audio! Keep it playing until it ends naturally!
+        // Do not cut or fade audio! Keep it playing until it ends naturally without looping!
         setStagePhase("library");
         return;
       }
@@ -2044,26 +1935,59 @@ function MasterPromptsExperience(props) {
     };
   }, [type, stagePhase]);
 
-  // Keyboard Escape Handler
+  // Keyboard Navigation: Arrow Keys to move through cards, Enter to copy, Escape to exit
   uA.useEffect(function() {
-    function handleModalEscape(e) {
+    function handleKeyDown(e) {
       if (e.key === "Escape") {
         e.stopPropagation();
         if (stagePhase === "intro") {
-          // Immediately skip intro without stopping music
           handleSkipIntro();
         } else if (stagePhase === "library") {
-          // Exit modal back to portfolio -> stop audio
           stopAllAudios(150);
           onClose();
         }
+        return;
+      }
+
+      if (stagePhase !== "library") return;
+
+      var total = config.prompts ? config.prompts.length : 0;
+      if (total === 0) return;
+
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+        e.preventDefault();
+        setFocusedCardIndex(function(prev) {
+          var next = (prev + 1) % total;
+          if (cardElementsRef.current[next]) {
+            cardElementsRef.current[next].scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          return next;
+        });
+      } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        setFocusedCardIndex(function(prev) {
+          var prevIdx = (prev - 1 + total) % total;
+          if (cardElementsRef.current[prevIdx]) {
+            cardElementsRef.current[prevIdx].scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          return prevIdx;
+        });
+      } else if (e.key === "Enter" || e.key === " ") {
+        var item = config.prompts[focusedCardIndex];
+        if (item) {
+          e.preventDefault();
+          if (window.copyPromptGlobal) {
+            window.copyPromptGlobal(item.prompt, focusedCardIndex);
+          }
+        }
       }
     }
-    window.addEventListener("keydown", handleModalEscape, true);
+
+    window.addEventListener("keydown", handleKeyDown, true);
     return function() {
-      window.removeEventListener("keydown", handleModalEscape, true);
+      window.removeEventListener("keydown", handleKeyDown, true);
     };
-  }, [stagePhase, onClose]);
+  }, [stagePhase, onClose, focusedCardIndex, config.prompts]);
 
   return Z("div", {
     className: "immersive-stage-wrapper " + config.themeClass + (" " + (stagePhase === "intro" ? "phase-intro" : "phase-library")),
@@ -2081,7 +2005,7 @@ function MasterPromptsExperience(props) {
           // Background Video-Edit Audio Canvas
           Z(VideoEditAudioCanvas, { type: type, audio: audioInstance }),
 
-          // Geometric Sonic Pulse Ring (Pure visual, no text)
+          // Geometric Sonic Pulse Ring
           Z("div", {
             className: "intro-sonic-ring-wrap",
             children: [
@@ -2127,31 +2051,31 @@ function MasterPromptsExperience(props) {
         ]
       }) : null,
 
-      // 2. CLEAN PROMPTS SECTION (Library phase)
+      // 2. COMPACT APPLE BACK BUTTON (Trimmed, Sleek Pill)
       stagePhase === "library" ? Z("button", {
         type: "button",
         onClick: function() {
           stopAllAudios(150);
           onClose();
         },
-        className: "library-floating-exit-btn",
+        className: "apple-compact-back-btn",
         title: "Volver al Portafolio (Esc)",
         children: [
-          Z("span", { className: "exit-arrow", children: "←" }),
-          Z("span", { className: "exit-key-badge", children: "ESC" }),
-          Z("span", { children: "VOLVER AL PORTAFOLIO" })
+          Z("span", { className: "apple-kbd", children: "ESC" }),
+          Z("span", { className: "back-label", children: "Portafolio" })
         ]
       }) : null,
 
+      // 3. APPLE LUXURY PROMPTS SECTION (Library phase)
       stagePhase === "library" ? Z("div", {
         className: "prompts-library-section",
         children: [
-          // Corner Metadata to enrich the layout without cluttering minimalism
+          // Corner Metadata
           Z("div", {
             className: "prompts-corner-meta corner-tr",
             children: [
               Z("span", { className: "meta-tag", children: "ESTUDIO CREATIVO // TALLER IA 2026" }),
-              Z("span", { className: "meta-sub", children: "EDICIÓN NEURAL LIMITADA • V2.5" })
+              Z("span", { className: "meta-sub", children: "EDICIÓN APPLE NEURAL • V3.0" })
             ]
           }),
           Z("div", {
@@ -2208,13 +2132,16 @@ function MasterPromptsExperience(props) {
             ]
           }),
 
-          // 6-Card Prompts Grid
+          // Responsive Prompts Grid
           Z("div", {
             className: "prompts-grid",
             children: config.prompts.map(function(item, idx) {
               return Z(PromptCardBox, {
                 key: idx,
                 item: item,
+                cardIndex: idx,
+                isFocused: focusedCardIndex === idx,
+                cardRef: function(el) { cardElementsRef.current[idx] = el; },
                 themeClass: config.themeClass
               });
             })
@@ -2233,6 +2160,9 @@ function $V(){
   let[activeModal,setActiveModal]=uA.useState(window.getInitialSectionFromUrl ? window.getInitialSectionFromUrl() : null);
   let activeModalRef=uA.useRef(null);
   activeModalRef.current=activeModal;
+  let [focusedColIndex, setFocusedColIndex] = uA.useState(-1);
+  let focusedColRef = uA.useRef(-1);
+  focusedColRef.current = focusedColIndex;
 
   let k=uA.useRef(null),r=uA.useRef(null),O=uA.useRef(null),T=uA.useRef(null),b=uA.useRef(null);
 
@@ -2244,15 +2174,33 @@ function $V(){
     document.body.style.margin="0";
 
     function handleKeyDown(e){
-      // Alt + Left Arrow navigation
-      if(e.altKey && e.key === "ArrowLeft"){
-        if(activeModalRef.current){
-          stopAllAudios(0);
-          setActiveModal(null);
-          if(window.syncExplicitUrl) window.syncExplicitUrl(null);
-        } else {
-          window.location.href = "/";
+      if(activeModalRef.current) return;
+
+      if(e.key === "ArrowRight" || e.key === "ArrowDown"){
+        e.preventDefault();
+        let next = (focusedColRef.current + 1) % 5;
+        setFocusedColIndex(next);
+        let col = ["anime", "caricatura", "elegancia", "edicion", "superheroe"][next];
+        handleColEnter(col);
+      } else if(e.key === "ArrowLeft" || e.key === "ArrowUp"){
+        e.preventDefault();
+        let prev = (focusedColRef.current - 1 + 5) % 5;
+        if(focusedColRef.current === -1) prev = 4;
+        setFocusedColIndex(prev);
+        let col = ["anime", "caricatura", "elegancia", "edicion", "superheroe"][prev];
+        handleColEnter(col);
+      } else if(e.key === "Enter" || e.key === " "){
+        if(focusedColRef.current >= 0 && focusedColRef.current < 5){
+          e.preventDefault();
+          let col = ["anime", "caricatura", "elegancia", "edicion", "superheroe"][focusedColRef.current];
+          if(col === "anime") onAnimeClick();
+          else if(col === "caricatura") onCaricaturaClick();
+          else if(col === "elegancia") onEleganciaClick();
+          else if(col === "edicion") onEdicionClick();
+          else if(col === "superheroe") onSuperheroeClick();
         }
+      } else if(e.altKey && e.key === "ArrowLeft"){
+        window.location.href = "/";
       }
     }
     window.addEventListener("keydown", handleKeyDown);
@@ -2489,7 +2437,7 @@ function $V(){
     }) : null,
     Z("div",{className:"portfolio-shell",children:EA("div",{className:"portfolio",onPointerLeave:handlePortfolioLeave,children:[
       EA("div",{
-        className:"col col-anime group " + (activeHoverCol === "anime" ? "is-expanded" : ""),
+        className:"col col-anime group " + ((activeHoverCol === "anime" || (activeHoverCol === null && focusedColIndex === 0)) ? "is-expanded" : ""),
         style:{backgroundColor:"#243447"},
         onPointerEnter:()=>handleColEnter("anime"),
         onTouchStart:()=>handleColEnter("anime"),
@@ -2500,7 +2448,7 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-caricatura group " + (activeHoverCol === "caricatura" ? "is-expanded" : ""),
+        className:"col col-caricatura group " + ((activeHoverCol === "caricatura" || (activeHoverCol === null && focusedColIndex === 1)) ? "is-expanded" : ""),
         style:{backgroundColor:"#FF6B6B"},
         onPointerEnter:()=>handleColEnter("caricatura"),
         onTouchStart:()=>handleColEnter("caricatura"),
@@ -2511,7 +2459,7 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-elegancia group " + (activeHoverCol === "elegancia" ? "is-expanded" : ""),
+        className:"col col-elegancia group " + ((activeHoverCol === "elegancia" || (activeHoverCol === null && focusedColIndex === 2)) ? "is-expanded" : ""),
         style:{backgroundColor:"#E9DDC2"},
         onPointerEnter:()=>handleColEnter("elegancia"),
         onTouchStart:()=>handleColEnter("elegancia"),
@@ -2522,7 +2470,7 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-edicion group " + (activeHoverCol === "edicion" ? "is-expanded" : ""),
+        className:"col col-edicion group " + ((activeHoverCol === "edicion" || (activeHoverCol === null && focusedColIndex === 3)) ? "is-expanded" : ""),
         style:{backgroundColor:"#143F54"},
         onPointerEnter:()=>handleColEnter("edicion"),
         onTouchStart:()=>handleColEnter("edicion"),
@@ -2533,7 +2481,7 @@ function $V(){
         ]
       }),
       EA("div",{
-        className:"col col-superheroe group " + (activeHoverCol === "superheroe" ? "is-expanded" : ""),
+        className:"col col-superheroe group " + ((activeHoverCol === "superheroe" || (activeHoverCol === null && focusedColIndex === 4)) ? "is-expanded" : ""),
         style:{backgroundColor:"#5AB0E6"},
         onPointerEnter:()=>handleColEnter("superheroe"),
         onTouchStart:()=>handleColEnter("superheroe"),
