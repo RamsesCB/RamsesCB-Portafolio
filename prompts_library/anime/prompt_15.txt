@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #15: Cyber-Hacker Callejero con Drones de Asalto
+CATEGORÍA: ANIME | PROMPT #15: Chico Skater Rebelde (Skateboard en Muro Grafiti)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-💻 Sube 1 foto tuya. Siéntete un hacker rebelde en un callejón nocturno de Shibuya con drones sigilosos e implantes cibernéticos neón.
+📸 Sube tu foto de referencia. Apóyate casual contra una pared de grafitis con skateboard bajo el brazo, ropa urbana y actitud despreocupada.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
-   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - Adjunta tu foto de referencia.
+   - Pega el prompt que aparece abajo en la caja.
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, seamlessly retain their facial structure, nose, lips, and focused eyes while styling them into a rogue cyberpunk netrunner crouched in a rain-slicked Tokyo alleyway. Sleek glowing neural port implants at the temple emitting faint neon cyan light, dual floating miniature stealth drones hovering at shoulder level, transparent holographic terminal windows displaying code cascades, techwear oversized parka with tactical straps, neon kanji sign reflections in puddles, atmospheric cyberpunk anime noir --ar 4:5 --niji 6`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real con gafas, cabello negro rizado. Cosplay inspirado en chico skater: camiseta azul brillante, shorts morados cargo, zapatillas blancas, dos skateboards amarillos. POSE INTERESANTE: recargado casual contra muro con grafitis coloridos en callejón urbano, un pie sobre skateboard en suelo, mano izquierda en bolsillo, mano derecha sosteniendo otro skateboard amarillo bajo brazo, sonrisa leve y cool mirando a cámara, fondo muro lleno de grafitis de colores y bicicletas aparcadas, luz de día natural, cosplay bien hecho como ropa casual, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the primary subject, seamlessly retain their facial structure, nose, lips, and focused eyes while styling them into a rogue cyberpunk netrunner crouched in a rain-slicked Tokyo alleyway. Sleek glowing neural port implants at the temple emitting faint neon cyan light, dual floating miniature stealth drones hovering at shoulder level, transparent holographic terminal windows displaying code cascades, techwear oversized parka with tactical straps, neon kanji sign reflections in puddles, atmospheric cyberpunk anime noir --ar 4:5 --niji 6
+Según la hoja de referencia, humano real con gafas, cabello negro rizado. Cosplay inspirado en chico skater: camiseta azul brillante, shorts morados cargo, zapatillas blancas, dos skateboards amarillos. POSE INTERESANTE: recargado casual contra muro con grafitis coloridos en callejón urbano, un pie sobre skateboard en suelo, mano izquierda en bolsillo, mano derecha sosteniendo otro skateboard amarillo bajo brazo, sonrisa leve y cool mirando a cámara, fondo muro lleno de grafitis de colores y bicicletas aparcadas, luz de día natural, cosplay bien hecho como ropa casual, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --style raw
 ================================================================================

@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #08: Piloto de Mecha Orbital (Evangelion)
+CATEGORÍA: ANIME | PROMPT #08: Ninja Sabio (Rasengan en Cruce Urbano)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🚀 Sube 1 foto tuya. Viste un traje plugsuit táctico con visor futurista y propulsores de iones flotando sobre la Tierra estilo Evangelion.
+📸 Sube tu foto o referencia. Despliega una postura de combate en la ciudad sosteniendo un Rasengan azul con chaqueta naranja y banda ninja.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
-   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - Adjunta tu foto de referencia.
+   - Pega el prompt que aparece abajo en la caja.
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en ninja sabio: chaqueta naranja y negra con remolino rojo en espalda, pantalones negros, banda con símbolo de hoja, maquillaje naranja sutil en ojos de sabio. POSE: Rasengan dinámico en calle normal, mano derecha extendida adelante sosteniendo esfera azul transparente de plástico como Rasengan, mano izquierda apoyando, piernas en postura amplia de pelea, expresión determinada, fondo cruce de calles real con tiendas, luz de día, sin efectos de chakra, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250
+Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en ninja sabio: chaqueta naranja y negra con remolino rojo en espalda, pantalones negros, banda con símbolo de hoja, maquillaje naranja sutil en ojos de sabio. POSE: Rasengan dinámico en calle normal, mano derecha extendida adelante sosteniendo esfera azul transparente de plástico como Rasengan, mano izquierda apoyando, piernas en postura amplia de pelea, expresión determinada, fondo cruce de calles real con tiendas, luz de día, sin efectos de chakra, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6 --stylize 250
+--ar 4:5 --style raw
 ================================================================================

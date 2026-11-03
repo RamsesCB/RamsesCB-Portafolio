@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #11: Alquimista Elemental de Fuego & Viento
+CATEGORÍA: ANIME | PROMPT #11: Pirata del Sombrero de Paja (Pose Elástica & Sonrisa)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🔥 Sube 1 foto tuya. Desata un torbellino de llamas y chispas doradas con gabardina ondeando como en los mejores animes de acción.
+📸 Sube tu foto de referencia. Sonríe a cámara en un cruce peatonal levantando tu sombrero de paja con efecto de perspectiva dinámica.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro concentrado)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
-   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - Adjunta tu foto de referencia.
+   - Pega el prompt que aparece abajo en la caja.
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary character, maintain their exact facial features, sharp gaze, and personal likeness while illustrating them as an elite elemental alchemist transmuting roaring crimson and gold firestorm vortexes. Swirling ember sparks orbiting open palms, billowing high-collar crimson trench coat with golden alchemy crests, cracked volcanic ground radiating molten fissures beneath boots, dynamic low-angle framing, intense fiery rim lighting, Studio Bones anime quality, saturated vermilion, amber, and obsidian color grading --ar 4:5 --niji 6`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en pirata de sombrero de paja: sombrero de paja con cinta roja, chaleco rojo abierto, shorts jeans azules, sandalias. POSE: de pie en cruce peatonal normal de ciudad, brazo derecho estirado largo hacia adelante hacia cámara como truco de perspectiva de goma, mano izquierda sosteniendo sombrero de paja levantado, sonrisa grande y alegre, fondo calle real con autos y tiendas desenfocadas, luz de día, sin superpoderes reales, cosplay bien hecho, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the primary character, maintain their exact facial features, sharp gaze, and personal likeness while illustrating them as an elite elemental alchemist transmuting roaring crimson and gold firestorm vortexes. Swirling ember sparks orbiting open palms, billowing high-collar crimson trench coat with golden alchemy crests, cracked volcanic ground radiating molten fissures beneath boots, dynamic low-angle framing, intense fiery rim lighting, Studio Bones anime quality, saturated vermilion, amber, and obsidian color grading --ar 4:5 --niji 6
+Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en pirata de sombrero de paja: sombrero de paja con cinta roja, chaleco rojo abierto, shorts jeans azules, sandalias. POSE: de pie en cruce peatonal normal de ciudad, brazo derecho estirado largo hacia adelante hacia cámara como truco de perspectiva de goma, mano izquierda sosteniendo sombrero de paja levantado, sonrisa grande y alegre, fondo calle real con autos y tiendas desenfocadas, luz de día, sin superpoderes reales, cosplay bien hecho, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --style raw
 ================================================================================

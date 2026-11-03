@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #14: Comandante de Maniobras Tácticas (SnK)
+CATEGORÍA: ANIME | PROMPT #14: Héroe Verde (Puño al Cielo en Cruce Peatonal)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-⚔️ Sube 1 foto tuya decidida. Conquista los cielos con equipo tridimensional a vapor y capa verde de exploración al atardecer.
+📸 Sube tu foto de referencia. Levanta el puño hacia el cielo con traje verde de héroe y sonrisa determinada en medio de la ciudad.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con mirada seria)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
-   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - Adjunta tu foto de referencia.
+   - Pega el prompt que aparece abajo en la caja.
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the model, accurately preserve their facial geometry, eye intensity, and personal hairstyle while illustrating them as a veteran military scout commander perched on high medieval fortress battlements at sunset. Billowing dark green scout cape with embroidered wings insignia, dual omni-directional steel blades reflecting fiery crimson sunset clouds, pressurized steam plumes venting from gas gear mechanisms, dramatic Dutch tilt wide shot, gritty anime war aesthetic, rich warm sepia and fiery orange lighting --ar 4:5 --niji 6`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real con gafas, cabello rizado volando. Cosplay de héroe verde: traje verde con detalles negros y beige, guantes verdes, cinturón verde, zapatos rojos. POSE BONITA Y DINÁMICA: pose de héroe en medio de cruce peatonal de ciudad, puño derecho levantado alto hacia cielo, pierna izquierda adelante, postura amplia, sonrisa determinada mirando hacia arriba, cabello y traje ondeando con viento, fondo calle real con tienda Lawson japonesa, luz natural, sin efectos de energía, cosplay bien logrado, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the model, accurately preserve their facial geometry, eye intensity, and personal hairstyle while illustrating them as a veteran military scout commander perched on high medieval fortress battlements at sunset. Billowing dark green scout cape with embroidered wings insignia, dual omni-directional steel blades reflecting fiery crimson sunset clouds, pressurized steam plumes venting from gas gear mechanisms, dramatic Dutch tilt wide shot, gritty anime war aesthetic, rich warm sepia and fiery orange lighting --ar 4:5 --niji 6
+Según la hoja de referencia, humano real con gafas, cabello rizado volando. Cosplay de héroe verde: traje verde con detalles negros y beige, guantes verdes, cinturón verde, zapatos rojos. POSE BONITA Y DINÁMICA: pose de héroe en medio de cruce peatonal de ciudad, puño derecho levantado alto hacia cielo, pierna izquierda adelante, postura amplia, sonrisa determinada mirando hacia arriba, cabello y traje ondeando con viento, fondo calle real con tienda Lawson japonesa, luz natural, sin efectos de energía, cosplay bien logrado, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --style raw
 ================================================================================

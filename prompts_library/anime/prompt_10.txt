@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #10: Trascendencia Cósmica Anime
+CATEGORÍA: ANIME | PROMPT #10: Guerrero Marcial (Postura Carga Kamehameha)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌌 Sube 1 foto tuya serena. Transfórmate en una deidad cósmica levitando en el espacio infinito entre constelaciones y geometrías sagradas.
+📸 Sube tu foto de referencia. Carga energía en postura firme de artes marciales con gi naranja clásico en medio de una calle con letreros japoneses.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro sereno o de perfil)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
-   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - Adjunta tu foto de referencia.
+   - Pega el prompt que aparece abajo en la caja.
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the main subject, preserve their true facial contours, nose, lips, and serene expression while transforming them into an ethereal anime celestial entity levitating in zero gravity amidst deep space nebula dust. Glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, preserva gafas, cabello rizado. Cosplay inspirado en artista marcial naranja: gi naranja brillante con kanji tortuga negro en pecho, camiseta interior azul oscuro y muñequeras azules, cinturón azul oscuro, pantalones azules anchos. POSE INTERESANTE: pose de carga de Kamehameha en calle normal, pies separados muy amplios en postura de caballo, manos juntas en costado de cintura como cargando energía, inclinado hacia adelante, expresión intensa enfocada, fondo calle real con tienda de conveniencia japonesa con letrero de colores, luz de día, sin bola de energía, cosplay bien hecho, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the main subject, preserve their true facial contours, nose, lips, and serene expression while transforming them into an ethereal anime celestial entity levitating in zero gravity amidst deep space nebula dust. Glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350
+Según la hoja de referencia, preserva gafas, cabello rizado. Cosplay inspirado en artista marcial naranja: gi naranja brillante con kanji tortuga negro en pecho, camiseta interior azul oscuro y muñequeras azules, cinturón azul oscuro, pantalones azules anchos. POSE INTERESANTE: pose de carga de Kamehameha en calle normal, pies separados muy amplios en postura de caballo, manos juntas en costado de cintura como cargando energía, inclinado hacia adelante, expresión intensa enfocada, fondo calle real con tienda de conveniencia japonesa con letrero de colores, luz de día, sin bola de energía, cosplay bien hecho, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6 --stylize 350
+--ar 4:5 --style raw
 ================================================================================

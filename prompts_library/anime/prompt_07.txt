@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #07: Espadachín del Amanecer (Makoto Shinkai)
+CATEGORÍA: ANIME | PROMPT #07: Cazador del Trueno (Postura Primer Trueno)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌸 Sube 1 foto tuya. Logra una escena poética empuñando una katana al alba con pétalos de cerezo danzando en el viento estilo Makoto Shinkai.
+📸 Sube tu foto de referencia. Agáchate con máxima concentración y estilo en la vereda con haori de triángulos y mano lista en la katana.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o tres cuartos)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
-   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - Adjunta tu foto de referencia.
+   - Pega el prompt que aparece abajo en la caja.
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real con gafas, cabello rizado. Cosplay inspirado en cazador del trueno: uniforme táctico negro con haori amarillo con triángulos blancos y naranjas con textura de tela. POSE INTERESANTE: agachado profundo en pose de primer trueno en vereda de ciudad normal, rodillas dobladas, mano derecha sujetando katana en cintura a punto de desenvainar, mano izquierda atrás, cabeza baja con ojos cerrados concentrado, fondo muro de concreto gris de ciudad, luz de día, sin rayos, cosplay bien logrado, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6
+Según la hoja de referencia, humano real con gafas, cabello rizado. Cosplay inspirado en cazador del trueno: uniforme táctico negro con haori amarillo con triángulos blancos y naranjas con textura de tela. POSE INTERESANTE: agachado profundo en pose de primer trueno en vereda de ciudad normal, rodillas dobladas, mano derecha sujetando katana en cintura a punto de desenvainar, mano izquierda atrás, cabeza baja con ojos cerrados concentrado, fondo muro de concreto gris de ciudad, luz de día, sin rayos, cosplay bien logrado, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --style raw
 ================================================================================
