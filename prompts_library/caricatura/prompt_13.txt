@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #13: Banquero Toon Bajo Lluvia de Monedas de Oro
+CATEGORÍA: CARICATURA | PROMPT #13: Prehistórico Cómico 1960s (Los Picapiedra)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-💰 Sube 1 foto tuya festejando. Celebra sobre una montaña de monedas de oro brillantes y joyas de fantasía con un simpático monóculo.
+🦕 Sube tu foto de referencia. ¡Conduce el troncomóvil prehistórico con corbata y camisa verde en la edad de piedra animada de Hanna-Barbera!
+
+🎨 ESTILO VISUAL:
+Hanna-Barbera 1960s Stone Age
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con expresión de triunfo o festejo)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, caricature their facial features and joy into a jolly cartoon tycoon sitting atop an enormous cartoon bank vault. Golden coins raining down like sparkling confetti, top hat balanced precariously, tiny gold rim monóculo over one eye, classic Silly Symphony animated theatrical short style, warm rich golden hues --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, caricature their facial features and joy into a jolly cartoon tycoon sitting atop an enormous cartoon bank vault. Golden coins raining down like sparkling confetti, top hat balanced precariously, tiny gold rim monóculo over one eye, classic Silly Symphony animated theatrical short style, warm rich golden hues --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into 1960s Hanna-Barbera limited animation style, thick outlines, collar with tie, wearing green shirt, sitting at stone age car with feet, Flintstones inspired generic prehistoric style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-cheerful vintage cartoon character swimming happily through an enormous vault filled with sparkling gold coins and gems, oversized top hat, whimsical 1950s animation art style, rich vibrant gouache rendering --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo animación limitada Hanna-Barbera de los años 60, contornos gruesos, cuello con corbata, camisa verde, sentado en auto de la edad de piedra con pies, estilo prehistórico inspirado en Los Picapiedra --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-13",
+  "title": "Prehistórico Cómico 1960s (Los Picapiedra)",
+  "category": "caricatura",
+  "style": "Hanna-Barbera 1960s Stone Age",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 1960s Hanna-Barbera limited animation style, thick outlines, collar with tie, wearing green shirt, sitting at stone age car with feet, Flintstones inspired generic prehistoric style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo animación limitada Hanna-Barbera de los años 60, contornos gruesos, cuello con corbata, camisa verde, sentado en auto de la edad de piedra con pies, estilo prehistórico inspirado en Los Picapiedra --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Hanna-Barbera 1960s"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

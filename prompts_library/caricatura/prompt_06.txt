@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #06: Chef Italiano en Cocina de Spaghetti Caótico
+CATEGORÍA: CARICATURA | PROMPT #06: Pandilla del Misterio 1970s (Scooby-Doo)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🍕 Sube 1 foto tuya con sonrisa. Diviértete en una cocina de dibujos animados lanzando masa de pizza gigante con fideos voladores.
+🚐 Sube tu foto de referencia. ¡Investiga misterios junto a la Máquina del Misterio con lupa en mano y estilo retro Hanna-Barbera!
+
+🎨 ESTILO VISUAL:
+Hanna-Barbera 1970s Mystery Gang
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro sonriente o guiñando un ojo)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, exaggerate their facial likeness and joyful expression into a lively cartoon master chef tossing a colossal flying pizza dough in an animated rustic kitchen. Oversized puffy white toque hat, twirled cartoon mustache, colorful pots whistling steam, dancing garlic bulbs on the counter, 1950s theatrical animation short aesthetic, warm gouache colors, rich humorous staging --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, exaggerate their facial likeness and joyful expression into a lively cartoon master chef tossing a colossal flying pizza dough in an animated rustic kitchen. Oversized puffy white toque hat, twirled cartoon mustache, colorful pots whistling steam, dancing garlic bulbs on the counter, 1950s theatrical animation short aesthetic, warm gouache colors, rich humorous staging --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into 1970s mystery gang cartoon style, wearing green shirt and blue jeans with magnifying glass, standing next to colorful van with flower power, haunted house background, Hanna-Barbera style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-cheerful vintage cartoon Italian chef in an energetic kitchen tossing a massive spinning pizza crust toward the ceiling, whistling copper kettles, flying spaghetti strands, exaggerated rubber-hose character animation, warm hand-painted watercolor background, Golden Age cartoon charm --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo pandilla del misterio de los años 70, camisa verde y jeans azules con lupa, junto a furgoneta colorida flower power, mansión embrujada de fondo, estilo Hanna-Barbera --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-06",
+  "title": "Pandilla del Misterio 1970s (Scooby-Doo)",
+  "category": "caricatura",
+  "style": "Hanna-Barbera 1970s Mystery Gang",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 1970s mystery gang cartoon style, wearing green shirt and blue jeans with magnifying glass, standing next to colorful van with flower power, haunted house background, Hanna-Barbera style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo pandilla del misterio de los años 70, camisa verde y jeans azules con lupa, junto a furgoneta colorida flower power, mansión embrujada de fondo, estilo Hanna-Barbera --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Hanna-Barbera 1970s"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #02: Detective Noir Toon en Callejón de Lluvia
+CATEGORÍA: CARICATURA | PROMPT #02: Pato Donald Disney Clásico (Patoburgo)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🕵️‍♂️ Sube 1 foto tuya. Ponte una gabardina de detective y sombrero fedora bajo una farola con niebla en una parodia animada clásica.
+🦆 Sube tu foto de referencia. ¡Conviértete en un pato antropomórfico de Disney de los años 50 con marinera azul frente al Bóveda de Rico McPato!
+
+🎨 ESTILO VISUAL:
+Donald Duck Disney Classic 1950s
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con sombrero o mirada sospechosa)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, caricature their facial features, jawline, and nose into a stylized 1940s animated cartoon private detective. Tilted felt fedora casting a comical shadow over one eye, classic cartoon trench coat with oversized lapels, leaning under a flickering street lamp in a puddle-strewn alleyway, exaggerated cartoon proportions, hand-painted matte background, Tex Avery meets Looney Tunes aesthetic, rich theatrical sepia and charcoal tones --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, caricature their facial features, jawline, and nose into a stylized 1940s animated cartoon private detective. Tilted felt fedora casting a comical shadow over one eye, classic cartoon trench coat with oversized lapels, leaning under a flickering street lamp in a puddle-strewn alleyway, exaggerated cartoon proportions, hand-painted matte background, Tex Avery meets Looney Tunes aesthetic, rich theatrical sepia and charcoal tones --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, preserve curly hair and glasses. Transform into Donald Duck Disney classic cartoon style, anthropomorphic duck version with white feathers, blue sailor shirt and red bow tie and duck bill, angry comical expression with fists on hips, standing in Duckburg city with money bin background, classic Disney 1950s cartoon style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-humorous vintage 1940s cartoon detective lurking beneath a flickering Victorian street lamp in a foggy wet alley, tilted fedora hat, exaggerated comical detective trench coat, magnifying glass reflecting a goofy clue, classic theatrical animated short style, warm gouache painting texture --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Transforma en estilo caricatura clásico de Pato Donald Disney, versión pato antropomórfico con plumas blancas, camisa de marinero azul, moño rojo y pico de pato, expresión cómica con puños en caderas, en Patoburgo con el almacén de dinero de fondo, estilo clásico Disney 1950s --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-02",
+  "title": "Pato Donald Disney Clásico (Patoburgo)",
+  "category": "caricatura",
+  "style": "Donald Duck Disney Classic 1950s",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, preserve curly hair and glasses. Transform into Donald Duck Disney classic cartoon style, anthropomorphic duck version with white feathers, blue sailor shirt and red bow tie and duck bill, angry comical expression with fists on hips, standing in Duckburg city with money bin background, classic Disney 1950s cartoon style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Transforma en estilo caricatura clásico de Pato Donald Disney, versión pato antropomórfico con plumas blancas, camisa de marinero azul, moño rojo y pico de pato, expresión cómica con puños en caderas, en Patoburgo con el almacén de dinero de fondo, estilo clásico Disney 1950s --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Classic Disney 1950s"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

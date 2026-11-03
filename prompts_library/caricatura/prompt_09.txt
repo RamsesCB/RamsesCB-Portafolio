@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #09: Mago de Teatro con Truco de Chistera Fallido
+CATEGORÍA: CARICATURA | PROMPT #09: Misterio en el Bosque de Oregón (Gravity Falls)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🎩 Sube 1 foto tuya cómplice. Haz magia cómica en un teatro clásico donde decenas de palomas y confeti escapan de tu chistera.
+🌲 Sube tu foto de referencia. ¡Explora el bosque con chaleco azul, fez con gafas, diario secreto de anomalías y gnomos escondidos!
+
+🎨 ESTILO VISUAL:
+Mystery Twins Forest Style (Gravity Falls)
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con ceja levantada o sonrisa cómplice)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the reference photo, adapt their face, eyes, and hairstyle into an eccentric cartoon stage magician caught in the middle of a chaotic magic trick. White-gloved hands holding a smoking magic wand, dozens of colorful cartoon doves and ribbon streamers exploding out of an upside-down black top hat, classic theatrical velvet stage curtain backdrop, vintage MGM cartoon studio styling, rich technicolor gouache --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the reference photo, adapt their face, eyes, and hairstyle into an eccentric cartoon stage magician caught in the middle of a chaotic magic trick. White-gloved hands holding a smoking magic wand, dozens of colorful cartoon doves and ribbon streamers exploding out of an upside-down black top hat, classic theatrical velvet stage curtain backdrop, vintage MGM cartoon studio styling, rich technicolor gouache --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into 2010s mystery twins forest cartoon style, wearing blue vest and fez hat with glasses, standing in forest with journal and gnomes, Gravity Falls inspired generic mystery style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-eccentric vintage cartoon stage magician in a formal black tuxedo with tails, dozens of startled white cartoon rabbits popping out of a single top hat, glittering magic sparklers, dramatic crimson stage spotlight, expressive slapstick animation art --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo caricatura de misterio en el bosque de los 2010s, chaleco azul y gorro fez con gafas, en bosque con diario secreto y gnomos, estilo inspirado en Gravity Falls --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-09",
+  "title": "Misterio en el Bosque de Oregón (Gravity Falls)",
+  "category": "caricatura",
+  "style": "Mystery Twins Forest Style (Gravity Falls)",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 2010s mystery twins forest cartoon style, wearing blue vest and fez hat with glasses, standing in forest with journal and gnomes, Gravity Falls inspired generic mystery style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de misterio en el bosque de los 2010s, chaleco azul y gorro fez con gafas, en bosque con diario secreto y gnomos, estilo inspirado en Gravity Falls --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Gravity Falls Style"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

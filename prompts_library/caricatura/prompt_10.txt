@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #10: Pirata Cómico con Loro Bromista en el Hombro
+CATEGORÍA: CARICATURA | PROMPT #10: Escuela de Técnicas Mixtas (El Mundo de Gumball)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🦜 Sube 1 foto tuya sonriendo. ¡Zarpa como un capitán pirata de caricatura con parche bordado y un loro charlatán en tu hombro!
+🐱 Sube tu foto de referencia. ¡Híbrido revolucionario 2D sobre fondos 3D reales con fieltro, aula escolar de Elmore y donas!
+
+🎨 ESTILO VISUAL:
+Mixed Media 2D/3D Felt Style (Gumball)
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con sonrisa pícara)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, transform their likeness, smile, and jawline into a swaggering, friendly cartoon pirate captain on the wooden deck of a rolling galleon. Feathered tricorn hat, eye patch with a funny skull doodle, a sassy cartoon parrot whispering secrets into their ear, treasure chests overflowing with gold cartoon coins, vibrant Caribbean sea backdrop, classic storybook cartoon illustration --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, transform their likeness, smile, and jawline into a swaggering, friendly cartoon pirate captain on the wooden deck of a rolling galleon. Feathered tricorn hat, eye patch with a funny skull doodle, a sassy cartoon parrot whispering secrets into their ear, treasure chests overflowing with gold cartoon coins, vibrant Caribbean sea backdrop, classic storybook cartoon illustration --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into mixed media school cartoon style, half 2D half 3D felt, wearing blue jeans and orange cat with fish friend, classroom with donuts, Gumball inspired generic mixed media style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-charming cartoon pirate captain standing proudly at the wooden ship helm, comical green parrot perched on shoulder with an eye patch, rolling ocean waves and tropical island in distance, vintage theatrical cartoon cel painting, colorful joyful adventure aesthetic --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo caricatura escolar de técnica mixta, mitad 2D y mitad 3D de fieltro, jeans azules con gato naranja y amigo pez, salón de clases con donas, estilo inspirado en Gumball --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-10",
+  "title": "Escuela de Técnicas Mixtas (El Mundo de Gumball)",
+  "category": "caricatura",
+  "style": "Mixed Media 2D/3D Felt Style (Gumball)",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into mixed media school cartoon style, half 2D half 3D felt, wearing blue jeans and orange cat with fish friend, classroom with donuts, Gumball inspired generic mixed media style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura escolar de técnica mixta, mitad 2D y mitad 3D de fieltro, jeans azules con gato naranja y amigo pez, salón de clases con donas, estilo inspirado en Gumball --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Mixed Media Felt / 2D"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

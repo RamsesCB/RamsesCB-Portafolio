@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #07: Músico de Jazz Toon con Trompeta Dorada
+CATEGORÍA: CARICATURA | PROMPT #07: Rubberhose Vintage a Color (Desierto Tinta)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🎺 Sube 1 foto tuya. Toca una trompeta de latón curvada en un club de swing animado con notas musicales flotando como burbujas.
+🥕 Sube tu foto de referencia. ¡Variante a color vintage con chaqueta marrón, vaqueros y zanahoria en el desierto con cráter de tinta!
+
+🎨 ESTILO VISUAL:
+1930s Vintage Color Variant
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro concentrado o de perfil)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the reference photo, translate their facial structure and soulful gaze into a stylized vintage cartoon jazz trumpeter blowing a high note on a bent golden horn. Glowing colorful musical notes floating like bubbles from the instrument bell, tilted pork pie hat, sharp pinstripe cartoon suit, smoky midnight blue jazz cellar background, Fleischer Studios 1930s swing era animation vibe, dynamic rubber-hose sway --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the reference photo, translate their facial structure and soulful gaze into a stylized vintage cartoon jazz trumpeter blowing a high note on a bent golden horn. Glowing colorful musical notes floating like bubbles from the instrument bell, tilted pork pie hat, sharp pinstripe cartoon suit, smoky midnight blue jazz cellar background, Fleischer Studios 1930s swing era animation vibe, dynamic rubber-hose sway --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, preserve curly hair and glasses. Transform into 1930s rubber hose cartoon style variant, brown jacket and blue jeans, holding carrot, ink desert with crater hole --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-soulful 1930s cartoon jazz trumpeter leaning backward while blowing into a gleaming brass horn, physical musical notes bouncing off the piano, smoky speakeasy club background with warm spotlight, authentic rubber-hose animated rhythm, charming nostalgic animation art --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Transforma en variante de estilo rubber hose de los años 30 a color, chaqueta marrón y jeans azules, sosteniendo zanahoria, en desierto de tinta con cráter --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-07",
+  "title": "Rubberhose Vintage a Color (Desierto Tinta)",
+  "category": "caricatura",
+  "style": "1930s Vintage Color Variant",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, preserve curly hair and glasses. Transform into 1930s rubber hose cartoon style variant, brown jacket and blue jeans, holding carrot, ink desert with crater hole --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Transforma en variante de estilo rubber hose de los años 30 a color, chaqueta marrón y jeans azules, sosteniendo zanahoria, en desierto de tinta con cráter --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "1930s Technicolor"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

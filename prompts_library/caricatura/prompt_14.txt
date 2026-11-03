@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #14: Astronauta Toon en la Luna de Queso Gruyer
+CATEGORÍA: CARICATURA | PROMPT #14: Animación Muda de Cine 1920s (Félix el Gato)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🧀 Sube 1 foto tuya. Salta sin gravedad con un casco redondo de pecera sobre una divertida luna con cráteres de queso suizo.
+🌙 Sube tu foto de referencia. ¡Auténtico grano de película silente de los años 20 con extremidades de goma de tinta sobre la luna estrellada!
+
+🎨 ESTILO VISUAL:
+1920s Silent Film Felix Style
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro dentro de un círculo)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the reference photo, caricature their face and curious gaze inside a crystal-clear spherical fishbowl space helmet. Bouncing weightlessly across a cartoon yellow moon surface with Swiss cheese craters, planting a cheerful smiling cartoon flag into the lunar dust, stars drawn as sparkling four-pointed cartoon twinkles, 1960s retro space cartoon aesthetic --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the reference photo, caricature their face and curious gaze inside a crystal-clear spherical fishbowl space helmet. Bouncing weightlessly across a cartoon yellow moon surface with Swiss cheese craters, planting a cheerful smiling cartoon flag into the lunar dust, stars drawn as sparkling four-pointed cartoon twinkles, 1960s retro space cartoon aesthetic --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into 1920s silent black and white Felix the Cat style cartoon, rubber hose limbs, pie eyes, all black and white, wearing gloves, standing on moon with stars, vintage silent film grain --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-whimsical retro cartoon astronaut in a puffy white space suit with a round fishbowl helmet bouncing joyfully across a Swiss cheese lunar surface, tiny green alien waving from behind a rock, sparkling cartoon stars in deep navy space, vintage storybook art --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en caricatura estilo Félix el Gato en cine mudo de los años 20, extremidades rubber hose, ojos de tarta, blanco y negro puro, guantes, sobre la luna con estrellas, grano de película vintage --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-14",
+  "title": "Animación Muda de Cine 1920s (Félix el Gato)",
+  "category": "caricatura",
+  "style": "1920s Silent Film Felix Style",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 1920s silent black and white Felix the Cat style cartoon, rubber hose limbs, pie eyes, all black and white, wearing gloves, standing on moon with stars, vintage silent film grain --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en caricatura estilo Félix el Gato en cine mudo de los años 20, extremidades rubber hose, ojos de tarta, blanco y negro puro, guantes, sobre la luna con estrellas, grano de película vintage --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "1920s Silent Film Grain"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

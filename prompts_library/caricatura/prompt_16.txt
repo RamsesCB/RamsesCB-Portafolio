@@ -1,0 +1,57 @@
+================================================================================
+CATEGORÍA: CARICATURA | PROMPT #16: Techo Nocturno en Cine Silente 1920s
+================================================================================
+
+✨ DESCRIPCIÓN:
+🌃 Sube tu foto de referencia. ¡Posa sobre un tejado de tejas bajo una luna creciente con cuerpo de tinta y guantes blancos de animación silente!
+
+🎨 ESTILO VISUAL:
+1920s Silent Rooftop Moon Variant
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de referencia)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
+--------------------------------------------------------------------------------
+Using the exact person from the reference sheet, transform into 1920s black and white Felix cat cartoon style, big eyes, black body, white gloves, standing on rooftop with moon, silent film style --ar 4:5
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Según la hoja de referencia que me pasaste, transforma en estilo caricatura de gato Félix en blanco y negro de los 1920s, ojos grandes, silueta de tinta negra, guantes blancos, en azotea con luna, estilo de película muda --ar 4:5
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS:
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-16",
+  "title": "Techo Nocturno en Cine Silente 1920s",
+  "category": "caricatura",
+  "style": "1920s Silent Rooftop Moon Variant",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 1920s black and white Felix cat cartoon style, big eyes, black body, white gloves, standing on rooftop with moon, silent film style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de gato Félix en blanco y negro de los 1920s, ojos grandes, silueta de tinta negra, guantes blancos, en azotea con luna, estilo de película muda --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "1920s Black & White"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
+================================================================================

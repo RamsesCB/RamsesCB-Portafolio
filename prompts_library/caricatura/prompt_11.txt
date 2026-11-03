@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #11: Conductor de Tranvía Saltarín 1930s
+CATEGORÍA: CARICATURA | PROMPT #11: UPA Modernismo Minimalista 1950s
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🚋 Sube 1 foto tuya alegre. Maneja un tranvía amarillo de animación elástica que se dobla en curvas imposibles tocando la campana.
+📐 Sube tu foto de referencia. ¡Estilo vanguardista de formas planas geométricas y paleta limitada de la era dorada del estudio UPA!
+
+🎨 ESTILO VISUAL:
+1950s UPA Modern Minimal (Gerald McBoing-Boing)
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, stylize their facial proportions and friendly demeanor into a 1930s rubber-hose cartoon cable-car operator ringing the brass bell on a steep San Francisco style cartoon hill. The entire yellow trolley bends and squashes along the curved tracks, musical chime clangs floating as text balloons, sepia-tinted hand-inked vintage animation cel style, authentic nostalgic Fleischer charm --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, stylize their facial proportions and friendly demeanor into a 1930s rubber-hose cartoon cable-car operator ringing the brass bell on a steep San Francisco style cartoon hill. The entire yellow trolley bends and squashes along the curved tracks, musical chime clangs floating as text balloons, sepia-tinted hand-inked vintage animation cel style, authentic nostalgic Fleischer charm --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into 1950s UPA modern minimal cartoon style, flat shapes, limited colors, wearing brown jacket and blue jeans with glasses, standing in abstract city with geometric buildings, Gerald McBoing-Boing style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-exuberant 1930s rubber-hose cartoon cable car operator clanging a brass bell as the yellow trolley car stretches and squashes down a steep cartoon hill, vintage sepia and pastel gouache background, charming Fleischer and Disney 1930s short animation style --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo caricatura minimalista moderna UPA de los años 50, formas planas, paleta limitada, chaqueta marrón y jeans con gafas, en ciudad abstracta con edificios geométricos, estilo Gerald McBoing-Boing --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-11",
+  "title": "UPA Modernismo Minimalista 1950s",
+  "category": "caricatura",
+  "style": "1950s UPA Modern Minimal (Gerald McBoing-Boing)",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 1950s UPA modern minimal cartoon style, flat shapes, limited colors, wearing brown jacket and blue jeans with glasses, standing in abstract city with geometric buildings, Gerald McBoing-Boing style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura minimalista moderna UPA de los años 50, formas planas, paleta limitada, chaqueta marrón y jeans con gafas, en ciudad abstracta con edificios geométricos, estilo Gerald McBoing-Boing --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "UPA 1950s Modernism"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

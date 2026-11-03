@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #03: Científico Chiflado con Invento de Cohete Acme
+CATEGORÍA: CARICATURA | PROMPT #03: Hora de Aventura (Reino Caramelo)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🚀 Sube 1 foto tuya divertida. Construye un invento disparatado con planos y dinamita al más puro estilo del Coyote y el Correcaminos.
+⚔️ Sube tu foto de referencia. ¡Entra a la tierra de Ooo con extremidades fideo, gorro de explorador y mochila en pleno Reino Caramelo!
+
+🎨 ESTILO VISUAL:
+Adventure Time (Pendleton Ward)
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con expresión de asombro o sorpresa)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as inspiration, humorously adapt their facial likeness, hair, and expression into a manic cartoon inventor at a cluttered wooden workbench. Assembling a giant Acme rocket-powered roller skate, blueprint schematics pinned to sandstone canyon wall, sticks of cartoon dynamite with sizzling spark fuses, exaggerated squinting concentration, painted gouache desert landscape, vibrant retro Technicolor palette, classic Chuck Jones directing style --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as inspiration, humorously adapt their facial likeness, hair, and expression into a manic cartoon inventor at a cluttered wooden workbench. Assembling a giant Acme rocket-powered roller skate, blueprint schematics pinned to sandstone canyon wall, sticks of cartoon dynamite with sizzling spark fuses, exaggerated squinting concentration, painted gouache desert landscape, vibrant retro Technicolor palette, classic Chuck Jones directing style --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into Adventure Time cartoon style, simple noodle limbs, small eyes, wearing Finn's hat with backpack, standing in Candy Kingdom, Pendleton Ward style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-humorous vintage cartoon coyote at a wooden workbench frantically assembling a giant Acme rocket-powered roller skate, blueprint schematics pinned to red desert canyon sandstone, sticks of dynamite with burning spark fuses, exaggerated squinting concentration, painted gouache desert landscape, vibrant retro Technicolor palette, classic Chuck Jones directing style --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo caricatura Hora de Aventura, extremidades simples de fideo, ojos pequeños, gorro de Finn con mochila, en el Reino Caramelo, estilo Pendleton Ward --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-03",
+  "title": "Hora de Aventura (Reino Caramelo)",
+  "category": "caricatura",
+  "style": "Adventure Time (Pendleton Ward)",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into Adventure Time cartoon style, simple noodle limbs, small eyes, wearing Finn's hat with backpack, standing in Candy Kingdom, Pendleton Ward style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura Hora de Aventura, extremidades simples de fideo, ojos pequeños, gorro de Finn con mochila, en el Reino Caramelo, estilo Pendleton Ward --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Pendleton Ward"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

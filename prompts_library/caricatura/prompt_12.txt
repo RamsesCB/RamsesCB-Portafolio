@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #12: Jardinero Toon en Batalla con un Topo Bromista
+CATEGORÍA: CARICATURA | PROMPT #12: El Laboratorio del Niño Genio 1990s (Dexter)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌻 Sube 1 foto tuya divertida. Cuida tu jardín animado mientras lidias con una manguera anudada y un topo travieso con gafas de sol.
+🧪 Sube tu foto de referencia. ¡Bata blanca de científico, guantes morados y gafas gigantes sosteniendo un invento entre matraces de laboratorio!
+
+🎨 ESTILO VISUAL:
+Genndy Tartakovsky Boy Genius (Dexter)
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con mirada cómica de exasperación)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the reference photo, exaggerate their facial features into a determined cartoon gardener in denim overalls caught in a comical standoff with a cheeky cartoon mole poking its head out from a flowerbed. Exaggerated hose pipe knotted into funny pretzel loops, cartoon sunflowers with smiling faces swaying, lush green garden with painted fence, Hanna-Barbera slapstick comedy aesthetic --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the reference photo, exaggerate their facial features into a determined cartoon gardener in denim overalls caught in a comical standoff with a cheeky cartoon mole poking its head out from a flowerbed. Exaggerated hose pipe knotted into funny pretzel loops, cartoon sunflowers with smiling faces swaying, lush green garden with painted fence, Hanna-Barbera slapstick comedy aesthetic --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into 1990s boy genius lab cartoon style, very small with big glasses, lab coat, holding invention, laboratory with beakers background, Dexter inspired generic boy genius style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-humorous cartoon gardener in blue overalls staring down in funny disbelief at a cheeky little mole wearing sunglasses popping out of the lawn, twisted garden hose spraying in crazy loops, bright cheerful sunny cartoon morning aesthetic --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo niño genio de laboratorio de los 90s, estatura pequeña con gafas gigantes, bata de laboratorio, sosteniendo invento, fondo de laboratorio con probetas, estilo inspirado en Dexter --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-12",
+  "title": "El Laboratorio del Niño Genio 1990s (Dexter)",
+  "category": "caricatura",
+  "style": "Genndy Tartakovsky Boy Genius (Dexter)",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 1990s boy genius lab cartoon style, very small with big glasses, lab coat, holding invention, laboratory with beakers background, Dexter inspired generic boy genius style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo niño genio de laboratorio de los 90s, estatura pequeña con gafas gigantes, bata de laboratorio, sosteniendo invento, fondo de laboratorio con probetas, estilo inspirado en Dexter --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Genndy Tartakovsky 90s"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

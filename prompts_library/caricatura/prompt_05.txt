@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #05: Piloto de Biplano en Carreras Alocadas
+CATEGORÍA: CARICATURA | PROMPT #05: Chicas Superpoderosas (Cielo de Saltadilla)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-✈️ Sube 1 foto tuya. Pilota una simpática avioneta roja con gafas de cuero y bufanda kilométrica estilo Autos Locos.
+💥 Sube tu foto de referencia. ¡Vuela sobre Saltadilla con estilo superflat de ojos enormes, cabeza grande y puño en alto!
+
+🎨 ESTILO VISUAL:
+Powerpuff Girls (Craig McCracken)
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con gafas de sol o sonrisa pícara)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, caricature their facial features, jaw, and grinning expression into a dashing cartoon biplane racer. Wearing vintage leather flight goggles pushed over the forehead, a comically long white aviator silk scarf whipping twenty feet behind in the wind, sitting in a tiny red cartoon propeller biplane banking steeply over cartoon mountains, bright cheerful Hanna-Barbera racing animation style, saturated primary colors --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, caricature their facial features, jaw, and grinning expression into a dashing cartoon biplane racer. Wearing vintage leather flight goggles pushed over the forehead, a comically long white aviator silk scarf whipping twenty feet behind in the wind, sitting in a tiny red cartoon propeller biplane banking steeply over cartoon mountains, bright cheerful Hanna-Barbera racing animation style, saturated primary colors --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into superflat big eyes power girl cartoon style, tiny body big head, wearing blue dress and glasses, flying with fist up, city of Townsville background, Craig McCracken style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-dashing vintage cartoon aviator grinning in the cockpit of a bright red miniature propeller biplane, oversized flying goggles, comically long white silk scarf fluttering across fluffy clouds, whimsical 1960s cartoon racing animation aesthetic, vibrant saturated gouache background --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo caricatura superflat de ojos gigantes, cuerpo diminuto y cabeza grande, vestido azul y gafas, volando con puño en alto sobre la ciudad de Saltadilla (Townsville), estilo Craig McCracken --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-05",
+  "title": "Chicas Superpoderosas (Cielo de Saltadilla)",
+  "category": "caricatura",
+  "style": "Powerpuff Girls (Craig McCracken)",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into superflat big eyes power girl cartoon style, tiny body big head, wearing blue dress and glasses, flying with fist up, city of Townsville background, Craig McCracken style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura superflat de ojos gigantes, cuerpo diminuto y cabeza grande, vestido azul y gafas, volando con puño en alto sobre la ciudad de Saltadilla (Townsville), estilo Craig McCracken --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Craig McCracken"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================

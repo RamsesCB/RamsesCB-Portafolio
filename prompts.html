@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>RamsesCB</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="shortcut icon" href="favicon.ico">
@@ -942,6 +943,492 @@
   pointer-events: none !important;
   z-index: 1 !important;
 }
+
+/* =========================================================
+   APPLE LUXURY PROMPT CARDS & DUAL-ACTION SUITE
+   ========================================================= */
+.prompt-box {
+  position: relative !important;
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.72) 0%, rgba(10, 15, 29, 0.88) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  content-visibility: auto !important;
+  contain-intrinsic-size: 0 560px !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
+}
+
+.prompt-box,
+.prompt-box:focus,
+.prompt-box:focus-visible {
+  outline: none !important;
+}
+
+.prompt-box:hover, .prompt-box.box-active-hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 26px 65px -12px rgba(0, 0, 0, 0.85), 0 0 35px var(--theme-glow, rgba(255,255,255,0.06)), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.prompt-box.box-keyboard-focused {
+  outline: none !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 26px 65px -12px rgba(0, 0, 0, 0.9), inset 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-5px) scale(1.01) !important;
+}
+
+.prompt-box-image-wrap {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 320px !important;
+  max-height: 520px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #040711 !important;
+  border-radius: 21px 21px 0 0 !important;
+  overflow: hidden !important;
+  padding: 0.85rem !important;
+  box-sizing: border-box !important;
+}
+
+.prompt-box-ambient-blur {
+  position: absolute !important;
+  inset: -20px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  filter: blur(36px) brightness(0.32) saturate(1.4) !important;
+  opacity: 0.65 !important;
+  pointer-events: none !important;
+  transform: scale(1.15) !important;
+}
+
+.prompt-box-img {
+  position: relative !important;
+  z-index: 2 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 480px !important;
+  object-fit: contain !important;
+  border-radius: 14px !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6) !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease !important;
+}
+.prompt-box-img.img-loading {
+  opacity: 0 !important;
+}
+.prompt-box-img.img-visible {
+  opacity: 1 !important;
+}
+.prompt-box:hover .prompt-box-img {
+  transform: scale(1.025) !important;
+}
+
+.prompt-card-top-actions {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  z-index: 6 !important;
+}
+
+.prompt-quick-btn {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(15, 23, 42, 0.82) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  color: #E2E8F0 !important;
+  cursor: pointer !important;
+  font-size: 0.72rem !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  padding: 0 !important;
+}
+.prompt-quick-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+  transform: scale(1.08) !important;
+}
+.prompt-quick-btn:active {
+  transform: scale(0.94) !important;
+}
+.prompt-quick-btn.quick-copied {
+  background: #059669 !important;
+  border-color: #10B981 !important;
+  color: #FFFFFF !important;
+}
+
+.prompt-box-badge {
+  position: absolute !important;
+  top: 1rem !important;
+  left: 1rem !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 8px !important;
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  z-index: 5 !important;
+  background: rgba(15, 23, 42, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+.prompt-badge-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: var(--theme-accent, #38BDF8) !important;
+  box-shadow: 0 0 8px var(--theme-accent, #38BDF8) !important;
+  display: inline-block !important;
+}
+
+.prompt-box-content {
+  padding: 1.45rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  justify-content: space-between !important;
+  background: transparent !important;
+}
+
+.prompt-box-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 0.45rem 0 !important;
+  line-height: 1.35 !important;
+  color: #F8FAFC !important;
+  letter-spacing: -0.018em !important;
+}
+
+.prompt-box-desc {
+  font-size: 0.86rem !important;
+  line-height: 1.6 !important;
+  color: #94A3B8 !important;
+  margin: 0 0 1rem 0 !important;
+}
+
+.prompt-card-pills-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.4rem !important;
+  margin-bottom: 1rem !important;
+}
+.prompt-card-pill {
+  padding: 0.18rem 0.55rem !important;
+  border-radius: 6px !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #CBD5E1 !important;
+}
+
+.prompt-syntax-box {
+  background: rgba(0, 0, 0, 0.42) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 0.65rem 0.85rem !important;
+  margin-bottom: 1.15rem !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: all 0.2s ease !important;
+  user-select: none !important;
+}
+.prompt-syntax-box:hover {
+  background: rgba(0, 0, 0, 0.55) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.4) !important;
+}
+.prompt-syntax-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 0.45rem !important;
+  padding-bottom: 0.35rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+.prompt-syntax-dots {
+  display: flex !important;
+  gap: 4px !important;
+}
+.syntax-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+}
+.syntax-dot-red { background: #EF4444; }
+.syntax-dot-amber { background: #F59E0B; }
+.syntax-dot-green { background: #10B981; }
+.prompt-syntax-label {
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  color: #64748B !important;
+  text-transform: uppercase !important;
+}
+.prompt-syntax-hint {
+  font-size: 0.62rem !important;
+  color: var(--theme-accent, #38BDF8) !important;
+  font-weight: 600 !important;
+  opacity: 0.9 !important;
+}
+.prompt-syntax-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  font-size: 0.74rem !important;
+  line-height: 1.5 !important;
+  color: #94A3B8 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin: 0 !important;
+  word-break: break-word !important;
+}
+
+.prompt-card-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  width: 100% !important;
+}
+
+.prompt-command-btn {
+  flex: 1.5 !important;
+  padding: 0.72rem 1rem !important;
+  border-radius: 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.03) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #F8FAFC !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+  min-height: 42px !important;
+}
+.prompt-command-btn:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+}
+.prompt-command-btn:active {
+  transform: scale(0.97) !important;
+}
+.prompt-command-btn.btn-copied {
+  background: #059669 !important;
+  border-color: #10B981 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.5) !important;
+}
+
+.prompt-json-btn {
+  flex: 1 !important;
+  padding: 0.72rem 0.85rem !important;
+  border-radius: 12px !important;
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  background: rgba(0, 0, 0, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #CBD5E1 !important;
+  backdrop-filter: blur(12px) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+  min-height: 42px !important;
+}
+.prompt-json-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px) !important;
+}
+.prompt-json-btn:active {
+  transform: scale(0.97) !important;
+}
+
+.json-modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.25rem !important;
+  box-sizing: border-box !important;
+}
+
+.json-modal-card {
+  width: 100% !important;
+  max-width: 680px !important;
+  max-height: 85vh !important;
+  background: #090E17 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.json-modal-header {
+  padding: 1.15rem 1.45rem !important;
+  background: rgba(15, 23, 42, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.json-modal-title-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+}
+
+.json-modal-badge {
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  padding: 0.2rem 0.55rem !important;
+  background: rgba(56, 189, 248, 0.15) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  color: #38BDF8 !important;
+  border-radius: 6px !important;
+}
+
+.json-modal-title {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #F8FAFC !important;
+  margin: 0 !important;
+}
+
+.json-modal-close-btn {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #94A3B8 !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  font-size: 0.85rem !important;
+  transition: all 0.2s ease !important;
+}
+.json-modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+.json-modal-body {
+  padding: 1.25rem 1.45rem !important;
+  overflow-y: auto !important;
+  flex: 1 !important;
+}
+
+.json-modal-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.78rem !important;
+  line-height: 1.6 !important;
+  color: #38BDF8 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 12px !important;
+  padding: 1rem !important;
+  margin: 0 !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  user-select: text !important;
+}
+
+.json-modal-footer {
+  padding: 1rem 1.45rem !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0.65rem !important;
+}
+
+.json-action-btn {
+  padding: 0.6rem 1.15rem !important;
+  border-radius: 10px !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  transition: all 0.2s ease !important;
+}
+.json-action-copy {
+  background: #0284C7 !important;
+  border: 1px solid #38BDF8 !important;
+  color: #FFFFFF !important;
+}
+.json-action-copy:hover {
+  background: #0369A1 !important;
+}
+.json-action-copy.copied {
+  background: #059669 !important;
+  border-color: #10B981 !important;
+}
+.json-action-dl {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #E2E8F0 !important;
+}
+.json-action-dl:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #FFFFFF !important;
+}
+
 </style>
 </head>
 <body>
@@ -1387,16 +1874,166 @@ function BeforeAfterComparisonImage(props) {
 /* =========================================================
    PROMPT CARD COMPONENT (Apple Aesthetic, Zero Crop, Single-Click Copy)
    ========================================================= */
+/* =========================================================
+   PROMPT METADATA & EXACT JSON EXTRACTOR
+   ========================================================= */
+function getPromptMetadata(item, categoryKey, index) {
+  var cat = categoryKey || "caricatura";
+  var id = item.id || (cat.toUpperCase() + "-" + (index + 1 < 10 ? "0" + (index + 1) : (index + 1)));
+  return {
+    id: id,
+    title: item.title || ("Prompt #" + (index + 1)),
+    category: cat,
+    style: item.style || (cat.charAt(0).toUpperCase() + cat.slice(1) + " Editorial"),
+    aspect_ratio: (item.parameters && item.parameters.ar) || "4:5",
+    engine: (item.parameters && item.parameters.v) ? ("Midjourney v" + item.parameters.v) : "Midjourney / Flux / Meta AI",
+    prompt: item.prompt || "",
+    universal_prompt: item.universalPrompt || item.prompt || "",
+    reference_requirements: item.referenceRequirements || "1 Foto de referencia (Rostro de frente o vistas)",
+    parameters: item.parameters || { ar: "4:5", v: "6.1", style: "raw" },
+    image_source: item.image || item.resultImage || "",
+    author: "RamsesCB / Taller IA 2026",
+    status: "Verified & Ready",
+    export_date: "2026-11-03"
+  };
+}
+
+/* =========================================================
+   JSON INSPECTOR MODAL
+   ========================================================= */
+function JsonInspectorModal(props) {
+  var isOpen = props.isOpen;
+  var onClose = props.onClose;
+  var jsonData = props.jsonData;
+  var [copied, setCopied] = uA.useState(false);
+
+  uA.useEffect(function() {
+    function onKeyDown(e) {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        onClose();
+      }
+    }
+    if (isOpen) {
+      window.addEventListener("keydown", onKeyDown, true);
+    }
+    return function() {
+      window.removeEventListener("keydown", onKeyDown, true);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen || !jsonData) return null;
+
+  var jsonString = JSON.stringify(jsonData, null, 2);
+
+  function copyJson(e) {
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(jsonString).then(function() {
+        setCopied(true);
+        setTimeout(function() { setCopied(false); }, 2200);
+      });
+    } else {
+      var t = document.createElement("textarea");
+      t.value = jsonString;
+      document.body.appendChild(t);
+      t.select();
+      document.execCommand("copy");
+      document.body.removeChild(t);
+      setCopied(true);
+      setTimeout(function() { setCopied(false); }, 2200);
+    }
+  }
+
+  function downloadJson(e) {
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    try {
+      var blob = new Blob([jsonString], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = (jsonData.id || "prompt-data") + ".json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.warn("Download error", err);
+    }
+  }
+
+  return Z("div", {
+    className: "json-modal-backdrop",
+    onClick: onClose,
+    children: Z("div", {
+      className: "json-modal-card",
+      onClick: function(e) { e.stopPropagation(); },
+      children: [
+        Z("div", {
+          className: "json-modal-header",
+          children: [
+            Z("div", {
+              className: "json-modal-title-group",
+              children: [
+                Z("span", { className: "json-modal-badge", children: jsonData.id }),
+                Z("h3", { className: "json-modal-title", children: jsonData.title })
+              ]
+            }),
+            Z("button", {
+              type: "button",
+              className: "json-modal-close-btn",
+              onClick: onClose,
+              title: "Cerrar (Esc)",
+              children: "✕"
+            })
+          ]
+        }),
+        Z("div", {
+          className: "json-modal-body",
+          children: Z("pre", {
+            className: "json-modal-code",
+            children: jsonString
+          })
+        }),
+        Z("div", {
+          className: "json-modal-footer",
+          children: [
+            Z("button", {
+              type: "button",
+              className: "json-action-btn json-action-dl",
+              onClick: downloadJson,
+              children: "⬇ Descargar .json"
+            }),
+            Z("button", {
+              type: "button",
+              className: "json-action-btn json-action-copy" + (copied ? " copied" : ""),
+              onClick: copyJson,
+              children: copied ? "✓ ¡JSON Copiado!" : "📋 Copiar JSON Completo"
+            })
+          ]
+        })
+      ]
+    })
+  });
+}
+
+/* =========================================================
+   PROMPT CARD COMPONENT (Apple Aesthetic, Zero Crop, Dual-Action & JSON Extraction)
+   ========================================================= */
 function PromptCardBox(props) {
   var item = props.item;
   var themeClass = props.themeClass;
   var isFocused = props.isFocused;
   var cardIndex = props.cardIndex;
   var cardRef = props.cardRef;
+  var categoryKey = props.categoryKey || "caricatura";
 
   var [copied, setCopied] = uA.useState(false);
   var [imgLoaded, setImgLoaded] = uA.useState(false);
   var [isHovered, setIsHovered] = uA.useState(false);
+  var [isJsonModalOpen, setIsJsonModalOpen] = uA.useState(false);
+
+  var metadata = getPromptMetadata(item, categoryKey, cardIndex);
 
   function executeCopy(textToCopy) {
     var text = textToCopy || item.prompt;
@@ -1454,7 +2091,14 @@ function PromptCardBox(props) {
     executeCopy(item.prompt);
   }
 
-  // Bind global keyboard copy for focused card
+  function openJsonModal(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    setIsJsonModalOpen(true);
+  }
+
   uA.useEffect(function() {
     if (isFocused) {
       window.copyPromptGlobal = function(text, idx) {
@@ -1480,19 +2124,16 @@ function PromptCardBox(props) {
       }) : Z("div", {
         className: "prompt-box-image-wrap",
         children: [
-          // Shimmer Skeleton Placeholder while loading
           !imgLoaded ? Z("div", {
             className: "apple-skeleton-wrapper",
             children: Z("div", { className: "apple-skeleton-shimmer" })
           }) : null,
 
-          // Ambient Blur Reflection (Behind image)
           Z("div", {
             className: "prompt-box-ambient-blur",
             style: { backgroundImage: "url(" + item.image + ")" }
           }),
 
-          // Natural Aspect Ratio Image (Zero Cropping, Object-fit contain)
           Z("img", {
             src: item.image,
             alt: item.title,
@@ -1503,19 +2144,36 @@ function PromptCardBox(props) {
             onLoad: function() { setImgLoaded(true); }
           }),
 
-          // Top Badges
           Z("div", {
             className: "prompt-box-badge",
-            children: item.badge
+            children: [
+              Z("span", { className: "prompt-badge-dot" }),
+              item.badge || ("#" + (cardIndex + 1))
+            ]
           }),
+
           Z("div", {
-            className: "prompt-box-format-badge",
-            children: "4:5 RAW"
+            className: "prompt-card-top-actions",
+            children: [
+              Z("button", {
+                type: "button",
+                className: "prompt-quick-btn" + (copied ? " quick-copied" : ""),
+                onClick: copyPrompt,
+                title: copied ? "¡Copiado!" : "Copiar prompt al portapapeles",
+                children: copied ? "✓" : "📋"
+              }),
+              Z("button", {
+                type: "button",
+                className: "prompt-quick-btn",
+                onClick: openJsonModal,
+                title: "Extraer e inspeccionar JSON",
+                children: "{ }"
+              })
+            ]
           })
         ]
       }),
 
-      // Content
       Z("div", {
         className: "prompt-box-content",
         children: [
@@ -1529,26 +2187,76 @@ function PromptCardBox(props) {
                 className: "prompt-box-desc",
                 children: item.description
               }),
-              // Tag pills row
+
               Z("div", {
                 className: "prompt-card-pills-row",
                 children: [
-                  Z("span", { className: "prompt-card-pill", children: "📸 1 FOTO / 4 VISTAS" }),
-                  Z("span", { className: "prompt-card-pill", children: "MIDJOURNEY / FLUX" }),
-                  Z("span", { className: "prompt-card-pill", children: "8K UHD RAW" })
+                  Z("span", { className: "prompt-card-pill", children: "📸 " + (item.referenceRequirements || "1 FOTO REF") }),
+                  Z("span", { className: "prompt-card-pill", children: (item.parameters && item.parameters.v) ? ("V" + item.parameters.v + " • 8K") : "MIDJOURNEY / FLUX" }),
+                  Z("span", { className: "prompt-card-pill", children: "AR " + ((item.parameters && item.parameters.ar) || "4:5") })
+                ]
+              }),
+
+              Z("div", {
+                className: "prompt-syntax-box",
+                onClick: copyPrompt,
+                title: "Haz clic para copiar este prompt",
+                children: [
+                  Z("div", {
+                    className: "prompt-syntax-header",
+                    children: [
+                      Z("div", {
+                        className: "prompt-syntax-dots",
+                        children: [
+                          Z("span", { className: "syntax-dot syntax-dot-red" }),
+                          Z("span", { className: "syntax-dot syntax-dot-amber" }),
+                          Z("span", { className: "syntax-dot syntax-dot-green" })
+                        ]
+                      }),
+                      Z("span", {
+                        className: "prompt-syntax-label",
+                        children: "PROMPT TEXT"
+                      }),
+                      Z("span", {
+                        className: "prompt-syntax-hint",
+                        children: copied ? "✓ COPIADO" : "CLIC PARA COPIAR ↵"
+                      })
+                    ]
+                  }),
+                  Z("p", {
+                    className: "prompt-syntax-text",
+                    children: item.prompt
+                  })
                 ]
               })
             ]
           }),
 
-          // Single-Click Copy Button
-          Z("button", {
-            type: "button",
-            onClick: copyPrompt,
-            className: "prompt-command-btn" + (copied ? " btn-copied" : ""),
-            children: copied ? "✓ ¡PROMPT COPIADO!" : "+ COPIAR PROMPT"
+          Z("div", {
+            className: "prompt-card-actions",
+            children: [
+              Z("button", {
+                type: "button",
+                onClick: copyPrompt,
+                className: "prompt-command-btn" + (copied ? " btn-copied" : ""),
+                children: copied ? "✓ ¡PROMPT COPIADO!" : "📋 COPIAR PROMPT"
+              }),
+              Z("button", {
+                type: "button",
+                onClick: openJsonModal,
+                className: "prompt-json-btn",
+                title: "Extraer metadata y JSON estructurado",
+                children: "{ } JSON"
+              })
+            ]
           })
         ]
+      }),
+
+      Z(JsonInspectorModal, {
+        isOpen: isJsonModalOpen,
+        onClose: function() { setIsJsonModalOpen(false); },
+        jsonData: metadata
       })
     ]
   });
@@ -1674,120 +2382,350 @@ var CATEGORY_DATA = {
     ]
   },
   caricatura: {
-    title: "Prompts de Caricatura",
-    themeClass: "stage-theme-caricatura",
-    introClass: "intro-prog-caricatura",
-    bio: "Diseñado con pasión y una profunda nostalgia por la época dorada de la animación tradicional. Esta colección rinde tributo a las siluetas elásticas, el slapstick cómico y la expresividad sin límites. Es un espacio pensado para divertir, despertar sonrisas y dotar a cada trazo de una personalidad única y entrañable.",
-    tags: ["ANIMACIÓN CLÁSICA", "RUBBER-HOSE", "SLAPSTICK COMEDY", "VINTAGE TOON", "EXPRESIONES VIVAS"],
-    lyrics: [{"start": 0.0, "end": 1.3, "line1": "SMILE AND LAUGH", "line2": "VINTAGE FUN"}, {"start": 1.3, "end": 2.6, "line1": "HAPPY TOONS", "line2": "EVERYONE"}, {"start": 2.6, "end": 3.8, "line1": "RISAS Y RITMO", "line2": "EN CADA COLOR"}, {"start": 3.8, "end": 5.0, "line1": "ANIMACIÓN PURA", "line2": "DIVERSIÓN TOTAL"}],
-    prompts: [
-      {
-        badge: "#01",
-        image: Na[0 % Na.length],
-        title: "Conejo Travieso Looney Tunes",
-        description: "🥕 Sube 1 foto tuya sonriendo. ¡Conviértete en un dibujo animado clásico de los años 50 con guantes blancos y sonrisa pícara!",
-        prompt: "Using the person in the uploaded reference photo as the character inspiration, translate their distinctive smile, facial features, and playful expression into a classic 1950s American golden age cartoon character. Popping out of an underground burrow with a mischievous toothy grin, exaggerated rubber-hose anatomy, oversized cartoon gloves gesturing, hand-painted gouache background of lush pastoral rolling hills, authentic technicolor 3-strip color palette, bold hand-inked line art, vintage Warner Bros animation studio aesthetic, warm film grain texture --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#02",
-        image: Na[1 % Na.length],
-        title: "Detective Noir Toon en Callejón de Lluvia",
-        description: "🕵️‍♂️ Sube 1 foto tuya. Ponte una gabardina de detective y sombrero fedora bajo una farola con niebla en una parodia animada clásica.",
-        prompt: "Using the person in the uploaded reference photo, caricature their facial features, jawline, and nose into a stylized 1940s animated cartoon private detective. Tilted felt fedora casting a comical shadow over one eye, classic cartoon trench coat with oversized lapels, leaning under a flickering street lamp in a puddle-strewn alleyway, exaggerated cartoon proportions, hand-painted matte background, Tex Avery meets Looney Tunes aesthetic, rich theatrical sepia and charcoal tones --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#03",
-        image: Na[2 % Na.length],
-        title: "Científico Chiflado con Invento de Cohete Acme",
-        description: "🚀 Sube 1 foto tuya divertida. Construye un invento disparatado con planos y dinamita al más puro estilo del Coyote y el Correcaminos.",
-        prompt: "Using the person in the uploaded reference photo as inspiration, humorously adapt their facial likeness, hair, and expression into a manic cartoon inventor at a cluttered wooden workbench. Assembling a giant Acme rocket-powered roller skate, blueprint schematics pinned to sandstone canyon wall, sticks of cartoon dynamite with sizzling spark fuses, exaggerated squinting concentration, painted gouache desert landscape, vibrant retro Technicolor palette, classic Chuck Jones directing style --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#04",
-        image: Na[3 % Na.length],
-        title: "Pato Neurótico en Acción de Pánico",
-        description: "🦆 Puedes subir tu foto o usar el prompt directo. ¡Recrea un pato de dibujos animados en pleno ataque de pánico cómico con ojos de resorte!",
-        prompt: "Using the facial emotion and comedic energy of the person in the reference photo, translate their wide-eyed expression into a hyper-expressive frantic cartoon duck frozen mid-air in slapstick panic. Eyes popping out on springy cartoon stalks, bill spinning upside down, spinning tornado feet leaving a dusty chalk trail, vintage theatrical animated short style, vibrant retro hand-painted animation cel, high-energy Saturday morning cartoon nostalgia --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#05",
-        image: Na[4 % Na.length],
-        title: "Piloto de Biplano en Carreras Alocadas",
-        description: "✈️ Sube 1 foto tuya. Pilota una simpática avioneta roja con gafas de cuero y bufanda kilométrica estilo Autos Locos.",
-        prompt: "Using the person in the uploaded reference photo, caricature their facial features, jaw, and grinning expression into a dashing cartoon biplane racer. Wearing vintage leather flight goggles pushed over the forehead, a comically long white aviator silk scarf whipping twenty feet behind in the wind, sitting in a tiny red cartoon propeller biplane banking steeply over cartoon mountains, bright cheerful Hanna-Barbera racing animation style, saturated primary colors --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#06",
-        image: Na[5 % Na.length],
-        title: "Chef Italiano en Cocina de Spaghetti Caótico",
-        description: "🍕 Sube 1 foto tuya con sonrisa. Diviértete en una cocina de dibujos animados lanzando masa de pizza gigante con fideos voladores.",
-        prompt: "Using the person in the uploaded reference photo, exaggerate their facial likeness and joyful expression into a lively cartoon master chef tossing a colossal flying pizza dough in an animated rustic kitchen. Oversized puffy white toque hat, twirled cartoon mustache, colorful pots whistling steam, dancing garlic bulbs on the counter, 1950s theatrical animation short aesthetic, warm gouache colors, rich humorous staging --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#07",
-        image: Na[6 % Na.length],
-        title: "Músico de Jazz Toon con Trompeta Dorada",
-        description: "🎺 Sube 1 foto tuya. Toca una trompeta de latón curvada en un club de swing animado con notas musicales flotando como burbujas.",
-        prompt: "Using the person in the reference photo, translate their facial structure and soulful gaze into a stylized vintage cartoon jazz trumpeter blowing a high note on a bent golden horn. Glowing colorful musical notes floating like bubbles from the instrument bell, tilted pork pie hat, sharp pinstripe cartoon suit, smoky midnight blue jazz cellar background, Fleischer Studios 1930s swing era animation vibe, dynamic rubber-hose sway --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#08",
-        image: Na[7 % Na.length],
-        title: "Explorador de Safari con Lupa Gigante",
-        description: "🦁 Sube 1 foto tuya curiosa. Explora una jungla colorida con salacot y una lupa enorme que agranda tu ojo con simpatía.",
-        prompt: "Using the person in the uploaded reference photo, caricature their eye shape, nose, and curious expression into an intrepid cartoon jungle explorer. Holding a comically gigantic magnifying glass that magnifies one eye three times normal size, safari pith helmet with a bird feather, jungle vines and curious colorful toucans peering from giant cartoon leaves, classic vintage theatrical short animation aesthetic --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#09",
-        image: Na[8 % Na.length],
-        title: "Mago de Teatro con Truco de Chistera Fallido",
-        description: "🎩 Sube 1 foto tuya cómplice. Haz magia cómica en un teatro clásico donde decenas de palomas y confeti escapan de tu chistera.",
-        prompt: "Using the person in the reference photo, adapt their face, eyes, and hairstyle into an eccentric cartoon stage magician caught in the middle of a chaotic magic trick. White-gloved hands holding a smoking magic wand, dozens of colorful cartoon doves and ribbon streamers exploding out of an upside-down black top hat, classic theatrical velvet stage curtain backdrop, vintage MGM cartoon studio styling, rich technicolor gouache --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#10",
-        image: Na[9 % Na.length],
-        title: "Pirata Cómico con Loro Bromista en el Hombro",
-        description: "🦜 Sube 1 foto tuya sonriendo. ¡Zarpa como un capitán pirata de caricatura con parche bordado y un loro charlatán en tu hombro!",
-        prompt: "Using the person in the uploaded reference photo, transform their likeness, smile, and jawline into a swaggering, friendly cartoon pirate captain on the wooden deck of a rolling galleon. Feathered tricorn hat, eye patch with a funny skull doodle, a sassy cartoon parrot whispering secrets into their ear, treasure chests overflowing with gold cartoon coins, vibrant Caribbean sea backdrop, classic storybook cartoon illustration --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#11",
-        image: Na[10 % Na.length],
-        title: "Conductor de Tranvía Saltarín 1930s",
-        description: "🚋 Sube 1 foto tuya alegre. Maneja un tranvía amarillo de animación elástica que se dobla en curvas imposibles tocando la campana.",
-        prompt: "Using the person in the uploaded reference photo, stylize their facial proportions and friendly demeanor into a 1930s rubber-hose cartoon cable-car operator ringing the brass bell on a steep San Francisco style cartoon hill. The entire yellow trolley bends and squashes along the curved tracks, musical chime clangs floating as text balloons, sepia-tinted hand-inked vintage animation cel style, authentic nostalgic Fleischer charm --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#12",
-        image: Na[11 % Na.length],
-        title: "Jardinero Toon en Batalla con un Topo Bromista",
-        description: "🌻 Sube 1 foto tuya divertida. Cuida tu jardín animado mientras lidias con una manguera anudada y un topo travieso con gafas de sol.",
-        prompt: "Using the person in the reference photo, exaggerate their facial features into a determined cartoon gardener in denim overalls caught in a comical standoff with a cheeky cartoon mole poking its head out from a flowerbed. Exaggerated hose pipe knotted into funny pretzel loops, cartoon sunflowers with smiling faces swaying, lush green garden with painted fence, Hanna-Barbera slapstick comedy aesthetic --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#13",
-        image: Na[12 % Na.length],
-        title: "Banquero Toon Bajo Lluvia de Monedas de Oro",
-        description: "💰 Sube 1 foto tuya festejando. Celebra sobre una montaña de monedas de oro brillantes y joyas de fantasía con un simpático monóculo.",
-        prompt: "Using the person in the uploaded reference photo, caricature their facial features and joy into a jolly cartoon tycoon sitting atop an enormous cartoon bank vault. Golden coins raining down like sparkling confetti, top hat balanced precariously, tiny gold rim monóculo over one eye, classic Silly Symphony animated theatrical short style, warm rich golden hues --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#14",
-        image: Na[13 % Na.length],
-        title: "Astronauta Toon en la Luna de Queso Gruyer",
-        description: "🧀 Sube 1 foto tuya. Salta sin gravedad con un casco redondo de pecera sobre una divertida luna con cráteres de queso suizo.",
-        prompt: "Using the person in the reference photo, caricature their face and curious gaze inside a crystal-clear spherical fishbowl space helmet. Bouncing weightlessly across a cartoon yellow moon surface with Swiss cheese craters, planting a cheerful smiling cartoon flag into the lunar dust, stars drawn as sparkling four-pointed cartoon twinkles, 1960s retro space cartoon aesthetic --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#15",
-        image: Na[14 % Na.length],
-        title: "Director de Orquesta en Concierto Caótico",
-        description: "🎼 Sube 1 foto tuya apasionada. Dirige una orquesta animada donde las partituras vuelan en torbellino y los violines cobran vida.",
-        prompt: "Using the person in the uploaded reference photo, translate their facial likeness and dynamic intensity into an animated cartoon maestro furiously conducting a symphony of sentient bouncing musical instruments. Tattered tuxedo tails flapping, sparkling magical baton cutting through the air, musical score sheets flying in a chaotic paper cyclone, dramatic stage spotlight, classic Merrie Melodies musical short climax aesthetic --ar 4:5 --v 6.1"
+  "title": "Prompts de Caricatura",
+  "themeClass": "stage-theme-caricatura",
+  "introClass": "intro-prog-caricatura",
+  "bio": "Diseñado con pasión y una profunda nostalgia por la época dorada de la animación tradicional. Esta colección rinde tributo a las siluetas elásticas, el slapstick cómico y la expresividad sin límites. Es un espacio pensado para divertir, despertar sonrisas y dotar a cada trazo de una personalidad única y entrañable.",
+  "tags": [
+    "ANIMACIÓN CLÁSICA",
+    "RUBBER-HOSE",
+    "SLAPSTICK COMEDY",
+    "VINTAGE TOON",
+    "EXPRESIONES VIVAS"
+  ],
+  "lyrics": [
+    {
+      "start": 0.0,
+      "end": 1.3,
+      "line1": "SMILE AND LAUGH",
+      "line2": "VINTAGE FUN"
+    },
+    {
+      "start": 1.3,
+      "end": 2.6,
+      "line1": "HAPPY TOONS",
+      "line2": "EVERYONE"
+    },
+    {
+      "start": 2.6,
+      "end": 3.8,
+      "line1": "RISAS Y RITMO",
+      "line2": "EN CADA COLOR"
+    },
+    {
+      "start": 3.8,
+      "end": 5.0,
+      "line1": "ANIMACIÓN PURA",
+      "line2": "DIVERSIÓN TOTAL"
+    }
+  ],
+  "prompts": [
+    {
+      "badge": "#01",
+      "id": "CARICATURA-01",
+      "image": "assets/images/caricatura/01_Los_Simpson_Springfield_Nuclear.webp",
+      "title": "Los Simpson (Springfield Nuclear)",
+      "style": "The Simpsons (Matt Groening)",
+      "description": "🟡 Sube tu foto de referencia. ¡Transfórmate en habitante amarillo de Springfield con sobremordida cómica frente a la planta nuclear!",
+      "prompt": "Using the exact person from the reference sheet, transform into The Simpsons cartoon style, yellow skin, overbite, big eyes, wearing blue sneakers and skateboard, standing in front of Springfield nuclear plant, Matt Groening style, thick black outlines --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de Los Simpson, piel amarilla, sobremordida, ojos grandes, zapatillas azules y patineta, frente a la planta nuclear de Springfield, estilo Matt Groening, contornos negros gruesos --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Matt Groening"
       }
-    ]
-  },
+    },
+    {
+      "badge": "#02",
+      "id": "CARICATURA-02",
+      "image": "assets/images/caricatura/02_Pato_Donald_Disney_Clasico.webp",
+      "title": "Pato Donald Disney Clásico (Patoburgo)",
+      "style": "Donald Duck Disney Classic 1950s",
+      "description": "🦆 Sube tu foto de referencia. ¡Conviértete en un pato antropomórfico de Disney de los años 50 con marinera azul frente a la Bóveda de Rico McPato!",
+      "prompt": "Using the exact person from the reference sheet, preserve curly hair and glasses. Transform into Donald Duck Disney classic cartoon style, anthropomorphic duck version with white feathers, blue sailor shirt and red bow tie and duck bill, angry comical expression with fists on hips, standing in Duckburg city with money bin background, classic Disney 1950s cartoon style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Transforma en estilo caricatura clásico de Pato Donald Disney, versión pato antropomórfico con plumas blancas, camisa de marinero azul, moño rojo y pico de pato, expresión cómica con puños en caderas, en Patoburgo con el almacén de dinero de fondo, estilo clásico Disney 1950s --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Classic Disney 1950s"
+      }
+    },
+    {
+      "badge": "#03",
+      "id": "CARICATURA-03",
+      "image": "assets/images/caricatura/03_Hora_de_Aventura_Reino_Caramelo.webp",
+      "title": "Hora de Aventura (Reino Caramelo)",
+      "style": "Adventure Time (Pendleton Ward)",
+      "description": "⚔️ Sube tu foto de referencia. ¡Entra a la tierra de Ooo con extremidades fideo, gorro de explorador y mochila en pleno Reino Caramelo!",
+      "prompt": "Using the exact person from the reference sheet, transform into Adventure Time cartoon style, simple noodle limbs, small eyes, wearing Finn's hat with backpack, standing in Candy Kingdom, Pendleton Ward style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura Hora de Aventura, extremidades simples de fideo, ojos pequeños, gorro de Finn con mochila, en el Reino Caramelo, estilo Pendleton Ward --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Pendleton Ward"
+      }
+    },
+    {
+      "badge": "#04",
+      "id": "CARICATURA-04",
+      "image": "assets/images/caricatura/04_Animacion_Rubberhose_1930s_Cuphead.webp",
+      "title": "Rubberhose 1930s Blanco y Negro (Cuphead Style)",
+      "style": "1930s Fleischer / Cuphead Rubberhose",
+      "description": "🎞️ Sube tu foto de referencia. ¡Animación clásica de los años 30 en blanco y negro con ojos de tarta, brazos de manguera y guantes en el desierto de tinta!",
+      "prompt": "Using the exact person from the reference sheet, preserve curly hair and glasses. Transform into 1930s rubber hose cartoon style, black and white with pie eyes, bendy limbs, wearing gloves, holding carrot, standing in ink desert with Acme hole, Cuphead style, vintage animation --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Transforma en estilo caricatura rubber hose de los años 30, blanco y negro con ojos de tarta, extremidades elásticas, guantes, sosteniendo zanahoria, en desierto de tinta con agujero Acme, estilo Cuphead, animación vintage --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Cuphead / Fleischer 1930s"
+      }
+    },
+    {
+      "badge": "#05",
+      "id": "CARICATURA-05",
+      "image": "assets/images/caricatura/05_Chicas_Superpoderosas_Townsville.webp",
+      "title": "Chicas Superpoderosas (Cielo de Saltadilla)",
+      "style": "Powerpuff Girls (Craig McCracken)",
+      "description": "💥 Sube tu foto de referencia. ¡Vuela sobre Saltadilla con estilo superflat de ojos enormes, cabeza grande y puño en alto!",
+      "prompt": "Using the exact person from the reference sheet, transform into superflat big eyes power girl cartoon style, tiny body big head, wearing blue dress and glasses, flying with fist up, city of Townsville background, Craig McCracken style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura superflat de ojos gigantes, cuerpo diminuto y cabeza grande, vestido azul y gafas, volando con puño en alto sobre la ciudad de Saltadilla (Townsville), estilo Craig McCracken --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Craig McCracken"
+      }
+    },
+    {
+      "badge": "#06",
+      "id": "CARICATURA-06",
+      "image": "assets/images/caricatura/06_Scooby_Doo_Misterio_1970s.webp",
+      "title": "Pandilla del Misterio 1970s (Scooby-Doo)",
+      "style": "Hanna-Barbera 1970s Mystery Gang",
+      "description": "🚐 Sube tu foto de referencia. ¡Investiga misterios junto a la Máquina del Misterio con lupa en mano y estilo retro Hanna-Barbera!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1970s mystery gang cartoon style, wearing green shirt and blue jeans with magnifying glass, standing next to colorful van with flower power, haunted house background, Hanna-Barbera style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo pandilla del misterio de los años 70, camisa verde y jeans azules con lupa, junto a furgoneta colorida flower power, mansión embrujada de fondo, estilo Hanna-Barbera --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Hanna-Barbera 1970s"
+      }
+    },
+    {
+      "badge": "#07",
+      "id": "CARICATURA-07",
+      "image": "assets/images/caricatura/07_Rubberhose_Vintage_Color_1930s.webp",
+      "title": "Rubberhose Vintage a Color (Desierto Tinta)",
+      "style": "1930s Vintage Color Variant",
+      "description": "🥕 Sube tu foto de referencia. ¡Variante a color vintage con chaqueta marrón, vaqueros y zanahoria en el desierto con cráter de tinta!",
+      "prompt": "Using the exact person from the reference sheet, preserve curly hair and glasses. Transform into 1930s rubber hose cartoon style variant, brown jacket and blue jeans, holding carrot, ink desert with crater hole --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Transforma en variante de estilo rubber hose de los años 30 a color, chaqueta marrón y jeans azules, sosteniendo zanahoria, en desierto de tinta con cráter --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "1930s Technicolor"
+      }
+    },
+    {
+      "badge": "#08",
+      "id": "CARICATURA-08",
+      "image": "assets/images/caricatura/08_South_Park_Recortes_Papel.webp",
+      "title": "Pueblo de Recortes de Papel 1990s (South Park)",
+      "style": "Paper Cutout Comedy Style",
+      "description": "🏔️ Sube tu foto de referencia. ¡Diseño geométrico en stop-motion de papel recortado con parada de autobús nevada y cartel de pare!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1990s paper cutout town cartoon style with simple geometric shapes, tiny eyes, flat colors, wearing green shirt and blue jeans, standing on snowy mountain with stop sign, South Park inspired generic style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo pueblo de recortes de papel de los años 90 con formas geométricas simples, ojos diminutos, colores planos, camisa verde y jeans, en montaña nevada con señal de alto, estilo inspirado en South Park --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Paper Cutout 1990s"
+      }
+    },
+    {
+      "badge": "#09",
+      "id": "CARICATURA-09",
+      "image": "assets/images/caricatura/09_Gravity_Falls_Misterio_Bosque.webp",
+      "title": "Misterio en el Bosque de Oregón (Gravity Falls)",
+      "style": "Mystery Twins Forest Style (Gravity Falls)",
+      "description": "🌲 Sube tu foto de referencia. ¡Explora el bosque con chaleco azul, fez con gafas, diario secreto de anomalías y gnomos escondidos!",
+      "prompt": "Using the exact person from the reference sheet, transform into 2010s mystery twins forest cartoon style, wearing blue vest and fez hat with glasses, standing in forest with journal and gnomes, Gravity Falls inspired generic mystery style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de misterio en el bosque de los 2010s, chaleco azul y gorro fez con gafas, en bosque con diario secreto y gnomos, estilo inspirado en Gravity Falls --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Gravity Falls Style"
+      }
+    },
+    {
+      "badge": "#10",
+      "id": "CARICATURA-10",
+      "image": "assets/images/caricatura/10_El_Increible_Mundo_de_Gumball.webp",
+      "title": "Escuela de Técnicas Mixtas (El Mundo de Gumball)",
+      "style": "Mixed Media 2D/3D Felt Style (Gumball)",
+      "description": "🐱 Sube tu foto de referencia. ¡Híbrido revolucionario 2D sobre fondos 3D reales con fieltro, aula escolar de Elmore y donas!",
+      "prompt": "Using the exact person from the reference sheet, transform into mixed media school cartoon style, half 2D half 3D felt, wearing blue jeans and orange cat with fish friend, classroom with donuts, Gumball inspired generic mixed media style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura escolar de técnica mixta, mitad 2D y mitad 3D de fieltro, jeans azules con gato naranja y amigo pez, salón de clases con donas, estilo inspirado en Gumball --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Mixed Media Felt / 2D"
+      }
+    },
+    {
+      "badge": "#11",
+      "id": "CARICATURA-11",
+      "image": "assets/images/caricatura/11_UPA_Minimalista_Moderno_1950s.webp",
+      "title": "UPA Modernismo Minimalista 1950s",
+      "style": "1950s UPA Modern Minimal (Gerald McBoing-Boing)",
+      "description": "📐 Sube tu foto de referencia. ¡Estilo vanguardista de formas planas geométricas y paleta limitada de la era dorada del estudio UPA!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1950s UPA modern minimal cartoon style, flat shapes, limited colors, wearing brown jacket and blue jeans with glasses, standing in abstract city with geometric buildings, Gerald McBoing-Boing style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura minimalista moderna UPA de los años 50, formas planas, paleta limitada, chaqueta marrón y jeans con gafas, en ciudad abstracta con edificios geométricos, estilo Gerald McBoing-Boing --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "UPA 1950s Modernism"
+      }
+    },
+    {
+      "badge": "#12",
+      "id": "CARICATURA-12",
+      "image": "assets/images/caricatura/12_El_Laboratorio_de_Dexter.webp",
+      "title": "El Laboratorio del Niño Genio 1990s (Dexter)",
+      "style": "Genndy Tartakovsky Boy Genius (Dexter)",
+      "description": "🧪 Sube tu foto de referencia. ¡Bata blanca de científico, guantes morados y gafas gigantes sosteniendo un invento entre matraces de laboratorio!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1990s boy genius lab cartoon style, very small with big glasses, lab coat, holding invention, laboratory with beakers background, Dexter inspired generic boy genius style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo niño genio de laboratorio de los 90s, estatura pequeña con gafas gigantes, bata de laboratorio, sosteniendo invento, fondo de laboratorio con probetas, estilo inspirado en Dexter --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Genndy Tartakovsky 90s"
+      }
+    },
+    {
+      "badge": "#13",
+      "id": "CARICATURA-13",
+      "image": "assets/images/caricatura/13_Los_Picapiedra_Prehistorico_1960s.webp",
+      "title": "Prehistórico Cómico 1960s (Los Picapiedra)",
+      "style": "Hanna-Barbera 1960s Stone Age",
+      "description": "🦕 Sube tu foto de referencia. ¡Conduce el troncomóvil prehistórico con corbata y camisa verde en la edad de piedra animada de Hanna-Barbera!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1960s Hanna-Barbera limited animation style, thick outlines, collar with tie, wearing green shirt, sitting at stone age car with feet, Flintstones inspired generic prehistoric style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo animación limitada Hanna-Barbera de los años 60, contornos gruesos, cuello con corbata, camisa verde, sentado en auto de la edad de piedra con pies, estilo prehistórico inspirado en Los Picapiedra --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Hanna-Barbera 1960s"
+      }
+    },
+    {
+      "badge": "#14",
+      "id": "CARICATURA-14",
+      "image": "assets/images/caricatura/14_El_Gato_Felix_Silente_1920s.webp",
+      "title": "Animación Muda de Cine 1920s (Félix el Gato)",
+      "style": "1920s Silent Film Felix Style",
+      "description": "🌙 Sube tu foto de referencia. ¡Auténtico grano de película silente de los años 20 con extremidades de goma de tinta sobre la luna estrellada!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1920s silent black and white Felix the Cat style cartoon, rubber hose limbs, pie eyes, all black and white, wearing gloves, standing on moon with stars, vintage silent film grain --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en caricatura estilo Félix el Gato en cine mudo de los años 20, extremidades rubber hose, ojos de tarta, blanco y negro puro, guantes, sobre la luna con estrellas, grano de película vintage --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "1920s Silent Film Grain"
+      }
+    },
+    {
+      "badge": "#15",
+      "id": "CARICATURA-15",
+      "image": "assets/images/caricatura/15_Popeye_El_Marino_Fleischer_1930s.webp",
+      "title": "Marinero Forzudo 1930s (Popeye Fleischer)",
+      "style": "Fleischer Studios 1930s Sailor Strongman",
+      "description": "⚓ Sube tu foto de referencia. ¡Antebrazos gigantes con tatuajes de anclas, pipa de maíz y lata de espinacas en el muelle de los estudios Fleischer!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1930s sailor strongman cartoon style, big forearms, pipe, wearing blue sailor shirt and anchor tattoos, holding spinach can, dock background, Popeye inspired generic public domain sailor style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de marinero forzudo de los años 30, antebrazos grandes, pipa, camisa de marinero azul y tatuajes de ancla, sosteniendo lata de espinacas, muelle de fondo, estilo inspirado en Popeye --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Fleischer Studios 1930s"
+      }
+    },
+    {
+      "badge": "#16",
+      "id": "CARICATURA-16",
+      "image": "assets/images/caricatura/16_Gato_Felix_Techo_Nocturno_1920s.webp",
+      "title": "Techo Nocturno en Cine Silente 1920s",
+      "style": "1920s Silent Rooftop Moon Variant",
+      "description": "🌃 Sube tu foto de referencia. ¡Posa sobre un tejado de tejas bajo una luna creciente con cuerpo de tinta y guantes blancos de animación silente!",
+      "prompt": "Using the exact person from the reference sheet, transform into 1920s black and white Felix cat cartoon style, big eyes, black body, white gloves, standing on rooftop with moon, silent film style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de gato Félix en blanco y negro de los 1920s, ojos grandes, silueta de tinta negra, guantes blancos, en azotea con luna, estilo de película muda --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "1920s Black & White"
+      }
+    },
+    {
+      "badge": "#17",
+      "id": "CARICATURA-17",
+      "image": "assets/images/caricatura/17_Un_Show_Mas_Parque_Slackers.webp",
+      "title": "Cuidadores del Parque 2010s (Un Show Más)",
+      "style": "Regular Show Slacker Park (J.G. Quintel)",
+      "description": "☕ Sube tu foto de referencia. ¡Pasea por el parque con café en mano, camisa azul y mapaches traviesos al más puro estilo de Un Show Más!",
+      "prompt": "Using the exact person from the reference sheet, transform into 2010s slackers park cartoon style, wearing blue shirt and green pants, holding coffee, standing in park with raccoons, Regular Show inspired generic slacker style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de cuidadores del parque de los 2010s, camisa azul y pantalones verdes, taza de café, en parque con mapaches, estilo inspirado en Un Show Más --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "J.G. Quintel Style"
+      }
+    },
+    {
+      "badge": "#18",
+      "id": "CARICATURA-18",
+      "image": "assets/images/caricatura/18_Samurai_Jack_Minimalista_2000s.webp",
+      "title": "Samurái Minimalista 2000s (Samurai Jack)",
+      "style": "Genndy Tartakovsky Epic Minimalist",
+      "description": "🎋 Sube tu foto de referencia. ¡Arte cinematográfico de líneas afiladas y colores planos con kimono blanco, moño alto y katana en bosque de bambú!",
+      "prompt": "Using the exact person from the reference sheet, transform into 2000s samurai minimal cartoon style, wearing white kimono with top knot, holding katana, standing in bamboo forest with mountains, flat colors and sharp lines, samurai inspired generic minimal style --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura samurái minimalista de los 2000s, kimono blanco con moño alto, sosteniendo katana, en bosque de bambú con montañas, colores planos y líneas filosas, estilo inspirado en Samurai Jack --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Samurai Jack / Tartakovsky"
+      }
+    },
+    {
+      "badge": "#19",
+      "id": "CARICATURA-19",
+      "image": "assets/images/caricatura/19_Samurai_Jack_Bosque_Bambu_Katana.webp",
+      "title": "Samurái de Bambú con Obi Negro (Variante Katana)",
+      "style": "Samurai Jack Bamboo Obi Variant",
+      "description": "⚔️ Sube tu foto de referencia. ¡Variante con obi negro de combate y postura lista con katana entre los tallos altos de bambú y bruma!",
+      "prompt": "Using the exact person from the reference sheet, transform into 2000s samurai minimal cartoon style variant, white kimono, black obi, holding katana, bamboo forest background --ar 4:5",
+      "universalPrompt": "Según la hoja de referencia que me pasaste, transforma en variante de estilo samurái minimalista de los 2000s, kimono blanco con faja obi negra, sosteniendo katana, fondo de bosque de bambú --ar 4:5",
+      "referenceRequirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+      "parameters": {
+        "ar": "4:5",
+        "v": "6.1",
+        "style": "Samurai Jack Variant"
+      }
+    }
+  ]
+},
   elegancia: {
     title: "Prompts de Elegancia",
     themeClass: "stage-theme-elegancia",
@@ -2232,6 +3170,17 @@ function MasterPromptsExperience(props) {
     };
   }, [type, stagePhase]);
 
+  // GSAP Staggered Spring Reveal for Cards
+  uA.useEffect(function() {
+    if (stagePhase === "library" && window.gsap) {
+      window.gsap.fromTo(
+        ".prompt-box",
+        { opacity: 0, y: 32, scale: 0.97 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.45, stagger: 0.04, ease: "power2.out", clearProps: "transform,opacity" }
+      );
+    }
+  }, [stagePhase, type]);
+
   // Keyboard Navigation: Arrow Keys to move through cards, Enter to copy, Escape to exit
   uA.useEffect(function() {
     function handleKeyDown(e) {
@@ -2438,6 +3387,7 @@ function MasterPromptsExperience(props) {
                 key: idx,
                 item: item,
                 cardIndex: idx,
+                categoryKey: type,
                 isFocused: focusedCardIndex === idx,
                 cardRef: function(el) { cardElementsRef.current[idx] = el; },
                 themeClass: config.themeClass

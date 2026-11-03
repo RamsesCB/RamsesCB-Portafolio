@@ -1,36 +1,57 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #15: Director de Orquesta en Concierto Caótico
+CATEGORÍA: CARICATURA | PROMPT #15: Marinero Forzudo 1930s (Popeye Fleischer)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🎼 Sube 1 foto tuya apasionada. Dirige una orquesta animada donde las partituras vuelan en torbellino y los violines cobran vida.
+⚓ Sube tu foto de referencia. ¡Antebrazos gigantes con tatuajes de anclas, pipa de maíz y lata de espinacas en el muelle de los estudios Fleischer!
+
+🎨 ESTILO VISUAL:
+Fleischer Studios 1930s Sailor Strongman
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con máxima expresión y energía)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformándolo en caricatura con este estilo legendario.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, translate their facial likeness and dynamic intensity into an animated cartoon maestro furiously conducting a symphony of sentient bouncing musical instruments. Tattered tuxedo tails flapping, sparkling magical baton cutting through the air, musical score sheets flying in a chaotic paper cyclone, dramatic stage spotlight, classic Merrie Melodies musical short climax aesthetic --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe /imagine y pega: [URL_DE_TU_FOTO] [PROMPT]
 
 --------------------------------------------------------------------------------
-📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+📋 COPIAR Y PEGAR: PROMPT ORIGINAL EN INGLÉS
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, translate their facial likeness and dynamic intensity into an animated cartoon maestro furiously conducting a symphony of sentient bouncing musical instruments. Tattered tuxedo tails flapping, sparkling magical baton cutting through the air, musical score sheets flying in a chaotic paper cyclone, dramatic stage spotlight, classic Merrie Melodies musical short climax aesthetic --ar 4:5 --v 6.1
+Using the exact person from the reference sheet, transform into 1930s sailor strongman cartoon style, big forearms, pipe, wearing blue sailor shirt and anchor tattoos, holding spinach can, dock background, Popeye inspired generic public domain sailor style --ar 4:5
 
 --------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL EN ESPAÑOL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-frenetic maestro cartoon character in a comically frayed tuxedo frantically conducting an orchestra of mischievous sentient musical instruments, swirling musical sheet paper vortex, dramatic stage spotlight cutting through theatrical hall haze, expressive slapstick animation art --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, transforma en estilo caricatura de marinero forzudo de los años 30, antebrazos grandes, pipa, camisa de marinero azul y tatuajes de ancla, sosteniendo lata de espinacas, muelle de fondo, estilo inspirado en Popeye --ar 4:5
 
 --------------------------------------------------------------------------------
-⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+⚙️ PARÁMETROS RECOMENDADOS:
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 METADATOS JSON EXACTOS DE LA IMAGEN:
+--------------------------------------------------------------------------------
+{
+  "id": "CARICATURA-15",
+  "title": "Marinero Forzudo 1930s (Popeye Fleischer)",
+  "category": "caricatura",
+  "style": "Fleischer Studios 1930s Sailor Strongman",
+  "aspect_ratio": "4:5",
+  "prompt": "Using the exact person from the reference sheet, transform into 1930s sailor strongman cartoon style, big forearms, pipe, wearing blue sailor shirt and anchor tattoos, holding spinach can, dock background, Popeye inspired generic public domain sailor style --ar 4:5",
+  "universal_prompt": "Según la hoja de referencia que me pasaste, transforma en estilo caricatura de marinero forzudo de los años 30, antebrazos grandes, pipa, camisa de marinero azul y tatuajes de ancla, sosteniendo lata de espinacas, muelle de fondo, estilo inspirado en Popeye --ar 4:5",
+  "reference_requirements": "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+  "parameters": {
+    "ar": "4:5",
+    "v": "6.1",
+    "style": "Fleischer Studios 1930s"
+  },
+  "author": "RamsesCB / Taller IA 2026"
+}
 ================================================================================
