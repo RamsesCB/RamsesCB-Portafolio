@@ -301,47 +301,62 @@
        ======================================================== */
     main.studio-main {
       flex: 1;
-      padding: 14px 16px;
+      padding: 14px 16px 40px;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: minmax(520px, calc(100vh - 90px));
+      gap: 16px;
       height: calc(100vh - 56px);
       background-color: var(--bg-canvas);
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
       transition: all 0.25s ease;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-subtle) transparent;
+    }
+
+    main.studio-main::-webkit-scrollbar {
+      width: 8px;
+    }
+    main.studio-main::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    main.studio-main::-webkit-scrollbar-thumb {
+      background: var(--border-strong);
+      border-radius: var(--radius-pill);
+    }
+    main.studio-main::-webkit-scrollbar-thumb:hover {
+      background: var(--text-tertiary);
     }
 
     /* Modos de vista enfocada */
-    main.studio-main.view-arduino {
+    main.studio-main.view-arduino,
+    main.studio-main.view-pn532,
+    main.studio-main.view-servo,
+    main.studio-main.view-stepper {
       grid-template-columns: 1fr;
+      grid-auto-rows: calc(100vh - 84px);
     }
+
     main.studio-main.view-arduino .panel-pn532,
     main.studio-main.view-arduino .panel-servo,
     main.studio-main.view-arduino .panel-stepper {
       display: none;
     }
 
-    main.studio-main.view-pn532 {
-      grid-template-columns: 1fr;
-    }
     main.studio-main.view-pn532 .panel-arduino,
     main.studio-main.view-pn532 .panel-servo,
     main.studio-main.view-pn532 .panel-stepper {
       display: none;
     }
 
-    main.studio-main.view-servo {
-      grid-template-columns: 1fr;
-    }
     main.studio-main.view-servo .panel-arduino,
     main.studio-main.view-servo .panel-pn532,
     main.studio-main.view-servo .panel-stepper {
       display: none;
     }
 
-    main.studio-main.view-stepper {
-      grid-template-columns: 1fr;
-    }
     main.studio-main.view-stepper .panel-arduino,
     main.studio-main.view-stepper .panel-pn532,
     main.studio-main.view-stepper .panel-servo {
@@ -1061,21 +1076,37 @@
     /* ========================================================
        RESPONSIVE ADAPTATIONS
        ======================================================== */
-    @media (max-width: 1400px) and (min-width: 1025px) {
+    @media (max-width: 1100px) and (min-width: 721px) {
+      header.studio-header {
+        height: auto;
+        padding: 10px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .view-segmented-wrap {
+        order: 3;
+        max-width: 100%;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
       main.studio-main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 520px;
         height: auto;
-        overflow-y: auto;
+        overflow-y: visible;
+        padding: 12px;
+        gap: 14px;
       }
-      .studio-panel {
-        height: 500px;
-      }
+
       body {
         overflow-y: auto;
       }
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 720px) {
       header.studio-header {
         height: auto;
         padding: 10px 16px;
@@ -1097,14 +1128,11 @@
 
       main.studio-main {
         grid-template-columns: 1fr;
+        grid-auto-rows: 500px;
         height: auto;
-        overflow-y: auto;
+        overflow-y: visible;
         padding: 12px;
-        gap: 16px;
-      }
-
-      .studio-panel {
-        height: 520px;
+        gap: 14px;
       }
     }
 
