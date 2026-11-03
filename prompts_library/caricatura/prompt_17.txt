@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #17: Cuidadores del Parque 2010s (Un Show Más)
+CATEGORÍA: CARICATURA | PROMPT #17: Estilo Un Show Más en el Parque
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-☕ Sube tu foto de referencia. ¡Pasea por el parque con café en mano, camisa azul y mapaches traviesos al más puro estilo de Un Show Más!
+Personaje con camisa azul y café en mano paseando tranquilamente por un parque con árboles y pasto.
 
 🎨 ESTILO VISUAL:
 Regular Show Slacker Park (J.G. Quintel)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura de 
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-17",
-  "title": "Cuidadores del Parque 2010s (Un Show Más)",
+  "title": "Estilo Un Show Más en el Parque",
   "category": "caricatura",
   "style": "Regular Show Slacker Park (J.G. Quintel)",
   "aspect_ratio": "4:5",

@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #13: Prehistórico Cómico 1960s (Los Picapiedra)
+CATEGORÍA: CARICATURA | PROMPT #13: Estilo Los Picapiedra Prehistórico
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🦕 Sube tu foto de referencia. ¡Conduce el troncomóvil prehistórico con corbata y camisa verde en la edad de piedra animada de Hanna-Barbera!
+Personaje cavernícola con corbata y camisa verde sentado en un auto de piedra con ruedas de tronco.
 
 🎨 ESTILO VISUAL:
 Hanna-Barbera 1960s Stone Age
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo animación lim
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-13",
-  "title": "Prehistórico Cómico 1960s (Los Picapiedra)",
+  "title": "Estilo Los Picapiedra Prehistórico",
   "category": "caricatura",
   "style": "Hanna-Barbera 1960s Stone Age",
   "aspect_ratio": "4:5",

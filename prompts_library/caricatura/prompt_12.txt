@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #12: El Laboratorio del Niño Genio 1990s (Dexter)
+CATEGORÍA: CARICATURA | PROMPT #12: Estilo El Laboratorio de Dexter
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🧪 Sube tu foto de referencia. ¡Bata blanca de científico, guantes morados y gafas gigantes sosteniendo un invento entre matraces de laboratorio!
+Niño genio con bata blanca de laboratorio y gafas grandes sosteniendo un invento entre tubos de ensayo.
 
 🎨 ESTILO VISUAL:
 Genndy Tartakovsky Boy Genius (Dexter)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo niño genio de
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-12",
-  "title": "El Laboratorio del Niño Genio 1990s (Dexter)",
+  "title": "Estilo El Laboratorio de Dexter",
   "category": "caricatura",
   "style": "Genndy Tartakovsky Boy Genius (Dexter)",
   "aspect_ratio": "4:5",

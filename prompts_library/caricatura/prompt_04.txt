@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #04: Rubberhose 1930s Blanco y Negro (Cuphead Style)
+CATEGORÍA: CARICATURA | PROMPT #04: Estilo Dibujo Animado 1930s
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🎞️ Sube tu foto de referencia. ¡Animación clásica de los años 30 en blanco y negro con ojos de tarta, brazos de manguera y guantes en el desierto de tinta!
+Animación clásica de los años 30 en blanco y negro con guantes blancos y ojos en forma de tarta.
 
 🎨 ESTILO VISUAL:
 1930s Fleischer / Cuphead Rubberhose
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Tr
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-04",
-  "title": "Rubberhose 1930s Blanco y Negro (Cuphead Style)",
+  "title": "Estilo Dibujo Animado 1930s",
   "category": "caricatura",
   "style": "1930s Fleischer / Cuphead Rubberhose",
   "aspect_ratio": "4:5",

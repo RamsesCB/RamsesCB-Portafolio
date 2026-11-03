@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #08: Pueblo de Recortes de Papel 1990s (South Park)
+CATEGORÍA: CARICATURA | PROMPT #08: Estilo South Park de Papel
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🏔️ Sube tu foto de referencia. ¡Diseño geométrico en stop-motion de papel recortado con parada de autobús nevada y cartel de pare!
+Personaje plano de papel recortado con ropa sencilla en un pueblo nevado junto a una señal de pare.
 
 🎨 ESTILO VISUAL:
 Paper Cutout Comedy Style
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo pueblo de reco
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-08",
-  "title": "Pueblo de Recortes de Papel 1990s (South Park)",
+  "title": "Estilo South Park de Papel",
   "category": "caricatura",
   "style": "Paper Cutout Comedy Style",
   "aspect_ratio": "4:5",

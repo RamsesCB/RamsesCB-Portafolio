@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #02: Pato Donald Disney Clásico (Patoburgo)
+CATEGORÍA: CARICATURA | PROMPT #02: Estilo Pato Donald Clásico
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🦆 Sube tu foto de referencia. ¡Conviértete en un pato antropomórfico de Disney de los años 50 con marinera azul frente al Bóveda de Rico McPato!
+Convierte a la persona en un pato animado de Disney con traje de marinero azul en la ciudad de Patoburgo.
 
 🎨 ESTILO VISUAL:
 Donald Duck Disney Classic 1950s
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Tr
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-02",
-  "title": "Pato Donald Disney Clásico (Patoburgo)",
+  "title": "Estilo Pato Donald Clásico",
   "category": "caricatura",
   "style": "Donald Duck Disney Classic 1950s",
   "aspect_ratio": "4:5",

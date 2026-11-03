@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #09: Misterio en el Bosque de Oregón (Gravity Falls)
+CATEGORÍA: CARICATURA | PROMPT #09: Estilo Gravity Falls en el Bosque
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌲 Sube tu foto de referencia. ¡Explora el bosque con chaleco azul, fez con gafas, diario secreto de anomalías y gnomos escondidos!
+Personaje con chaleco azul, gorro fez y diario secreto en medio de un bosque con gnomos.
 
 🎨 ESTILO VISUAL:
 Mystery Twins Forest Style (Gravity Falls)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura de 
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-09",
-  "title": "Misterio en el Bosque de Oregón (Gravity Falls)",
+  "title": "Estilo Gravity Falls en el Bosque",
   "category": "caricatura",
   "style": "Mystery Twins Forest Style (Gravity Falls)",
   "aspect_ratio": "4:5",

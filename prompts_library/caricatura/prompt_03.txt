@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #03: Hora de Aventura (Reino Caramelo)
+CATEGORÍA: CARICATURA | PROMPT #03: Estilo Hora de Aventura
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-⚔️ Sube tu foto de referencia. ¡Entra a la tierra de Ooo con extremidades fideo, gorro de explorador y mochila en pleno Reino Caramelo!
+Personaje con extremidades delgadas, gorro de explorador y mochila en el colorido Reino Caramelo.
 
 🎨 ESTILO VISUAL:
 Adventure Time (Pendleton Ward)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura Hor
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-03",
-  "title": "Hora de Aventura (Reino Caramelo)",
+  "title": "Estilo Hora de Aventura",
   "category": "caricatura",
   "style": "Adventure Time (Pendleton Ward)",
   "aspect_ratio": "4:5",

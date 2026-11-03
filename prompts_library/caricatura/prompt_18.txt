@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #18: Samurái Minimalista 2000s (Samurai Jack)
+CATEGORÍA: CARICATURA | PROMPT #18: Estilo Samurái Jack en Bosque de Bambú
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🎋 Sube tu foto de referencia. ¡Arte cinematográfico de líneas afiladas y colores planos con kimono blanco, moño alto y katana en bosque de bambú!
+Samurái con kimono blanco y katana de líneas rectas y colores planos en un bosque de bambú.
 
 🎨 ESTILO VISUAL:
 Genndy Tartakovsky Epic Minimalist
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura sam
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-18",
-  "title": "Samurái Minimalista 2000s (Samurai Jack)",
+  "title": "Estilo Samurái Jack en Bosque de Bambú",
   "category": "caricatura",
   "style": "Genndy Tartakovsky Epic Minimalist",
   "aspect_ratio": "4:5",

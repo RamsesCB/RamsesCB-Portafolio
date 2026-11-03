@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #11: UPA Modernismo Minimalista 1950s
+CATEGORÍA: CARICATURA | PROMPT #11: Estilo UPA Minimalista 1950s
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-📐 Sube tu foto de referencia. ¡Estilo vanguardista de formas planas geométricas y paleta limitada de la era dorada del estudio UPA!
+Diseño gráfico de figuras geométricas planas y pocos colores en una ciudad abstracta moderna.
 
 🎨 ESTILO VISUAL:
 1950s UPA Modern Minimal (Gerald McBoing-Boing)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura min
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-11",
-  "title": "UPA Modernismo Minimalista 1950s",
+  "title": "Estilo UPA Minimalista 1950s",
   "category": "caricatura",
   "style": "1950s UPA Modern Minimal (Gerald McBoing-Boing)",
   "aspect_ratio": "4:5",

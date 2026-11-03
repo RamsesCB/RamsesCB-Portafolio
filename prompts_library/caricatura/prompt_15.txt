@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #15: Marinero Forzudo 1930s (Popeye Fleischer)
+CATEGORÍA: CARICATURA | PROMPT #15: Estilo Popeye el Marino
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-⚓ Sube tu foto de referencia. ¡Antebrazos gigantes con tatuajes de anclas, pipa de maíz y lata de espinacas en el muelle de los estudios Fleischer!
+Marinero de brazos anchos con pipa y tatuaje de ancla sosteniendo una lata de espinacas en el muelle.
 
 🎨 ESTILO VISUAL:
 Fleischer Studios 1930s Sailor Strongman
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura de 
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-15",
-  "title": "Marinero Forzudo 1930s (Popeye Fleischer)",
+  "title": "Estilo Popeye el Marino",
   "category": "caricatura",
   "style": "Fleischer Studios 1930s Sailor Strongman",
   "aspect_ratio": "4:5",

@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #05: Chicas Superpoderosas (Cielo de Saltadilla)
+CATEGORÍA: CARICATURA | PROMPT #05: Estilo Chicas Superpoderosas
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-💥 Sube tu foto de referencia. ¡Vuela sobre Saltadilla con estilo superflat de ojos enormes, cabeza grande y puño en alto!
+Personaje de cabeza grande y ojos gigantes volando con el puño en alto sobre la ciudad de Saltadilla.
 
 🎨 ESTILO VISUAL:
 Powerpuff Girls (Craig McCracken)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura sup
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-05",
-  "title": "Chicas Superpoderosas (Cielo de Saltadilla)",
+  "title": "Estilo Chicas Superpoderosas",
   "category": "caricatura",
   "style": "Powerpuff Girls (Craig McCracken)",
   "aspect_ratio": "4:5",

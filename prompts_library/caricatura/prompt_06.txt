@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #06: Pandilla del Misterio 1970s (Scooby-Doo)
+CATEGORÍA: CARICATURA | PROMPT #06: Estilo Scooby-Doo
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🚐 Sube tu foto de referencia. ¡Investiga misterios junto a la Máquina del Misterio con lupa en mano y estilo retro Hanna-Barbera!
+Personaje con camisa verde y lupa junto a la camioneta colorida frente a una casa embrujada.
 
 🎨 ESTILO VISUAL:
 Hanna-Barbera 1970s Mystery Gang
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo pandilla del m
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-06",
-  "title": "Pandilla del Misterio 1970s (Scooby-Doo)",
+  "title": "Estilo Scooby-Doo",
   "category": "caricatura",
   "style": "Hanna-Barbera 1970s Mystery Gang",
   "aspect_ratio": "4:5",

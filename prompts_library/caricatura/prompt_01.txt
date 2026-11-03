@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #01: Los Simpson (Springfield Nuclear)
+CATEGORÍA: CARICATURA | PROMPT #01: Estilo Los Simpson
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🟡 Sube tu foto de referencia. ¡Transfórmate en habitante amarillo de Springfield con sobremordida cómica frente a la planta nuclear!
+Transforma a la persona en un personaje amarillo con zapatillas y patineta frente a la planta nuclear de Springfield.
 
 🎨 ESTILO VISUAL:
 The Simpsons (Matt Groening)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura de 
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-01",
-  "title": "Los Simpson (Springfield Nuclear)",
+  "title": "Estilo Los Simpson",
   "category": "caricatura",
   "style": "The Simpsons (Matt Groening)",
   "aspect_ratio": "4:5",

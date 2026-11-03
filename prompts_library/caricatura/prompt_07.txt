@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #07: Rubberhose Vintage a Color (Desierto Tinta)
+CATEGORÍA: CARICATURA | PROMPT #07: Estilo Caricatura Retro a Color
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🥕 Sube tu foto de referencia. ¡Variante a color vintage con chaqueta marrón, vaqueros y zanahoria en el desierto con cráter de tinta!
+Versión a color de animación clásica de los años 30 con chaqueta marrón en un desierto de tinta.
 
 🎨 ESTILO VISUAL:
 1930s Vintage Color Variant
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, preserva cabello rizado y gafas. Tr
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-07",
-  "title": "Rubberhose Vintage a Color (Desierto Tinta)",
+  "title": "Estilo Caricatura Retro a Color",
   "category": "caricatura",
   "style": "1930s Vintage Color Variant",
   "aspect_ratio": "4:5",

@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #14: Animación Muda de Cine 1920s (Félix el Gato)
+CATEGORÍA: CARICATURA | PROMPT #14: Estilo Félix el Gato en la Luna
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌙 Sube tu foto de referencia. ¡Auténtico grano de película silente de los años 20 con extremidades de goma de tinta sobre la luna estrellada!
+Dibujo animado mudo de los años 20 en blanco y negro con guantes blancos de pie sobre la luna.
 
 🎨 ESTILO VISUAL:
 1920s Silent Film Felix Style
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en caricatura estilo Fé
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-14",
-  "title": "Animación Muda de Cine 1920s (Félix el Gato)",
+  "title": "Estilo Félix el Gato en la Luna",
   "category": "caricatura",
   "style": "1920s Silent Film Felix Style",
   "aspect_ratio": "4:5",

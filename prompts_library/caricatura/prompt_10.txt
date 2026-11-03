@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #10: Escuela de Técnicas Mixtas (El Mundo de Gumball)
+CATEGORÍA: CARICATURA | PROMPT #10: Estilo El Increíble Mundo de Gumball
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🐱 Sube tu foto de referencia. ¡Híbrido revolucionario 2D sobre fondos 3D reales con fieltro, aula escolar de Elmore y donas!
+Personaje 2D de fieltro dentro de un salón de clases con fondo real y amigos animados.
 
 🎨 ESTILO VISUAL:
 Mixed Media 2D/3D Felt Style (Gumball)
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura esc
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-10",
-  "title": "Escuela de Técnicas Mixtas (El Mundo de Gumball)",
+  "title": "Estilo El Increíble Mundo de Gumball",
   "category": "caricatura",
   "style": "Mixed Media 2D/3D Felt Style (Gumball)",
   "aspect_ratio": "4:5",

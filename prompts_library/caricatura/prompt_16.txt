@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #16: Techo Nocturno en Cine Silente 1920s
+CATEGORÍA: CARICATURA | PROMPT #16: Estilo Félix el Gato en el Techo
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌃 Sube tu foto de referencia. ¡Posa sobre un tejado de tejas bajo una luna creciente con cuerpo de tinta y guantes blancos de animación silente!
+Silueta de gato animado negro con guantes blancos sobre las tejas de un tejado bajo la luna.
 
 🎨 ESTILO VISUAL:
 1920s Silent Rooftop Moon Variant
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en estilo caricatura de 
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-16",
-  "title": "Techo Nocturno en Cine Silente 1920s",
+  "title": "Estilo Félix el Gato en el Techo",
   "category": "caricatura",
   "style": "1920s Silent Rooftop Moon Variant",
   "aspect_ratio": "4:5",

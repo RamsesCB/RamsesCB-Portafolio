@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: CARICATURA | PROMPT #19: Samurái de Bambú con Obi Negro (Variante Katana)
+CATEGORÍA: CARICATURA | PROMPT #19: Estilo Samurái Jack con Faja Negra
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-⚔️ Sube tu foto de referencia. ¡Variante con obi negro de combate y postura lista con katana entre los tallos altos de bambú y bruma!
+Variante de samurái con kimono blanco, faja negra y katana en mano entre tallos de bambú.
 
 🎨 ESTILO VISUAL:
 Samurai Jack Bamboo Obi Variant
@@ -40,7 +40,7 @@ Según la hoja de referencia que me pasaste, transforma en variante de estilo sa
 --------------------------------------------------------------------------------
 {
   "id": "CARICATURA-19",
-  "title": "Samurái de Bambú con Obi Negro (Variante Katana)",
+  "title": "Estilo Samurái Jack con Faja Negra",
   "category": "caricatura",
   "style": "Samurai Jack Bamboo Obi Variant",
   "aspect_ratio": "4:5",
