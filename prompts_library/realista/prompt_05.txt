@@ -1,5 +1,5 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #05: Monumento y Estructura de la Plaza
+CATEGORÍA: EDICION | PROMPT #05: Monumento y Estructura de la Plaza
 ================================================================================
 
 ✨ DESCRIPCIÓN:
@@ -10,9 +10,9 @@ Junto a las estructuras monumentales de la Plaza Mayor con perspectiva arquitect
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía exterior realista de chico peruano con cabello corto rizado y lentes, vistiendo casaca marrón y zapatillas deportivas. Posa de manera relajada y seria frente a las estructuras monumentales y arcos de la Plaza Mayor de Nuevo Chimbote, cielo azul despejado, colores fieles a la realidad sin saturación artificial --ar 4:5 --v 6.1`.

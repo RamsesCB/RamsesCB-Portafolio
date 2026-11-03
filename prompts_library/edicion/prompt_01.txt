@@ -1,5 +1,5 @@
 ================================================================================
-CATEGORÍA: EDICIÓN | PROMPT #01: Frente a la Catedral en la Plaza Mayor
+CATEGORÍA: EDICION | PROMPT #01: Frente a la Catedral en la Plaza Mayor
 ================================================================================
 
 ✨ DESCRIPCIÓN:
@@ -10,9 +10,9 @@ De pie frente a la fachada principal de la Catedral de Nuevo Chimbote con ropa c
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Foto fotorrealista de chico joven peruano, cabello corto rizado natural bien recortado, lentes de marco fino, chaqueta marrón casual sobre polo oscuro y pantalón negro con zapatillas deportivas. De pie con postura relajada y natural en el pavimento pulido frente a la fachada de la Catedral Nuestra Señora del Carmen en la Plaza Mayor de Nuevo Chimbote. Fondo nítido y auténtico con la arquitectura moderna de la iglesia, cielo despejado de día, luz natural uniforme sin sobreexposición, enfoque limpio, proporción vertical --ar 4:5 --v 6.1`.

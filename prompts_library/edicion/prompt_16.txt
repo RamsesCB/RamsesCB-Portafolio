@@ -1,26 +1,26 @@
 ================================================================================
-CATEGORÍA: EDICIÓN | PROMPT #16: Junto a la Escultura del Tigre
+CATEGORÍA: EDICION | PROMPT #16: Plano Americano junto al Tigre
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Mano apoyada sobre la escultura del tigre en el parque con fondo de farolas azules y pasto.
+Plano americano parado al lado de la escultura del tigre con el parque y farolas de fondo.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 FOTO DE REFERENCIA
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista corregida en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano con cabello corto rizado normal, gafas circulares finas y expresión seria y concentrada sin sonrisa, vistiendo chaqueta marrón y pantalón oscuro. Con una mano apoyada sobre la escultura decorativa del tigre en el parque, fondo idéntico preservado con áreas verdes de pasto y farolas metálicas azules, iluminación natural precisa --ar 4:5 --v 6.1`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía en plano americano corregida en el Parque de los Tigres de Nuevo Chimbote. Chico peruano de cabello corto rizado natural, lentes redondos finos, expresión seria y tranquila, vistiendo casaca marrón. Parado erguido al costado de la estatua del tigre, fondo natural del parque con césped, árboles y postes de luz azules característicos, luz diurna neutra --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Fotografía realista corregida en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano con cabello corto rizado normal, gafas circulares finas y expresión seria y concentrada sin sonrisa, vistiendo chaqueta marrón y pantalón oscuro. Con una mano apoyada sobre la escultura decorativa del tigre en el parque, fondo idéntico preservado con áreas verdes de pasto y farolas metálicas azules, iluminación natural precisa --ar 4:5 --v 6.1
+Fotografía en plano americano corregida en el Parque de los Tigres de Nuevo Chimbote. Chico peruano de cabello corto rizado natural, lentes redondos finos, expresión seria y tranquila, vistiendo casaca marrón. Parado erguido al costado de la estatua del tigre, fondo natural del parque con césped, árboles y postes de luz azules característicos, luz diurna neutra --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

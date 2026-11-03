@@ -1,5 +1,5 @@
 ================================================================================
-CATEGORÍA: EDICIÓN | PROMPT #07: Entrada al Parque de los Tigres
+CATEGORÍA: EDICION | PROMPT #07: Entrada al Parque de los Tigres
 ================================================================================
 
 ✨ DESCRIPCIÓN:
@@ -10,9 +10,9 @@ En el sendero de entrada al Parque de los Tigres rodeado de césped verde y faro
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista al aire libre en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano de cabello corto rizado y lentes circulares, parado tranquilamente sobre la vereda del parque rodeado de jardines verdes bien cuidados, farolas azules de iluminación pública y árboles, luz natural de día --ar 4:5 --v 6.1`.

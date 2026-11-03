@@ -1,5 +1,5 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #06: Retrato Medio en la Plaza Mayor
+CATEGORÍA: EDICION | PROMPT #06: Retrato Medio en la Plaza Mayor
 ================================================================================
 
 ✨ DESCRIPCIÓN:
@@ -10,9 +10,9 @@ Retrato en plano medio con chaqueta marrón y la catedral desenfocada en el fond
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Retrato fotográfico en plano medio de chico joven peruano con cabello rizado corto natural y anteojos metálicos redondos, vistiendo chaqueta casual marrón. Fondo desenfocado con bokeh sutil mostrando la Plaza Mayor de Nuevo Chimbote y la catedral, iluminación natural equilibrada, expresión serena y enfocada a la cámara --ar 4:5 --v 6.1`.

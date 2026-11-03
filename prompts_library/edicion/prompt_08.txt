@@ -1,5 +1,5 @@
 ================================================================================
-CATEGORÍA: EDICIÓN | PROMPT #08: Paseo entre Jardines del Parque
+CATEGORÍA: EDICION | PROMPT #08: Paseo entre Jardines del Parque
 ================================================================================
 
 ✨ DESCRIPCIÓN:
@@ -10,9 +10,9 @@ Recorriendo los senderos arbolados y el césped del Parque de los Tigres con luz
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista de cuerpo entero de chico peruano de complexión normal, cabello corto rizado natural y lentes finos, caminando entre el césped y los senderos del Parque de los Tigres en Nuevo Chimbote. Fondo auténtico del parque con vegetación costera y veredas peatonales, tono de color natural y balance de blancos perfecto --ar 4:5 --v 6.1`.

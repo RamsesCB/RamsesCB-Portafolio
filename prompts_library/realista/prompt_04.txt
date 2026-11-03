@@ -1,5 +1,5 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #04: Esquina Urbana de la Plaza
+CATEGORÍA: EDICION | PROMPT #04: Esquina Urbana de la Plaza
 ================================================================================
 
 ✨ DESCRIPCIÓN:
@@ -10,9 +10,9 @@ De pie en la esquina de la plaza con perspectiva abierta hacia la calle y el tr�
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía callejera hiperrealista de chico joven peruano con chaqueta marrón y pantalón oscuro, lentes redondos y cabello corto rizado natural. Ubicado en la esquina peatonal de la Plaza Mayor de Nuevo Chimbote con vista abierta a la avenida, veredas limpias y arquitectura costera típica de Chimbote al fondo, iluminación natural de día --ar 4:5 --v 6.1`.

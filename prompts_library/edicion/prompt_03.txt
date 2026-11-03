@@ -1,5 +1,5 @@
 ================================================================================
-CATEGORÍA: EDICIÓN | PROMPT #03: Caminata en el Paseo Central
+CATEGORÍA: EDICION | PROMPT #03: Caminata en el Paseo Central
 ================================================================================
 
 ✨ DESCRIPCIÓN:
@@ -10,9 +10,9 @@ Caminando de manera casual por el paseo peatonal central de la Plaza Mayor con �
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía documental realista de chico peruano de cabello corto rizado natural y lentes delgados, caminando con calma por el paseo central adoquinado de la Plaza Mayor de Nuevo Chimbote. Al fondo se aprecian las farolas urbanas, palmeras y bancas de concreto, luz solar clara de media tarde, composición equilibrada y encuadre vertical --ar 4:5 --v 6.1`.

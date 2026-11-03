@@ -1,26 +1,26 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #14: Plano Americano en el Parque
+CATEGORÍA: EDICION | PROMPT #14: Junto a la Escultura del Tigre
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Plano americano en el parque con fondo arbolado y luz natural equilibrada.
+Mano apoyada sobre la escultura del tigre en el parque con fondo de farolas azules y pasto.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 FOTO DE REFERENCIA
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+   - La IA mantendrá tu rostro exacto e integrará la composición realista de Nuevo Chimbote.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía en plano americano (tres cuartos) de chico peruano con lentes redondos y cabello corto rizado natural. Posa de pie con las manos en los bolsillos en el Parque de los Tigres de Nuevo Chimbote, fondo verde de pasto y arbustos desenfocados suavemente, fotografía profesional 4:5 --ar 4:5 --v 6.1`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista corregida en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano con cabello corto rizado normal, gafas circulares finas y expresión seria y concentrada sin sonrisa, vistiendo chaqueta marrón y pantalón oscuro. Con una mano apoyada sobre la escultura decorativa del tigre en el parque, fondo idéntico preservado con áreas verdes de pasto y farolas metálicas azules, iluminación natural precisa --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Fotografía en plano americano (tres cuartos) de chico peruano con lentes redondos y cabello corto rizado natural. Posa de pie con las manos en los bolsillos en el Parque de los Tigres de Nuevo Chimbote, fondo verde de pasto y arbustos desenfocados suavemente, fotografía profesional 4:5 --ar 4:5 --v 6.1
+Fotografía realista corregida en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano con cabello corto rizado normal, gafas circulares finas y expresión seria y concentrada sin sonrisa, vistiendo chaqueta marrón y pantalón oscuro. Con una mano apoyada sobre la escultura decorativa del tigre en el parque, fondo idéntico preservado con áreas verdes de pasto y farolas metálicas azules, iluminación natural precisa --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
