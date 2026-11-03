@@ -1,0 +1,29 @@
+================================================================================
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #13: Retrato Urbano en la Plaza Mayor
+================================================================================
+
+✨ DESCRIPCIÓN:
+De pie junto a las jardineras de la plaza con luz natural clara de media mañana.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Retrato fotorrealista de chico joven peruano con cabello corto rizado bien definido, lentes circulares, casaca marrón y camiseta oscura. Parado con postura erguida y tranquila en la Plaza Mayor de Nuevo Chimbote cerca a las jardineras de concreto pulido y palmeras urbanas, sombras suaves y nitidez 8K --ar 4:5 --v 6.1`.
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Retrato fotorrealista de chico joven peruano con cabello corto rizado bien definido, lentes circulares, casaca marrón y camiseta oscura. Parado con postura erguida y tranquila en la Plaza Mayor de Nuevo Chimbote cerca a las jardineras de concreto pulido y palmeras urbanas, sombras suaves y nitidez 8K --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

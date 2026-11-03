@@ -1,0 +1,29 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #27: Ninja Uchiha con Postura de Rayo
+================================================================================
+
+✨ DESCRIPCIÓN:
+Ninja con camisa gris de cuello alto y postura de ataque en un callejón urbano.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real con gafas, cabello rizado. Cosplay inspirado en ninja Uchiha: camisa azul marino de cuello alto con parche rojo y blanco de abanico en hombro, pantalones negros, vendas beige en antebrazos. POSE INTERESANTE: de pie en callejón urbano con grafitis, mano derecha extendida hacia cámara con dedos en signo de Chidori sin rayos, mano izquierda atrás, cuerpo inclinado hacia adelante, mirada intensa y seria bajo gafas, fondo callejón con grafitis de colores y contenedor de basura, luz de día, sin relámpagos, cosplay bien hecho, 8K --ar 4:5`.
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Según la hoja de referencia, humano real con gafas, cabello rizado. Cosplay inspirado en ninja Uchiha: camisa azul marino de cuello alto con parche rojo y blanco de abanico en hombro, pantalones negros, vendas beige en antebrazos. POSE INTERESANTE: de pie en callejón urbano con grafitis, mano derecha extendida hacia cámara con dedos en signo de Chidori sin rayos, mano izquierda atrás, cuerpo inclinado hacia adelante, mirada intensa y seria bajo gafas, fondo callejón con grafitis de colores y contenedor de basura, luz de día, sin relámpagos, cosplay bien hecho, 8K --ar 4:5
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

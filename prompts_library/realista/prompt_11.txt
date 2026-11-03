@@ -1,0 +1,29 @@
+================================================================================
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #11: Vista Amplia del Parque de los Tigres
+================================================================================
+
+✨ DESCRIPCIÓN:
+Plano general que muestra la extensión verde y los senderos peatonales del parque.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía en plano general amplio en el Parque de los Tigres en Nuevo Chimbote. Chico peruano con gafas y ropa casual parado en la vereda central, mostrando la amplitud del parque, el cielo abierto, árboles ornamentales y veredas limpias, iluminación natural diurna sin retoques exagerados --ar 4:5 --v 6.1`.
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Fotografía en plano general amplio en el Parque de los Tigres en Nuevo Chimbote. Chico peruano con gafas y ropa casual parado en la vereda central, mostrando la amplitud del parque, el cielo abierto, árboles ornamentales y veredas limpias, iluminación natural diurna sin retoques exagerados --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

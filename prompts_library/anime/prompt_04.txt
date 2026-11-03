@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #04: Cazador Apoyado en Columna
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #04: Esquina Urbana de la Plaza
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Cazador con haori rojo y negro apoyado casualmente en una columna con la katana al hombro.
+De pie en la esquina de la plaza con perspectiva abierta hacia la calle y el tránsito local.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro o pose apoyada)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste de 4 vistas frontales y laterales, crea foto fotorrealista de humano real, preserva estructura facial exacta, gafas redondas delgadas, cabello negro rizado con volumen natural, tono de piel, complexión. Cosplay de cazador con haori a cuadros: uniforme negro táctico con cierre y bolsas, haori rojo y negro. POSE INTERESANTE: apoyado contra columna de concreto en esquina de ciudad normal, una pierna cruzada sobre otra, sosteniendo katana sobre hombro, mirada directa, pose relajada pero con estilo, fondo ciudad real Lima con letreros de farmacia desenfocados, iluminación natural, cosplay bien logrado como si fuera comprado de tienda premium, 8K photorealistic --ar 4:5`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía callejera hiperrealista de chico joven peruano con chaqueta marrón y pantalón oscuro, lentes redondos y cabello corto rizado natural. Ubicado en la esquina peatonal de la Plaza Mayor de Nuevo Chimbote con vista abierta a la avenida, veredas limpias y arquitectura costera típica de Chimbote al fondo, iluminación natural de día --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Según la hoja de referencia que me pasaste de 4 vistas frontales y laterales, crea foto fotorrealista de humano real, preserva estructura facial exacta, gafas redondas delgadas, cabello negro rizado con volumen natural, tono de piel, complexión. Cosplay de cazador con haori a cuadros: uniforme negro táctico con cierre y bolsas, haori rojo y negro. POSE INTERESANTE: apoyado contra columna de concreto en esquina de ciudad normal, una pierna cruzada sobre otra, sosteniendo katana sobre hombro, mirada directa, pose relajada pero con estilo, fondo ciudad real Lima con letreros de farmacia desenfocados, iluminación natural, cosplay bien logrado como si fuera comprado de tienda premium, 8K photorealistic --ar 4:5
+Fotografía callejera hiperrealista de chico joven peruano con chaqueta marrón y pantalón oscuro, lentes redondos y cabello corto rizado natural. Ubicado en la esquina peatonal de la Plaza Mayor de Nuevo Chimbote con vista abierta a la avenida, veredas limpias y arquitectura costera típica de Chimbote al fondo, iluminación natural de día --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5
+--ar 4:5 --v 6.1
 ================================================================================

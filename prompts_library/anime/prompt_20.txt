@@ -1,0 +1,29 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #20: Hechicero con Venda y Abrigo Largo
+================================================================================
+
+✨ DESCRIPCIÓN:
+Hechicero levantando una venda negra sobre los ojos con abrigo oscuro ondeando por el viento.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas debajo, cabello negro rizado con textura real. Cosplay inspirado en Gojo: abrigo largo negro de cuello alto con tela mate pesada, pantalones oscuros holgados, zapatos negros. POSE BONITA: de pie en calle de ciudad de noche con tiendas iluminadas desenfocadas, mano derecha subiendo lentamente una venda negra sobre los ojos revelando mirada intensa, mano izquierda en bolsillo de abrigo, tela del abrigo con pliegues ondeando por el viento, iluminación de fondo bokeh suave con tonos azules y blancos, sin ojos celestes mágicos ni efectos sobrenaturales, fotografía fotorrealista editorial de moda cosplay, 8K --ar 4:5`.
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas debajo, cabello negro rizado con textura real. Cosplay inspirado en Gojo: abrigo largo negro de cuello alto con tela mate pesada, pantalones oscuros holgados, zapatos negros. POSE BONITA: de pie en calle de ciudad de noche con tiendas iluminadas desenfocadas, mano derecha subiendo lentamente una venda negra sobre los ojos revelando mirada intensa, mano izquierda en bolsillo de abrigo, tela del abrigo con pliegues ondeando por el viento, iluminación de fondo bokeh suave con tonos azules y blancos, sin ojos celestes mágicos ni efectos sobrenaturales, fotografía fotorrealista editorial de moda cosplay, 8K --ar 4:5
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

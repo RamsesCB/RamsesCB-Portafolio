@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #08: Ninja con Chaqueta Naranja y Rasengan
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #08: Paseo entre Jardines del Parque
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Ninja con chaqueta naranja y banda en la frente sosteniendo una esfera de energía en una calle urbana.
+Recorriendo los senderos arbolados y el césped del Parque de los Tigres con luz suave.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Adjunta tu foto de referencia.
-   - Pega el prompt que aparece abajo en la caja.
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en ninja sabio: chaqueta naranja y negra con remolino rojo en espalda, pantalones negros, banda con símbolo de hoja, maquillaje naranja sutil en ojos de sabio. POSE: Rasengan dinámico en calle normal, mano derecha extendida adelante sosteniendo esfera azul transparente de plástico como Rasengan, mano izquierda apoyando, piernas en postura amplia de pelea, expresión determinada, fondo cruce de calles real con tiendas, luz de día, sin efectos de chakra, 8K --ar 4:5`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista de cuerpo entero de chico peruano de complexión normal, cabello corto rizado natural y lentes finos, caminando entre el césped y los senderos del Parque de los Tigres en Nuevo Chimbote. Fondo auténtico del parque con vegetación costera y veredas peatonales, tono de color natural y balance de blancos perfecto --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en ninja sabio: chaqueta naranja y negra con remolino rojo en espalda, pantalones negros, banda con símbolo de hoja, maquillaje naranja sutil en ojos de sabio. POSE: Rasengan dinámico en calle normal, mano derecha extendida adelante sosteniendo esfera azul transparente de plástico como Rasengan, mano izquierda apoyando, piernas en postura amplia de pelea, expresión determinada, fondo cruce de calles real con tiendas, luz de día, sin efectos de chakra, 8K --ar 4:5
+Fotografía realista de cuerpo entero de chico peruano de complexión normal, cabello corto rizado natural y lentes finos, caminando entre el césped y los senderos del Parque de los Tigres en Nuevo Chimbote. Fondo auténtico del parque con vegetación costera y veredas peatonales, tono de color natural y balance de blancos perfecto --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --style raw
+--ar 4:5 --v 6.1
 ================================================================================

@@ -1,0 +1,29 @@
+================================================================================
+CATEGORÍA: ANIME | PROMPT #26: Capitán con Capa Verde y Taza de Té
+================================================================================
+
+✨ DESCRIPCIÓN:
+Capitán con capa verde y equipo táctico tomando una taza de té apoyado en un muro.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, preserva gafas, cabello rizado. Cosplay de cuerpo de exploración: chaqueta marrón corta con botones dorados, camisa blanca, capa verde oscuro con emblema de alas blanco y azul en hombro, arnés de cuero marrón con hebillas y cajas metálicas de maniobras en muslos. POSE BONITA: pie derecho sobre muro bajo de concreto en calle normal de ciudad, mano derecha sosteniendo taza de té blanca pequeña contrastando con equipo militar, mano izquierda en cadera, capa ondeando con viento dramáticamente, mirando de lado con expresión seria y cool, fondo calle real con edificios, luz natural, sin fortaleza, cosplay premium, 8K --ar 4:5`.
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Según la hoja de referencia, preserva gafas, cabello rizado. Cosplay de cuerpo de exploración: chaqueta marrón corta con botones dorados, camisa blanca, capa verde oscuro con emblema de alas blanco y azul en hombro, arnés de cuero marrón con hebillas y cajas metálicas de maniobras en muslos. POSE BONITA: pie derecho sobre muro bajo de concreto en calle normal de ciudad, mano derecha sosteniendo taza de té blanca pequeña contrastando con equipo militar, mano izquierda en cadera, capa ondeando con viento dramáticamente, mirando de lado con expresión seria y cool, fondo calle real con edificios, luz natural, sin fortaleza, cosplay premium, 8K --ar 4:5
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

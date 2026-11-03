@@ -1,29 +1,29 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #06: Hechicero con Venda y Abrigo Largo
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #06: Retrato Medio en la Plaza Mayor
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Hechicero con abrigo largo negro y venda en los ojos haciendo el gesto de infinito en la ciudad.
+Retrato en plano medio con chaqueta marrón y la catedral desenfocada en el fondo.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Adjunta tu foto de referencia.
-   - Pega el prompt que aparece abajo en la caja.
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes. Cosplay inspirado en hechicero de ojos vendados: abrigo largo negro de cuello alto con corte amplio, pantalones negros, venda negra subida a la frente. POSE BONITA: de pie en calle normal de ciudad, piernas separadas en pose confiada, mano derecha extendida hacia adelante con dedos ligeramente curvados como técnica de infinito, mano izquierda en bolsillo, abrigo ondeando con viento, sonrisa leve mirando a cámara, fondo ciudad real con edificios desenfocados, luz natural de día, sin círculos mágicos, cosplay bien hecho, 8K --ar 4:5`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Retrato fotográfico en plano medio de chico joven peruano con cabello rizado corto natural y anteojos metálicos redondos, vistiendo chaqueta casual marrón. Fondo desenfocado con bokeh sutil mostrando la Plaza Mayor de Nuevo Chimbote y la catedral, iluminación natural equilibrada, expresión serena y enfocada a la cámara --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes. Cosplay inspirado en hechicero de ojos vendados: abrigo largo negro de cuello alto con corte amplio, pantalones negros, venda negra subida a la frente. POSE BONITA: de pie en calle normal de ciudad, piernas separadas en pose confiada, mano derecha extendida hacia adelante con dedos ligeramente curvados como técnica de infinito, mano izquierda en bolsillo, abrigo ondeando con viento, sonrisa leve mirando a cámara, fondo ciudad real con edificios desenfocados, luz natural de día, sin círculos mágicos, cosplay bien hecho, 8K --ar 4:5
+Retrato fotográfico en plano medio de chico joven peruano con cabello rizado corto natural y anteojos metálicos redondos, vistiendo chaqueta casual marrón. Fondo desenfocado con bokeh sutil mostrando la Plaza Mayor de Nuevo Chimbote y la catedral, iluminación natural equilibrada, expresión serena y enfocada a la cámara --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --style raw
+--ar 4:5 --v 6.1
 ================================================================================

@@ -468,6 +468,129 @@
 }
 
 /* =========================================================
+   APPLE LIQUID GLASS SUB-FILTER PILLS
+   ========================================================= */
+.apple-subfilter-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  padding: 0.35rem 0.65rem !important;
+  background: rgba(15, 23, 42, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 9999px !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  max-width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.apple-subfilter-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  padding: 0.45rem 1rem !important;
+  border-radius: 9999px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  color: #94A3B8 !important;
+  font-family: inherit !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+  white-space: nowrap !important;
+}
+
+.apple-subfilter-pill:hover {
+  color: #F8FAFC !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.apple-subfilter-pill:active {
+  transform: scale(0.96) !important;
+}
+
+.apple-subfilter-pill.active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07)) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  font-weight: 600 !important;
+}
+
+.apple-subfilter-pill .pill-icon {
+  font-size: 0.85rem !important;
+  display: inline-block !important;
+}
+
+.apple-subfilter-pill .pill-text {
+  letter-spacing: -0.01em !important;
+}
+
+.apple-subfilter-pill .pill-count {
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  padding: 0.12rem 0.45rem !important;
+  border-radius: 9999px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #E2E8F0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.apple-subfilter-pill.active .pill-count {
+  background: rgba(56, 189, 248, 0.25) !important;
+  color: #38BDF8 !important;
+  border-color: rgba(56, 189, 248, 0.35) !important;
+}
+
+/* Badge dot radar pulse animation */
+.prompt-badge-dot::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: -3px !important;
+  border-radius: 50% !important;
+  border: 1px solid var(--theme-accent, #38BDF8) !important;
+  opacity: 0.6 !important;
+  animation: badgeDotPulse 2s cubic-bezier(0.16, 1, 0.3, 1) infinite !important;
+}
+
+@keyframes badgeDotPulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .apple-subfilter-bar {
+    width: 100% !important;
+    border-radius: 18px !important;
+    justify-content: stretch !important;
+    gap: 0.35rem !important;
+    padding: 0.35rem !important;
+  }
+  .apple-subfilter-pill {
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.72rem !important;
+  }
+  .apple-subfilter-pill .pill-text {
+    font-size: 0.72rem !important;
+  }
+  .apple-subfilter-pill .pill-count {
+    font-size: 0.62rem !important;
+    padding: 0.08rem 0.35rem !important;
+  }
+}
+
+/* =========================================================
    PROMPTS GRID & APPLE CARDS (Exact 4:5 Aspect, Zero Crop, Symmetrical Bounds)
    ========================================================= */
 .prompts-grid {
@@ -2299,115 +2422,474 @@ var CATEGORY_DATA = {
     themeClass: "stage-theme-anime",
     introClass: "intro-prog-anime",
     bio: "Este es un rincón creado con mucho cariño y dedicación enfocado exclusivamente en el fascinante universo del anime y la animación shonen. He puesto gran esfuerzo en recopilar y estructurar una amplia diversidad de estilos: desde batallas con energía desbordante hasta composiciones conceptuales de alta velocidad. Espero de corazón que te guste y potencie al máximo tus creaciones.",
-    tags: ["COLECCIÓN ANIME", "SHONEN", "ILUSTRACIÓN DIGITAL", "ALTA VELOCIDAD", "NIJI 6"],
+    tags: ["COLECCIÓN ANIME & REALISMO", "FOTOS REALISTAS 4:5", "COSPLAY SHONEN", "NUEVO CHIMBOTE", "MIDJOURNEY / FLUX"],
     lyrics: [{"start": 0.0, "end": 1.3, "line1": "¿ESTÁS LISTO...", "line2": "PARA EL IMPACTO?"}, {"start": 1.3, "end": 2.6, "line1": "DESPIERTA TU ENERGÍA", "line2": "ROMPE TUS LÍMITES"}, {"start": 2.6, "end": 3.8, "line1": "VELOCIDAD CINÉTICA", "line2": "PODER DESBORDADO"}, {"start": 3.8, "end": 5.0, "line1": "SHONEN AL MÁXIMO", "line2": "¡VAMOS CON TODO!"}],
     prompts: [
       {
-        badge: "#01",
-        image: "assets/images/anime/01_Pose_Pared_Haori.webp",
-        title: "Cazador con Haori en la Pared",
-        description: "Cazador con haori a cuadros y katana al hombro, apoyado en una pared de concreto en la ciudad.",
-        prompt: "Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes y blancas Nike. Cosplay bien hecho inspirado en cazador: uniforme táctico negro con botones dorados y bolsas laterales, haori largo a cuadros rojo y negro con costuras visibles y textura de tela real, katana real con empuñadura negra de diamantes y tsuba dorada en funda negra. POSE: recargado casual contra muro de concreto gris en calle normal de ciudad, pierna derecha doblada con pie apoyado en el muro, mano izquierda en bolsillo, mano derecha sosteniendo katana real apoyada sobre hombro como bate, cabeza levemente inclinada, sonrisa confiada mirando a cámara, fondo calle real con farmacia y bus azul desenfocado, luz de día natural sombras suaves, piel con poros reales, 8K, shallow depth of field, ángulo ligeramente bajo --ar 4:5 --style raw"
+            "id": "ANIME-01",
+            "badge": "#01",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/01_Plaza_Mayor_Catedral_Fachada.webp",
+            "title": "Frente a la Catedral en la Plaza Mayor",
+            "description": "De pie frente a la fachada principal de la Catedral de Nuevo Chimbote con ropa casual y expresión serena.",
+            "prompt": "Foto fotorrealista de chico joven peruano, cabello corto rizado natural bien recortado, lentes de marco fino, chaqueta marrón casual sobre polo oscuro y pantalón negro con zapatillas deportivas. De pie con postura relajada y natural en el pavimento pulido frente a la fachada de la Catedral Nuestra Señora del Carmen en la Plaza Mayor de Nuevo Chimbote. Fondo nítido y auténtico con la arquitectura moderna de la iglesia, cielo despejado de día, luz natural uniforme sin sobreexposición, enfoque limpio, proporción vertical --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#02",
-        image: "assets/images/anime/02_Pose_Hombro_KimonoNegro.webp",
-        title: "Shinigami con Kimono Negro",
-        description: "Personaje con kimono negro shihakusho mirando sobre el hombro en la calle con la mano en la katana.",
-        prompt: "Según la hoja de referencia que me pasaste, humano real con gafas redondas, cabello negro rizado, complexión delgada. Cosplay de shinigami bien hecho: kimono negro shihakusho con pliegues gruesos de tela, interior blanco visible, obi negro ancho, katana real con mango texturizado y funda negra. POSE: de pie en vereda de ciudad normal, cuerpo girado 3/4 de espaldas pero cabeza girada mirando por encima del hombro directo a cámara, mano izquierda sobre mango de katana lista para desenvainar, mano derecha relajada, cabello con movimiento de viento, expresión misteriosa y cool, fondo calle real con cafetería COFFEE y bicicletas aparcadas, luz natural de día, fotografía callejera estilo Harajuku, 8K --ar 4:5 --style raw"
+            "id": "ANIME-02",
+            "badge": "#02",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/02_Plaza_Mayor_Catedral_Lateral.webp",
+            "title": "Vista Lateral de la Catedral",
+            "description": "En la explanada de la Plaza Mayor con vista lateral de la catedral y jardines urbanos.",
+            "prompt": "Fotografía urbana fotorrealista de chico joven peruano con cabello corto rizado natural, gafas de armazón circular fino, chaqueta marrón y polo negro. Plano tres cuartos en la explanada de la Plaza Mayor de Nuevo Chimbote, con los pilares y arquitectura lateral de la catedral al fondo, iluminación diurna suave, textura real de la piel con poros naturales, sombras ambientales auténticas --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#03",
-        image: "assets/images/anime/03_Pose_Caminando_Talisman.webp",
-        title: "Hechicero con Abrigo y Talismán",
-        description: "Hechicero caminando por una calle urbana sosteniendo un talismán con katana en el cinto.",
-        prompt: "Según la hoja de referencia que me pasaste, humano real con mismo rostro, gafas redondas, cabello rizado. Cosplay de hechicero de alta calidad: chaqueta larga azul marino con costura roja detallada en bordes y emblema dorado de brújula en pecho, pantalones cargo negros con costura roja, cinturón negro con hebilla plateada, katana real con papeles talismán blancos con kanji rojo atados con cuerda roja colgando. POSE: caminando con confianza hacia cámara en calle real de ciudad japonesa, pierna izquierda adelante en pleno paso, mano derecha sosteniendo katana por el costado con talismanes ondeando, mano izquierda levantada sosteniendo un talismán entre dedos índice y pulgar, abrigo largo ondeando con movimiento por viento, sonrisa leve y confiada, fondo calle urbana con tiendas y máquinas expendedoras, luz de día natural, sin neón, sin lluvia, fotografía de moda callejera, 8K --ar 4:5 --style raw"
+            "id": "ANIME-03",
+            "badge": "#03",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/03_Plaza_Mayor_Paseo_Central.webp",
+            "title": "Caminata en el Paseo Central",
+            "description": "Caminando de manera casual por el paseo peatonal central de la Plaza Mayor con árboles y bancas.",
+            "prompt": "Fotografía documental realista de chico peruano de cabello corto rizado natural y lentes delgados, caminando con calma por el paseo central adoquinado de la Plaza Mayor de Nuevo Chimbote. Al fondo se aprecian las farolas urbanas, palmeras y bancas de concreto, luz solar clara de media tarde, composición equilibrada y encuadre vertical --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#04",
-        image: "assets/images/anime/04_Pose_Apoyado_Ciudad.webp",
-        title: "Cazador Apoyado en Columna",
-        description: "Cazador con haori rojo y negro apoyado casualmente en una columna con la katana al hombro.",
-        prompt: "Según la hoja de referencia que me pasaste de 4 vistas frontales y laterales, crea foto fotorrealista de humano real, preserva estructura facial exacta, gafas redondas delgadas, cabello negro rizado con volumen natural, tono de piel, complexión. Cosplay de cazador con haori a cuadros: uniforme negro táctico con cierre y bolsas, haori rojo y negro. POSE INTERESANTE: apoyado contra columna de concreto en esquina de ciudad normal, una pierna cruzada sobre otra, sosteniendo katana sobre hombro, mirada directa, pose relajada pero con estilo, fondo ciudad real Lima con letreros de farmacia desenfocados, iluminación natural, cosplay bien logrado como si fuera comprado de tienda premium, 8K photorealistic --ar 4:5"
+            "id": "ANIME-04",
+            "badge": "#04",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/04_Plaza_Mayor_Esquina_Urbana.webp",
+            "title": "Esquina Urbana de la Plaza",
+            "description": "De pie en la esquina de la plaza con perspectiva abierta hacia la calle y el tránsito local.",
+            "prompt": "Fotografía callejera hiperrealista de chico joven peruano con chaqueta marrón y pantalón oscuro, lentes redondos y cabello corto rizado natural. Ubicado en la esquina peatonal de la Plaza Mayor de Nuevo Chimbote con vista abierta a la avenida, veredas limpias y arquitectura costera típica de Chimbote al fondo, iluminación natural de día --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#05",
-        image: "assets/images/anime/05_Pose_Corriendo_TresEspadas.webp",
-        title: "Espadachín Corriendo con Tres Katanas",
-        description: "Espadachín con kimono verde corriendo en la calle con una katana desenvainada y dos en el cinto.",
-        prompt: "Según la hoja de referencia que me pasaste, humano real con cabello rizado volando por viento, gafas redondas, piel real. Cosplay de espadachín de tres espadas bien hecho: kimono verde oscuro texturizado con patrón sutil, camiseta negra interior, pantalones hakama negros anchos, faja negra ancha, tres katanas reales con tsuba dorada y mango negro de rombos en cinturón, zapatos tabi negros. POSE BONITA E INTERESANTE: corriendo dinámico en medio de calle asfaltada normal, pierna derecha levantada del suelo, cuerpo inclinado hacia adelante en carrera, kimono y hakama ondeando dramáticamente hacia atrás por viento, mano derecha sosteniendo una katana desenvainada brillante con reflejo de luz, mano izquierda sosteniendo fundas, mirada intensa hacia un lado como si persiguiera algo, fondo calle real con bicicletas aparcadas y muro de concreto desenfocado, luz natural de día, fotografía de acción callejera, alta velocidad de obturación, 8K --ar 4:5 --style raw"
+            "id": "ANIME-05",
+            "badge": "#05",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/05_Plaza_Mayor_Arco_Monumento.webp",
+            "title": "Monumento y Estructura de la Plaza",
+            "description": "Junto a las estructuras monumentales de la Plaza Mayor con perspectiva arquitectónica.",
+            "prompt": "Fotografía exterior realista de chico peruano con cabello corto rizado y lentes, vistiendo casaca marrón y zapatillas deportivas. Posa de manera relajada y seria frente a las estructuras monumentales y arcos de la Plaza Mayor de Nuevo Chimbote, cielo azul despejado, colores fieles a la realidad sin saturación artificial --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#06",
-        image: "assets/images/anime/01_Gojo_Blindfold_Infinity_Pose.webp",
-        title: "Hechicero con Venda y Abrigo Largo",
-        description: "Hechicero con abrigo largo negro y venda en los ojos haciendo el gesto de infinito en la ciudad.",
-        prompt: "Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes. Cosplay inspirado en hechicero de ojos vendados: abrigo largo negro de cuello alto con corte amplio, pantalones negros, venda negra subida a la frente. POSE BONITA: de pie en calle normal de ciudad, piernas separadas en pose confiada, mano derecha extendida hacia adelante con dedos ligeramente curvados como técnica de infinito, mano izquierda en bolsillo, abrigo ondeando con viento, sonrisa leve mirando a cámara, fondo ciudad real con edificios desenfocados, luz natural de día, sin círculos mágicos, cosplay bien hecho, 8K --ar 4:5"
+            "id": "ANIME-06",
+            "badge": "#06",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/06_Plaza_Mayor_Plano_Medio.webp",
+            "title": "Retrato Medio en la Plaza Mayor",
+            "description": "Retrato en plano medio con chaqueta marrón y la catedral desenfocada en el fondo.",
+            "prompt": "Retrato fotográfico en plano medio de chico joven peruano con cabello rizado corto natural y anteojos metálicos redondos, vistiendo chaqueta casual marrón. Fondo desenfocado con bokeh sutil mostrando la Plaza Mayor de Nuevo Chimbote y la catedral, iluminación natural equilibrada, expresión serena y enfocada a la cámara --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#07",
-        image: "assets/images/anime/02_Zenitsu_Thunder_Crouch.webp",
-        title: "Cazador del Rayo Agachado",
-        description: "Cazador con haori amarillo de triángulos en cuclillas en la acera a punto de desenvainar.",
-        prompt: "Según la hoja de referencia, humano real con gafas, cabello rizado. Cosplay inspirado en cazador del trueno: uniforme táctico negro con haori amarillo con triángulos blancos y naranjas con textura de tela. POSE INTERESANTE: agachado profundo en pose de primer trueno en vereda de ciudad normal, rodillas dobladas, mano derecha sujetando katana en cintura a punto de desenvainar, mano izquierda atrás, cabeza baja con ojos cerrados concentrado, fondo muro de concreto gris de ciudad, luz de día, sin rayos, cosplay bien logrado, 8K --ar 4:5"
+            "id": "ANIME-07",
+            "badge": "#07",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/07_Parque_Tigres_Entrada.webp",
+            "title": "Entrada al Parque de los Tigres",
+            "description": "En el sendero de entrada al Parque de los Tigres rodeado de césped verde y farolas urbanas.",
+            "prompt": "Fotografía realista al aire libre en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano de cabello corto rizado y lentes circulares, parado tranquilamente sobre la vereda del parque rodeado de jardines verdes bien cuidados, farolas azules de iluminación pública y árboles, luz natural de día --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#08",
-        image: "assets/images/anime/03_Naruto_Sage_Rasengan.webp",
-        title: "Ninja con Chaqueta Naranja y Rasengan",
-        description: "Ninja con chaqueta naranja y banda en la frente sosteniendo una esfera de energía en una calle urbana.",
-        prompt: "Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en ninja sabio: chaqueta naranja y negra con remolino rojo en espalda, pantalones negros, banda con símbolo de hoja, maquillaje naranja sutil en ojos de sabio. POSE: Rasengan dinámico en calle normal, mano derecha extendida adelante sosteniendo esfera azul transparente de plástico como Rasengan, mano izquierda apoyando, piernas en postura amplia de pelea, expresión determinada, fondo cruce de calles real con tiendas, luz de día, sin efectos de chakra, 8K --ar 4:5"
+            "id": "ANIME-08",
+            "badge": "#08",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/08_Parque_Tigres_Paseo_Verde.webp",
+            "title": "Paseo entre Jardines del Parque",
+            "description": "Recorriendo los senderos arbolados y el césped del Parque de los Tigres con luz suave.",
+            "prompt": "Fotografía realista de cuerpo entero de chico peruano de complexión normal, cabello corto rizado natural y lentes finos, caminando entre el césped y los senderos del Parque de los Tigres en Nuevo Chimbote. Fondo auténtico del parque con vegetación costera y veredas peatonales, tono de color natural y balance de blancos perfecto --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#09",
-        image: "assets/images/anime/04_Ichigo_Bankai_Long_Coat.webp",
-        title: "Shinigami con Abrigo Largo y Espada Gigante",
-        description: "Shinigami con abrigo negro y espada grande apoyada en el hombro mirando hacia atrás.",
-        prompt: "Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en shinigami Bankai: abrigo largo negro con interior rojo ondeando, shihakusho negro debajo, espada Bankai grande oversize con tela negra enrollada en mango en espalda. POSE BONITA: de pie heroico en vereda de ciudad, abrigo ondeando dramáticamente con viento hacia un lado, mano derecha agarrando mango de espada grande sobre hombro, mano izquierda en bolsillo, mirando por encima del hombro a cámara con expresión seria y cool, fondo calle real con bicicletas desenfocadas, luz natural, sin presión espiritual, 8K --ar 4:5"
+            "id": "ANIME-09",
+            "badge": "#09",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/09_Parque_Tigres_Farolas_Azules.webp",
+            "title": "Sendero de Farolas Azules",
+            "description": "De pie junto a las características farolas azules y jardines del Parque de los Tigres.",
+            "prompt": "Fotografía urbana al aire libre en el Parque de los Tigres de Nuevo Chimbote. Chico peruano con chaqueta marrón, pantalón negro y zapatillas, de pie junto a las postes y farolas metálicas azules clásicas del parque, con árboles verdes y veredas de concreto, textura real en ropa y piel, proporción 4:5 --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#10",
-        image: "assets/images/anime/05_Goku_Orange_Gi_Kamehameha.webp",
-        title: "Luchador con Gi Naranja en Carga",
-        description: "Artista marcial con gi naranja en postura de carga de energía frente a tiendas de la ciudad.",
-        prompt: "Según la hoja de referencia, preserva gafas, cabello rizado. Cosplay inspirado en artista marcial naranja: gi naranja brillante con kanji tortuga negro en pecho, camiseta interior azul oscuro y muñequeras azules, cinturón azul oscuro, pantalones azules anchos. POSE INTERESANTE: pose de carga de Kamehameha en calle normal, pies separados muy amplios en postura de caballo, manos juntas en costado de cintura como cargando energía, inclinado hacia adelante, expresión intensa enfocada, fondo calle real con tienda de conveniencia japonesa con letrero de colores, luz de día, sin bola de energía, cosplay bien hecho, 8K --ar 4:5"
+            "id": "ANIME-10",
+            "badge": "#10",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/10_Parque_Tigres_Camino_Arboles.webp",
+            "title": "Alameda Arbolada del Parque",
+            "description": "En medio del camino flanqueado por árboles en el Parque de los Tigres en Nuevo Chimbote.",
+            "prompt": "Fotografía documental realista de chico joven con cabello corto rizado natural, gafas y chaqueta marrón, posando de pie en el camino adoquinado del Parque de los Tigres flanqueado por árboles frondosos y áreas verdes. Profundidad de campo natural que resalta el entorno cotidiano y auténtico de la ciudad --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#11",
-        image: "assets/images/anime/06_Luffy_Straw_Hat_Stretch.webp",
-        title: "Pirata con Sombrero de Paja",
-        description: "Pirata sonriendo con chaleco rojo y sombrero de paja levantado en un cruce peatonal.",
-        prompt: "Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en pirata de sombrero de paja: sombrero de paja con cinta roja, chaleco rojo abierto, shorts jeans azules, sandalias. POSE: de pie en cruce peatonal normal de ciudad, brazo derecho estirado largo hacia adelante hacia cámara como truco de perspectiva de goma, mano izquierda sosteniendo sombrero de paja levantado, sonrisa grande y alegre, fondo calle real con autos y tiendas desenfocadas, luz de día, sin superpoderes reales, cosplay bien hecho, 8K --ar 4:5"
+            "id": "ANIME-11",
+            "badge": "#11",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/11_Parque_Tigres_Vista_Panoramica.webp",
+            "title": "Vista Amplia del Parque de los Tigres",
+            "description": "Plano general que muestra la extensión verde y los senderos peatonales del parque.",
+            "prompt": "Fotografía en plano general amplio en el Parque de los Tigres en Nuevo Chimbote. Chico peruano con gafas y ropa casual parado en la vereda central, mostrando la amplitud del parque, el cielo abierto, árboles ornamentales y veredas limpias, iluminación natural diurna sin retoques exagerados --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#12",
-        image: "assets/images/anime/07_Levi_Cape_Tea_Pose.webp",
-        title: "Capitán con Capa Verde y Taza de Té",
-        description: "Capitán con capa verde y equipo táctico tomando una taza de té apoyado en un muro.",
-        prompt: "Según la hoja de referencia, preserva gafas, cabello rizado. Cosplay de cuerpo de exploración: chaqueta marrón corta con botones dorados, camisa blanca, capa verde oscuro con emblema de alas blanco y azul en hombro, arnés de cuero marrón con hebillas y cajas metálicas de maniobras en muslos. POSE BONITA: pie derecho sobre muro bajo de concreto en calle normal de ciudad, mano derecha sosteniendo taza de té blanca pequeña contrastando con equipo militar, mano izquierda en cadera, capa ondeando con viento dramáticamente, mirando de lado con expresión seria y cool, fondo calle real con edificios, luz natural, sin fortaleza, cosplay premium, 8K --ar 4:5"
+            "id": "ANIME-12",
+            "badge": "#12",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/12_Losa_Deportiva_Techo_Metalico.webp",
+            "title": "Losa Deportiva con Techo Metálico",
+            "description": "En la cancha deportiva techada con estructura metálica y piso de fulbito en Nuevo Chimbote.",
+            "prompt": "Fotografía realista en el complejo deportivo municipal de Nuevo Chimbote. Chico peruano con cabello corto rizado y lentes, vistiendo ropa casual deportiva, parado sobre la losa deportiva pintada en tonos azul y verde bajo la gran estructura de techo metálico curvo, iluminación de sombra fresca protegida del sol --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#13",
-        image: "assets/images/anime/08_Sasuke_Chidori_Hand.webp",
-        title: "Ninja Uchiha con Postura de Rayo",
-        description: "Ninja con camisa gris de cuello alto y postura de ataque en un callejón urbano.",
-        prompt: "Según la hoja de referencia, humano real con gafas, cabello rizado. Cosplay inspirado en ninja Uchiha: camisa azul marino de cuello alto con parche rojo y blanco de abanico en hombro, pantalones negros, vendas beige en antebrazos. POSE INTERESANTE: de pie en callejón urbano con grafitis, mano derecha extendida hacia cámara con dedos en signo de Chidori sin rayos, mano izquierda atrás, cuerpo inclinado hacia adelante, mirada intensa y seria bajo gafas, fondo callejón con grafitis de colores y contenedor de basura, luz de día, sin relámpagos, cosplay bien hecho, 8K --ar 4:5"
+            "id": "ANIME-13",
+            "badge": "#13",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/13_Plaza_Mayor_Retrato_Urbano.webp",
+            "title": "Retrato Urbano en la Plaza Mayor",
+            "description": "De pie junto a las jardineras de la plaza con luz natural clara de media mañana.",
+            "prompt": "Retrato fotorrealista de chico joven peruano con cabello corto rizado bien definido, lentes circulares, casaca marrón y camiseta oscura. Parado con postura erguida y tranquila en la Plaza Mayor de Nuevo Chimbote cerca a las jardineras de concreto pulido y palmeras urbanas, sombras suaves y nitidez 8K --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#14",
-        image: "assets/images/anime/09_Deku_Green_Jumpsuit_Hero.webp",
-        title: "Héroe con Traje Verde y Puño en Alto",
-        description: "Joven héroe con traje verde levantando el puño con determinación en medio de la calle.",
-        prompt: "Según la hoja de referencia, humano real con gafas, cabello rizado volando. Cosplay de héroe verde: traje verde con detalles negros y beige, guantes verdes, cinturón verde, zapatos rojos. POSE BONITA Y DINÁMICA: pose de héroe en medio de cruce peatonal de ciudad, puño derecho levantado alto hacia cielo, pierna izquierda adelante, postura amplia, sonrisa determinada mirando hacia arriba, cabello y traje ondeando con viento, fondo calle real con tienda Lawson japonesa, luz natural, sin efectos de energía, cosplay bien logrado, 8K --ar 4:5"
+            "id": "ANIME-14",
+            "badge": "#14",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/14_Parque_Tigres_Retrato_Luz_Dia.webp",
+            "title": "Plano Americano en el Parque",
+            "description": "Plano americano en el parque con fondo arbolado y luz natural equilibrada.",
+            "prompt": "Fotografía en plano americano (tres cuartos) de chico peruano con lentes redondos y cabello corto rizado natural. Posa de pie con las manos en los bolsillos en el Parque de los Tigres de Nuevo Chimbote, fondo verde de pasto y arbustos desenfocados suavemente, fotografía profesional 4:5 --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#15",
-        image: "assets/images/anime/10_Killua_Skateboard_Graffiti.webp",
-        title: "Cazador con Caja de Madera a la Espalda",
-        description: "Cazador con kimono de cuadros verdes y caja de madera a la espalda caminando por la acera.",
-        prompt: "Según la hoja de referencia, humano real con gafas, cabello negro rizado. Cosplay inspirado en chico skater: camiseta azul brillante, shorts morados cargo, zapatillas blancas, dos skateboards amarillos. POSE INTERESANTE: recargado casual contra muro con grafitis coloridos en callejón urbano, un pie sobre skateboard en suelo, mano izquierda en bolsillo, mano derecha sosteniendo otro skateboard amarillo bajo brazo, sonrisa leve y cool mirando a cámara, fondo muro lleno de grafitis de colores y bicicletas aparcadas, luz de día natural, cosplay bien hecho como ropa casual, 8K --ar 4:5"
+            "id": "ANIME-15",
+            "badge": "#15",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/15_Plaza_Mayor_Borde_Amarillo_Corregida.webp",
+            "title": "Borde de la Plaza con Sardinel Amarillo",
+            "description": "De pie en el borde del sardinel amarillo de la Plaza Mayor con perspectiva corregida y fondo real.",
+            "prompt": "Fotografía realista corregida en la Plaza Mayor de Nuevo Chimbote. Chico joven peruano con cabello corto rizado natural sin volumen excesivo, gafas de marco fino, expresión seria y serena sin sonrisa, chaqueta marrón, pantalón negro y zapatillas deportivas. De pie sobre la vereda junto al sardinel amarillo de seguridad vial, fondo idéntico y preservado de la plaza con catedral y cielo despejado, perspectiva angular realista --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-16",
+            "badge": "#16",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/16_Parque_Tigres_Tocando_Tigre_Corregida.webp",
+            "title": "Junto a la Escultura del Tigre",
+            "description": "Mano apoyada sobre la escultura del tigre en el parque con fondo de farolas azules y pasto.",
+            "prompt": "Fotografía realista corregida en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano con cabello corto rizado normal, gafas circulares finas y expresión seria y concentrada sin sonrisa, vistiendo chaqueta marrón y pantalón oscuro. Con una mano apoyada sobre la escultura decorativa del tigre en el parque, fondo idéntico preservado con áreas verdes de pasto y farolas metálicas azules, iluminación natural precisa --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-17",
+            "badge": "#17",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/17_Plaza_Mayor_Angulo_Picado_Corregida.webp",
+            "title": "Ángulo Picado en la Plaza Mayor",
+            "description": "Toma desde ángulo picado mirando a cámara con el arco y la catedral de fondo.",
+            "prompt": "Fotografía en ángulo picado (high angle) realista en la Plaza Mayor de Nuevo Chimbote. Chico joven peruano con cabello corto rizado natural, gafas de armazón circular y expresión seria mirando fijamente a la cámara desde arriba, chaqueta marrón y pantalón negro. Fondo idéntico perfectamente preservado con el arco monumental, la catedral y el pavimento de la plaza, encuadre vertical 4:5 --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-18",
+            "badge": "#18",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/18_Parque_Tigres_Lado_Estatua_Corregida.webp",
+            "title": "Plano Americano junto al Tigre",
+            "description": "Plano americano parado al lado de la escultura del tigre con el parque y farolas de fondo.",
+            "prompt": "Fotografía en plano americano corregida en el Parque de los Tigres de Nuevo Chimbote. Chico peruano de cabello corto rizado natural, lentes redondos finos, expresión seria y tranquila, vistiendo casaca marrón. Parado erguido al costado de la estatua del tigre, fondo natural del parque con césped, árboles y postes de luz azules característicos, luz diurna neutra --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-19",
+            "badge": "#19",
+            "category": "anime",
+            "subCategory": "realista",
+            "image": "assets/images/anime/19_Losa_Fulbito_Anfiteatro_Perspectiva_Corregida.webp",
+            "title": "Cancha de Fulbito en el Anfiteatro",
+            "description": "De pie en la cancha de fulbito techada del anfiteatro con el arco blanco en perspectiva proporcional.",
+            "prompt": "Fotografía de perspectiva realista corregida en la losa deportiva techada y anfiteatro de Nuevo Chimbote. Chico joven peruano de pie con expresión seria y tranquila sin sonrisa, cabello corto rizado natural y lentes circulares, vistiendo ropa casual en la cancha de fulbito con piso pintado en azul y verde bajo la gran estructura de techo metálico curvo. Arco de fulbito metálico blanco en perspectiva proporcional realista más alto que la persona vista desde lente 35mm a distancia media, profundidad de campo auténtica, proporción vertical 4:5 --ar 4:5 --v 6.1",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-20",
+            "badge": "#20",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/01_Gojo_Blindfold_Infinity_Pose.webp",
+            "title": "Hechicero con Venda y Abrigo Largo",
+            "description": "Hechicero levantando una venda negra sobre los ojos con abrigo oscuro ondeando por el viento.",
+            "prompt": "Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas debajo, cabello negro rizado con textura real. Cosplay inspirado en Gojo: abrigo largo negro de cuello alto con tela mate pesada, pantalones oscuros holgados, zapatos negros. POSE BONITA: de pie en calle de ciudad de noche con tiendas iluminadas desenfocadas, mano derecha subiendo lentamente una venda negra sobre los ojos revelando mirada intensa, mano izquierda en bolsillo de abrigo, tela del abrigo con pliegues ondeando por el viento, iluminación de fondo bokeh suave con tonos azules y blancos, sin ojos celestes mágicos ni efectos sobrenaturales, fotografía fotorrealista editorial de moda cosplay, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-21",
+            "badge": "#21",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/02_Zenitsu_Thunder_Crouch.webp",
+            "title": "Cazador del Rayo Agachado",
+            "description": "Cazador en postura agachada con katana desenfundada en una vereda urbana con hojas secas.",
+            "prompt": "Según la hoja de referencia, humano real con gafas, cabello rizado natural. Cosplay inspirado en cazador del rayo: haori amarillo y naranja con triángulos blancos, uniforme negro debajo, espinilleras con diseño de triángulos, katana con mango blanco y dorado. POSE: agachado bajo en una rodilla en vereda de ciudad con hojas secas en el suelo, mano derecha en la empuñadura de la katana apenas saliendo de la vaina, mirada concentrada hacia adelante, viento moviendo el haori, fondo calle real de Tokio de día con edificios normales, sin relámpagos ni electricidad en el cuerpo, realismo absoluto, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-22",
+            "badge": "#22",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/03_Naruto_Sage_Rasengan.webp",
+            "title": "Ninja con Chaqueta Naranja y Rasengan",
+            "description": "Ninja con chaqueta naranja y pergamino gigante en la espalda en un cruce peatonal de la ciudad.",
+            "prompt": "Según la hoja de referencia, humano real con gafas redondas, cabello rizado. Cosplay inspirado en modo sabio: chaqueta naranja y negra con cuello alto, capa roja corta con llamas negras en el borde, pergamino gigante café enrollado a la espalda con correas de cuero, manos con vendas blancas. POSE DINÁMICA: de pie en medio de un cruce peatonal de ciudad, cuerpo girado 3/4, mano derecha abierta hacia la cámara como sosteniendo una esfera de cristal transparente (sin energía azul mágica), capa ondeando con el viento, expresión determinada mirando a cámara, fondo cruce urbano con personas desenfocadas, luz de atardecer dorado cálido, cosplay de alta fidelidad, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-23",
+            "badge": "#23",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/04_Ichigo_Bankai_Long_Coat.webp",
+            "title": "Shinigami con Abrigo Largo y Espada Gigante",
+            "description": "Shinigami con abrigo largo negro deshilachado y espada zangetsu gigante apoyada en el suelo.",
+            "prompt": "Según la hoja de referencia, humano real, complexión delgada, gafas, cabello rizado. Cosplay inspirado en shinigami bankai: abrigo largo negro con bordes inferiores deshilachados con estilo, cuello levantado, cinturón blanco de tela con cadenas plateadas, espada negra gigante con cadena en el pomo apoyada en el suelo. POSE BONITA: de pie en azotea de edificio con barandilla metálica, ambas manos descansando sobre el pomo de la espada clavada vertical en el suelo frente a él, abrigo negro ondeando fuertemente por el viento de altura, mirada seria y nostálgica hacia el horizonte de la ciudad, fondo cielo con nubes dramáticas al atardecer, fotografía realista cinematográfica, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-24",
+            "badge": "#24",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/05_Goku_Orange_Gi_Kamehameha.webp",
+            "title": "Luchador con Gi Naranja en Carga",
+            "description": "Luchador en postura de carga con gi naranja y muñequeras azules en una calle urbana.",
+            "prompt": "Según la hoja de referencia, preserva gafas, cabello rizado normal. Cosplay de artes marciales: gi naranja brillante de tela gruesa de algodón con kanji de tortuga negro en pecho, camiseta interior azul oscuro y muñequeras azules, cinturón azul oscuro, pantalones azules anchos. POSE INTERESANTE: pose de carga de Kamehameha en calle normal, pies separados muy amplios en postura de caballo, manos juntas en costado de cintura como cargando energía, inclinado hacia adelante, expresión intensa enfocada, fondo calle real con tienda de conveniencia japonesa con letrero de colores, luz de día, sin bola de energía, cosplay bien hecho, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-25",
+            "badge": "#25",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/06_Luffy_Straw_Hat_Stretch.webp",
+            "title": "Pirata con Sombrero de Paja",
+            "description": "Pirata sonriendo con chaleco rojo y sombrero de paja levantado en un cruce peatonal.",
+            "prompt": "Según la hoja de referencia, humano real, gafas, cabello rizado. Cosplay inspirado en pirata de sombrero de paja: sombrero de paja con cinta roja, chaleco rojo abierto, shorts jeans azules, sandalias. POSE: de pie en cruce peatonal normal de ciudad, brazo derecho estirado largo hacia adelante hacia cámara como truco de perspectiva de goma, mano izquierda sosteniendo sombrero de paja levantado, sonrisa grande y alegre, fondo calle real con autos y tiendas desenfocadas, luz de día, sin superpoderes reales, cosplay bien hecho, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-26",
+            "badge": "#26",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/07_Levi_Cape_Tea_Pose.webp",
+            "title": "Capitán con Capa Verde y Taza de Té",
+            "description": "Capitán con capa verde y equipo táctico tomando una taza de té apoyado en un muro.",
+            "prompt": "Según la hoja de referencia, preserva gafas, cabello rizado. Cosplay de cuerpo de exploración: chaqueta marrón corta con botones dorados, camisa blanca, capa verde oscuro con emblema de alas blanco y azul en hombro, arnés de cuero marrón con hebillas y cajas metálicas de maniobras en muslos. POSE BONITA: pie derecho sobre muro bajo de concreto en calle normal de ciudad, mano derecha sosteniendo taza de té blanca pequeña contrastando con equipo militar, mano izquierda en cadera, capa ondeando con viento dramáticamente, mirando de lado con expresión seria y cool, fondo calle real con edificios, luz natural, sin fortaleza, cosplay premium, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-27",
+            "badge": "#27",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/08_Sasuke_Chidori_Hand.webp",
+            "title": "Ninja Uchiha con Postura de Rayo",
+            "description": "Ninja con camisa gris de cuello alto y postura de ataque en un callejón urbano.",
+            "prompt": "Según la hoja de referencia, humano real con gafas, cabello rizado. Cosplay inspirado en ninja Uchiha: camisa azul marino de cuello alto con parche rojo y blanco de abanico en hombro, pantalones negros, vendas beige en antebrazos. POSE INTERESANTE: de pie en callejón urbano con grafitis, mano derecha extendida hacia cámara con dedos en signo de Chidori sin rayos, mano izquierda atrás, cuerpo inclinado hacia adelante, mirada intensa y seria bajo gafas, fondo callejón con grafitis de colores y contenedor de basura, luz de día, sin relámpagos, cosplay bien hecho, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-28",
+            "badge": "#28",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/09_Deku_Green_Jumpsuit_Hero.webp",
+            "title": "Héroe con Traje Verde y Puño en Alto",
+            "description": "Joven héroe con traje verde levantando el puño con determinación en medio de la calle.",
+            "prompt": "Según la hoja de referencia, humano real con gafas, cabello rizado volando. Cosplay de héroe verde: traje verde con detalles negros y beige, guantes verdes, cinturón verde, zapatos rojos. POSE BONITA Y DINÁMICA: pose de héroe en medio de cruce peatonal de ciudad, puño derecho levantado alto hacia cielo, pierna izquierda adelante, postura amplia, sonrisa determinada mirando hacia arriba, cabello y traje ondeando con viento, fondo calle real con tienda Lawson japonesa, luz natural, sin efectos de energía, cosplay bien logrado, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
+      },
+      {
+            "id": "ANIME-29",
+            "badge": "#29",
+            "category": "anime",
+            "subCategory": "anime",
+            "image": "assets/images/anime/10_Killua_Skateboard_Graffiti.webp",
+            "title": "Cazador con Caja de Madera a la Espalda",
+            "description": "Cazador con camiseta casual y dos skateboards posando relajado contra un muro de grafitis.",
+            "prompt": "Según la hoja de referencia, humano real con gafas, cabello negro rizado. Cosplay inspirado en chico skater: camiseta azul brillante, shorts morados cargo, zapatillas blancas, dos skateboards amarillos. POSE INTERESANTE: recargado casual contra muro con grafitis coloridos en callejón urbano, un pie sobre skateboard en suelo, mano izquierda en bolsillo, mano derecha sosteniendo otro skateboard amarillo bajo brazo, sonrisa leve y cool mirando a cámara, fondo muro lleno de grafitis de colores y bicicletas aparcadas, luz de día natural, cosplay bien hecho como ropa casual, 8K --ar 4:5",
+            "referenceRequirements": "1 FOTO DE REFERENCIA",
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       }
-    ]
+]
   },
   caricatura: {
   "title": "Prompts de Caricatura",
@@ -3198,7 +3680,14 @@ function MasterPromptsExperience(props) {
   var [strobeScale, setStrobeScale] = uA.useState(0);
   var [autoplayBlocked, setAutoplayBlocked] = uA.useState(false);
   var [focusedCardIndex, setFocusedCardIndex] = uA.useState(-1);
+  var [activeSubFilter, setActiveSubFilter] = uA.useState("all"); // "all" | "realista" | "anime"
   var cardElementsRef = uA.useRef([]);
+
+  // Sub-filter prompts calculation for Anime & Realism category
+  var displayedPrompts = (config.prompts || []).filter(function(item) {
+    if (type !== "anime" || activeSubFilter === "all") return true;
+    return item.subCategory === activeSubFilter;
+  });
 
   // Audio Playback & Browser Policy Resilience (Plays audio ONCE, NEVER loops or repeats)
   function tryPlayAudio() {
@@ -3252,7 +3741,6 @@ function MasterPromptsExperience(props) {
       var elapsed = (now - startTime) / 1000;
 
       if (elapsed >= INTRO_DURATION) {
-        // Do not cut or fade audio! Keep it playing until it ends naturally without looping!
         setStagePhase("library");
         return;
       }
@@ -3284,10 +3772,10 @@ function MasterPromptsExperience(props) {
       window.gsap.fromTo(
         ".prompt-box",
         { opacity: 0, y: 32, scale: 0.97 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.45, stagger: 0.04, ease: "power2.out", clearProps: "transform,opacity" }
+        { opacity: 1, y: 0, scale: 1, duration: 0.45, stagger: 0.03, ease: "power2.out", clearProps: "transform,opacity" }
       );
     }
-  }, [stagePhase, type]);
+  }, [stagePhase, type, activeSubFilter]);
 
   // Keyboard Navigation: Arrow Keys to move through cards, Enter to copy, Escape to exit
   uA.useEffect(function() {
@@ -3305,7 +3793,7 @@ function MasterPromptsExperience(props) {
 
       if (stagePhase !== "library") return;
 
-      var total = config.prompts ? config.prompts.length : 0;
+      var total = displayedPrompts ? displayedPrompts.length : 0;
       if (total === 0) return;
 
       if (e.key === "ArrowDown" || e.key === "ArrowRight") {
@@ -3327,7 +3815,7 @@ function MasterPromptsExperience(props) {
           return prevIdx;
         });
       } else if (e.key === "Enter" || e.key === " ") {
-        var item = config.prompts[focusedCardIndex];
+        var item = displayedPrompts[focusedCardIndex];
         if (item) {
           e.preventDefault();
           if (window.copyPromptGlobal) {
@@ -3341,7 +3829,7 @@ function MasterPromptsExperience(props) {
     return function() {
       window.removeEventListener("keydown", handleKeyDown, true);
     };
-  }, [stagePhase, onClose, focusedCardIndex, config.prompts]);
+  }, [stagePhase, onClose, focusedCardIndex, displayedPrompts]);
 
   return Z("div", {
     className: "immersive-stage-wrapper " + config.themeClass + (" " + (stagePhase === "intro" ? "phase-intro" : "phase-library")),
@@ -3443,7 +3931,7 @@ function MasterPromptsExperience(props) {
           Z("div", {
             className: "prompts-corner-meta corner-br",
             children: [
-              Z("span", { className: "meta-tag", children: (config.prompts.length < 10 ? "0" + config.prompts.length : config.prompts.length) + " PROMPTS DISPONIBLES // GENERACIÓN ACTIVA" }),
+              Z("span", { className: "meta-tag", children: (displayedPrompts.length < 10 ? "0" + displayedPrompts.length : displayedPrompts.length) + " PROMPTS DISPONIBLES // GENERACIÓN ACTIVA" }),
               Z("span", { className: "meta-sub", children: "SISTEMA OPTIMIZADO • 60 FPS" })
             ]
           }),
@@ -3483,16 +3971,71 @@ function MasterPromptsExperience(props) {
                     children: tag
                   });
                 })
-              })
+              }),
+
+              // Sub-category filter pills for Anime & Realism (when type === "anime")
+              type === "anime" ? Z("div", {
+                className: "apple-subfilter-bar",
+                children: [
+                  Z("button", {
+                    type: "button",
+                    className: "apple-subfilter-pill" + (activeSubFilter === "all" ? " active" : ""),
+                    onClick: function() {
+                      setActiveSubFilter("all");
+                      setFocusedCardIndex(-1);
+                      if (window.gsap) {
+                        window.gsap.fromTo(".prompt-box", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.02, ease: "power2.out", clearProps: "transform,opacity" });
+                      }
+                    },
+                    children: [
+                      Z("span", { className: "pill-icon", children: "✨" }),
+                      Z("span", { className: "pill-text", children: "Todos" }),
+                      Z("span", { className: "pill-count", children: "29" })
+                    ]
+                  }),
+                  Z("button", {
+                    type: "button",
+                    className: "apple-subfilter-pill" + (activeSubFilter === "realista" ? " active" : ""),
+                    onClick: function() {
+                      setActiveSubFilter("realista");
+                      setFocusedCardIndex(-1);
+                      if (window.gsap) {
+                        window.gsap.fromTo(".prompt-box", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.02, ease: "power2.out", clearProps: "transform,opacity" });
+                      }
+                    },
+                    children: [
+                      Z("span", { className: "pill-icon", children: "🏙️" }),
+                      Z("span", { className: "pill-text", children: "Fotos Realistas Nuevo Chimbote" }),
+                      Z("span", { className: "pill-count", children: "19" })
+                    ]
+                  }),
+                  Z("button", {
+                    type: "button",
+                    className: "apple-subfilter-pill" + (activeSubFilter === "anime" ? " active" : ""),
+                    onClick: function() {
+                      setActiveSubFilter("anime");
+                      setFocusedCardIndex(-1);
+                      if (window.gsap) {
+                        window.gsap.fromTo(".prompt-box", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.02, ease: "power2.out", clearProps: "transform,opacity" });
+                      }
+                    },
+                    children: [
+                      Z("span", { className: "pill-icon", children: "⚡" }),
+                      Z("span", { className: "pill-text", children: "Cosplay Anime Shonen" }),
+                      Z("span", { className: "pill-count", children: "10" })
+                    ]
+                  })
+                ]
+              }) : null
             ]
           }),
 
           // Responsive Prompts Grid
           Z("div", {
             className: "prompts-grid",
-            children: config.prompts.map(function(item, idx) {
+            children: displayedPrompts.map(function(item, idx) {
               return Z(PromptCardBox, {
-                key: idx,
+                key: (item.badge || idx) + "-" + idx,
                 item: item,
                 cardIndex: idx,
                 categoryKey: type,
@@ -3507,6 +4050,7 @@ function MasterPromptsExperience(props) {
     ]
   });
 }
+
 
 /* =========================================================
    ROOT PORTFOLIO COMPONENT ($V)

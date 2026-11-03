@@ -1,0 +1,29 @@
+================================================================================
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #09: Sendero de Farolas Azules
+================================================================================
+
+✨ DESCRIPCIÓN:
+De pie junto a las características farolas azules y jardines del Parque de los Tigres.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía urbana al aire libre en el Parque de los Tigres de Nuevo Chimbote. Chico peruano con chaqueta marrón, pantalón negro y zapatillas, de pie junto a las postes y farolas metálicas azules clásicas del parque, con árboles verdes y veredas de concreto, textura real en ropa y piel, proporción 4:5 --ar 4:5 --v 6.1`.
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Fotografía urbana al aire libre en el Parque de los Tigres de Nuevo Chimbote. Chico peruano con chaqueta marrón, pantalón negro y zapatillas, de pie junto a las postes y farolas metálicas azules clásicas del parque, con árboles verdes y veredas de concreto, textura real en ropa y piel, proporción 4:5 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

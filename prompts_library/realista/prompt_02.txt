@@ -1,0 +1,29 @@
+================================================================================
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #02: Vista Lateral de la Catedral
+================================================================================
+
+✨ DESCRIPCIÓN:
+En la explanada de la Plaza Mayor con vista lateral de la catedral y jardines urbanos.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía urbana fotorrealista de chico joven peruano con cabello corto rizado natural, gafas de armazón circular fino, chaqueta marrón y polo negro. Plano tres cuartos en la explanada de la Plaza Mayor de Nuevo Chimbote, con los pilares y arquitectura lateral de la catedral al fondo, iluminación diurna suave, textura real de la piel con poros naturales, sombras ambientales auténticas --ar 4:5 --v 6.1`.
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Fotografía urbana fotorrealista de chico joven peruano con cabello corto rizado natural, gafas de armazón circular fino, chaqueta marrón y polo negro. Plano tres cuartos en la explanada de la Plaza Mayor de Nuevo Chimbote, con los pilares y arquitectura lateral de la catedral al fondo, iluminación diurna suave, textura real de la piel con poros naturales, sombras ambientales auténticas --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

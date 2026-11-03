@@ -1,9 +1,9 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #01: Cazador con Haori en la Pared
+CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #01: Frente a la Catedral en la Plaza Mayor
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Cazador con haori a cuadros y katana al hombro, apoyado en una pared de concreto en la ciudad.
+De pie frente a la fachada principal de la Catedral de Nuevo Chimbote con ropa casual y expresión serena.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
@@ -12,18 +12,18 @@ Cazador con haori a cuadros y katana al hombro, apoyado en una pared de concreto
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes y blancas Nike. Cosplay bien hecho inspirado en cazador: uniforme táctico negro con botones dorados y bolsas laterales, haori largo a cuadros rojo y negro con costuras visibles y textura de tela real, katana real con empuñadura negra de diamantes y tsuba dorada en funda negra. POSE: recargado casual contra muro de concreto gris en calle normal de ciudad, pierna derecha doblada con pie apoyado en el muro, mano izquierda en bolsillo, mano derecha sosteniendo katana real apoyada sobre hombro como bate, cabeza levemente inclinada, sonrisa confiada mirando a cámara, fondo calle real con farmacia y bus azul desenfocado, luz de día natural sombras suaves, piel con poros reales, 8K, shallow depth of field, ángulo ligeramente bajo --ar 4:5 --style raw`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Foto fotorrealista de chico joven peruano, cabello corto rizado natural bien recortado, lentes de marco fino, chaqueta marrón casual sobre polo oscuro y pantalón negro con zapatillas deportivas. De pie con postura relajada y natural en el pavimento pulido frente a la fachada de la Catedral Nuestra Señora del Carmen en la Plaza Mayor de Nuevo Chimbote. Fondo nítido y auténtico con la arquitectura moderna de la iglesia, cielo despejado de día, luz natural uniforme sin sobreexposición, enfoque limpio, proporción vertical --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes y blancas Nike. Cosplay bien hecho inspirado en cazador: uniforme táctico negro con botones dorados y bolsas laterales, haori largo a cuadros rojo y negro con costuras visibles y textura de tela real, katana real con empuñadura negra de diamantes y tsuba dorada en funda negra. POSE: recargado casual contra muro de concreto gris en calle normal de ciudad, pierna derecha doblada con pie apoyado en el muro, mano izquierda en bolsillo, mano derecha sosteniendo katana real apoyada sobre hombro como bate, cabeza levemente inclinada, sonrisa confiada mirando a cámara, fondo calle real con farmacia y bus azul desenfocado, luz de día natural sombras suaves, piel con poros reales, 8K, shallow depth of field, ángulo ligeramente bajo --ar 4:5 --style raw
+Foto fotorrealista de chico joven peruano, cabello corto rizado natural bien recortado, lentes de marco fino, chaqueta marrón casual sobre polo oscuro y pantalón negro con zapatillas deportivas. De pie con postura relajada y natural en el pavimento pulido frente a la fachada de la Catedral Nuestra Señora del Carmen en la Plaza Mayor de Nuevo Chimbote. Fondo nítido y auténtico con la arquitectura moderna de la iglesia, cielo despejado de día, luz natural uniforme sin sobreexposición, enfoque limpio, proporción vertical --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --style raw
+--ar 4:5 --v 6.1
 ================================================================================
