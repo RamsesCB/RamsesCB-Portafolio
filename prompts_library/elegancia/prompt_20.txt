@@ -1,0 +1,36 @@
+================================================================================
+CATEGORÍA: ELEGANCIA | PROMPT #20: Esmoquin Negro Clásico en Sala Minimalista
+================================================================================
+
+✨ DESCRIPCIÓN:
+Joven de esmoquin negro con solapas de satén y pajarita de pie en una sala minimalista con planta monstera y luz natural.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de referencia)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello corto elegante con volumen, usando esmoquin negro clásico con solapas de satén, camisa blanca, pajarita negra, zapatos Oxford de charol negro, de pie en sala minimalista tranquila con pared beige, planta monstera en canasta de ratán, suelo madera clara, luz natural de ventana --ar 4:5`.
+3. Si NO tienes foto y quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello corto elegante con volumen, usando esmoquin negro clásico con solapas de satén, camisa blanca, pajarita negra, zapatos Oxford de charol negro, de pie en sala minimalista tranquila con pared beige, planta monstera en canasta de ratán, suelo madera clara, luz natural de ventana --ar 4:5
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+realistic evening formal portrait of a young man with curly hair, round glasses, and volume hair, wearing a classic black tuxedo with satin lapels, white dress shirt, black bowtie, and black patent leather Oxford shoes, standing in a quiet minimalist room with beige wall, monstera plant in rattan basket, light wood floor, natural window light --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

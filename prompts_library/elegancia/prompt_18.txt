@@ -1,0 +1,36 @@
+================================================================================
+CATEGORÍA: ELEGANCIA | PROMPT #18: Traje de Lino Beige en Cafetería Luminosa
+================================================================================
+
+✨ DESCRIPCIÓN:
+Joven con traje beige de lino y camisa abierta sentado en una cafetería tranquila con taza de café latte y croissant.
+
+📸 REQUISITO DE FOTOS DE REFERENCIA:
+1 Foto (Tu rostro de frente o tu hoja de referencia)
+
+💡 GUÍA RÁPIDA DE USO:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+   - Sube tu foto (o fotos) en el chat.
+   - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
+   - Sube tu foto a Discord, copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello definido hacia atrás, usando traje beige de lino de lujo con camisa blanca abierta, mocasines de ante marrón claro, sentado en cafetería tranquila con mesa de madera y taza de café latte con arte, vaso de agua con limón, croissant, planta eucalipto, ventana con luz natural, pared clara --ar 4:5`.
+3. Si NO tienes foto y quieres crear un personaje desde cero:
+   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+
+--------------------------------------------------------------------------------
+📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
+--------------------------------------------------------------------------------
+Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello definido hacia atrás, usando traje beige de lino de lujo con camisa blanca abierta, mocasines de ante marrón claro, sentado en cafetería tranquila con mesa de madera y taza de café latte con arte, vaso de agua con limón, croissant, planta eucalipto, ventana con luz natural, pared clara --ar 4:5
+
+--------------------------------------------------------------------------------
+🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
+--------------------------------------------------------------------------------
+realistic lifestyle editorial of a young man with curly hair and round glasses, wearing a luxury beige linen suit with open white shirt and light brown suede loafers, sitting in a quiet cafe with wooden table, latte art coffee, glass of water with lemon, croissant, eucalyptus plant, bright window daylight --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
+--------------------------------------------------------------------------------
+--ar 4:5 --v 6.1
+================================================================================

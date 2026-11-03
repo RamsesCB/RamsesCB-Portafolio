@@ -468,12 +468,12 @@
 }
 
 /* =========================================================
-   PROMPTS GRID & APPLE CARDS (Zero Cropping & Performant)
+   PROMPTS GRID & APPLE CARDS (Exact 4:5 Aspect, Zero Crop, Symmetrical Bounds)
    ========================================================= */
 .prompts-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
-  gap: 2rem !important;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)) !important;
+  gap: 1.5rem !important;
   max-width: 1440px !important;
   margin: 0 auto !important;
   padding: 1.5rem 1.5rem calc(6rem + var(--sab, 0px)) 1.5rem !important;
@@ -496,14 +496,22 @@
   }
   .prompt-box-image-wrap,
   .comparison-card-wrap {
-    min-height: 260px !important;
-    max-height: 420px !important;
-    padding: 0.65rem !important;
+    aspect-ratio: 4 / 5 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    max-height: unset !important;
+    padding: 0 !important;
   }
   .prompt-box-img,
   .comparison-img-ia,
+  .comparison-img-orig,
   .comparison-img-crop {
-    max-height: 380px !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
   }
   .prompt-box-content {
     padding: 1.25rem !important;
@@ -514,8 +522,8 @@
 @media (max-width: 640px) {
   .prompts-grid {
     grid-template-columns: 1fr !important;
-    gap: 1.25rem !important;
-    padding: 1rem 0.85rem calc(5rem + var(--sab, 0px)) 0.85rem !important;
+    gap: 1rem !important;
+    padding: 1rem 1rem calc(5rem + var(--sab, 0px)) 1rem !important;
   }
   .prompts-hero-center {
     padding: calc(3.8rem + var(--sat, 0px)) 1rem 1.5rem 1rem !important;
@@ -536,20 +544,28 @@
     padding: 0.25rem 0.65rem !important;
   }
   .prompt-box {
-    border-radius: 16px !important;
+    border-radius: 18px !important;
   }
   .prompt-box-image-wrap,
   .comparison-card-wrap {
-    min-height: 220px !important;
-    max-height: 380px !important;
-    padding: 0.5rem !important;
-    border-radius: 15px 15px 0 0 !important;
+    aspect-ratio: 4 / 5 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    max-height: unset !important;
+    padding: 0 !important;
+    border-radius: 17px 17px 0 0 !important;
   }
   .prompt-box-img,
   .comparison-img-ia,
+  .comparison-img-orig,
   .comparison-img-crop {
-    max-height: 330px !important;
-    border-radius: 10px !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 17px 17px 0 0 !important;
   }
   .prompt-box-content {
     padding: 1.1rem !important;
@@ -606,43 +622,46 @@
   transform: translateY(-4px) scale(1.01) !important;
 }
 
-/* Image Wrap (Apple Ambient Framing - Proporción Original Sin Recortes) */
+/* Image Wrap (Apple Ambient Framing - Proporción Original 4:5 Sin Recortes Ni Márgenes Asimétricos) */
 .prompt-box-image-wrap {
   position: relative !important;
   width: 100% !important;
-  min-height: 320px !important;
-  max-height: 520px !important;
+  aspect-ratio: 4 / 5 !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: unset !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   background: #050811 !important;
-  border-radius: 19px 19px 0 0 !important;
+  border-radius: 21px 21px 0 0 !important;
   overflow: hidden !important;
-  padding: 0.85rem !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
 .prompt-box-ambient-blur {
   position: absolute !important;
-  inset: -20px !important;
+  inset: -15px !important;
   background-size: cover !important;
   background-position: center !important;
-  filter: blur(35px) brightness(0.35) saturate(1.4) !important;
-  opacity: 0.65 !important;
+  filter: blur(28px) brightness(0.28) saturate(1.3) !important;
+  opacity: 0.55 !important;
   pointer-events: none !important;
-  transform: scale(1.15) !important;
+  transform: scale(1.08) !important;
 }
 
 .prompt-box-img {
   position: relative !important;
   z-index: 2 !important;
-  width: auto !important;
+  width: 100% !important;
+  height: 100% !important;
   max-width: 100% !important;
-  height: auto !important;
-  max-height: 480px !important;
+  max-height: 100% !important;
   object-fit: contain !important;
-  border-radius: 12px !important;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55) !important;
+  display: block !important;
+  border-radius: 21px 21px 0 0 !important;
+  box-shadow: none !important;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease !important;
 }
 .prompt-box-img.img-loading {
@@ -801,8 +820,10 @@
 .comparison-card-wrap {
   position: relative !important;
   width: 100% !important;
-  min-height: 320px !important;
-  max-height: 520px !important;
+  aspect-ratio: 4 / 5 !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: unset !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -813,8 +834,8 @@
   touch-action: pan-y !important;
   -webkit-tap-highlight-color: transparent !important;
   cursor: grab !important;
-  border-radius: 19px 19px 0 0 !important;
-  padding: 0.85rem !important;
+  border-radius: 21px 21px 0 0 !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 .comparison-card-wrap.is-holding {
@@ -823,16 +844,17 @@
 .comparison-img-ia {
   position: relative !important;
   z-index: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
   max-width: 100% !important;
-  max-height: 480px !important;
-  width: auto !important;
-  height: auto !important;
+  max-height: 100% !important;
   object-fit: contain !important;
-  border-radius: 12px !important;
+  display: block !important;
+  border-radius: 21px 21px 0 0 !important;
 }
 .comparison-img-orig-wrap {
   position: absolute !important;
-  inset: 0.85rem !important;
+  inset: 0 !important;
   z-index: 2 !important;
   overflow: hidden !important;
   display: flex !important;
@@ -840,12 +862,13 @@
   justify-content: center !important;
 }
 .comparison-img-orig {
+  width: 100% !important;
+  height: 100% !important;
   max-width: 100% !important;
-  max-height: 480px !important;
-  width: auto !important;
-  height: auto !important;
+  max-height: 100% !important;
   object-fit: contain !important;
-  border-radius: 12px !important;
+  display: block !important;
+  border-radius: 21px 21px 0 0 !important;
 }
 .comparison-divider-line {
   position: absolute !important;
@@ -987,39 +1010,44 @@
 .prompt-box-image-wrap {
   position: relative !important;
   width: 100% !important;
-  min-height: 320px !important;
-  max-height: 520px !important;
+  aspect-ratio: 4 / 5 !important;
+  height: auto !important;
+  min-height: unset !important;
+  max-height: unset !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   background: #040711 !important;
   border-radius: 21px 21px 0 0 !important;
   overflow: hidden !important;
-  padding: 0.85rem !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
 .prompt-box-ambient-blur {
   position: absolute !important;
-  inset: -20px !important;
+  inset: -15px !important;
   background-size: cover !important;
   background-position: center !important;
-  filter: blur(36px) brightness(0.32) saturate(1.4) !important;
-  opacity: 0.65 !important;
+  filter: blur(28px) brightness(0.28) saturate(1.3) !important;
+  opacity: 0.55 !important;
   pointer-events: none !important;
-  transform: scale(1.15) !important;
+  transform: scale(1.08) !important;
 }
 
 .prompt-box-img {
   position: relative !important;
   z-index: 2 !important;
-  width: auto !important;
+  width: 100% !important;
+  height: 100% !important;
   max-width: 100% !important;
-  height: auto !important;
-  max-height: 480px !important;
+  max-height: 100% !important;
   object-fit: contain !important;
-  border-radius: 14px !important;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6) !important;
+  display: block !important;
+  border-radius: 21px 21px 0 0 !important;
+  box-shadow: none !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease !important;
+}
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease !important;
 }
 .prompt-box-img.img-loading {
@@ -2838,6 +2866,86 @@ var CATEGORY_DATA = {
         title: "Vestido de Terciopelo Negro",
         description: "Retrato nocturno con vestido negro de terciopelo frente a un fondo oscuro con destellos cálidos.",
         prompt: "Using the person in the uploaded reference photo, maintain their genuine facial features, eye intensity, and posture standing beside a majestic dark bay thoroughbred horse on a rolling English country estate. Tailored olive herringbone tweed hacking jacket, brown leather riding boots, gentle morning ground mist burning off under golden sunrise rays, ancient mossy oak trees, Town & Country equestrian heritage aesthetic --ar 4:5 --v 6.1"
+      },
+      {
+        badge: "#16",
+        id: "ELEGANCIA-16",
+        image: "assets/images/elegancia/16_Blazer_Terciopelo_Burdeos_Sala_Tranquila.webp",
+        title: "Blazer de Terciopelo Burdeos en Sala Elegante",
+        style: "Quiet Luxury Living Room",
+        description: "Joven con blazer burdeos y mocasines de terciopelo de pie en una sala tranquila con sillón verde y lámpara dorada.",
+        prompt: "Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, low fade haircut, wearing a luxury burgundy velvet blazer, black trousers, black t-shirt, black velvet loafers with gold buckle, standing in an elegant quiet living room with green velvet armchair, golden lamp, olive plant, jute rug, beige wall, peaceful home atmosphere --ar 4:5 --v 6.1",
+        universalPrompt: "Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello rizado perfectamente peinado con fade bajo y líneas definidas, usando blazer de terciopelo burdeos de lujo con pantalón negro y camiseta negra, mocasines de terciopelo negro con hebilla dorada de lujo, de pie en sala tranquila elegante con sillón verde de terciopelo, lámpara dorada, planta olivo, alfombra de yute, pared beige, ambiente hogareño tranquilo --ar 4:5",
+        referenceRequirements: "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+        parameters: {
+          ar: "4:5",
+          v: "6.1",
+          style: "Quiet Luxury"
+        }
+      },
+      {
+        badge: "#17",
+        id: "ELEGANCIA-17",
+        image: "assets/images/elegancia/17_Traje_Tres_Piezas_Azul_Marino_Biblioteca.webp",
+        title: "Traje Tres Piezas Azul Marino en Biblioteca",
+        style: "Classic Library Editorial",
+        description: "Joven con traje sastre azul marino de tres piezas y corbata satinada sentado en una biblioteca de madera clásica.",
+        prompt: "Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, taper fade haircut, wearing a luxury navy blue wool three-piece suit, vest, satin blue tie, dark brown Oxford shoes, sitting in a quiet home library with wooden bookshelves, antique books, golden lamp, soft window light, calm elegant atmosphere --ar 4:5 --v 6.1",
+        universalPrompt: "Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello con corte taper fade y rizado definido, usando traje de tres piezas azul marino de lana de lujo, chaleco, corbata azul satinada, zapatos Oxford marrón oscuro de lujo, sentado en biblioteca tranquila de casa con estanterías de madera y libros antiguos, lámpara dorada, luz suave de ventana, ambiente elegante y calmado --ar 4:5",
+        referenceRequirements: "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+        parameters: {
+          ar: "4:5",
+          v: "6.1",
+          style: "Classic Library"
+        }
+      },
+      {
+        badge: "#18",
+        id: "ELEGANCIA-18",
+        image: "assets/images/elegancia/18_Traje_Lino_Beige_Cafeteria_Luminosa.webp",
+        title: "Traje de Lino Beige en Cafetería Luminosa",
+        style: "Sunlit Lifestyle Editorial",
+        description: "Joven con traje beige de lino y camisa abierta sentado en una cafetería tranquila con taza de café latte y croissant.",
+        prompt: "Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, slicked back hair, wearing a luxury beige linen suit with open white shirt, light brown suede loafers, sitting in a quiet cafe with wooden table, latte art coffee, glass of water with lemon, croissant, eucalyptus plant, bright window daylight --ar 4:5 --v 6.1",
+        universalPrompt: "Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello definido hacia atrás, usando traje beige de lino de lujo con camisa blanca abierta, mocasines de ante marrón claro, sentado en cafetería tranquila con mesa de madera y taza de café latte con arte, vaso de agua con limón, croissant, planta eucalipto, ventana con luz natural, pared clara --ar 4:5",
+        referenceRequirements: "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+        parameters: {
+          ar: "4:5",
+          v: "6.1",
+          style: "Sunlit Cafe"
+        }
+      },
+      {
+        badge: "#19",
+        id: "ELEGANCIA-19",
+        image: "assets/images/elegancia/19_Traje_Carbon_Cruzado_Cuello_Tortuga.webp",
+        title: "Traje Carbón Cruzado con Cuello Tortuga",
+        style: "Minimalist Modern Tailoring",
+        description: "Joven con traje carbón cruzado y suéter negro de cuello alto apoyado en una pared minimalista con sombra suave.",
+        prompt: "Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, matte styled hair, wearing a charcoal double-breasted suit with black cashmere turtleneck, black leather Chelsea boots, Swiss watch, leaning against a minimalist white wall with soft shadow, grey microcement floor, peaceful elegant interior --ar 4:5 --v 6.1",
+        universalPrompt: "Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello arreglado hacia atrás con producto mate, usando traje carbón cruzado doble botonadura con cuello tortuga negro de cashmere, Chelsea boots negras de cuero, reloj suizo, apoyado en pared blanca minimalista con sombra suave, suelo microcemento gris, interior tranquilo elegante --ar 4:5",
+        referenceRequirements: "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+        parameters: {
+          ar: "4:5",
+          v: "6.1",
+          style: "Minimalist Studio"
+        }
+      },
+      {
+        badge: "#20",
+        id: "ELEGANCIA-20",
+        image: "assets/images/elegancia/20_Esmoquin_Negro_Clasico_Sala_Minimalista.webp",
+        title: "Esmoquin Negro Clásico en Sala Minimalista",
+        style: "Black Tie Minimalist",
+        description: "Joven de esmoquin negro con solapas de satén y pajarita de pie en una sala minimalista con planta monstera y luz natural.",
+        prompt: "Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, elegant volume hair, wearing a classic black tuxedo with satin lapels, white dress shirt, black bowtie, black patent leather Oxford shoes, standing in a quiet minimalist room with beige wall, monstera plant in rattan basket, light wood floor, natural window light --ar 4:5 --v 6.1",
+        universalPrompt: "Según la hoja de referencia que me pasaste, crea una imagen realista humana del mismo joven de cabello rizado y gafas redondas, cabello corto elegante con volumen, usando esmoquin negro clásico con solapas de satén, camisa blanca, pajarita negra, zapatos Oxford de charol negro, de pie en sala minimalista tranquila con pared beige, planta monstera en canasta de ratán, suelo madera clara, luz natural de ventana --ar 4:5",
+        referenceRequirements: "1 Foto (Tu rostro de frente o tu hoja de referencia)",
+        parameters: {
+          ar: "4:5",
+          v: "6.1",
+          style: "Classic Tuxedo"
+        }
       }
     ]
   },
