@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #13: Asesino Sombrío en la Azotea Bajo la Luna Roja
+CATEGORÍA: ANIME | PROMPT #13: Cazador de Demonios en la Noche Nevada
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌙 Sube 1 foto tuya. Posa con una máscara oni entreabierta sobre tejados tradicionales bajo una gigantesca luna roja carmesí.
+❄️ Sube 1 foto tuya. Empuña una espada nichirin bajo una tormenta de nieve con dragones de hielo y haori tradicional como en Demon Slayer.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con mirada penetrante)
+1 Foto (Tu rostro)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #13: Asesino Sombrío en la Azotea Bajo la Luna Roja
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the central character, preserve their authentic facial features, intense gaze, and jawline while depicting them as an elite shadow assassin perched on curved Japanese roof tiles. Half-removed black porcelain oni mask revealing their recognizable eyes, a colossal blood-red harvest moon illuminating the dark midnight skyline, billowing tattered scarf trailing into shadowy mist, twin ninjato swords strapped across back, high-contrast chiaroscuro silhouette, classic 90s dark anime OVA aesthetic --ar 4:5 --niji 6`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the subject, preserve their authentic facial features, jawline, and determined grimace while transforming them into a demon slayer swordsman standing resolute in a blizzard-swept cedar mountain at midnight. Visible mist condensation from cold breathing, individual snowflakes frozen mid-air around the blade, traditional geometric patterned haori flapping in freezing gales, glowing cyan mist dragon wrapping around the nichirin katana, Ufotable visual effects style, midnight navy and crisp frost-white palette --ar 4:5 --niji 6 --stylize 250`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the central character, preserve their authentic facial features, intense gaze, and jawline while depicting them as an elite shadow assassin perched on curved Japanese roof tiles. Half-removed black porcelain oni mask revealing their recognizable eyes, a colossal blood-red harvest moon illuminating the dark midnight skyline, billowing tattered scarf trailing into shadowy mist, twin ninjato swords strapped across back, high-contrast chiaroscuro silhouette, classic 90s dark anime OVA aesthetic --ar 4:5 --niji 6
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-striking dark fantasy anime illustration of an elite shadow assassin standing atop feudal temple curved roof tiles, massive crimson harvest moon looming in the dark sky, fluttering dark scarf merging with shadows, sharp katana glint, high-contrast silhouette lighting, moody 90s anime aesthetic --ar 4:5 --niji 6
+Using the person in the uploaded reference photo as the subject, preserve their authentic facial features, jawline, and determined grimace while transforming them into a demon slayer swordsman standing resolute in a blizzard-swept cedar mountain at midnight. Visible mist condensation from cold breathing, individual snowflakes frozen mid-air around the blade, traditional geometric patterned haori flapping in freezing gales, glowing cyan mist dragon wrapping around the nichirin katana, Ufotable visual effects style, midnight navy and crisp frost-white palette --ar 4:5 --niji 6 --stylize 250
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --niji 6 --stylize 250
 ================================================================================

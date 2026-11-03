@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #04: Piloto de Mecha Orbital
+CATEGORÍA: ANIME | PROMPT #04: Cazador en Columna (Estilo Callejero Lima)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🚀 Sube 1 foto tuya. Viste un traje plugsuit táctico con visor futurista y propulsores de iones flotando sobre la Tierra estilo Evangelion.
+📸 Sube tu foto o vistas de referencia. Posa relajado y con gran porte apoyado en una columna de concreto en plena ciudad con katana sobre el hombro.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente)
+1 Foto (Tu rostro o pose apoyada)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #04: Piloto de Mecha Orbital
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste de 4 vistas frontales y laterales, crea foto fotorrealista de humano real, preserva estructura facial exacta, gafas redondas delgadas, cabello negro rizado con volumen natural, tono de piel, complexión. Cosplay de cazador con haori a cuadros: uniforme negro táctico con cierre y bolsas, haori rojo y negro. POSE INTERESANTE: apoyado contra columna de concreto en esquina de ciudad normal, una pierna cruzada sobre otra, sosteniendo katana sobre hombro, mirada directa, pose relajada pero con estilo, fondo ciudad real Lima con letreros de farmacia desenfocados, iluminación natural, cosplay bien logrado como si fuera comprado de tienda premium, 8K photorealistic --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-epic sci-fi anime splash art of an orbital mecha guardian floating above Earth's glowing blue curvature, aerodynamic articulated titanium armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250
+Según la hoja de referencia que me pasaste de 4 vistas frontales y laterales, crea foto fotorrealista de humano real, preserva estructura facial exacta, gafas redondas delgadas, cabello negro rizado con volumen natural, tono de piel, complexión. Cosplay de cazador con haori a cuadros: uniforme negro táctico con cierre y bolsas, haori rojo y negro. POSE INTERESANTE: apoyado contra columna de concreto en esquina de ciudad normal, una pierna cruzada sobre otra, sosteniendo katana sobre hombro, mirada directa, pose relajada pero con estilo, fondo ciudad real Lima con letreros de farmacia desenfocados, iluminación natural, cosplay bien logrado como si fuera comprado de tienda premium, 8K photorealistic --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6 --stylize 250
+--ar 4:5
 ================================================================================

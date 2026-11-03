@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #06: Trascendencia Cósmica Anime
+CATEGORÍA: ANIME | PROMPT #06: Mago Cyberpunk de Neón (Studio Trigger)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌌 Sube 1 foto tuya serena. Transfórmate en una deidad cósmica levitando en el espacio infinito entre constelaciones y geometrías sagradas.
+🌆 Sube 1 foto tuya. Imagínate como un hechicero tecnológico sobre los rascacielos lluviosos de Neo-Tokyo con runas holográficas flotantes.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro sereno o de perfil)
+1 Foto (Tu rostro o medio cuerpo)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #06: Trascendencia Cósmica Anime
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the main subject, preserve their true facial contours, nose, lips, and serene expression while transforming them into an ethereal anime celestial entity levitating in zero gravity amidst deep space nebula dust. Glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, faithfully capture and translate their facial anatomy, expression, eye structure, and hairstyle into cinematic anime concept art of a futuristic cyber-sorcerer standing atop a rain-soaked Neo-Tokyo skyscraper. Intricate glowing cyan holographic runic circles orbiting mechanical cybernetic fingers, high-collar techwear trench coat with illuminated fiber-optic trim, wet asphalt reflections, dense volumetric neon fog, moody atmospheric rain streaks, low-angle telephoto framing, deep midnight purple, electric magenta and cyan color grading, hyper-detailed anime illustration in Studio Trigger style --ar 4:5 --niji 6 --style expressive`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the main subject, preserve their true facial contours, nose, lips, and serene expression while transforming them into an ethereal anime celestial entity levitating in zero gravity amidst deep space nebula dust. Glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-ethereal anime masterpiece of an enlightened celestial entity levitating in zero gravity amidst deep space nebula dust, glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350
+Using the person in the uploaded reference photo as the primary subject, faithfully capture and translate their facial anatomy, expression, eye structure, and hairstyle into cinematic anime concept art of a futuristic cyber-sorcerer standing atop a rain-soaked Neo-Tokyo skyscraper. Intricate glowing cyan holographic runic circles orbiting mechanical cybernetic fingers, high-collar techwear trench coat with illuminated fiber-optic trim, wet asphalt reflections, dense volumetric neon fog, moody atmospheric rain streaks, low-angle telephoto framing, deep midnight purple, electric magenta and cyan color grading, hyper-detailed anime illustration in Studio Trigger style --ar 4:5 --niji 6 --style expressive
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6 --stylize 350
+--ar 4:5 --niji 6 --style expressive
 ================================================================================

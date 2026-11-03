@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #09: Cazador de Demonios en la Noche Nevada
+CATEGORÍA: ANIME | PROMPT #09: Invocador de Sombras Épico (Solo Leveling)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-❄️ Sube 1 foto tuya. Empuña una espada nichirin bajo una tormenta de nieve con dragones de hielo y haori tradicional como en Demon Slayer.
+🔮 Sube 1 foto tuya con mirada desafiante. Despierta un imponente espectro sombrío con fuego violeta como en Solo Leveling.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o perfil)
+1 Foto (Tu rostro con mirada intensa)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #09: Cazador de Demonios en la Noche Nevada
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the subject, preserve their authentic facial features, jawline, and determined grimace while transforming them into a demon slayer swordsman standing resolute in a blizzard-swept cedar mountain at midnight. Visible mist condensation from cold breathing, individual snowflakes frozen mid-air around the blade, traditional geometric patterned haori flapping in freezing gales, glowing cyan mist dragon wrapping around the nichirin katana, Ufotable visual effects style, midnight navy and crisp frost-white palette --ar 4:5 --niji 6 --stylize 250`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the main character, retain and adapt their exact facial features, jawline, and determined expression into a dramatic shonen battle keyframe of a dark shadow summoner opening a dimensional abyss. Colossal spectral shadow beast with luminous violet eyes emerging from twisting dark tendrils behind the summoner, crackling purple flame vortex swirling around their hands, extreme contrapicado worm's-eye perspective, explosive motion blur on foreground rubble, dark fantasy aesthetic, ominous high-contrast lighting, deep ink-black and spectral amethyst tones, ultra-detailed anime rendering --ar 4:5 --niji 6`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the subject, preserve their authentic facial features, jawline, and determined grimace while transforming them into a demon slayer swordsman standing resolute in a blizzard-swept cedar mountain at midnight. Visible mist condensation from cold breathing, individual snowflakes frozen mid-air around the blade, traditional geometric patterned haori flapping in freezing gales, glowing cyan mist dragon wrapping around the nichirin katana, Ufotable visual effects style, midnight navy and crisp frost-white palette --ar 4:5 --niji 6 --stylize 250
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-epic anime still of an elite demon hunter standing in a heavy mountain blizzard at midnight, glowing crystalline ice dragon aura spiraling around an unsheathed katana blade, frost mist rising from breath, traditional patterned haori coat caught in freezing wind, crisp Ufotable digital compositing, dramatic cold contrast --ar 4:5 --niji 6 --stylize 250
+Using the person in the uploaded reference photo as the main character, retain and adapt their exact facial features, jawline, and determined expression into a dramatic shonen battle keyframe of a dark shadow summoner opening a dimensional abyss. Colossal spectral shadow beast with luminous violet eyes emerging from twisting dark tendrils behind the summoner, crackling purple flame vortex swirling around their hands, extreme contrapicado worm's-eye perspective, explosive motion blur on foreground rubble, dark fantasy aesthetic, ominous high-contrast lighting, deep ink-black and spectral amethyst tones, ultra-detailed anime rendering --ar 4:5 --niji 6
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6 --stylize 250
+--ar 4:5 --niji 6
 ================================================================================

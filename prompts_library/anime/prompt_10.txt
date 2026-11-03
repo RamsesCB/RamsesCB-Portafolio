@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #10: Comandante Militar de Maniobras Tácticas
+CATEGORÍA: ANIME | PROMPT #10: Trascendencia Cósmica Anime
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-⚔️ Sube 1 foto tuya decidida. Conquista los cielos con equipo tridimensional a vapor y capa verde de exploración al atardecer.
+🌌 Sube 1 foto tuya serena. Transfórmate en una deidad cósmica levitando en el espacio infinito entre constelaciones y geometrías sagradas.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con mirada seria y decidida)
+1 Foto (Tu rostro sereno o de perfil)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #10: Comandante Militar de Maniobras Tácticas
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the model, accurately preserve their facial geometry, eye intensity, and personal hairstyle while illustrating them as a veteran military scout commander perched on high medieval fortress battlements at sunset. Billowing dark green scout cape with embroidered wings insignia, dual omni-directional steel blades reflecting fiery crimson sunset clouds, pressurized steam plumes venting from gas gear mechanisms, dramatic Dutch tilt wide shot, gritty anime war aesthetic, rich warm sepia and fiery orange lighting --ar 4:5 --niji 6`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the main subject, preserve their true facial contours, nose, lips, and serene expression while transforming them into an ethereal anime celestial entity levitating in zero gravity amidst deep space nebula dust. Glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the model, accurately preserve their facial geometry, eye intensity, and personal hairstyle while illustrating them as a veteran military scout commander perched on high medieval fortress battlements at sunset. Billowing dark green scout cape with embroidered wings insignia, dual omni-directional steel blades reflecting fiery crimson sunset clouds, pressurized steam plumes venting from gas gear mechanisms, dramatic Dutch tilt wide shot, gritty anime war aesthetic, rich warm sepia and fiery orange lighting --ar 4:5 --niji 6
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-cinematic anime keyframe of a battle-tested scout commander leaping through smoke and steam high above a walled fortress city, twin blades drawn, billowing green cape with crest, golden hour rays breaking through stormy clouds, high-speed shutter action, gritty Wit Studio anime aesthetic --ar 4:5 --niji 6
+Using the person in the uploaded reference photo as the main subject, preserve their true facial contours, nose, lips, and serene expression while transforming them into an ethereal anime celestial entity levitating in zero gravity amidst deep space nebula dust. Glowing concentric sacred geometry rings spinning around the silhouette, flowing starlight hair merging with distant galaxies, soft celestial ambient glow, grand cosmic scale, hyper-detailed cel shading, deep astral indigo, radiant pearl and iridescent violet palette, breathtaking transcendent mood --ar 4:5 --niji 6 --stylize 350
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --niji 6 --stylize 350
 ================================================================================

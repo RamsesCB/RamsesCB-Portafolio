@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #12: Guardián del Dragón del Templo Dorado
+CATEGORÍA: ANIME | PROMPT #12: Arquero Espiritual del Bosque Ancestral (Ghibli)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🐉 Sube 1 foto tuya tranquila. Comparte cuadro con un majestuoso dragón de jade y oro entre linternas de papel encendidas al atardecer.
+🌿 Sube 1 foto tuya. Adéntrate en un bosque místico milenario y tensa un arco de pura luz estelar rodeado de duendecillos estilo Studio Ghibli.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro sereno o de perfil)
+1 Foto (Tu rostro de perfil o tres cuartos)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,19 +15,12 @@ CATEGORÍA: ANIME | PROMPT #12: Guardián del Dragón del Templo Dorado
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the hero subject, keep their recognizable facial features, calm expression, and likeness while creating an exquisite anime painting of a temple guardian with a majestic serpentine spirit dragon coiled gracefully around their shoulders. The dragon possesses iridescent jade and gold scales with whisker tendrils drifting in soft mountain breeze, vermilion torii gates and glowing paper lanterns floating in background mist, traditional silk robes with lotus embroidery, Kyoto Animation aesthetic, warm atmospheric twilight illumination --ar 4:5 --niji 6`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the protagonist, faithfully reproduce their facial bone structure, eye shape, and focused expression as a legendary spirit archer drawing a bow made of crystalline starlight. Perched high on an ancient moss-covered cedar branch in a mystical fog-draped primordial forest, glowing ethereal forest spirits floating like fireflies, sunbeams slicing through giant canopy leaves, flowing traveler tunic with leather bracers, Studio Ghibli inspired magical realism, tranquil emerald, sage, and golden dust palette --ar 4:5 --niji 6`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the hero subject, keep their recognizable facial features, calm expression, and likeness while creating an exquisite anime painting of a temple guardian with a majestic serpentine spirit dragon coiled gracefully around their shoulders. The dragon possesses iridescent jade and gold scales with whisker tendrils drifting in soft mountain breeze, vermilion torii gates and glowing paper lanterns floating in background mist, traditional silk robes with lotus embroidery, Kyoto Animation aesthetic, warm atmospheric twilight illumination --ar 4:5 --niji 6
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-exquisite anime masterpiece of a mystic guardian accompanied by a magnificent serpentine Eastern spirit dragon coiled around their torso, shimmering jade and gold scales, glowing red torii gates floating in misty sacred waters, hanging paper lanterns, delicate Makoto Shinkai lighting, serene enchanting atmosphere --ar 4:5 --niji 6
+Using the person in the uploaded reference photo as the protagonist, faithfully reproduce their facial bone structure, eye shape, and focused expression as a legendary spirit archer drawing a bow made of crystalline starlight. Perched high on an ancient moss-covered cedar branch in a mystical fog-draped primordial forest, glowing ethereal forest spirits floating like fireflies, sunbeams slicing through giant canopy leaves, flowing traveler tunic with leather bracers, Studio Ghibli inspired magical realism, tranquil emerald, sage, and golden dust palette --ar 4:5 --niji 6
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

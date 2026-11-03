@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #03: Espadachín / Espadachina del Amanecer
+CATEGORÍA: ANIME | PROMPT #03: Hechicero Místico (Paso Firme con Talismanes)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌸 Sube 1 foto tuya. Logra una escena poética empuñando una katana al alba con pétalos de cerezo danzando en el viento estilo Makoto Shinkai.
+📸 Sube tu foto de referencia. Camina con seguridad por una calle urbana sosteniendo un talismán místico con katana y abrigo ondeando al viento.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o perfil tres cuartos)
+1 Foto (Tu rostro o cuerpo caminando hacia cámara)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #03: Espadachín / Espadachina del Amanecer
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste, humano real con mismo rostro, gafas redondas, cabello rizado. Cosplay de hechicero de alta calidad: chaqueta larga azul marino con costura roja detallada en bordes y emblema dorado de brújula en pecho, pantalones cargo negros con costura roja, cinturón negro con hebilla plateada, katana real con papeles talismán blancos con kanji rojo atados con cuerda roja colgando. POSE: caminando con confianza hacia cámara en calle real de ciudad japonesa, pierna izquierda adelante en pleno paso, mano derecha sosteniendo katana por el costado con talismanes ondeando, mano izquierda levantada sosteniendo un talismán entre dedos índice y pulgar, abrigo largo ondeando con movimiento por viento, sonrisa leve y confiada, fondo calle urbana con tiendas y máquinas expendedoras, luz de día natural, sin neón, sin lluvia, fotografía de moda callejera, 8K --ar 4:5 --style raw`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-breathtaking anime action still of an elegant samurai swordmaster executing a high-speed iaido slash at sunrise, cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6
+Según la hoja de referencia que me pasaste, humano real con mismo rostro, gafas redondas, cabello rizado. Cosplay de hechicero de alta calidad: chaqueta larga azul marino con costura roja detallada en bordes y emblema dorado de brújula en pecho, pantalones cargo negros con costura roja, cinturón negro con hebilla plateada, katana real con papeles talismán blancos con kanji rojo atados con cuerda roja colgando. POSE: caminando con confianza hacia cámara en calle real de ciudad japonesa, pierna izquierda adelante en pleno paso, mano derecha sosteniendo katana por el costado con talismanes ondeando, mano izquierda levantada sosteniendo un talismán entre dedos índice y pulgar, abrigo largo ondeando con movimiento por viento, sonrisa leve y confiada, fondo calle urbana con tiendas y máquinas expendedoras, luz de día natural, sin neón, sin lluvia, fotografía de moda callejera, 8K --ar 4:5 --style raw
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --style raw
 ================================================================================

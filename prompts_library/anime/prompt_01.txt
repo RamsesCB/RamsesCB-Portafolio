@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #01: Guerrero Celestial Shonen
+CATEGORÍA: ANIME | PROMPT #01: Cazador en la Pared (Pose Haori a Cuadros)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-✨ Sube 1 foto tuya. ¡Conviértete en un guerrero shonen legendario con aura de relámpagos celestes y ojos dorados al más puro estilo Ufotable!
+📸 Sube tu foto o referencia. ¡Posa recargado casual contra un muro de ciudad real con katana al hombro y haori de cazador a cuadros!
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente con buena iluminación)
+1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #01: Guerrero Celestial Shonen
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, accurately preserve and translate their exact facial features, facial bone structure, jawline, eye shape, hairstyle, and authentic likeness into a masterpiece anime key visual of a determined young shonen warrior. The warrior is unleashing an explosive celestial lightning aura with crackling electric arcs curling around clenched fists and luminous glowing golden-blue irises. Sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes y blancas Nike. Cosplay bien hecho inspirado en cazador: uniforme táctico negro con botones dorados y bolsas laterales, haori largo a cuadros rojo y negro con costuras visibles y textura de tela real, katana real con empuñadura negra de diamantes y tsuba dorada en funda negra. POSE: recargado casual contra muro de concreto gris en calle normal de ciudad, pierna derecha doblada con pie apoyado en el muro, mano izquierda en bolsillo, mano derecha sosteniendo katana real apoyada sobre hombro como bate, cabeza levemente inclinada, sonrisa confiada mirando a cámara, fondo calle real con farmacia y bus azul desenfocado, luz de día natural sombras suaves, piel con poros reales, 8K, shallow depth of field, ángulo ligeramente bajo --ar 4:5 --style raw`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the primary subject, accurately preserve and translate their exact facial features, facial bone structure, jawline, eye shape, hairstyle, and authentic likeness into a masterpiece anime key visual of a determined young shonen warrior. The warrior is unleashing an explosive celestial lightning aura with crackling electric arcs curling around clenched fists and luminous glowing golden-blue irises. Sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-masterpiece anime key visual of a determined young shonen warrior unleashing an explosive celestial lightning aura, crackling electric arcs curling around clenched fists, intense luminous golden-blue irises, sharp cel-shaded linework in the style of Ufotable, floating shattered stone debris suspended in mid-air, dynamic Dutch angle perspective, dramatic high-contrast backlighting, volumetric ether mist, saturated cobalt blue, electric cyan and obsidian palette, 8k resolution wallpaper quality --ar 4:5 --niji 6 --stylize 300
+Según la hoja de referencia que me pasaste de 4 vistas, crea foto fotorrealista de humano real, preserva gafas redondas, cabello negro rizado con volumen, piel media, zapatillas celestes y blancas Nike. Cosplay bien hecho inspirado en cazador: uniforme táctico negro con botones dorados y bolsas laterales, haori largo a cuadros rojo y negro con costuras visibles y textura de tela real, katana real con empuñadura negra de diamantes y tsuba dorada en funda negra. POSE: recargado casual contra muro de concreto gris en calle normal de ciudad, pierna derecha doblada con pie apoyado en el muro, mano izquierda en bolsillo, mano derecha sosteniendo katana real apoyada sobre hombro como bate, cabeza levemente inclinada, sonrisa confiada mirando a cámara, fondo calle real con farmacia y bus azul desenfocado, luz de día natural sombras suaves, piel con poros reales, 8K, shallow depth of field, ángulo ligeramente bajo --ar 4:5 --style raw
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6 --stylize 300
+--ar 4:5 --style raw
 ================================================================================

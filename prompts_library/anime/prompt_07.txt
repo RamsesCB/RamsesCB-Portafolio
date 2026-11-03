@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #07: Alquimista Elemental de Fuego & Viento
+CATEGORÍA: ANIME | PROMPT #07: Espadachín del Amanecer (Makoto Shinkai)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🔥 Sube 1 foto tuya. Desata un torbellino de llamas y chispas doradas con gabardina ondeando como en los mejores animes de acción.
+🌸 Sube 1 foto tuya. Logra una escena poética empuñando una katana al alba con pétalos de cerezo danzando en el viento estilo Makoto Shinkai.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con mirada intensa)
+1 Foto (Tu rostro de frente o tres cuartos)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,19 +15,12 @@ CATEGORÍA: ANIME | PROMPT #07: Alquimista Elemental de Fuego & Viento
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary character, maintain their exact facial features, sharp gaze, and personal likeness while illustrating them as an elite elemental alchemist transmuting roaring crimson and gold firestorm vortexes. Swirling ember sparks orbiting open palms, billowing high-collar crimson trench coat with golden alchemy crests, cracked volcanic ground radiating molten fissures beneath boots, dynamic low-angle framing, intense fiery rim lighting, Studio Bones anime quality, saturated vermilion, amber, and obsidian color grading --ar 4:5 --niji 6`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the primary character, maintain their exact facial features, sharp gaze, and personal likeness while illustrating them as an elite elemental alchemist transmuting roaring crimson and gold firestorm vortexes. Swirling ember sparks orbiting open palms, billowing high-collar crimson trench coat with golden alchemy crests, cracked volcanic ground radiating molten fissures beneath boots, dynamic low-angle framing, intense fiery rim lighting, Studio Bones anime quality, saturated vermilion, amber, and obsidian color grading --ar 4:5 --niji 6
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-cinematic anime illustration of a master flame alchemist unleashing a swirling cyclone of scarlet and golden fire, glowing transmutation sparks spiraling around clenched hands, billowing longcoat with embroidered runic trim, molten volcanic stone environment, dramatic low-angle shot, radiant firelight illumination, crisp cel-shaded anime style --ar 4:5 --niji 6
+Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

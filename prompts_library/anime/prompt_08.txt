@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: ANIME | PROMPT #08: Arquero Espiritual del Bosque Ancestral
+CATEGORÍA: ANIME | PROMPT #08: Piloto de Mecha Orbital (Evangelion)
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-🌿 Sube 1 foto tuya. Adéntrate en un bosque místico milenario y tensa un arco de pura luz estelar rodeado de duendecillos estilo Studio Ghibli.
+🚀 Sube 1 foto tuya. Viste un traje plugsuit táctico con visor futurista y propulsores de iones flotando sobre la Tierra estilo Evangelion.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de perfil o tres cuartos)
+1 Foto (Tu rostro)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,22 +15,15 @@ CATEGORÍA: ANIME | PROMPT #08: Arquero Espiritual del Bosque Ancestral
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the protagonist, faithfully reproduce their facial bone structure, eye shape, and focused expression as a legendary spirit archer drawing a bow made of crystalline starlight. Perched high on an ancient moss-covered cedar branch in a mystical fog-draped primordial forest, glowing ethereal forest spirits floating like fireflies, sunbeams slicing through giant canopy leaves, flowing traveler tunic with leather bracers, Studio Ghibli inspired magical realism, tranquil emerald, sage, and golden dust palette --ar 4:5 --niji 6`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the protagonist, faithfully reproduce their facial bone structure, eye shape, and focused expression as a legendary spirit archer drawing a bow made of crystalline starlight. Perched high on an ancient moss-covered cedar branch in a mystical fog-draped primordial forest, glowing ethereal forest spirits floating like fireflies, sunbeams slicing through giant canopy leaves, flowing traveler tunic with leather bracers, Studio Ghibli inspired magical realism, tranquil emerald, sage, and golden dust palette --ar 4:5 --niji 6
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-breathtaking anime artwork of an ethereal spirit archer drawing an ornate bow of pure luminous starlight in a sacred misty forest, miniature glowing forest spirits fluttering around, sunlight filtering through towering mossy canopy trees, intricate cel-shaded character design, tranquil mystical atmosphere, rich forest greens and soft golden light rays --ar 4:5 --niji 6
+Using the person in the uploaded reference photo as the central subject, preserve their authentic facial structure, eyes, and hairstyle while portraying them as an orbital mecha pilot floating above Earth's glowing blue curvature. Aerodynamic articulated titanium plugsuit armor with exposed glowing ion conduits, twin plasma thrusters emitting brilliant azure particle exhaust, reflective gold-tinted pilot visor resting atop the forehead, hard-surface mechanical detailing inspired by Evangelion, high-altitude starlight illumination, cinematic wide shot, pristine digital matte painting --ar 4:5 --niji 6 --stylize 250
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --niji 6
+--ar 4:5 --niji 6 --stylize 250
 ================================================================================
