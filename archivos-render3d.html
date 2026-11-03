@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>RamsesCB</title>
   
-  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532 y Servomotor).">
+  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532, Servomotor y Motor Paso a Paso).">
   <meta name="theme-color" content="#000000" id="theme-color-meta">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -303,7 +303,7 @@
       flex: 1;
       padding: 14px 16px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
       height: calc(100vh - 56px);
       background-color: var(--bg-canvas);
@@ -316,7 +316,8 @@
       grid-template-columns: 1fr;
     }
     main.studio-main.view-arduino .panel-pn532,
-    main.studio-main.view-arduino .panel-servo {
+    main.studio-main.view-arduino .panel-servo,
+    main.studio-main.view-arduino .panel-stepper {
       display: none;
     }
 
@@ -324,7 +325,8 @@
       grid-template-columns: 1fr;
     }
     main.studio-main.view-pn532 .panel-arduino,
-    main.studio-main.view-pn532 .panel-servo {
+    main.studio-main.view-pn532 .panel-servo,
+    main.studio-main.view-pn532 .panel-stepper {
       display: none;
     }
 
@@ -332,7 +334,17 @@
       grid-template-columns: 1fr;
     }
     main.studio-main.view-servo .panel-arduino,
-    main.studio-main.view-servo .panel-pn532 {
+    main.studio-main.view-servo .panel-pn532,
+    main.studio-main.view-servo .panel-stepper {
+      display: none;
+    }
+
+    main.studio-main.view-stepper {
+      grid-template-columns: 1fr;
+    }
+    main.studio-main.view-stepper .panel-arduino,
+    main.studio-main.view-stepper .panel-pn532,
+    main.studio-main.view-stepper .panel-servo {
       display: none;
     }
 
@@ -668,6 +680,58 @@
       border-radius: 2px;
     }
 
+    .sk-stepper-silhouette {
+      width: 130px;
+      height: 125px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .sk-stepper-gearbox {
+      width: 34px;
+      height: 18px;
+      background: rgba(255, 159, 10, 0.22);
+      border: 1.5px solid rgba(255, 159, 10, 0.45);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2px;
+    }
+    .sk-stepper-shaft {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff9f0a;
+    }
+    .sk-stepper-body {
+      width: 76px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px solid rgba(255, 159, 10, 0.35);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sk-stepper-can {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: rgba(255, 159, 10, 0.85);
+      font-family: monospace;
+    }
+    .sk-stepper-uln {
+      margin-top: 6px;
+      padding: 2px 10px;
+      background: rgba(255, 159, 10, 0.12);
+      border: 1px dashed rgba(255, 159, 10, 0.3);
+      border-radius: 4px;
+      font-size: 0.58rem;
+      font-family: monospace;
+      color: var(--text-secondary);
+    }
+
     @keyframes sk-cube-pulse {
       0%, 100% { opacity: 0.4; transform: scale(0.97); }
       50% { opacity: 0.85; transform: scale(1.02); }
@@ -997,7 +1061,21 @@
     /* ========================================================
        RESPONSIVE ADAPTATIONS
        ======================================================== */
-    @media (max-width: 1120px) {
+    @media (max-width: 1400px) and (min-width: 1025px) {
+      main.studio-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        height: auto;
+        overflow-y: auto;
+      }
+      .studio-panel {
+        height: 500px;
+      }
+      body {
+        overflow-y: auto;
+      }
+    }
+
+    @media (max-width: 1024px) {
       header.studio-header {
         height: auto;
         padding: 10px 16px;
@@ -1011,6 +1089,10 @@
         width: 100%;
         overflow-x: auto;
         padding-bottom: 2px;
+      }
+
+      body {
+        overflow-y: auto;
       }
 
       main.studio-main {
@@ -1071,7 +1153,7 @@
 
       <div class="brand-group">
         <h1 class="brand-title">Hardware 3D Studio</h1>
-        <span class="brand-sub">RamsesCB • Arduino / NFC / Servomotor</span>
+        <span class="brand-sub">RamsesCB • Arduino / NFC / Servomotor / Stepper</span>
       </div>
     </div>
 
@@ -1090,6 +1172,9 @@
         </button>
         <button class="seg-btn" id="btn-servo" onclick="setViewMode('servo')" role="tab" aria-selected="false">
           ⚙️ Servomotor
+        </button>
+        <button class="seg-btn" id="btn-stepper" onclick="setViewMode('stepper')" role="tab" aria-selected="false">
+          🔄 Motor Paso a Paso
         </button>
       </div>
     </div>
@@ -1345,6 +1430,68 @@
       </div>
     </section>
 
+    <!-- PANEL 4: MOTOR PASO A PASO (28BYJ-48 & ULN2003) -->
+    <section class="studio-panel panel-stepper" id="panelStepper">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#ff9f0a; box-shadow:0 0 8px rgba(255,159,10,0.4);"></span>
+          <span class="panel-title-text">Motor Paso a Paso</span>
+          <span class="panel-spec-tag">28BYJ-48</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-stepper-3d" onclick="setPanelTab('stepper', '3d')">3D CAD</button>
+          <button class="tab-pill-btn" id="tab-stepper-render" onclick="setPanelTab('stepper', 'render')">Render</button>
+        </div>
+      </div>
+
+      <!-- 3D Model Viewport -->
+      <div class="panel-viewport" id="viewport-stepper-3d">
+        <!-- Skeleton Preview (Exact Stepper Motor & Driver Silhouette) -->
+        <div class="viewport-skeleton-loader" id="sk-stepper-3d" aria-hidden="true">
+          <div class="sk-board-silhouette sk-stepper-silhouette">
+            <div class="sk-stepper-gearbox">
+              <div class="sk-stepper-shaft"></div>
+            </div>
+            <div class="sk-stepper-body">
+              <div class="sk-stepper-can">28BYJ-48</div>
+            </div>
+            <div class="sk-stepper-uln">
+              <div class="sk-uln-chip">ULN2003 Driver</div>
+            </div>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot" style="background:#ff9f0a;"></span>
+            <span>Cargando modelo 3D Motor de Paso...</span>
+          </div>
+        </div>
+        <iframe id="iframe-stepper"
+                title="Aula 28 - Motor de Passo 3D Model"
+                src="https://sketchfab.com/models/b34306a0794349a0be92665081bb4b0c/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-stepper-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/stepper_render.webp', 'Motor Paso a Paso 28BYJ-48 con Driver ULN2003')">
+          <img src="/assets/renders3d/stepper_render.webp" alt="Motor Paso a Paso 28BYJ-48 Render" loading="lazy">
+          <div class="render-info">
+            <span>Motor de Passo 28BYJ-48 • Driver ULN2003</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>Robótica Paraná • 28BYJ-48</span>
+        <a href="https://sketchfab.com/3d-models/aula-28-motor-de-passo-b34306a0794349a0be92665081bb4b0c" target="_blank" rel="noopener">
+          Sketchfab
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- ========================================================
@@ -1502,10 +1649,11 @@
         grid: document.getElementById('btn-grid'),
         arduino: document.getElementById('btn-arduino'),
         pn532: document.getElementById('btn-pn532'),
-        servo: document.getElementById('btn-servo')
+        servo: document.getElementById('btn-servo'),
+        stepper: document.getElementById('btn-stepper')
       };
 
-      main.classList.remove('view-arduino', 'view-pn532', 'view-servo');
+      main.classList.remove('view-arduino', 'view-pn532', 'view-servo', 'view-stepper');
       Object.values(buttons).forEach(btn => {
         if (btn) {
           btn.classList.remove('active');
@@ -1528,6 +1676,10 @@
         main.classList.add('view-servo');
         buttons.servo.classList.add('active');
         buttons.servo.setAttribute('aria-selected', 'true');
+      } else if (mode === 'stepper') {
+        main.classList.add('view-stepper');
+        buttons.stepper.classList.add('active');
+        buttons.stepper.setAttribute('aria-selected', 'true');
       }
     }
 
@@ -1574,6 +1726,23 @@
         const vpren = document.getElementById('viewport-servo-render');
         const tab3d = document.getElementById('tab-servo-3d');
         const tabren = document.getElementById('tab-servo-render');
+
+        if (tab === '3d') {
+          vp3d.style.display = 'block';
+          vpren.classList.remove('active');
+          tab3d.classList.add('active');
+          tabren.classList.remove('active');
+        } else {
+          vp3d.style.display = 'none';
+          vpren.classList.add('active');
+          tab3d.classList.remove('active');
+          tabren.classList.add('active');
+        }
+      } else if (panel === 'stepper') {
+        const vp3d = document.getElementById('viewport-stepper-3d');
+        const vpren = document.getElementById('viewport-stepper-render');
+        const tab3d = document.getElementById('tab-stepper-3d');
+        const tabren = document.getElementById('tab-stepper-render');
 
         if (tab === '3d') {
           vp3d.style.display = 'block';
@@ -1639,6 +1808,7 @@
       setupIframeSkeleton('iframe-arduino', 'sk-ard-3d');
       setupIframeSkeleton('iframe-pn532', 'sk-pn-3d');
       setupIframeSkeleton('iframe-servomotor', 'sk-servo-3d');
+      setupIframeSkeleton('iframe-stepper', 'sk-stepper-3d');
       initServomotorViewer();
     });
   </script>
