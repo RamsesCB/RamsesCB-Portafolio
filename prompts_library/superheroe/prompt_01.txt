@@ -1,36 +1,45 @@
 ================================================================================
-CATEGORÍA: SUPERHEROE | PROMPT #01: Vuelo en Tormenta con Capa Roja
+CATEGORÍA: SUPERHEROE | PROMPT #01: Héroe con Traje Amarillo y Azul
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Héroe volando entre nubes oscuras con armadura de combate y capa roja al viento.
+Retrato de cuerpo entero en estudio con traje heroico amarillo y azul con capucha y lentes de malla blanca.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro mirando hacia arriba con determinación)
+1 Foto (Hoja de personaje o rostro)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto (o fotos) de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá las facciones y mantendrá la identidad exacta en la composición.
 2. En MIDJOURNEY:
-   - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the superhero, accurately preserve their facial features, jawline, and determined expression in a colossal cinematic IMAX still surging upward through a violent supercell thunderstorm. Individual raindrops suspended and illuminated by purple-white lightning flashes, intricately paneled titanium and carbon composite suit, billowing tattered crimson cape whipping in gale-force winds, high-contrast rim lighting, cinematic photo-realism, Zack Snyder blockbuster aesthetic --ar 4:5 --v 6.1 --stylize 300`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Sube tu foto a Discord y copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Create a full-body superhero portrait of the same person from reference sheet, young man with curly black hair, round glasses, light brown skin. Wearing yellow and blue superhero suit with yellow cowl and white mesh eye lenses, yellow chest with black muscle lines, blue sides, yellow gloves, blue boots. Heroic standing pose, clean neutral studio lighting, photorealistic fabric texture --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the superhero, accurately preserve their facial features, jawline, and determined expression in a colossal cinematic IMAX still surging upward through a violent supercell thunderstorm. Individual raindrops suspended and illuminated by purple-white lightning flashes, intricately paneled titanium and carbon composite suit, billowing tattered crimson cape whipping in gale-force winds, high-contrast rim lighting, cinematic photo-realism, Zack Snyder blockbuster aesthetic --ar 4:5 --v 6.1 --stylize 300
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-colossal cinematic IMAX still of an armored superhero surging upward through a violent supercell thunderstorm, individual rain droplets suspended and illuminated by lightning flashes, intricately paneled titanium and carbon composite suit, billowing tattered crimson cape whipping in gale-force winds, high-contrast rim lighting, cinematic photo-realism, Zack Snyder aesthetic --ar 4:5 --v 6.1 --stylize 300
+Create a full-body superhero portrait of the same person from reference sheet, young man with curly black hair, round glasses, light brown skin. Wearing yellow and blue superhero suit with yellow cowl and white mesh eye lenses, yellow chest with black muscle lines, blue sides, yellow gloves, blue boots. Heroic standing pose, clean neutral studio lighting, photorealistic fabric texture --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --v 6.1 --stylize 300
+--ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 ESQUEMA JSON ESTRUCTURADO:
+--------------------------------------------------------------------------------
+{
+  "style": "fotografía realista vida real, retrato de estudio, ultra detallada",
+  "characters": 1,
+  "reference_instruction": "Preserva rostro, facciones, cabello rizado negro, gafas redondas y contextura de la hoja de personaje",
+  "costumes": "traje de superhéroe amarillo y azul con capucha amarilla, lentes de malla blanca, pecho amarillo con líneas musculares negras, laterales azules, guantes amarillos y botas azules",
+  "pose": "pose heroica de pie de cuerpo completo, porte firme y seguro",
+  "background": "fondo de estudio neutro y limpio con iluminación uniforme",
+  "lighting": "iluminación de estudio limpia y neutra, sombras suaves, textura de tela fotorrealista",
+  "camera": "plano entero de cuerpo completo, ángulo frontal, enfoque nítido",
+  "mood": "heroico, sobrio, imponente",
+  "aspect_ratio": "4:5"
+}
 ================================================================================

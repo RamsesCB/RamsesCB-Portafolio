@@ -2029,6 +2029,9 @@ function BeforeAfterComparisonImage(props) {
    PROMPT METADATA & EXACT JSON EXTRACTOR
    ========================================================= */
 function getPromptMetadata(item, categoryKey, index) {
+  if (item.rawJson) {
+    return item.rawJson;
+  }
   var cat = categoryKey || "caricatura";
   var id = item.id || (cat.toUpperCase() + "-" + (index + 1 < 10 ? "0" + (index + 1) : (index + 1)));
   return {
@@ -3346,111 +3349,213 @@ var CATEGORY_DATA = {
     lyrics: [{"start": 0.0, "end": 1.3, "line1": "FLY IN THE SKY", "line2": "SOARING HIGH"}, {"start": 1.3, "end": 2.6, "line1": "FLY IN THE RAIN", "line2": "NEVER SURRENDER"}, {"start": 2.6, "end": 3.8, "line1": "DESPIERTA EL PODER", "line2": "QUE LLEVAS DENTRO"}, {"start": 3.8, "end": 5.0, "line1": "NACE UNA LEYENDA", "line2": "EL HÉROE DESPIERTA"}],
     prompts: [
       {
-        badge: "#01",
-        image: Xa[0 % Xa.length],
-        title: "Vuelo en Tormenta con Capa Roja",
-        description: "Héroe volando entre nubes oscuras con armadura de combate y capa roja al viento.",
-        prompt: "Using the person in the uploaded reference photo as the superhero, accurately preserve their facial features, jawline, and determined expression in a colossal cinematic IMAX still surging upward through a violent supercell thunderstorm. Individual raindrops suspended and illuminated by purple-white lightning flashes, intricately paneled titanium and carbon composite suit, billowing tattered crimson cape whipping in gale-force winds, high-contrast rim lighting, cinematic photo-realism, Zack Snyder blockbuster aesthetic --ar 4:5 --v 6.1 --stylize 300"
+            "badge": "#01",
+            "image": "assets/images/superheroe/01_amarillo_azul_normal.webp",
+            "title": "Héroe con Traje Amarillo y Azul",
+            "description": "Retrato de cuerpo entero en estudio con traje heroico amarillo y azul con capucha y lentes de malla blanca.",
+            "subCategory": "solitario",
+            "referenceRequirements": "1 Foto (Hoja de personaje o rostro)",
+            "prompt": "Create a full-body superhero portrait of the same person from reference sheet, young man with curly black hair, round glasses, light brown skin. Wearing yellow and blue superhero suit with yellow cowl and white mesh eye lenses, yellow chest with black muscle lines, blue sides, yellow gloves, blue boots. Heroic standing pose, clean neutral studio lighting, photorealistic fabric texture --ar 4:5 --v 6.1",
+            "rawJson": {
+                  "style": "fotografía realista vida real, retrato de estudio, ultra detallada",
+                  "characters": 1,
+                  "reference_instruction": "Preserva rostro, facciones, cabello rizado negro, gafas redondas y contextura de la hoja de personaje",
+                  "costumes": "traje de superhéroe amarillo y azul con capucha amarilla, lentes de malla blanca, pecho amarillo con líneas musculares negras, laterales azules, guantes amarillos y botas azules",
+                  "pose": "pose heroica de pie de cuerpo completo, porte firme y seguro",
+                  "background": "fondo de estudio neutro y limpio con iluminación uniforme",
+                  "lighting": "iluminación de estudio limpia y neutra, sombras suaves, textura de tela fotorrealista",
+                  "camera": "plano entero de cuerpo completo, ángulo frontal, enfoque nítido",
+                  "mood": "heroico, sobrio, imponente",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#02",
-        image: Xa[1 % Xa.length],
-        title: "Aterrizaje en el Asfalto con Energía",
-        description: "Héroe aterrizando con un puño en el suelo y grietas de energía brillante en la calle.",
-        prompt: "Using the person in the uploaded reference photo, retain their facial likeness and fierce gaze in a dynamic superhero three-point ground landing impact scene. One fist buried into a deep fractured pavement crater radiating glowing blue energy shockwaves, airborne asphalt chunks frozen mid-air, luminescent heroic eyes, low-angle ground perspective, dramatic volumetric dust cloud backlit by amber city fires, photorealistic Marvel blockbuster VFX quality --ar 4:5 --v 6.1"
+            "badge": "#02",
+            "image": "assets/images/superheroe/02_azul_negro_normal.webp",
+            "title": "Vigilante con Traje Azul y Negro",
+            "description": "Pose heroica con puños cerrados en azotea urbana con traje ajustado azul y negro y antifaz.",
+            "subCategory": "solitario",
+            "referenceRequirements": "1 Foto (Hoja de personaje o rostro)",
+            "prompt": "Same person from reference sheet, wearing tight blue and black bodysuit with blue eye mask, black sides, blue muscle shading, blue gloves and boots. Rooftop city background, heroic fists-clenched pose, photorealistic --ar 4:5 --v 6.1",
+            "rawJson": {
+                  "style": "fotografía realista cinematográfica, ultra detallada",
+                  "characters": 1,
+                  "reference_instruction": "Preserva rostro, facciones, cabello rizado negro y contextura de la hoja de personaje",
+                  "costumes": "traje ajustado azul y negro con antifaz azul en los ojos, laterales negros, sombreado muscular azul, guantes y botas azules",
+                  "pose": "pose heroica con puños cerrados mirando al horizonte con determinación",
+                  "background": "azotea de edificio con vista a la ciudad urbana",
+                  "lighting": "luz ambiental exterior realista con sombras definidas en la musculatura",
+                  "camera": "plano medio entero, ángulo ligeramente contrapicado, enfoque nítido",
+                  "mood": "vigilante, determinado, protector",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#03",
-        image: Xa[2 % Xa.length],
-        title: "Vigilante en una Gárgola de Noche",
-        description: "Héroe encapuchado observando la ciudad lluviosa desde lo alto de una gárgola de piedra.",
-        prompt: "Using the person in the uploaded reference photo, capture their facial structure, brow line, and solemn intensity into a moody comic noir masterwork of a dark vigilante superhero. Perched atop an art deco stone gargoyle statue overlooking a sprawling rain-slicked Gotham metropolis shrouded in low fog, trench-coat style armored cape fluttering in the freezing night wind, distant neon skyscrapers piercing misty clouds, high-contrast chiaroscuro, cinematic comic book realism --ar 4:5 --v 6.1"
+            "badge": "#03",
+            "image": "assets/images/superheroe/03_rojo_blanco_normal.webp",
+            "title": "Héroe con Traje Rojo y Capa Larga",
+            "description": "Pose heroica de cuerpo entero con traje rojo y blanco, emblema angular en el pecho y capa roja ondeando.",
+            "subCategory": "solitario",
+            "referenceRequirements": "1 Foto (Hoja de personaje o rostro)",
+            "prompt": "Same person from reference sheet, wearing red and white superhero suit with long flowing red cape, white sleeves, red body with white angular chest emblem. Full body heroic pose, studio lighting, ultra detailed --ar 4:5 --v 6.1",
+            "rawJson": {
+                  "style": "fotografía de estudio cinematográfica, ultra detallada",
+                  "characters": 1,
+                  "reference_instruction": "Preserva rostro, facciones, cabello rizado negro y contextura de la hoja de personaje",
+                  "costumes": "traje de superhéroe rojo y blanco con capa roja larga y fluida, mangas blancas, torso rojo con emblema angular en el pecho",
+                  "pose": "pose heroica imponente de cuerpo completo",
+                  "background": "estudio cinematográfico limpio con degradado suave",
+                  "lighting": "iluminación de estudio dramática con luces de acento en bordes de la capa",
+                  "camera": "plano entero de cuerpo completo, ángulo neutral",
+                  "mood": "noble, imponente, clásico",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#04",
-        image: Xa[3 % Xa.length],
-        title: "Guantes con Disparo de Energía Fotónica",
-        description: "Héroe apuntando las manos con esferas de energía brillante en los guantes metálicos.",
-        prompt: "Using the person in the uploaded reference photo as the superhero, preserve their authentic facial features, intense gaze, and fierce grit in a jaw-dropping IMAX action shot. Charging concentrated photonic energy between clenched armored fists, blinding white-gold plasma arcs spiraling around high-tech gauntlets, micro-textures on brushed gunmetal suit, volumetric god rays piercing dark atmospheric haze, photorealistic 8k render, epic Marvel grandeur --ar 4:5 --v 6.1"
+            "badge": "#04",
+            "image": "assets/images/superheroe/04_todos_volando.webp",
+            "title": "Trío de Héroes Volando en Formación",
+            "description": "Tres versiones del héroe volando juntos en formación a través de un cielo azul brillante.",
+            "subCategory": "equipo",
+            "referenceRequirements": "1 Foto (Hoja de personaje para replicar en 3 héroes)",
+            "prompt": "Three versions of the same person from reference sheet flying together in formation across bright blue sky. Left: yellow and blue suit with white eyes, middle: blue and black suit, right: red and white suit with red cape. Same facial features, dynamic flying poses, heroic team shot, cinematic --ar 4:5 --v 6.1",
+            "rawJson": {
+                  "style": "fotografía cinematográfica de acción, ultra detallada",
+                  "characters": 3,
+                  "reference_instruction": "Tres versiones del mismo personaje preservando rasgos faciales y cabello en cada uno",
+                  "costumes": "izquierda: traje amarillo y azul con ojos blancos; centro: traje azul y negro; derecha: traje rojo y blanco con capa roja",
+                  "pose": "vuelo dinámico en formación triangular atravesando el cielo",
+                  "background": "cielo azul brillante con nubes dispersas a gran altitud",
+                  "lighting": "luz solar directa y brillante, reflejos dinámicos en trajes y capas",
+                  "camera": "plano general cinematográfico, ángulo frontal dinámico en pleno vuelo",
+                  "mood": "épico, victorioso, trabajo en equipo",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#05",
-        image: Xa[4 % Xa.length],
-        title: "Sosteniendo una Viga en un Rescate",
-        description: "Héroe levantando una pesada viga de acero para rescatar personas entre escombros y polvo.",
-        prompt: "Using the person in the uploaded reference photo, maintain their recognizable facial features and raw emotional heroism straining under immense weight to support a collapsing steel skyscraper girder to protect civilians below. Dust motes and fiery embers dancing in dramatic morning sunbeams cutting through plumes of smoke, gritty realistic suit battle damage, cinematic heroism masterpiece, emotional cinematic storytelling --ar 4:5 --v 6.1"
+            "badge": "#05",
+            "image": "assets/images/superheroe/05_EPICO_amarillo_azul_supersonico.webp",
+            "title": "Vuelo Supersónico con Traje Amarillo",
+            "description": "Vuelo supersónico hacia la cámara con puño al frente, lentes blancos y tormenta en la ciudad.",
+            "subCategory": "accion",
+            "referenceRequirements": "1 Foto (Hoja de personaje o rostro)",
+            "prompt": "Epic action superhero portrait, same person from reference sheet, young man with curly black hair, round glasses, light brown skin. Wearing yellow and blue suit with glowing white eye lenses, yellow hood cape. Ultra epic flying pose rocketing towards camera with fist leading, motion blur, debris, stormy city below, cinematic lighting, photorealistic --ar 4:5 --v 6.1",
+            "rawJson": {
+                  "style": "fotografía cinematográfica de acción extrema, ultra detallada",
+                  "characters": 1,
+                  "reference_instruction": "Preserva rostro, cabello rizado y gafas de la hoja de personaje",
+                  "costumes": "traje amarillo y azul con capucha y capa corta, lentes oculares blancos brillantes",
+                  "pose": "pose de vuelo ultra épica coheteando hacia la cámara con el puño adelantado",
+                  "background": "ciudad bajo tormenta con escombros suspendidos y nubes oscuras",
+                  "lighting": "iluminación cinematográfica con destellos dramáticos y desenfoque de movimiento",
+                  "camera": "primer plano de acción en ángulo contrapicado dinámico hacia la cámara",
+                  "mood": "adrenalina pura, imparable, colosal",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#06",
-        image: Xa[5 % Xa.length],
-        title: "Retrato con Casco Dañado tras la Batalla",
-        description: "Primer plano del héroe con la mitad del casco metálico roto al amanecer.",
-        prompt: "Using the person in the uploaded reference photo, preserve their exact facial features, eye, and jawline in an epic close-up battle portrait at dawn. A cracked metallic helmet partially broken away to reveal their determined human eye, rising golden sun crowning a mountainous horizon behind the silhouette, soot and rain streaks running down battered armor plates, triumphant majestic mood, painted cinematic digital masterpiece --ar 4:5 --v 6.1 --stylize 350"
+            "badge": "#06",
+            "image": "assets/images/superheroe/06_EPICO_rojo_blanco_ascenso.webp",
+            "title": "Ascenso Épico hacia el Atardecer",
+            "description": "Ascenso en las alturas con brazos cruzados, enorme capa roja ondeando y rayos de sol al atardecer.",
+            "subCategory": "accion",
+            "referenceRequirements": "1 Foto (Hoja de personaje o rostro)",
+            "prompt": "Epic action superhero portrait, same person from reference sheet, wearing red and white suit with huge flowing red cape. Ultra epic ascending flight pose high in sky, arms crossed over chest, cape billowing massively, golden hour sunset, god rays, clouds below, photorealistic --ar 4:5 --v 6.1",
+            "rawJson": {
+                  "style": "fotografía cinematográfica mística y colosal, ultra detallada",
+                  "characters": 1,
+                  "reference_instruction": "Preserva rostro, cabello rizado y facciones de la hoja de personaje",
+                  "costumes": "traje de superhéroe rojo y blanco con enorme capa roja ondeante al viento",
+                  "pose": "vuelo ascendente ultra épico a gran altitud con brazos cruzados sobre el pecho",
+                  "background": "cielo al atardecer sobre un manto de nubes esponjosas con rayos crepusculares",
+                  "lighting": "golden hour cálido, rayos de luz solar divinos atravesando nubes, contraluz dorado",
+                  "camera": "plano entero contrapicado a gran altura en el cielo",
+                  "mood": "majestuoso, sereno, todopoderoso",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#07",
-        image: Xa[6 % Xa.length],
-        title: "Velocista Corriendo con Rayos de Luz",
-        description: "Héroe con traje rojo corriendo a toda velocidad con estelas de electricidad a su alrededor.",
-        prompt: "Using the person in the uploaded reference photo, preserve their facial likeness and aerodynamic focus in a mind-bending cinematic still of a speedster superhero sprinting at relativistic speed. Swirling vortex of amber and electric scarlet lightning arcing around the streamlined friction-proof suit, surrounding city street warped by gravitational time dilation, individual shattered glass fragments floating motionless in hyper-slow motion, Zack Snyder Speed Force visual aesthetic --ar 4:5 --v 6.1"
+            "badge": "#07",
+            "image": "assets/images/superheroe/07_EPICO_azul_negro_salto.webp",
+            "title": "Salto Dinámico desde la Azotea",
+            "description": "Salto dinámico al vacío desde la cornisa de un rascacielos al atardecer con antifaz y ojos brillantes.",
+            "subCategory": "accion",
+            "referenceRequirements": "1 Foto (Hoja de personaje o rostro)",
+            "prompt": "Epic action superhero portrait, same person from reference sheet, young man with curly black hair, round glasses, light brown skin. Wearing blue and black armored suit with blue mask and glowing white eyes, blue cape with glowing details. Ultra epic dynamic pose leaping high off city rooftop at sunset, arm forward, city skyline blurred, dramatic low angle cinematic lighting, photorealistic --ar 4:5 --v 6.1",
+            "rawJson": {
+                  "style": "fotografía cinematográfica nocturna y crepuscular, ultra detallada",
+                  "characters": 1,
+                  "reference_instruction": "Preserva rostro, facciones, cabello rizado negro y gafas de la hoja de personaje",
+                  "costumes": "traje blindado azul y negro con antifaz y ojos blancos brillantes, capa azul con detalles luminosos",
+                  "pose": "salto dinámico en pleno aire despegando desde la cornisa de un edificio, brazo extendido",
+                  "background": "horizonte de rascacielos al atardecer con luces citadinas desenfocadas",
+                  "lighting": "luz crepuscular dramática con ángulo bajo e iluminación de acento",
+                  "camera": "plano holandés en contrapicado dinámico desde abajo",
+                  "mood": "intrépido, cinético, justiciero",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "v": "6.1",
+                  "style": "raw"
+            }
       },
       {
-        badge: "#08",
-        image: Xa[7 % Xa.length],
-        title: "Hechicero Abriendo un Portal Místico",
-        description: "Hechicero con túnica abriendo un portal circular de chispas doradas con las manos.",
-        prompt: "Using the person in the uploaded reference photo, faithfully retain their facial features, cheekbones, and focused gaze as an omnipotent mystic sorcerer conjuring dimensional portals. Swirling mandalas of sparkling eldritch golden embers orbiting open hands, ornate velvet arcane tunic with floating levitation cloak, reality folding into kaleidoscope fractal mirror dimensions in background, Doctor Strange visual effects aesthetic, hyper-detailed volumetric illumination --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#09",
-        image: Xa[8 % Xa.length],
-        title: "Armadura Nanotecnológica en Pleno Vuelo",
-        description: "Armadura de placas metálicas ensamblándose sobre el cuerpo mientras vuela en el cielo.",
-        prompt: "Using the person in the uploaded reference photo as the hero, preserve their authentic facial features as a state-of-the-art nanotech powered armor fluidly forms across their body in mid-air. Liquid metal hexagonal armor tiles flowing across the neck and jawline, glowing blue arc power core illuminated on chest, stratospheric clouds and sunset horizon reflected in chrome surfaces, high-octane Iron Man suit-up sequence realism --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#10",
-        image: Xa[9 % Xa.length],
-        title: "Héroe Marino con Tridente Dorado",
-        description: "Héroe empuñando un tridente dorado en el fondo del mar rodeado de agua luminosa.",
-        prompt: "Using the person in the uploaded reference photo, preserve their facial bone structure, jawline, and commanding presence as a legendary aquatic monarch in the depths of the ocean. Holding an ornate glowing golden trident radiating ethereal cyan shockwaves, armored suit of carved iridescent dragon scales, hair floating weightlessly in deep ocean currents, bioluminescent coral reefs and manta ray silhouettes in misty blue abyss, Aquaman cinematic grandeur --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#11",
-        image: Xa[10 % Xa.length],
-        title: "Vigilante con Traje Blanco en la Nieve",
-        description: "Héroe con traje táctico blanco y visor térmico de pie en una montaña nevada.",
-        prompt: "Using the person in the uploaded reference photo, keep their authentic eyes, nose, and facial contours in a gritty realistic tactical superhero portrait. Battered tactical white and slate-grey winter armor with modular pouches, high-tech night-vision monocle tilted up, heavy blizzard snow sticking to collar and shoulders, frozen alpine mountain fortress backdrop, realistic Christopher Nolan style grounded superhero cinema --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#12",
-        image: Xa[11 % Xa.length],
-        title: "Guerrero del Trueno con Martillo de Guerra",
-        description: "Guerrero levantando un martillo de piedra envuelto en rayos eléctricos de tormenta.",
-        prompt: "Using the person in the uploaded reference photo, preserve their facial proportions and godly warrior intensity as a mythical thunder god standing inside an alien celestial forge. Raw stellar plasma and molten gold liquid metal swirling around a massive war hammer held high, brilliant blue lightning crackling through armored vambraces, glowing divine eyes, colossal cosmic ring architecture orbiting a dying star, epic Marvel Thor cinematic scale --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#13",
-        image: Xa[12 % Xa.length],
-        title: "Fusión con Traje Negro Simbionte",
-        description: "Materia negra orgánica cubriendo el cuerpo y formando un traje oscuro con textura líquida.",
-        prompt: "Using the person in the uploaded reference photo, preserve their exact facial features on one side while glistening liquid black alien symbiote tendrils aggressively creep across the other side of the face and neck. Glossy oil-slick organic textures reflecting streetlights, white liquid symbiote eye beginning to form over the cheek, wet dark alleyway backdrop, intense visceral body-horror superhero transformation, photorealistic movie render --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#14",
-        image: Xa[13 % Xa.length],
-        title: "Poder Telequinético con Ojos Brillantes",
-        description: "Héroe con dedos en la sien deteniendo proyectiles en el aire con ojos encendidos en blanco.",
-        prompt: "Using the person in the uploaded reference photo, capture their facial structure and intense telekinetic concentration with two fingers touching the temple. Luminous solid white eyes emitting soft mental aura waves, an entire barrage of military artillery shells and missiles frozen dead in mid-air in front of them with air rippling in shockwave ripples, smoke and embers suspended, grand cinematic superhero scale --ar 4:5 --v 6.1"
-      },
-      {
-        badge: "#15",
-        image: Xa[14 % Xa.length],
-        title: "Héroe Caminando hacia el Atardecer",
-        description: "Héroe con capa dañada caminando de espaldas hacia el sol tras concluir la batalla.",
-        prompt: "Using the person in the uploaded reference photo, preserve their silhouette, posture, and facial profile in a legendary wide cinematic closing frame. Walking tall across a cleared battlefield towards a glorious rising sun breaking through departing thunderclouds, battered armor glinting with morning dew, billowing cape trailing behind, heroic lone savior triumph, timeless cinematic comic book finale --ar 4:5 --v 6.1 --stylize 350"
+            "badge": "#08",
+            "image": "assets/images/superheroe/08_Viltrumitas_Con_Tu_Bro_Atardecer.webp",
+            "title": "Viltrumitas con tu Bro en las Alturas",
+            "description": "Dos jóvenes superhéroes flotando espalda con espalda sobre la ciudad al atardecer con trajes blancos y capas cortas.",
+            "subCategory": "equipo",
+            "referenceRequirements": "2 Fotos (Hojas de personaje de ambos)",
+            "prompt": "Tomando como referencia las dos hojas de personaje proporcionadas, crea una imagen realista en vida real de dos jóvenes superhéroes con traje blanco.\n\nPreserva exactamente el rostro, facciones, cabello rizado corto y contextura de cada hoja de personaje. No cambies su identidad.\n\nAmbos llevan traje de superhéroe blanco ajustado con textura futurista sutil, líneas gris claro en torso, espalda y piernas, capa corta tipo faldón hasta media pierna con caída natural y botas blancas integradas. Cuello alto cerrado.\n\nPose: ambos flotando en el aire a gran altura, espalda contra espalda, brazos cruzados al frente, piernas colgando relajadas, mirando cada uno hacia un lado opuesto de la ciudad, expresión seria sin sonrisa.\n\nFondo: ciudad realista creíble con rascacielos, avenidas con tráfico y luces de autos, edificios con ventanas iluminadas, cielo atardecer rosa-naranja dorado. Fondo creíble, no ficticio, luz natural.\n\nEstilo: fotografía realista vida real, ultra detallada, iluminación golden hour atardecer, plano entero, proporción 4:5 --ar 4:5",
+            "rawJson": {
+                  "style": "fotografía realista vida real, ultra detallada, 8K",
+                  "characters": 2,
+                  "reference_instruction": "Tomando como referencia las dos hojas de personaje proporcionadas, preserva rostro, facciones, cabello y contextura de cada uno",
+                  "costumes": "traje de superhéroe blanco completo con textura ajustada, detalles sutiles gris claro, patrón en espalda y piernas, capa corta tipo faldón hasta media pierna con abertura lateral, botas blancas integradas, cuello alto",
+                  "pose": "ambos personajes flotando en el aire espalda contra espalda, brazos cruzados al pecho, piernas ligeramente colgando, mirando hacia lados opuestos",
+                  "background": "ciudad realista creíble con rascacielos y calles iluminadas, atardecer, tráfico con luces, vista aérea alta desde azotea",
+                  "lighting": "golden hour atardecer cálido, luz suave rosa-naranja en horizonte, luces de ciudad encendiéndose, sombras suaves",
+                  "camera": "plano entero, ángulo ligeramente picado desde arriba, enfoque nítido en personajes con ciudad ligeramente desenfocada en profundidad",
+                  "mood": "heroico tranquilo, serio, cómplice",
+                  "aspect_ratio": "4:5"
+            },
+            "parameters": {
+                  "ar": "4:5",
+                  "style": "fotografía realista vida real, ultra detallada, 8K"
+            }
       }
-    ]
+]
   }
 };
 
@@ -3484,6 +3589,12 @@ function MasterPromptsExperience(props) {
       { key: "plaza", icon: "🏛️", label: "Plaza Mayor", count: 8 },
       { key: "tigres", icon: "🌳", label: "Parque de los Tigres", count: 7 },
       { key: "deporte", icon: "⚽", label: "Losa Deportiva", count: 1 }
+    ],
+    superheroe: [
+      { key: "all", icon: "✨", label: "Todos", count: 8 },
+      { key: "solitario", icon: "⚡", label: "Trajes y Retratos", count: 3 },
+      { key: "accion", icon: "🚀", label: "Vuelo y Acción Épica", count: 3 },
+      { key: "equipo", icon: "👥", label: "Dúos y Equipos", count: 2 }
     ]
   };
 

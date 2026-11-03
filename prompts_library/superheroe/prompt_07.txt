@@ -1,36 +1,45 @@
 ================================================================================
-CATEGORÍA: SUPERHEROE | PROMPT #07: Velocista Corriendo con Rayos de Luz
+CATEGORÍA: SUPERHEROE | PROMPT #07: Salto Dinámico desde la Azotea
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Héroe con traje rojo corriendo a toda velocidad con estelas de electricidad a su alrededor.
+Salto dinámico al vacío desde la cornisa de un rascacielos al atardecer con antifaz y ojos brillantes.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de perfil o en carrera)
+1 Foto (Hoja de personaje o rostro)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto (o fotos) de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá las facciones y mantendrá la identidad exacta en la composición.
 2. En MIDJOURNEY:
-   - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, preserve their facial likeness and aerodynamic focus in a mind-bending cinematic still of a speedster superhero sprinting at relativistic speed. Swirling vortex of amber and electric scarlet lightning arcing around the streamlined friction-proof suit, surrounding city street warped by gravitational time dilation, individual shattered glass fragments floating motionless in hyper-slow motion, Zack Snyder Speed Force visual aesthetic --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Sube tu foto a Discord y copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Epic action superhero portrait, same person from reference sheet, young man with curly black hair, round glasses, light brown skin. Wearing blue and black armored suit with blue mask and glowing white eyes, blue cape with glowing details. Ultra epic dynamic pose leaping high off city rooftop at sunset, arm forward, city skyline blurred, dramatic low angle cinematic lighting, photorealistic --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, preserve their facial likeness and aerodynamic focus in a mind-bending cinematic still of a speedster superhero sprinting at relativistic speed. Swirling vortex of amber and electric scarlet lightning arcing around the streamlined friction-proof suit, surrounding city street warped by gravitational time dilation, individual shattered glass fragments floating motionless in hyper-slow motion, Zack Snyder Speed Force visual aesthetic --ar 4:5 --v 6.1
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-mind-bending cinematic still of a speedster superhero sprinting at light speed through a city street, roaring arcs of scarlet and golden lightning tearing through the air, surrounding environment warped by extreme time dilation, debris frozen in hyper-slow motion, epic photorealistic comic book action --ar 4:5 --v 6.1
+Epic action superhero portrait, same person from reference sheet, young man with curly black hair, round glasses, light brown skin. Wearing blue and black armored suit with blue mask and glowing white eyes, blue cape with glowing details. Ultra epic dynamic pose leaping high off city rooftop at sunset, arm forward, city skyline blurred, dramatic low angle cinematic lighting, photorealistic --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 ESQUEMA JSON ESTRUCTURADO:
+--------------------------------------------------------------------------------
+{
+  "style": "fotografía cinematográfica nocturna y crepuscular, ultra detallada",
+  "characters": 1,
+  "reference_instruction": "Preserva rostro, facciones, cabello rizado negro y gafas de la hoja de personaje",
+  "costumes": "traje blindado azul y negro con antifaz y ojos blancos brillantes, capa azul con detalles luminosos",
+  "pose": "salto dinámico en pleno aire despegando desde la cornisa de un edificio, brazo extendido",
+  "background": "horizonte de rascacielos al atardecer con luces citadinas desenfocadas",
+  "lighting": "luz crepuscular dramática con ángulo bajo e iluminación de acento",
+  "camera": "plano holandés en contrapicado dinámico desde abajo",
+  "mood": "intrépido, cinético, justiciero",
+  "aspect_ratio": "4:5"
+}
 ================================================================================

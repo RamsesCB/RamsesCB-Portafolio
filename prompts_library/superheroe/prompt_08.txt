@@ -1,36 +1,65 @@
 ================================================================================
-CATEGORÍA: SUPERHEROE | PROMPT #08: Hechicero Abriendo un Portal Místico
+CATEGORÍA: SUPERHEROE | PROMPT #08: Viltrumitas con tu Bro en las Alturas
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Hechicero con túnica abriendo un portal circular de chispas doradas con las manos.
+Dos jóvenes superhéroes flotando espalda con espalda sobre la ciudad al atardecer con trajes blancos y capas cortas.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con mirada mística y manos levantadas)
+2 Fotos (Hojas de personaje de ambos)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto (o fotos) de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá las facciones y mantendrá la identidad exacta en la composición.
 2. En MIDJOURNEY:
-   - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, faithfully retain their facial features, cheekbones, and focused gaze as an omnipotent mystic sorcerer conjuring dimensional portals. Swirling mandalas of sparkling eldritch golden embers orbiting open hands, ornate velvet arcane tunic with floating levitation cloak, reality folding into kaleidoscope fractal mirror dimensions in background, Doctor Strange visual effects aesthetic, hyper-detailed volumetric illumination --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Sube tu foto a Discord y copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Tomando como referencia las dos hojas de personaje proporcionadas, crea una imagen realista en vida real de dos jóvenes superhéroes con traje blanco.
+
+Preserva exactamente el rostro, facciones, cabello rizado corto y contextura de cada hoja de personaje. No cambies su identidad.
+
+Ambos llevan traje de superhéroe blanco ajustado con textura futurista sutil, líneas gris claro en torso, espalda y piernas, capa corta tipo faldón hasta media pierna con caída natural y botas blancas integradas. Cuello alto cerrado.
+
+Pose: ambos flotando en el aire a gran altura, espalda contra espalda, brazos cruzados al frente, piernas colgando relajadas, mirando cada uno hacia un lado opuesto de la ciudad, expresión seria sin sonrisa.
+
+Fondo: ciudad realista creíble con rascacielos, avenidas con tráfico y luces de autos, edificios con ventanas iluminadas, cielo atardecer rosa-naranja dorado. Fondo creíble, no ficticio, luz natural.
+
+Estilo: fotografía realista vida real, ultra detallada, iluminación golden hour atardecer, plano entero, proporción 4:5 --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, faithfully retain their facial features, cheekbones, and focused gaze as an omnipotent mystic sorcerer conjuring dimensional portals. Swirling mandalas of sparkling eldritch golden embers orbiting open hands, ornate velvet arcane tunic with floating levitation cloak, reality folding into kaleidoscope fractal mirror dimensions in background, Doctor Strange visual effects aesthetic, hyper-detailed volumetric illumination --ar 4:5 --v 6.1
+Tomando como referencia las dos hojas de personaje proporcionadas, crea una imagen realista en vida real de dos jóvenes superhéroes con traje blanco.
 
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-spectacular cinematic still of a master sorcerer conjuring complex glowing golden geometric eldritch shields, sparkling embers spiraling around hands, high-collar mystical levitation cloak billowing, folding fractal reality dimensions in background, jaw-dropping Hollywood visual effects --ar 4:5 --v 6.1
+Preserva exactamente el rostro, facciones, cabello rizado corto y contextura de cada hoja de personaje. No cambies su identidad.
+
+Ambos llevan traje de superhéroe blanco ajustado con textura futurista sutil, líneas gris claro en torso, espalda y piernas, capa corta tipo faldón hasta media pierna con caída natural y botas blancas integradas. Cuello alto cerrado.
+
+Pose: ambos flotando en el aire a gran altura, espalda contra espalda, brazos cruzados al frente, piernas colgando relajadas, mirando cada uno hacia un lado opuesto de la ciudad, expresión seria sin sonrisa.
+
+Fondo: ciudad realista creíble con rascacielos, avenidas con tráfico y luces de autos, edificios con ventanas iluminadas, cielo atardecer rosa-naranja dorado. Fondo creíble, no ficticio, luz natural.
+
+Estilo: fotografía realista vida real, ultra detallada, iluminación golden hour atardecer, plano entero, proporción 4:5 --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
 --ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 ESQUEMA JSON ESTRUCTURADO:
+--------------------------------------------------------------------------------
+{
+  "style": "fotografía realista vida real, ultra detallada, 8K",
+  "characters": 2,
+  "reference_instruction": "Tomando como referencia las dos hojas de personaje proporcionadas, preserva rostro, facciones, cabello y contextura de cada uno",
+  "costumes": "traje de superhéroe blanco completo con textura ajustada, detalles sutiles gris claro, patrón en espalda y piernas, capa corta tipo faldón hasta media pierna con abertura lateral, botas blancas integradas, cuello alto",
+  "pose": "ambos personajes flotando en el aire espalda contra espalda, brazos cruzados al pecho, piernas ligeramente colgando, mirando hacia lados opuestos",
+  "background": "ciudad realista creíble con rascacielos y calles iluminadas, atardecer, tráfico con luces, vista aérea alta desde azotea",
+  "lighting": "golden hour atardecer cálido, luz suave rosa-naranja en horizonte, luces de ciudad encendiéndose, sombras suaves",
+  "camera": "plano entero, ángulo ligeramente picado desde arriba, enfoque nítido en personajes con ciudad ligeramente desenfocada en profundidad",
+  "mood": "heroico tranquilo, serio, cómplice",
+  "aspect_ratio": "4:5"
+}
 ================================================================================

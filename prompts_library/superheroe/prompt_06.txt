@@ -1,36 +1,45 @@
 ================================================================================
-CATEGORÍA: SUPERHEROE | PROMPT #06: Retrato con Casco Dañado tras la Batalla
+CATEGORÍA: SUPERHEROE | PROMPT #06: Ascenso Épico hacia el Atardecer
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Primer plano del héroe con la mitad del casco metálico roto al amanecer.
+Ascenso en las alturas con brazos cruzados, enorme capa roja ondeando y rayos de sol al atardecer.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de primer plano con mirada fija)
+1 Foto (Hoja de personaje o rostro)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
-   - Sube tu foto (o fotos) en el chat.
+   - Sube tu foto (o fotos) de referencia en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá las facciones y mantendrá la identidad exacta en la composición.
 2. En MIDJOURNEY:
-   - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, preserve their exact facial features, eye, and jawline in an epic close-up battle portrait at dawn. A cracked metallic helmet partially broken away to reveal their determined human eye, rising golden sun crowning a mountainous horizon behind the silhouette, soot and rain streaks running down battered armor plates, triumphant majestic mood, painted cinematic digital masterpiece --ar 4:5 --v 6.1 --stylize 350`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Sube tu foto a Discord y copia su enlace directo (URL).
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Epic action superhero portrait, same person from reference sheet, wearing red and white suit with huge flowing red cape. Ultra epic ascending flight pose high in sky, arms crossed over chest, cape billowing massively, golden hour sunset, god rays, clouds below, photorealistic --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, preserve their exact facial features, eye, and jawline in an epic close-up battle portrait at dawn. A cracked metallic helmet partially broken away to reveal their determined human eye, rising golden sun crowning a mountainous horizon behind the silhouette, soot and rain streaks running down battered armor plates, triumphant majestic mood, painted cinematic digital masterpiece --ar 4:5 --v 6.1 --stylize 350
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-epic battle-damaged superhero close-up portrait at dawn, cracked metallic helmet revealing a fiercely determined eye, rising golden sun crowning a mountainous horizon behind the silhouette, soot and rain streaks on battered armor plates, triumphant majestic mood, painted cinematic digital masterpiece --ar 4:5 --v 6.1 --stylize 350
+Epic action superhero portrait, same person from reference sheet, wearing red and white suit with huge flowing red cape. Ultra epic ascending flight pose high in sky, arms crossed over chest, cape billowing massively, golden hour sunset, god rays, clouds below, photorealistic --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --v 6.1 --stylize 350
+--ar 4:5 --v 6.1
+
+--------------------------------------------------------------------------------
+📦 ESQUEMA JSON ESTRUCTURADO:
+--------------------------------------------------------------------------------
+{
+  "style": "fotografía cinematográfica mística y colosal, ultra detallada",
+  "characters": 1,
+  "reference_instruction": "Preserva rostro, cabello rizado y facciones de la hoja de personaje",
+  "costumes": "traje de superhéroe rojo y blanco con enorme capa roja ondeante al viento",
+  "pose": "vuelo ascendente ultra épico a gran altitud con brazos cruzados sobre el pecho",
+  "background": "cielo al atardecer sobre un manto de nubes esponjosas con rayos crepusculares",
+  "lighting": "golden hour cálido, rayos de luz solar divinos atravesando nubes, contraluz dorado",
+  "camera": "plano entero contrapicado a gran altura en el cielo",
+  "mood": "majestuoso, sereno, todopoderoso",
+  "aspect_ratio": "4:5"
+}
 ================================================================================
