@@ -1,33 +1,26 @@
 ================================================================================
-CATEGORÍA: EDICION | PROMPT #06: Efecto Estatua de Mármol Clásico
+CATEGORÍA: EDICIÓN | PROMPT #06: Retrato Medio en la Plaza Mayor
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Transforma el rostro en una escultura de mármol pulido con grietas doradas sutiles.
+Retrato en plano medio con chaqueta marrón y la catedral desenfocada en el fondo.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro o pose casual)
+1 FOTO DE REFERENCIA
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the subject, render them as a 1990s magnetic camcorder video still while maintaining their facial likeness. Subtle horizontal CRT monitor scanlines, magnetic tape tracking glitch lines near bottom edge, warm nostalgic saturation shift, genuine video tape noise and bloom on bright highlights, contemporary streetwear styling, authentic vintage analog feel with crisp modern clarity --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Retrato fotográfico en plano medio de chico joven peruano con cabello rizado corto natural y anteojos metálicos redondos, vistiendo chaqueta casual marrón. Fondo desenfocado con bokeh sutil mostrando la Plaza Mayor de Nuevo Chimbote y la catedral, iluminación natural equilibrada, expresión serena y enfocada a la cámara --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the subject, render them as a 1990s magnetic camcorder video still while maintaining their facial likeness. Subtle horizontal CRT monitor scanlines, magnetic tape tracking glitch lines near bottom edge, warm nostalgic saturation shift, genuine video tape noise and bloom on bright highlights, contemporary streetwear styling, authentic vintage analog feel with crisp modern clarity --ar 4:5 --v 6.1
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-remastered 1990s analog camcorder still captured on vintage magnetic tape, subtle authentic CRT horizontal scanlines, warm nostalgic color shift, tactile magnetic tape tracking glitch artifacts, contemporary Tokyo night street fashion, organic analog imperfection fused with crisp 4k optical clarity --ar 4:5 --v 6.1
+Retrato fotográfico en plano medio de chico joven peruano con cabello rizado corto natural y anteojos metálicos redondos, vistiendo chaqueta casual marrón. Fondo desenfocado con bokeh sutil mostrando la Plaza Mayor de Nuevo Chimbote y la catedral, iluminación natural equilibrada, expresión serena y enfocada a la cámara --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

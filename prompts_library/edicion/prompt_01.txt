@@ -1,33 +1,26 @@
 ================================================================================
-CATEGORÍA: EDICION | PROMPT #01: Muñeco de Crochet Tejido a Mano
+CATEGORÍA: EDICIÓN | PROMPT #01: Frente a la Catedral en la Plaza Mayor
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Convierte la foto en un muñeco de lana estilo amigurumi con textura realista de estambre.
+De pie frente a la fachada principal de la Catedral de Nuevo Chimbote con ropa casual y expresión serena.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 o 2 Fotos (Foto 1: Tu rostro / Foto 2: Prenda o accesorio de lana)
+1 FOTO DE REFERENCIA
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the exact visual model, translate their facial likeness, hairstyle, skin tone, and distinct characteristics into a photorealistic handcrafted amigurumi crochet figure. Macro close-up shot showcasing authentic thick woolen yarn weave texture, visible fuzzy fiber filaments, delicate hand-stitched black button eyes, hand-knitted miniature clothes matching the photo, sitting on a warm wooden craft table surrounded by spools of thread, soft diffused daylight from window, tactile artisan masterpiece, 8k resolution macro photography --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Foto fotorrealista de chico joven peruano, cabello corto rizado natural bien recortado, lentes de marco fino, chaqueta marrón casual sobre polo oscuro y pantalón negro con zapatillas deportivas. De pie con postura relajada y natural en el pavimento pulido frente a la fachada de la Catedral Nuestra Señora del Carmen en la Plaza Mayor de Nuevo Chimbote. Fondo nítido y auténtico con la arquitectura moderna de la iglesia, cielo despejado de día, luz natural uniforme sin sobreexposición, enfoque limpio, proporción vertical --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the exact visual model, translate their facial likeness, hairstyle, skin tone, and distinct characteristics into a photorealistic handcrafted amigurumi crochet figure. Macro close-up shot showcasing authentic thick woolen yarn weave texture, visible fuzzy fiber filaments, delicate hand-stitched black button eyes, hand-knitted miniature clothes matching the photo, sitting on a warm wooden craft table surrounded by spools of thread, soft diffused daylight from window, tactile artisan masterpiece, 8k resolution macro photography --ar 4:5 --v 6.1
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-photorealistic handcrafted amigurumi crochet figure of a stylized character, macro close-up showcasing authentic thick woolen yarn weave texture, visible fluffy fiber fuzz, delicate hand-stitched details, soft felt accents, resting on a clean warm craft table with sewing thread spools in background, shallow depth of field, warm ambient window light, tactile artisan craftsmanship, 8k resolution macro photography --ar 4:5 --v 6.1
+Foto fotorrealista de chico joven peruano, cabello corto rizado natural bien recortado, lentes de marco fino, chaqueta marrón casual sobre polo oscuro y pantalón negro con zapatillas deportivas. De pie con postura relajada y natural en el pavimento pulido frente a la fachada de la Catedral Nuestra Señora del Carmen en la Plaza Mayor de Nuevo Chimbote. Fondo nítido y auténtico con la arquitectura moderna de la iglesia, cielo despejado de día, luz natural uniforme sin sobreexposición, enfoque limpio, proporción vertical --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #07: Entrada al Parque de los Tigres
+CATEGORÍA: ANIME | PROMPT #07: Cazador del Rayo Agachado
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-En el sendero de entrada al Parque de los Tigres rodeado de césped verde y farolas urbanas.
+Cazador en postura agachada con katana desenfundada en una vereda urbana con hojas secas.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,12 +15,12 @@ En el sendero de entrada al Parque de los Tigres rodeado de césped verde y faro
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista al aire libre en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano de cabello corto rizado y lentes circulares, parado tranquilamente sobre la vereda del parque rodeado de jardines verdes bien cuidados, farolas azules de iluminación pública y árboles, luz natural de día --ar 4:5 --v 6.1`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real con gafas, cabello rizado natural. Cosplay inspirado en cazador del rayo: haori amarillo y naranja con triángulos blancos, uniforme negro debajo, espinilleras con diseño de triángulos, katana con mango blanco y dorado. POSE: agachado bajo en una rodilla en vereda de ciudad con hojas secas en el suelo, mano derecha en la empuñadura de la katana apenas saliendo de la vaina, mirada concentrada hacia adelante, viento moviendo el haori, fondo calle real de Tokio de día con edificios normales, sin relámpagos ni electricidad en el cuerpo, realismo absoluto, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Fotografía realista al aire libre en el Parque de los Tigres de Nuevo Chimbote. Chico joven peruano de cabello corto rizado y lentes circulares, parado tranquilamente sobre la vereda del parque rodeado de jardines verdes bien cuidados, farolas azules de iluminación pública y árboles, luz natural de día --ar 4:5 --v 6.1
+Según la hoja de referencia, humano real con gafas, cabello rizado natural. Cosplay inspirado en cazador del rayo: haori amarillo y naranja con triángulos blancos, uniforme negro debajo, espinilleras con diseño de triángulos, katana con mango blanco y dorado. POSE: agachado bajo en una rodilla en vereda de ciudad con hojas secas en el suelo, mano derecha en la empuñadura de la katana apenas saliendo de la vaina, mirada concentrada hacia adelante, viento moviendo el haori, fondo calle real de Tokio de día con edificios normales, sin relámpagos ni electricidad en el cuerpo, realismo absoluto, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

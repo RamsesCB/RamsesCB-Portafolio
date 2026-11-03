@@ -1,36 +1,29 @@
 ================================================================================
-CATEGORÍA: ELEGANCIA | PROMPT #03: Primer Plano con Velo Translúcido
+CATEGORÍA: ELEGANCIA | PROMPT #03: Traje de Lino Beige en Cafetería Luminosa
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Fotografía de rostro de perfil cubierta por un velo de seda con pendientes dorados.
+Joven con traje beige de lino y camisa abierta sentado en una cafetería tranquila con taza de café latte y croissant.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro en primer plano cerrado)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, accurately retain their facial contours, eye color, and tranquil expression in an intimate high-jewelry beauty editorial. Photographed through multiple layers of floating translucent silk chiffon veil, handcrafted brushed raw gold drop earrings catching glistening pin-light, serene poised expression, ultra-shallow depth of field with velvety creamy bokeh, shot on 85mm f/1.2 portrait lens, refined aesthetic, high-end fine jewelry campaign --ar 4:5 --v 6.1 --style raw`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, slicked back hair, wearing a luxury beige linen suit with open white shirt, light brown suede loafers, sitting in a quiet cafe with wooden table, latte art coffee, glass of water with lemon, croissant, eucalyptus plant, bright window daylight --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the primary subject, accurately retain their facial contours, eye color, and tranquil expression in an intimate high-jewelry beauty editorial. Photographed through multiple layers of floating translucent silk chiffon veil, handcrafted brushed raw gold drop earrings catching glistening pin-light, serene poised expression, ultra-shallow depth of field with velvety creamy bokeh, shot on 85mm f/1.2 portrait lens, refined aesthetic, high-end fine jewelry campaign --ar 4:5 --v 6.1 --style raw
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-intimate high-jewelry beauty editorial, portrait photographed through multiple layers of floating translucent silk chiffon veil, handcrafted brushed raw gold drop earrings catching glistening pin-light, serene poised expression, ultra-shallow depth of field with velvety creamy bokeh, shot on 35mm portrait lens, refined aesthetic, high-end fine jewelry campaign --ar 4:5 --v 6.1 --style raw
+Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, slicked back hair, wearing a luxury beige linen suit with open white shirt, light brown suede loafers, sitting in a quiet cafe with wooden table, latte art coffee, glass of water with lemon, croissant, eucalyptus plant, bright window daylight --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --v 6.1 --style raw
+--ar 4:5 --v 6.1
 ================================================================================

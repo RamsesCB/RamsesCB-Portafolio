@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #15: Borde de la Plaza con Sardinel Amarillo
+CATEGORÍA: ANIME | PROMPT #15: Chico Skater con Patineta y Grafitis
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-De pie en el borde del sardinel amarillo de la Plaza Mayor con perspectiva corregida y fondo real.
+Cazador con camiseta casual y dos skateboards posando relajado contra un muro de grafitis.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,12 +15,12 @@ De pie en el borde del sardinel amarillo de la Plaza Mayor con perspectiva corre
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista corregida en la Plaza Mayor de Nuevo Chimbote. Chico joven peruano con cabello corto rizado natural sin volumen excesivo, gafas de marco fino, expresión seria y serena sin sonrisa, chaqueta marrón, pantalón negro y zapatillas deportivas. De pie sobre la vereda junto al sardinel amarillo de seguridad vial, fondo idéntico y preservado de la plaza con catedral y cielo despejado, perspectiva angular realista --ar 4:5 --v 6.1`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, humano real con gafas, cabello negro rizado. Cosplay inspirado en chico skater: camiseta azul brillante, shorts morados cargo, zapatillas blancas, dos skateboards amarillos. POSE INTERESANTE: recargado casual contra muro con grafitis coloridos en callejón urbano, un pie sobre skateboard en suelo, mano izquierda en bolsillo, mano derecha sosteniendo otro skateboard amarillo bajo brazo, sonrisa leve y cool mirando a cámara, fondo muro lleno de grafitis de colores y bicicletas aparcadas, luz de día natural, cosplay bien hecho como ropa casual, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Fotografía realista corregida en la Plaza Mayor de Nuevo Chimbote. Chico joven peruano con cabello corto rizado natural sin volumen excesivo, gafas de marco fino, expresión seria y serena sin sonrisa, chaqueta marrón, pantalón negro y zapatillas deportivas. De pie sobre la vereda junto al sardinel amarillo de seguridad vial, fondo idéntico y preservado de la plaza con catedral y cielo despejado, perspectiva angular realista --ar 4:5 --v 6.1
+Según la hoja de referencia, humano real con gafas, cabello negro rizado. Cosplay inspirado en chico skater: camiseta azul brillante, shorts morados cargo, zapatillas blancas, dos skateboards amarillos. POSE INTERESANTE: recargado casual contra muro con grafitis coloridos en callejón urbano, un pie sobre skateboard en suelo, mano izquierda en bolsillo, mano derecha sosteniendo otro skateboard amarillo bajo brazo, sonrisa leve y cool mirando a cámara, fondo muro lleno de grafitis de colores y bicicletas aparcadas, luz de día natural, cosplay bien hecho como ropa casual, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

@@ -1,36 +1,29 @@
 ================================================================================
-CATEGORÍA: ELEGANCIA | PROMPT #01: Traje de Alta Costura Color Marfil
+CATEGORÍA: ELEGANCIA | PROMPT #01: Blazer de Terciopelo Burdeos en Sala Elegante
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Retrato de estudio con traje marfil bordado en hilos dorados e iluminación suave.
+Joven con blazer burdeos y mocasines de terciopelo de pie en una sala tranquila con sillón verde y lámpara dorada.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con iluminación suave de estudio)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the model, preserve their authentic facial bone structure, delicate skin texture, gaze, and natural likeness in a statuesque high fashion editorial portrait. Dressed in a sculptural ivory silk gazar gown with hand-embroidered 24k gold filigree threads, architectural cascading pleats catching gentle daylight, minimalist limestone gallery interior, soft chiaroscuro studio lighting, shot on Hasselblad H6D-100c with 85mm f/1.4 lens, natural skin texture with dewy luminous highlights, Harper's Bazaar cover aesthetic, quiet luxury mood --ar 4:5 --v 6.1 --stylize 250`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, low fade haircut, wearing a luxury burgundy velvet blazer, black trousers, black t-shirt, black velvet loafers with gold buckle, standing in an elegant quiet living room with green velvet armchair, golden lamp, olive plant, jute rug, beige wall, peaceful home atmosphere --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo as the model, preserve their authentic facial bone structure, delicate skin texture, gaze, and natural likeness in a statuesque high fashion editorial portrait. Dressed in a sculptural ivory silk gazar gown with hand-embroidered 24k gold filigree threads, architectural cascading pleats catching gentle daylight, minimalist limestone gallery interior, soft chiaroscuro studio lighting, shot on Hasselblad H6D-100c with 85mm f/1.4 lens, natural skin texture with dewy luminous highlights, Harper's Bazaar cover aesthetic, quiet luxury mood --ar 4:5 --v 6.1 --stylize 250
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-statuesque high fashion editorial portrait of an elegant model in a sculptural ivory silk gazar gown with hand-embroidered 24k gold filigree threads, architectural cascading pleats catching gentle daylight, minimalist limestone gallery interior, soft chiaroscuro studio lighting, shot on Hasselblad H6D-100c with 85mm f/1.4 lens, natural skin texture with dewy luminous highlights, Harper's Bazaar cover aesthetic, quiet luxury mood --ar 4:5 --v 6.1 --stylize 250
+Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, low fade haircut, wearing a luxury burgundy velvet blazer, black trousers, black t-shirt, black velvet loafers with gold buckle, standing in an elegant quiet living room with green velvet armchair, golden lamp, olive plant, jute rug, beige wall, peaceful home atmosphere --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
 --------------------------------------------------------------------------------
---ar 4:5 --v 6.1 --stylize 250
+--ar 4:5 --v 6.1
 ================================================================================

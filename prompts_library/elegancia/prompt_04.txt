@@ -1,33 +1,26 @@
 ================================================================================
-CATEGORÍA: ELEGANCIA | PROMPT #04: Retrato Clásico con Túnica y Mármol
+CATEGORÍA: ELEGANCIA | PROMPT #04: Traje Carbón Cruzado con Cuello Tortuga
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Retrato con túnica de lino blanca y columnas de mármol clásico con luz matutina.
+Joven con traje carbón cruzado y suéter negro de cuello alto apoyado en una pared minimalista con sombra suave.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro con postura noble)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, capture their facial structure, brow line, and dignified posture in a timeless classical fashion portrait. Draped in a sun-bleached pleated linen Grecian peplos standing beside ancient fluted marble columns, raking golden Mediterranean morning sunlight creating deep sculptural shadows, poised noble posture, warm travertine and aged terracotta color story, editorial Vanity Fair museum shoot quality --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, matte styled hair, wearing a charcoal double-breasted suit with black cashmere turtleneck, black leather Chelsea boots, Swiss watch, leaning against a minimalist white wall with soft shadow, grey microcement floor, peaceful elegant interior --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, capture their facial structure, brow line, and dignified posture in a timeless classical fashion portrait. Draped in a sun-bleached pleated linen Grecian peplos standing beside ancient fluted marble columns, raking golden Mediterranean morning sunlight creating deep sculptural shadows, poised noble posture, warm travertine and aged terracotta color story, editorial Vanity Fair museum shoot quality --ar 4:5 --v 6.1
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-timeless classical fashion portrait, statuesque model draped in a sun-bleached pleated linen Grecian peplos standing beside ancient fluted marble columns, raking golden Mediterranean morning sunlight creating deep sculptural shadows, poised noble posture, warm travertine and aged terracotta color story, editorial Vanity Fair museum shoot quality --ar 4:5 --v 6.1
+Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, matte styled hair, wearing a charcoal double-breasted suit with black cashmere turtleneck, black leather Chelsea boots, Swiss watch, leaning against a minimalist white wall with soft shadow, grey microcement floor, peaceful elegant interior --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

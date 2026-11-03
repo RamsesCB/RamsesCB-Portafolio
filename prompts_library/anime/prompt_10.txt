@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #10: Alameda Arbolada del Parque
+CATEGORÍA: ANIME | PROMPT #10: Luchador con Gi Naranja en Carga
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-En medio del camino flanqueado por árboles en el Parque de los Tigres en Nuevo Chimbote.
+Luchador en postura de carga con gi naranja y muñequeras azules en una calle urbana.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,12 +15,12 @@ En medio del camino flanqueado por árboles en el Parque de los Tigres en Nuevo 
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía documental realista de chico joven con cabello corto rizado natural, gafas y chaqueta marrón, posando de pie en el camino adoquinado del Parque de los Tigres flanqueado por árboles frondosos y áreas verdes. Profundidad de campo natural que resalta el entorno cotidiano y auténtico de la ciudad --ar 4:5 --v 6.1`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia, preserva gafas, cabello rizado normal. Cosplay de artes marciales: gi naranja brillante de tela gruesa de algodón con kanji de tortuga negro en pecho, camiseta interior azul oscuro y muñequeras azules, cinturón azul oscuro, pantalones azules anchos. POSE INTERESANTE: pose de carga de Kamehameha en calle normal, pies separados muy amplios en postura de caballo, manos juntas en costado de cintura como cargando energía, inclinado hacia adelante, expresión intensa enfocada, fondo calle real con tienda de conveniencia japonesa con letrero de colores, luz de día, sin bola de energía, cosplay bien hecho, 8K --ar 4:5`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Fotografía documental realista de chico joven con cabello corto rizado natural, gafas y chaqueta marrón, posando de pie en el camino adoquinado del Parque de los Tigres flanqueado por árboles frondosos y áreas verdes. Profundidad de campo natural que resalta el entorno cotidiano y auténtico de la ciudad --ar 4:5 --v 6.1
+Según la hoja de referencia, preserva gafas, cabello rizado normal. Cosplay de artes marciales: gi naranja brillante de tela gruesa de algodón con kanji de tortuga negro en pecho, camiseta interior azul oscuro y muñequeras azules, cinturón azul oscuro, pantalones azules anchos. POSE INTERESANTE: pose de carga de Kamehameha en calle normal, pies separados muy amplios en postura de caballo, manos juntas en costado de cintura como cargando energía, inclinado hacia adelante, expresión intensa enfocada, fondo calle real con tienda de conveniencia japonesa con letrero de colores, luz de día, sin bola de energía, cosplay bien hecho, 8K --ar 4:5
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

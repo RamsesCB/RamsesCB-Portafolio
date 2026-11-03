@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #03: Caminata en el Paseo Central
+CATEGORÍA: ANIME | PROMPT #03: Hechicero con Abrigo y Talismán
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Caminando de manera casual por el paseo peatonal central de la Plaza Mayor con árboles y bancas.
+Hechicero caminando por una calle urbana sosteniendo un talismán con katana en el cinto.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,12 +15,12 @@ Caminando de manera casual por el paseo peatonal central de la Plaza Mayor con �
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía documental realista de chico peruano de cabello corto rizado natural y lentes delgados, caminando con calma por el paseo central adoquinado de la Plaza Mayor de Nuevo Chimbote. Al fondo se aprecian las farolas urbanas, palmeras y bancas de concreto, luz solar clara de media tarde, composición equilibrada y encuadre vertical --ar 4:5 --v 6.1`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste, humano real con mismo rostro, gafas redondas, cabello rizado. Cosplay de hechicero de alta calidad: chaqueta larga azul marino con costura roja detallada en bordes y emblema dorado de brújula en pecho, pantalones cargo negros con costura roja, cinturón negro con hebilla plateada, katana real con papeles talismán blancos con kanji rojo atados con cuerda roja colgando. POSE: caminando con confianza hacia cámara en calle real de ciudad japonesa, pierna izquierda adelante en pleno paso, mano derecha sosteniendo katana por el costado con talismanes ondeando, mano izquierda levantada sosteniendo un talismán entre dedos índice y pulgar, abrigo largo ondeando con movimiento por viento, sonrisa leve y confiada, fondo calle urbana con tiendas y máquinas expendedoras, luz de día natural, sin neón, sin lluvia, fotografía de moda callejera, 8K --ar 4:5 --style raw`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Fotografía documental realista de chico peruano de cabello corto rizado natural y lentes delgados, caminando con calma por el paseo central adoquinado de la Plaza Mayor de Nuevo Chimbote. Al fondo se aprecian las farolas urbanas, palmeras y bancas de concreto, luz solar clara de media tarde, composición equilibrada y encuadre vertical --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, humano real con mismo rostro, gafas redondas, cabello rizado. Cosplay de hechicero de alta calidad: chaqueta larga azul marino con costura roja detallada en bordes y emblema dorado de brújula en pecho, pantalones cargo negros con costura roja, cinturón negro con hebilla plateada, katana real con papeles talismán blancos con kanji rojo atados con cuerda roja colgando. POSE: caminando con confianza hacia cámara en calle real de ciudad japonesa, pierna izquierda adelante en pleno paso, mano derecha sosteniendo katana por el costado con talismanes ondeando, mano izquierda levantada sosteniendo un talismán entre dedos índice y pulgar, abrigo largo ondeando con movimiento por viento, sonrisa leve y confiada, fondo calle urbana con tiendas y máquinas expendedoras, luz de día natural, sin neón, sin lluvia, fotografía de moda callejera, 8K --ar 4:5 --style raw
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

@@ -1,33 +1,26 @@
 ================================================================================
-CATEGORÍA: ELEGANCIA | PROMPT #05: Suéter de Cuello Alto en Tono Avena
+CATEGORÍA: ELEGANCIA | PROMPT #05: Esmoquin Negro Clásico en Sala Minimalista
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Retrato de estilo minimalista con suéter beige de cuello alto y fondo limpio.
+Joven de esmoquin negro con solapas de satén y pajarita de pie en una sala minimalista con planta monstera y luz natural.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro relajado y seguro)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, preserve their exact facial features, skin tone, and authentic expression in a refined quiet luxury lifestyle editorial. Posed in an oversized double-breasted oatmeal cashmere trench coat with tailored wide-leg trousers, relaxed confident posture in a sunlit Scandinavian gallery with natural oak floors, soft natural northern window light, shot on medium format digital camera, muted neutral palette of taupe, ecru and warm beige, effortless sophisticated elegance --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, elegant volume hair, wearing a classic black tuxedo with satin lapels, white dress shirt, black bowtie, black patent leather Oxford shoes, standing in a quiet minimalist room with beige wall, monstera plant in rattan basket, light wood floor, natural window light --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, preserve their exact facial features, skin tone, and authentic expression in a refined quiet luxury lifestyle editorial. Posed in an oversized double-breasted oatmeal cashmere trench coat with tailored wide-leg trousers, relaxed confident posture in a sunlit Scandinavian gallery with natural oak floors, soft natural northern window light, shot on medium format digital camera, muted neutral palette of taupe, ecru and warm beige, effortless sophisticated elegance --ar 4:5 --v 6.1
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-refined quiet luxury lifestyle editorial, poised model in an oversized double-breasted oatmeal cashmere trench coat with tailored wide-leg trousers, relaxed confident posture in a sunlit Scandinavian gallery with oak floors, soft natural northern window light, shot on medium format digital camera, muted neutral palette of taupe, ecru and warm beige, effortless sophisticated elegance --ar 4:5 --v 6.1
+Using the person in the uploaded reference photo, create a realistic photo of the young man with curly hair and round glasses, elegant volume hair, wearing a classic black tuxedo with satin lapels, white dress shirt, black bowtie, black patent leather Oxford shoes, standing in a quiet minimalist room with beige wall, monstera plant in rattan basket, light wood floor, natural window light --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

@@ -1,33 +1,26 @@
 ================================================================================
-CATEGORÍA: EDICION | PROMPT #15: Rastro de Movimiento Estroboscópico
+CATEGORÍA: EDICIÓN | PROMPT #15: Borde de la Plaza con Sardinel Amarillo
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Secuencia de varias poses superpuestas mostrando la trayectoria del movimiento en una sola foto.
+De pie en el borde del sardinel amarillo de la Plaza Mayor con perspectiva corregida y fondo real.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro o cuerpo entero en exterior)
+1 FOTO DE REFERENCIA
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, render them within an enchanting miniature diorama world using an extreme tilt-shift optical perspective. Razor-thin horizontal plane of sharp focus right across the eyes, while the top and bottom of the frame melt into creamy cinematic blur and glowing golden circular bokeh balls, miniature city street setting with warm whimsical night lighting, magical toy-like photographic aesthetic --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía realista corregida en la Plaza Mayor de Nuevo Chimbote. Chico joven peruano con cabello corto rizado natural sin volumen excesivo, gafas de marco fino, expresión seria y serena sin sonrisa, chaqueta marrón, pantalón negro y zapatillas deportivas. De pie sobre la vereda junto al sardinel amarillo de seguridad vial, fondo idéntico y preservado de la plaza con catedral y cielo despejado, perspectiva angular realista --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, render them within an enchanting miniature diorama world using an extreme tilt-shift optical perspective. Razor-thin horizontal plane of sharp focus right across the eyes, while the top and bottom of the frame melt into creamy cinematic blur and glowing golden circular bokeh balls, miniature city street setting with warm whimsical night lighting, magical toy-like photographic aesthetic --ar 4:5 --v 6.1
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-enchanting tilt-shift street photography portrait, razor-thin plane of focus across the subject while foreground and background dissolve into soft dreamy blur and massive glowing bokeh circles, charming miniature world aesthetic, warm cinematic lighting --ar 4:5 --v 6.1
+Fotografía realista corregida en la Plaza Mayor de Nuevo Chimbote. Chico joven peruano con cabello corto rizado natural sin volumen excesivo, gafas de marco fino, expresión seria y serena sin sonrisa, chaqueta marrón, pantalón negro y zapatillas deportivas. De pie sobre la vereda junto al sardinel amarillo de seguridad vial, fondo idéntico y preservado de la plaza con catedral y cielo despejado, perspectiva angular realista --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

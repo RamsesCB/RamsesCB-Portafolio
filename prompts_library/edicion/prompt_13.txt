@@ -1,33 +1,26 @@
 ================================================================================
-CATEGORÍA: EDICION | PROMPT #13: Efecto Pintura al Óleo con Relieve
+CATEGORÍA: EDICIÓN | PROMPT #13: Retrato Urbano en la Plaza Mayor
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Transformación de la foto en un cuadro al óleo con pinceladas marcadas sobre lienzo.
+De pie junto a las jardineras de la plaza con luz natural clara de media mañana.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente)
+1 FOTO DE REFERENCIA
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, preserve their facial contours and recognizable profile while processing the image through a military-grade thermal infrared heat vision filter. Heat signatures shifting from deep violet and cobalt blue on cooler zones to radiant glowing magenta, blazing orange, and blinding white-hot highlights on forehead and lips, technical temperature scale HUD bar on side, experimental fashion art direction --ar 4:5 --v 6.1`.
-3. Si NO tienes foto y quieres crear un personaje desde cero:
-   - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Retrato fotorrealista de chico joven peruano con cabello corto rizado bien definido, lentes circulares, casaca marrón y camiseta oscura. Parado con postura erguida y tranquila en la Plaza Mayor de Nuevo Chimbote cerca a las jardineras de concreto pulido y palmeras urbanas, sombras suaves y nitidez 8K --ar 4:5 --v 6.1`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Using the person in the uploaded reference photo, preserve their facial contours and recognizable profile while processing the image through a military-grade thermal infrared heat vision filter. Heat signatures shifting from deep violet and cobalt blue on cooler zones to radiant glowing magenta, blazing orange, and blinding white-hot highlights on forehead and lips, technical temperature scale HUD bar on side, experimental fashion art direction --ar 4:5 --v 6.1
-
---------------------------------------------------------------------------------
-🎨 COPIAR Y PEGAR: PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)
---------------------------------------------------------------------------------
-high-definition thermographic heat signature portrait, glowing infrared color palette ranging from deep indigo to electric magenta, vivid warm orange and white-hot temperature points, clean graphic aesthetic, futuristic thermal vision concept --ar 4:5 --v 6.1
+Retrato fotorrealista de chico joven peruano con cabello corto rizado bien definido, lentes circulares, casaca marrón y camiseta oscura. Parado con postura erguida y tranquila en la Plaza Mayor de Nuevo Chimbote cerca a las jardineras de concreto pulido y palmeras urbanas, sombras suaves y nitidez 8K --ar 4:5 --v 6.1
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):

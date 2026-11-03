@@ -1,12 +1,12 @@
 ================================================================================
-CATEGORÍA: FOTOS REALISTAS NUEVO CHIMBOTE | PROMPT #05: Monumento y Estructura de la Plaza
+CATEGORÍA: ANIME | PROMPT #05: Espadachín Corriendo con Tres Katanas
 ================================================================================
 
 ✨ DESCRIPCIÓN:
-Junto a las estructuras monumentales de la Plaza Mayor con perspectiva arquitectónica.
+Espadachín corriendo hacia la cámara en la ciudad sosteniendo tres katanas al cinto.
 
 📸 REQUISITO DE FOTOS DE REFERENCIA:
-1 Foto (Tu rostro de frente o tu hoja de 4 vistas)
+1 Foto (Tu rostro de frente o tu hoja de referencia)
 
 💡 GUÍA RÁPIDA DE USO:
 1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
@@ -15,12 +15,12 @@ Junto a las estructuras monumentales de la Plaza Mayor con perspectiva arquitect
    - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el entorno y composición.
 2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
-   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Fotografía exterior realista de chico peruano con cabello corto rizado y lentes, vistiendo casaca marrón y zapatillas deportivas. Posa de manera relajada y seria frente a las estructuras monumentales y arcos de la Plaza Mayor de Nuevo Chimbote, cielo azul despejado, colores fieles a la realidad sin saturación artificial --ar 4:5 --v 6.1`.
+   - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Según la hoja de referencia que me pasaste, humano real con gafas redondas y cabello negro rizado. Cosplay inspirado en espadachín de tres katanas: abrigo largo verde oscuro abierto, faja roja ancha en la cintura, tres katanas reales al cinto con diferentes empuñaduras. POSE DINÁMICA: corriendo hacia la cámara en paso firme sobre calle adoquinada, manos cerca a las empuñaduras, abrigo ondeando hacia atrás, expresión decidida, luz natural de día, fotografía de acción urbana, 8K --ar 4:5 --style raw`.
 
 --------------------------------------------------------------------------------
 📋 COPIAR Y PEGAR: PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)
 --------------------------------------------------------------------------------
-Fotografía exterior realista de chico peruano con cabello corto rizado y lentes, vistiendo casaca marrón y zapatillas deportivas. Posa de manera relajada y seria frente a las estructuras monumentales y arcos de la Plaza Mayor de Nuevo Chimbote, cielo azul despejado, colores fieles a la realidad sin saturación artificial --ar 4:5 --v 6.1
+Según la hoja de referencia que me pasaste, humano real con gafas redondas y cabello negro rizado. Cosplay inspirado en espadachín de tres katanas: abrigo largo verde oscuro abierto, faja roja ancha en la cintura, tres katanas reales al cinto con diferentes empuñaduras. POSE DINÁMICA: corriendo hacia la cámara en paso firme sobre calle adoquinada, manos cerca a las empuñaduras, abrigo ondeando hacia atrás, expresión decidida, luz natural de día, fotografía de acción urbana, 8K --ar 4:5 --style raw
 
 --------------------------------------------------------------------------------
 ⚙️ PARÁMETROS RECOMENDADOS (MIDJOURNEY / FLUX):
