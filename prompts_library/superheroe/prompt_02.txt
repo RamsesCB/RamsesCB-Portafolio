@@ -2,18 +2,21 @@
 CATEGORÍA: SUPERHEROE | PROMPT #02: Aterrizaje Heroico de Tres Puntos en Cráter con Energía
 ================================================================================
 
+✨ DESCRIPCIÓN:
+💥 Sube 1 foto tuya decidida. Golpea el asfalto como un auténtico vengador generando un cráter con ondas de choque brillantes.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro inclinado hacia abajo con ojos intensos)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, retain their facial likeness and fierce gaze in a dynamic superhero three-point ground landing impact scene. One fist buried into a deep fractured pavement crater radiating glowing blue energy shockwaves, airborne asphalt chunks frozen mid-air, luminescent heroic eyes, low-angle ground perspective, dramatic volumetric dust cloud backlit by amber city fires, photorealistic Marvel blockbuster VFX quality --ar 4:5 --v 6.1`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

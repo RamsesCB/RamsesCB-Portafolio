@@ -2,18 +2,21 @@
 CATEGORÍA: EDICION | PROMPT #06: Textura Cinta VHS Analógica 1994 Remaster 4K
 ================================================================================
 
+✨ DESCRIPCIÓN:
+📼 Sube 1 foto tuya. Dale a tu foto el encanto nostálgico de las videocámaras de los noventa con scanlines sutiles y grano cálido.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro o pose casual)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the subject, render them as a 1990s magnetic camcorder video still while maintaining their facial likeness. Subtle horizontal CRT monitor scanlines, magnetic tape tracking glitch lines near bottom edge, warm nostalgic saturation shift, genuine video tape noise and bloom on bright highlights, contemporary streetwear styling, authentic vintage analog feel with crisp modern clarity --ar 4:5 --v 6.1`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

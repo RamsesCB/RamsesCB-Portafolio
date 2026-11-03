@@ -2,18 +2,21 @@
 CATEGORÍA: ELEGANCIA | PROMPT #13: Arquitecto / Diseñador en Estudio Minimalista Japandi
 ================================================================================
 
+✨ DESCRIPCIÓN:
+📐 Sube 1 foto tuya creativa. Proyecta diseño en un espacio sereno de madera clara con planos y jardín zen bañado por luz suave.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro con mirada reflexiva)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, keep their authentic facial bone structure, gaze, and natural hair in a serene design studio editorial. Wearing a relaxed raw silk mandarin-collar overshirt, reviewing minimalist architectural models on a solid hinoki cypress table, sliding shoji screens opening onto a quiet moss garden, pure natural lighting, Kinfolk magazine aesthetic, understated peaceful luxury --ar 4:5 --v 6.1`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

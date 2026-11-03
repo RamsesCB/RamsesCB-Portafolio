@@ -2,18 +2,21 @@
 CATEGORÍA: ANIME | PROMPT #03: Espadachín / Espadachina del Amanecer
 ================================================================================
 
+✨ DESCRIPCIÓN:
+🌸 Sube 1 foto tuya. Logra una escena poética empuñando una katana al alba con pétalos de cerezo danzando en el viento estilo Makoto Shinkai.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro de frente o perfil tres cuartos)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the hero subject, preserve their exact facial features, facial symmetry, gaze, and recognizable likeness while rendering them in a breathtaking anime action still executing a high-speed iaido slash at sunrise. Cherry blossom petals caught in a spiraling wind vortex around the gleaming katana blade, glistening golden hour sunlight glinting off forged steel, traditional flowing haori with wave motifs, Makoto Shinkai inspired atmospheric clouds, shallow depth of field, delicate particle embers, warm amber and rose-gold hues, pristine studio keyframe --ar 4:5 --niji 6`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

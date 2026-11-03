@@ -2,18 +2,21 @@
 CATEGORÍA: EDICION | PROMPT #11: Escáner 3D Holográfico Wireframe Azul Neón
 ================================================================================
 
+✨ DESCRIPCIÓN:
+🌐 Sube 1 foto tuya de frente. Superpone una malla poligonal 3D de alambre azul neón con coordenadas biométricas futuristas.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro de frente bien simétrico)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, maintain their true facial likeness on one side while the opposite side is overlaid with an intricate glowing cyan 3D wireframe mesh polygon grid. Laser scanning lines sweeping across cheekbones, subtle numerical spatial coordinates and vector nodes floating beside the face, dark high-tech laboratory backdrop, futuristic biometric scanning UI concept, ultra-clean sci-fi composite --ar 4:5 --v 6.1`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

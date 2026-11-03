@@ -3840,13 +3840,9 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
               <div class="confirm-panel" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmCopy">
                 <div class="confirm-kicker">PROMPTS // CONFIRMACIÓN</div>
                 <h3 class="confirm-title" id="confirmTitle">¿SEGURO DE ENTRAR? <span class="ellipsis">...</span></h3>
-                <p class="confirm-copy" id="confirmCopy">Vas a abrir el archivo de <b>PROMPTS</b>.<br>6 registros disponibles.</p>
-                <div class="confirm-actions">
-                  <button class="confirm-action primary" id="confirmEnter" data-testid="confirm-enter" type="button"><span class="keycap">ENTER</span> ENTRAR</button>
-                  <button class="confirm-action" id="confirmCancel" data-testid="confirm-cancel" type="button"><span class="keycap">ESC</span> CANCELAR</button>
-                </div>
+                <p class="confirm-copy" id="confirmCopy">Vas a abrir la galería de <b>PROMPTS IA</b>.<br>75 registros disponibles (15 por cada categoría).</p>
                 <div class="confirm-wait" aria-hidden="true">
-                  <div class="confirm-wait-label"><span>ESPERANDO CONFIRMACIÓN</span><span>5S</span></div>
+                  <div class="confirm-wait-label"><span>CARGANDO ACCESO</span><span>5S</span></div>
                   <div class="confirm-wait-track"><i class="confirm-wait-bar" id="confirmWaitBar"></i></div>
                 </div>
                 <div class="confirm-nudge" id="confirmNudge" role="status" aria-live="polite" hidden>
@@ -5091,9 +5087,12 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
     contentView.inert = value;
   }
 
+  let confirmLoaded = false;
+
   function showConfirm(index) {
     if (overlayState !== "idle") return;
     overlayState = "confirm";
+    confirmLoaded = false;
     pendingIndex = index;
     selected = index;
     setSelected(index);
@@ -5112,9 +5111,6 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
     cancelAnimationFrame(confirmWaitRaf);
     confirmWaitRaf = requestAnimationFrame(updateConfirmWait);
     tone(520, 0.08, "square", 0.08);
-    window.setTimeout(() => {
-      if (overlayState === "confirm") confirmEnterBtn.focus({ preventScroll: true });
-    }, 30);
   }
 
   function updateConfirmWait() {
@@ -5126,6 +5122,7 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
 
   function showNudge() {
     if (overlayState !== "confirm") return;
+    confirmLoaded = true;
     confirmNudge.hidden = false;
     confirmNudge.setAttribute("aria-hidden", "false");
     confirmNudge.classList.add("is-on");
@@ -5133,6 +5130,25 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
     window.setTimeout(() => {
       if (overlayState === "confirm") tone(1180, 0.12, "square", 0.05);
     }, 90);
+  }
+
+  function handleConfirmEnter() {
+    if (overlayState !== "confirm") return;
+    if (confirmLoaded) {
+      // La barra cargó por completo y salió DALE ENTER:
+      // Redirección directa a prompts sin animación de arcade bugeada
+      closeConfirm(true);
+      tone(880, 0.12, "square", 0.1);
+      window.setTimeout(() => tone(1320, 0.16, "square", 0.08), 80);
+      const target = window.location.protocol === "file:" ? "prompts.html" : "/prompts";
+      window.setTimeout(() => {
+        window.location.href = target;
+      }, 100);
+    } else {
+      // Enter antes de que la barra cargue por completo:
+      // Salta la animación programada de arcade bugeada
+      confirmEnter();
+    }
   }
 
   function closeConfirm(keepInert = false) {
@@ -5862,13 +5878,11 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
   window.addEventListener("keydown", (event) => {
     if (event.metaKey || event.ctrlKey || event.altKey) return;
     if (overlayState === "confirm") {
-      const origin = event.target instanceof Element ? event.target.closest("button") : null;
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
         ensureAudio();
         registerFirstInteraction();
-        if (origin && origin.id === "confirmCancel") cancelConfirm();
-        else confirmEnter();
+        handleConfirmEnter();
       } else if (event.key === "Escape" || event.key === "Backspace") {
         event.preventDefault();
         cancelConfirm();
@@ -6076,17 +6090,39 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
     backToMenu();
   });
 
-  confirmEnterBtn.addEventListener("click", () => {
-    ensureAudio();
-    registerFirstInteraction();
-    confirmEnter();
-  });
+  if (confirmEnterBtn) {
+    confirmEnterBtn.addEventListener("click", () => {
+      ensureAudio();
+      registerFirstInteraction();
+      handleConfirmEnter();
+    });
+  }
 
-  confirmCancelBtn.addEventListener("click", () => {
-    ensureAudio();
-    registerFirstInteraction();
-    cancelConfirm();
-  });
+  if (confirmCancelBtn) {
+    confirmCancelBtn.addEventListener("click", () => {
+      ensureAudio();
+      registerFirstInteraction();
+      cancelConfirm();
+    });
+  }
+
+  if (confirmNudge) {
+    confirmNudge.addEventListener("click", (e) => {
+      e.stopPropagation();
+      ensureAudio();
+      registerFirstInteraction();
+      handleConfirmEnter();
+    });
+  }
+
+  const confirmPanel = $(".confirm-panel");
+  if (confirmPanel) {
+    confirmPanel.addEventListener("click", () => {
+      ensureAudio();
+      registerFirstInteraction();
+      handleConfirmEnter();
+    });
+  }
 
   confirmLayer.addEventListener("click", (event) => {
     if (event.target === confirmLayer) cancelConfirm();
@@ -6115,7 +6151,7 @@ button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
       ensureAudio();
       registerFirstInteraction();
       if (overlayState === "confirm") {
-        confirmNavigation();
+        handleConfirmEnter();
         return;
       }
       if (current === "menu") {

@@ -2,18 +2,21 @@
 CATEGORÍA: SUPERHEROE | PROMPT #15: El Héroe Solitario Caminando Hacia el Horizonte Triunfal
 ================================================================================
 
+✨ DESCRIPCIÓN:
+🌅 Sube 1 foto tuya de espaldas o perfil. Camina con paso firme hacia un sol naciente con capa rasgada tras la victoria épica.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro o cuerpo de espaldas/perfil)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, preserve their silhouette, posture, and facial profile in a legendary wide cinematic closing frame. Walking tall across a cleared battlefield towards a glorious rising sun breaking through departing thunderclouds, battered armor glinting with morning dew, billowing cape trailing behind, heroic lone savior triumph, timeless cinematic comic book finale --ar 4:5 --v 6.1 --stylize 350`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

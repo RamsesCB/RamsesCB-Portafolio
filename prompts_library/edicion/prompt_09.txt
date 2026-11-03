@@ -2,18 +2,21 @@
 CATEGORÍA: EDICION | PROMPT #09: Retrato a Través de Vidrio Prismático & Gotas de Lluvia
 ================================================================================
 
+✨ DESCRIPCIÓN:
+🌧️ Sube 1 foto de cerca. Crea una atmósfera íntima y cinematográfica mirando a través de una ventana mojada por gotas de lluvia.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro mirando de cerca a la cámara)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo, preserve their facial identity and expressive eyes photographed through a wet textured glass window pane. Raindrops clinging to the glass causing subtle optical distortions and liquid caustics, soft city streetlights blurred into colorful circular bokeh spheres behind, intimate melancholic mood, cinematic film still, moody teal and warm amber grading --ar 4:5 --v 6.1`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

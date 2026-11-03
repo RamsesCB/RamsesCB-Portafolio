@@ -2,18 +2,21 @@
 CATEGORÍA: CARICATURA | PROMPT #04: Pato Neurótico en Acción de Pánico
 ================================================================================
 
+✨ DESCRIPCIÓN:
+🦆 Puedes subir tu foto o usar el prompt directo. ¡Recrea un pato de dibujos animados en pleno ataque de pánico cómico con ojos de resorte!
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto o Generación directa sin foto
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the facial emotion and comedic energy of the person in the reference photo, translate their wide-eyed expression into a hyper-expressive frantic cartoon duck frozen mid-air in slapstick panic. Eyes popping out on springy cartoon stalks, bill spinning upside down, spinning tornado feet leaving a dusty chalk trail, vintage theatrical animated short style, vibrant retro hand-painted animation cel, high-energy Saturday morning cartoon nostalgia --ar 4:5 --v 6.1`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

@@ -2,18 +2,21 @@
 CATEGORÍA: ANIME | PROMPT #11: Cyber-Hacker Callejero con Drones de Asalto
 ================================================================================
 
+✨ DESCRIPCIÓN:
+💻 Sube 1 foto tuya. Siéntete un hacker rebelde en un callejón nocturno de Shibuya con drones sigilosos e implantes cibernéticos neón.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro de frente o tres cuartos)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person in the uploaded reference photo as the primary subject, seamlessly retain their facial structure, nose, lips, and focused eyes while styling them into a rogue cyberpunk netrunner crouched in a rain-slicked Tokyo alleyway. Sleek glowing neural port implants at the temple emitting faint neon cyan light, dual floating miniature stealth drones hovering at shoulder level, transparent holographic terminal windows displaying code cascades, techwear oversized parka with tactical straps, neon kanji sign reflections in puddles, atmospheric cyberpunk anime noir --ar 4:5 --niji 6`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------

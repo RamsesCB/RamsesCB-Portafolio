@@ -2,18 +2,21 @@
 CATEGORÍA: EDICION | PROMPT #02: Doble Exposición Silueta & Bosque de Niebla
 ================================================================================
 
+✨ DESCRIPCIÓN:
+🌲 Sube 1 foto de perfil. Fusiona tu silueta de forma artística con un bosque de pinos brumosos y aves volando en libertad.
+
 📸 REQUISITO DE FOTOS DE REFERENCIA:
 1 Foto (Tu rostro de perfil con fondo liso)
 
 💡 GUÍA RÁPIDA DE USO:
-1. Si usas META AI (WhatsApp / Web) o CHATGPT / DALL-E:
+1. En META AI (WhatsApp / Web) o CHATGPT / DALL-E:
    - Sube tu foto (o fotos) en el chat.
    - Pega el bloque "PROMPT UNIVERSAL (CON TU FOTO ADJUNTA)".
-   - La IA reconocerá tu foto y mantendrá tu rostro, transformando el resto en la obra cinematográfica.
-2. Si usas MIDJOURNEY:
+   - La IA reconocerá tu foto y mantendrá tu rostro exacto, transformando el resto en la obra cinematográfica.
+2. En MIDJOURNEY:
    - Sube tu foto a Discord, copia su enlace directo (URL).
    - Escribe `/imagine` y pega: `[URL_DE_TU_FOTO] Using the person's profile silhouette from the uploaded reference photo, create a fine-art multiple exposure photographic portrait. The person's facial outline, nose, and lips seamlessly merge into a dense pine forest canopy shrouded in mountain mist, flying birds emerging from the crown of hair, monochrome tonality with subtle desaturated cold cyan shadows, pristine negative space, evocative Scandinavian album art aesthetic --ar 4:5 --v 6.1`.
-3. Si NO tienes foto o quieres crear un personaje desde cero:
+3. Si NO tienes foto y quieres crear un personaje desde cero:
    - Usa el bloque "PROMPT DIRECTO (SIN FOTO / PERSONAJE ORIGINAL)".
 
 --------------------------------------------------------------------------------
