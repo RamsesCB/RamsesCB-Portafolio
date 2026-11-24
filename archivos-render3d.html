@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>RamsesCB</title>
   
-  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532, Servomotor, Motor Paso a Paso, Driver L298N, Conversor Buck LM2596 y Sensor LDR).">
+  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, PN532 NFC, Servomotor, Motor Paso a Paso, Driver L298N, Conversor LM2596, Sensor LDR y Resistencia 10kΩ).">
   <meta name="theme-color" content="#000000" id="theme-color-meta">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -87,64 +87,80 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    html, body {
-      height: 100%;
+    html {
+      min-height: 100%;
+      background-color: var(--bg-canvas);
+      overflow-x: hidden;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100dvh;
       background-color: var(--bg-canvas);
       color: var(--text-primary);
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       transition: background-color 0.25s ease, color 0.25s ease;
     }
 
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
     /* ========================================================
-       TOP HEADER (APPLE FROSTED BAR)
+       TOP HEADER (2-TIER APPLE FROSTED BAR - ZERO COLLISIONS)
        ======================================================== */
     header.studio-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
       background: var(--glass-bg);
-      backdrop-filter: saturate(180%) blur(24px);
-      -webkit-backdrop-filter: saturate(180%) blur(24px);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 0 20px;
-      height: 56px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      flex-shrink: 0;
+      transition: border-color 0.25s ease, background-color 0.25s ease;
+    }
+
+    .header-top-row {
+      padding: 0 18px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      z-index: 100;
-      flex-shrink: 0;
-      transition: border-color 0.25s ease;
+      gap: 12px;
+      min-width: 0;
     }
 
     .header-left {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
       min-width: 0;
+      flex: 1;
     }
 
     /* Botón Volver Arcade */
     .btn-nav-arcade {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 6px 13px;
+      gap: 6px;
+      padding: 5px 12px;
       background: var(--segmented-bg);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-pill);
       color: var(--text-primary);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .btn-nav-arcade:hover {
@@ -156,6 +172,7 @@
 
     .btn-nav-arcade svg {
       transition: transform 0.2s ease;
+      flex-shrink: 0;
     }
 
     .btn-nav-arcade:hover svg {
@@ -167,10 +184,11 @@
       align-items: baseline;
       gap: 8px;
       min-width: 0;
+      overflow: hidden;
     }
 
     .brand-title {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       font-weight: 600;
       letter-spacing: -0.015em;
       color: var(--text-primary);
@@ -180,18 +198,31 @@
     }
 
     .brand-sub {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       color: var(--text-tertiary);
       font-weight: 400;
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* Segmented Control - Vista */
-    .view-segmented-wrap {
+    /* Segunda fila dedicada al Selector de Modelos (cero solapamiento) */
+    .header-nav-row {
+      padding: 6px 18px 8px;
+      border-top: 1px solid var(--border-subtle);
       display: flex;
-      justify-content: center;
-      flex: 1;
-      max-width: 520px;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 12px), transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 12px), transparent 100%);
+    }
+
+    .header-nav-row::-webkit-scrollbar {
+      display: none;
     }
 
     .segmented-control {
@@ -200,26 +231,29 @@
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
       padding: 3px;
-      gap: 2px;
-      backdrop-filter: blur(8px);
+      gap: 3px;
+      margin: 0 auto;
+      flex-shrink: 0;
+      width: max-content;
     }
 
     .seg-btn {
       background: transparent;
       border: none;
       color: var(--segmented-text);
-      padding: 5px 12px;
+      padding: 4px 11px;
       border-radius: var(--radius-sm);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 500;
       letter-spacing: -0.01em;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      gap: 5px;
+      transition: background-color 0.16s ease, color 0.16s ease;
       white-space: nowrap;
       user-select: none;
+      flex-shrink: 0;
     }
 
     .seg-btn:hover:not(.active) {
@@ -237,7 +271,7 @@
     .header-right {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       flex-shrink: 0;
     }
 
@@ -249,6 +283,7 @@
       border-radius: var(--radius-pill);
       padding: 2px;
       gap: 2px;
+      flex-shrink: 0;
     }
 
     .theme-btn {
@@ -263,8 +298,9 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      transition: all 0.18s ease;
+      transition: background-color 0.16s ease, color 0.16s ease;
       user-select: none;
+      white-space: nowrap;
     }
 
     .theme-btn.active {
@@ -289,7 +325,9 @@
       color: var(--text-secondary);
       text-decoration: none;
       border: 1px solid transparent;
-      transition: all 0.18s ease;
+      transition: color 0.16s ease, background-color 0.16s ease, border-color 0.16s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .btn-quick-portfolio:hover {
@@ -299,43 +337,25 @@
     }
 
     /* ========================================================
-       MAIN CANVAS & GRID DE PANELES
+       MAIN CANVAS & GRID DE PANELES (3 POR FILA, CERO COLISIÓN)
        ======================================================== */
     main.studio-main {
       flex: 1;
-      padding: 14px 16px 40px;
+      width: 100%;
+      padding: 16px 18px 40px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-auto-rows: minmax(520px, calc(100vh - 90px));
+      grid-auto-rows: clamp(430px, 54vh, 560px);
       gap: 16px;
-      height: calc(100vh - 56px);
       background-color: var(--bg-canvas);
-      overflow-y: auto;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-      transition: all 0.25s ease;
-      scrollbar-width: thin;
-      scrollbar-color: var(--border-subtle) transparent;
-    }
-
-    main.studio-main::-webkit-scrollbar {
-      width: 8px;
-    }
-    main.studio-main::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    main.studio-main::-webkit-scrollbar-thumb {
-      background: var(--border-strong);
-      border-radius: var(--radius-pill);
-    }
-    main.studio-main::-webkit-scrollbar-thumb:hover {
-      background: var(--text-tertiary);
+      align-content: start;
     }
 
     /* Modos de vista enfocada */
     main.studio-main[class*="view-"] {
       grid-template-columns: 1fr;
-      grid-auto-rows: calc(100vh - 84px);
+      grid-auto-rows: max(440px, calc(100dvh - 128px));
+      padding-bottom: 18px;
     }
 
     main.studio-main.view-arduino .studio-panel:not(.panel-arduino),
@@ -344,7 +364,8 @@
     main.studio-main.view-stepper .studio-panel:not(.panel-stepper),
     main.studio-main.view-l298n .studio-panel:not(.panel-l298n),
     main.studio-main.view-lm2596 .studio-panel:not(.panel-lm2596),
-    main.studio-main.view-ldr .studio-panel:not(.panel-ldr) {
+    main.studio-main.view-ldr .studio-panel:not(.panel-ldr),
+    main.studio-main.view-resistor10k .studio-panel:not(.panel-resistor10k) {
       display: none;
     }
 
@@ -362,7 +383,7 @@
     }
 
     /* ========================================================
-       APPLE PANEL CARDS
+       APPLE PANEL CARDS (CONTAINER-QUERY PROTECTED)
        ======================================================== */
     .studio-panel {
       background: var(--bg-panel);
@@ -371,10 +392,14 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      min-width: 0;
       min-height: 0;
       position: relative;
       box-shadow: var(--card-shadow);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      contain: layout style;
+      container-type: inline-size;
+      container-name: panel;
+      transition: border-color 0.2s ease;
     }
 
     .studio-panel:hover {
@@ -383,22 +408,25 @@
 
     /* Cabecera del Panel */
     .panel-top-bar {
-      padding: 9px 14px;
+      padding: 8px 12px;
       border-bottom: 1px solid var(--border-subtle);
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: var(--bg-panel);
       flex-shrink: 0;
-      height: 48px;
-      gap: 10px;
+      height: 46px;
+      gap: 8px;
+      min-width: 0;
     }
 
     .panel-meta {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
+      flex: 1;
       min-width: 0;
+      overflow: hidden;
     }
 
     .panel-indicator {
@@ -411,17 +439,18 @@
     }
 
     .panel-title-text {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 600;
       letter-spacing: -0.01em;
       color: var(--text-primary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      min-width: 0;
     }
 
     .panel-spec-tag {
-      font-size: 0.68rem;
+      font-size: 0.67rem;
       font-weight: 500;
       padding: 2px 7px;
       border-radius: var(--radius-pill);
@@ -429,6 +458,7 @@
       color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .panel-actions-group {
@@ -436,6 +466,32 @@
       align-items: center;
       gap: 6px;
       flex-shrink: 0;
+    }
+
+    @container panel (max-width: 395px) {
+      .panel-spec-tag {
+        display: none;
+      }
+    }
+
+    @container panel (max-width: 335px) {
+      .panel-top-bar {
+        padding: 7px 10px;
+        gap: 6px;
+      }
+      .panel-title-text {
+        font-size: 0.79rem;
+      }
+      #servo-toggle-text {
+        display: none;
+      }
+      .tab-pill-btn {
+        padding: 3px 7px;
+        font-size: 0.7rem;
+      }
+      .key-shortcut-hint {
+        display: none;
+      }
     }
 
     /* Botón animado Play/Pause con estilo Apple */
@@ -473,6 +529,7 @@
     /* Píldoras de Cambio de Pestaña (3D / Renders) */
     .tab-pills-wrap {
       display: inline-flex;
+      flex-shrink: 0;
       background: var(--segmented-bg);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
@@ -907,8 +964,75 @@
       border: 0;
       display: block;
       background: var(--bg-canvas);
-      transform: translateZ(0);
-      will-change: transform;
+    }
+
+    /* Poster Facade para fluidez GPU (muestra preview WebP instantáneo mientras no está activo) */
+    .viewport-skeleton-loader {
+      cursor: pointer;
+    }
+    .viewport-skeleton-loader.is-hibernated {
+      opacity: 1 !important;
+      display: flex !important;
+      pointer-events: auto !important;
+      transform: none !important;
+    }
+    .sk-board-silhouette,
+    .sk-status-pill {
+      position: relative;
+      z-index: 2;
+    }
+    .sk-poster-bg {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.32;
+      filter: blur(2px) saturate(1.1);
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .viewport-skeleton-loader.is-hibernated .sk-poster-bg {
+      opacity: 0.65;
+      filter: none;
+    }
+    .sk-foreground {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .sk-resistor-silhouette {
+      width: 146px;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sk-res-lead {
+      width: 28px;
+      height: 4px;
+      background: rgba(224, 169, 109, 0.55);
+      border-radius: 2px;
+    }
+    .sk-res-body {
+      width: 78px;
+      height: 28px;
+      background: rgba(224, 169, 109, 0.22);
+      border: 1.5px solid rgba(224, 169, 109, 0.65);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 8px;
+    }
+    .sk-res-band {
+      width: 5px;
+      height: 100%;
+      border-radius: 1px;
     }
 
     /* Overlay Atajo Espacio (Servomotor) */
@@ -1072,27 +1196,47 @@
     }
 
     .single-render-card .render-info {
-      padding: 10px 14px;
-      font-size: 0.78rem;
+      padding: 10px 12px;
+      font-size: 0.76rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 8px;
+    }
+    .single-render-card .render-info span:first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+    }
+    .single-render-card .render-info span:last-child {
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     /* ========================================================
        PANEL FOOTER
        ======================================================== */
     .panel-footer-bar {
-      padding: 7px 14px;
+      padding: 7px 12px;
       background: var(--bg-panel);
       border-top: 1px solid var(--border-subtle);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 8px;
       font-size: 0.72rem;
       color: var(--text-tertiary);
       flex-shrink: 0;
       height: 34px;
+      min-width: 0;
+    }
+
+    .panel-footer-bar span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
     }
 
     .panel-footer-bar a {
@@ -1103,6 +1247,8 @@
       align-items: center;
       gap: 3px;
       transition: color 0.15s ease;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .panel-footer-bar a:hover {
@@ -1172,8 +1318,8 @@
 
     .lightbox-close-btn {
       position: absolute;
-      top: -16px;
-      right: -16px;
+      top: 10px;
+      right: 10px;
       width: 36px;
       height: 36px;
       border-radius: 50%;
@@ -1196,92 +1342,69 @@
     }
 
     /* ========================================================
-       RESPONSIVE ADAPTATIONS
+       RESPONSIVE ADAPTATIONS (ZERO COLLISIONS 320px -> 4K)
        ======================================================== */
-    @media (max-width: 1100px) and (min-width: 721px) {
-      header.studio-header {
-        height: auto;
-        padding: 10px 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .view-segmented-wrap {
-        order: 3;
-        max-width: 100%;
-        width: 100%;
-        overflow-x: auto;
-        padding-bottom: 2px;
-      }
-
+    @media (max-width: 1180px) {
       main.studio-main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-auto-rows: 520px;
-        height: auto;
-        overflow-y: visible;
-        padding: 12px;
+        grid-auto-rows: 450px;
+        padding: 14px 14px 32px;
         gap: 14px;
       }
-
-      body {
-        overflow-y: auto;
-      }
-    }
-
-    @media (max-width: 720px) {
-      header.studio-header {
-        height: auto;
-        padding: 10px 16px;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .view-segmented-wrap {
-        order: 3;
-        max-width: 100%;
-        width: 100%;
-        overflow-x: auto;
-        padding-bottom: 2px;
-      }
-
-      body {
-        overflow-y: auto;
-      }
-
-      main.studio-main {
+      main.studio-main[class*="view-"] {
         grid-template-columns: 1fr;
-        grid-auto-rows: 500px;
-        height: auto;
-        overflow-y: visible;
-        padding: 12px;
-        gap: 14px;
+        grid-auto-rows: max(440px, calc(100dvh - 124px));
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 900px) {
       .brand-sub {
         display: none;
       }
+    }
 
-      .seg-btn {
-        padding: 4px 8px;
-        font-size: 0.72rem;
+    @media (max-width: 740px) {
+      .header-top-row {
+        padding: 0 12px;
+        height: 46px;
+        gap: 8px;
       }
-
-      .theme-btn span {
-        display: none;
+      .header-nav-row {
+        padding: 5px 10px 7px;
       }
-
-      .theme-btn {
-        padding: 4px 8px;
-      }
-
       .btn-quick-portfolio {
         display: none;
       }
+      main.studio-main {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 420px;
+        padding: 12px 12px 28px;
+        gap: 14px;
+      }
+      main.studio-main[class*="view-"] {
+        grid-auto-rows: max(400px, calc(100dvh - 116px));
+      }
+    }
 
-      .studio-panel {
-        height: 460px;
+    @media (max-width: 520px) {
+      .theme-btn .theme-label {
+        display: none;
+      }
+      .theme-btn {
+        padding: 4px 8px;
+      }
+      .btn-nav-arcade span {
+        display: none;
+      }
+      .btn-nav-arcade {
+        padding: 6px 9px;
+      }
+      .brand-title {
+        font-size: 0.86rem;
+      }
+      .seg-btn {
+        padding: 4px 9px;
+        font-size: 0.72rem;
       }
     }
   </style>
@@ -1292,39 +1415,61 @@
        APPLE NAVIGATION BAR
        ======================================================== -->
   <header class="studio-header">
-    <div class="header-left">
-      <a href="/" class="btn-nav-arcade" title="Regresar al Arcade CRT Principal">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-        <span>ARCADE</span>
-      </a>
+    <div class="header-top-row">
+      <div class="header-left">
+        <a href="/" class="btn-nav-arcade" title="Regresar al Arcade CRT Principal" aria-label="Volver al Arcade">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>ARCADE</span>
+        </a>
 
-      <div class="brand-group">
-        <h1 class="brand-title">Hardware 3D Studio</h1>
-        <span class="brand-sub">RamsesCB • 7 Modelos 3D de Hardware Embebido</span>
+        <div class="brand-group">
+          <h1 class="brand-title">Hardware 3D Studio</h1>
+          <span class="brand-sub">RamsesCB • 8 Modelos 3D Embebidos</span>
+        </div>
+      </div>
+
+      <!-- Right Controls: Theme Switcher + Portfolio -->
+      <div class="header-right">
+        <a href="/portafolio" class="btn-quick-portfolio" title="Ver Portafolio de Software">
+          <span>Portafolio</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+
+        <!-- Apple Theme Segmented Toggle (Negro predeterminado / Blanco) -->
+        <div class="theme-segmented" role="radiogroup" aria-label="Tema Visual">
+          <button class="theme-btn active" id="theme-btn-dark" onclick="setAppTheme('dark')" role="radio" aria-checked="true" title="Modo Oscuro OLED (Predeterminado)">
+            <span>🌙</span>
+            <span class="theme-label">Negro</span>
+          </button>
+          <button class="theme-btn" id="theme-btn-light" onclick="setAppTheme('light')" role="radio" aria-checked="false" title="Modo Claro Apple">
+            <span>☀️</span>
+            <span class="theme-label">Blanco</span>
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- Segmented View Mode -->
-    <div class="view-segmented-wrap">
+    <!-- Dedicated Scrollable Segmented View Mode Bar (Zero Collisions) -->
+    <div class="header-nav-row">
       <div class="segmented-control" role="tablist" aria-label="Selector de Vista 3D">
         <button class="seg-btn active" id="btn-grid" onclick="setViewMode('grid')" role="tab" aria-selected="true">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-          <span>Cuadrícula</span>
+          <span>Cuadrícula (8)</span>
         </button>
         <button class="seg-btn" id="btn-arduino" onclick="setViewMode('arduino')" role="tab" aria-selected="false">
-          ⚡ Arduino UNO
+          ⚡ Arduino
         </button>
         <button class="seg-btn" id="btn-pn532" onclick="setViewMode('pn532')" role="tab" aria-selected="false">
-          📡 PN532 NFC
+          📡 PN532
         </button>
         <button class="seg-btn" id="btn-servo" onclick="setViewMode('servo')" role="tab" aria-selected="false">
-          ⚙️ Servomotor
+          ⚙️ Servo
         </button>
         <button class="seg-btn" id="btn-stepper" onclick="setViewMode('stepper')" role="tab" aria-selected="false">
-          🔄 Motor Paso a Paso
+          🔄 Stepper
         </button>
         <button class="seg-btn" id="btn-l298n" onclick="setViewMode('l298n')" role="tab" aria-selected="false">
           🔴 L298N
@@ -1335,25 +1480,8 @@
         <button class="seg-btn" id="btn-ldr" onclick="setViewMode('ldr')" role="tab" aria-selected="false">
           ☀️ LDR
         </button>
-      </div>
-    </div>
-
-    <!-- Right Controls: Theme Switcher + Portfolio -->
-    <div class="header-right">
-      <a href="/portafolio" class="btn-quick-portfolio" title="Ver Portafolio de Software">
-        <span>Portafolio</span>
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-      </a>
-
-      <!-- Apple Theme Segmented Toggle (Negro predeterminado / Blanco) -->
-      <div class="theme-segmented" role="radiogroup" aria-label="Tema Visual">
-        <button class="theme-btn active" id="theme-btn-dark" onclick="setAppTheme('dark')" role="radio" aria-checked="true" title="Modo Oscuro OLED (Predeterminado)">
-          <span>🌙</span>
-          <span>Negro</span>
-        </button>
-        <button class="theme-btn" id="theme-btn-light" onclick="setAppTheme('light')" role="radio" aria-checked="false" title="Modo Claro Apple">
-          <span>☀️</span>
-          <span>Blanco</span>
+        <button class="seg-btn" id="btn-resistor10k" onclick="setViewMode('resistor10k')" role="tab" aria-selected="false">
+          🟫 10kΩ
         </button>
       </div>
     </div>
@@ -1381,7 +1509,8 @@
       <!-- 3D WebGL Viewport -->
       <div class="panel-viewport" id="viewport-ard-3d">
         <!-- Skeleton Preview (Exact Arduino UNO PCB Silhouette) -->
-        <div class="viewport-skeleton-loader" id="sk-ard-3d" aria-hidden="true">
+        <div class="viewport-skeleton-loader" id="sk-ard-3d" data-poster-for="sk-ard-3d" onclick="forceActivatePanel('iframe-arduino')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/artstation_11298390_42991245_Arduino UNO.webp" alt="" loading="lazy">
           <div class="sk-board-silhouette sk-arduino-board">
             <div class="sk-usb-port"></div>
             <div class="sk-dc-jack"></div>
@@ -1396,7 +1525,7 @@
         </div>
         <iframe id="iframe-arduino"
                 title="Arduino UNO R3 3D Interactive Model"
-                src="https://sketchfab.com/models/85e4a60ec0294e2c83fbafa6051a3681/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                data-src="https://sketchfab.com/models/85e4a60ec0294e2c83fbafa6051a3681/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
                 allowfullscreen
                 loading="lazy">
@@ -1475,7 +1604,8 @@
       <!-- 3D CAD Viewport -->
       <div class="panel-viewport" id="viewport-pn-3d">
         <!-- Skeleton Preview (Exact PN532 NFC Board Silhouette) -->
-        <div class="viewport-skeleton-loader" id="sk-pn-3d" aria-hidden="true">
+        <div class="viewport-skeleton-loader" id="sk-pn-3d" data-poster-for="sk-pn-3d" onclick="forceActivatePanel('iframe-pn532')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/pn532_render.webp" alt="" loading="lazy">
           <div class="sk-board-silhouette sk-nfc-board">
             <div class="sk-antenna-coil">
               <div class="sk-coil-inner"></div>
@@ -1489,7 +1619,7 @@
         </div>
         <iframe id="iframe-pn532"
                 title="PN532 NFC RFID Module CAD Model"
-                src="https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1702333&width=800&height=600&edraw=true"
+                data-src="https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1702333&width=800&height=600&edraw=true"
                 scrolling="no"
                 allowfullscreen
                 loading="lazy">
@@ -1540,7 +1670,8 @@
       <!-- 3D Cinemático Viewport -->
       <div class="panel-viewport" id="viewport-servo-3d">
         <!-- Skeleton Preview (Exact Servomotor Explode Silhouette) -->
-        <div class="viewport-skeleton-loader" id="sk-servo-3d" aria-hidden="true">
+        <div class="viewport-skeleton-loader" id="sk-servo-3d" data-poster-for="sk-servo-3d" onclick="forceActivatePanel('iframe-servomotor')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/servomotor_render.webp" alt="" loading="lazy">
           <div class="sk-board-silhouette sk-servo-motor">
             <div class="sk-servo-spline"></div>
             <div class="sk-servo-top-case"></div>
@@ -1606,7 +1737,8 @@
       <!-- 3D Model Viewport -->
       <div class="panel-viewport" id="viewport-stepper-3d">
         <!-- Skeleton Preview (Exact Stepper Motor & Driver Silhouette) -->
-        <div class="viewport-skeleton-loader" id="sk-stepper-3d" aria-hidden="true">
+        <div class="viewport-skeleton-loader" id="sk-stepper-3d" data-poster-for="sk-stepper-3d" onclick="forceActivatePanel('iframe-stepper')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/stepper_render.webp" alt="" loading="lazy">
           <div class="sk-board-silhouette sk-stepper-silhouette">
             <div class="sk-stepper-gearbox">
               <div class="sk-stepper-shaft"></div>
@@ -1625,7 +1757,7 @@
         </div>
         <iframe id="iframe-stepper"
                 title="Aula 28 - Motor de Passo 3D Model"
-                src="https://sketchfab.com/models/b34306a0794349a0be92665081bb4b0c/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                data-src="https://sketchfab.com/models/b34306a0794349a0be92665081bb4b0c/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
                 allowfullscreen
                 loading="lazy">
@@ -1669,7 +1801,8 @@
       <!-- 3D Model Viewport -->
       <div class="panel-viewport" id="viewport-l298n-3d">
         <!-- Skeleton Preview (L298N H-Bridge Driver Silhouette) -->
-        <div class="viewport-skeleton-loader" id="sk-l298n-3d" aria-hidden="true">
+        <div class="viewport-skeleton-loader" id="sk-l298n-3d" data-poster-for="sk-l298n-3d" onclick="forceActivatePanel('iframe-l298n')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/l298n_render.webp" alt="" loading="lazy">
           <div class="sk-board-silhouette sk-l298n-silhouette">
             <div class="sk-l298n-heatsink"></div>
             <div class="sk-l298n-terminals">
@@ -1685,7 +1818,7 @@
         </div>
         <iframe id="iframe-l298n"
                 title="Driver Ponte H L298N 3D Model"
-                src="https://sketchfab.com/models/d0855802156c46539d7c2eaf96600c16/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                data-src="https://sketchfab.com/models/d0855802156c46539d7c2eaf96600c16/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
                 allowfullscreen
                 loading="lazy">
@@ -1793,7 +1926,8 @@
 
       <!-- 3D Model Viewport -->
       <div class="panel-viewport" id="viewport-ldr-3d">
-        <div class="viewport-skeleton-loader" id="sk-ldr-3d" aria-hidden="true">
+        <div class="viewport-skeleton-loader" id="sk-ldr-3d" data-poster-for="sk-ldr-3d" onclick="forceActivatePanel('iframe-ldr')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/ldr_render.webp" alt="" loading="lazy">
           <div class="sk-board-silhouette sk-ldr-silhouette">
             <div class="sk-ldr-head">LDR</div>
             <div class="sk-ldr-leads"><span></span><span></span></div>
@@ -1805,7 +1939,7 @@
         </div>
         <iframe id="iframe-ldr"
                 title="Lichtgevoelige weerstand (LDR) 3D Model"
-                src="https://sketchfab.com/models/b80f4ba94b6c48fda171d75008d6ff42/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                data-src="https://sketchfab.com/models/b80f4ba94b6c48fda171d75008d6ff42/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
                 allowfullscreen
                 loading="lazy">
@@ -1826,6 +1960,68 @@
       <div class="panel-footer-bar">
         <span>SCB 3D • Fotosensor LDR</span>
         <a href="https://sketchfab.com/3d-models/lichtgevoelige-weerstand-ldr-b80f4ba94b6c48fda171d75008d6ff42" target="_blank" rel="noopener">
+          Sketchfab
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- PANEL 8: RESISTENCIA 10K OHM -->
+    <section class="studio-panel panel-resistor10k" id="panelResistor10k">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#e0a96d; box-shadow:0 0 8px rgba(224,169,109,0.45);"></span>
+          <span class="panel-title-text">Resistencia 10kΩ</span>
+          <span class="panel-spec-tag">10 kΩ ±5%</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-resistor10k-3d" onclick="setPanelTab('resistor10k', '3d')">3D CAD</button>
+          <button class="tab-pill-btn" id="tab-resistor10k-render" onclick="setPanelTab('resistor10k', 'render')">Render</button>
+        </div>
+      </div>
+
+      <!-- 3D Model Viewport -->
+      <div class="panel-viewport" id="viewport-resistor10k-3d">
+        <div class="viewport-skeleton-loader" id="sk-resistor10k-3d" data-poster-for="sk-resistor10k-3d" onclick="forceActivatePanel('iframe-resistor10k')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/resistor10k_render.webp" alt="" loading="lazy">
+          <div class="sk-board-silhouette sk-resistor-silhouette">
+            <div class="sk-res-lead"></div>
+            <div class="sk-res-body">
+              <span class="sk-res-band" style="background:#8b4513;"></span>
+              <span class="sk-res-band" style="background:#111111;"></span>
+              <span class="sk-res-band" style="background:#ff7b00;"></span>
+              <span class="sk-res-band" style="background:#d4af37;"></span>
+            </div>
+            <div class="sk-res-lead"></div>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot" style="background:#e0a96d;"></span>
+            <span>Cargando modelo 3D Resistencia 10kΩ...</span>
+          </div>
+        </div>
+        <iframe id="iframe-resistor10k"
+                title="10K Ohm Resistor 3D Model"
+                data-src="https://sketchfab.com/models/170087afb2f1464dafe4875f0edb8283/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-resistor10k-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/resistor10k_render.webp', 'Resistencia de Carbón 10kΩ ±5% (Marrón-Negro-Naranja-Dorado)')">
+          <img src="/assets/renders3d/resistor10k_render.webp" alt="Resistencia 10kΩ Render" loading="lazy">
+          <div class="render-info">
+            <span>Resistencia 10kΩ • Código 4 Bandas</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>Zachary Ferguson • 10kΩ ±5%</span>
+        <a href="https://sketchfab.com/3d-models/10k-ohm-resistor-170087afb2f1464dafe4875f0edb8283" target="_blank" rel="noopener">
           Sketchfab
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
@@ -1854,7 +2050,6 @@
     const STORAGE_KEY_THEME = 'ramsescb_theme_render3d';
 
     function initTheme() {
-      // Predeterminado en color negro (dark), respetando selección previa si el usuario la cambió a blanco
       const savedTheme = localStorage.getItem(STORAGE_KEY_THEME) || 'dark';
       setAppTheme(savedTheme, false);
     }
@@ -1887,17 +2082,18 @@
     }
 
     /* ========================================================
-       2. SKETCHFAB VIEWER API PARA SERVOMOTOR (CINEMÁTICA)
+       2. SKETCHFAB VIEWER API PARA SERVOMOTOR (CINEMÁTICA BAJO DEMANDA)
        ======================================================== */
     let servoApi = null;
+    let servoInitialized = false;
     let isServoPlaying = true;
-    const servoIframe = document.getElementById('iframe-servomotor');
+    let servoUserPaused = false;
 
     function initServomotorViewer() {
-      if (!window.Sketchfab) {
-        console.warn('Sketchfab API SDK aún no cargado');
-        return;
-      }
+      if (servoInitialized) return;
+      const servoIframe = document.getElementById('iframe-servomotor');
+      if (!servoIframe || !window.Sketchfab) return;
+      servoInitialized = true;
 
       const client = new Sketchfab(servoIframe);
       client.init('0fad21024bbc461db314a21db96b1395', {
@@ -1905,22 +2101,22 @@
           servoApi = api;
           api.start();
           api.addEventListener('viewerready', function() {
-            isServoPlaying = true;
-            updateServoButtonState(true);
-            const sk = document.getElementById('sk-servo-3d');
-            if (sk) {
-              sk.classList.add('is-loaded');
-              setTimeout(() => { sk.style.display = 'none'; }, 380);
+            isServoPlaying = !servoUserPaused;
+            if (servoUserPaused) {
+              api.pause();
             }
+            updateServoButtonState(isServoPlaying);
+            dismissSkeleton('sk-servo-3d');
           });
         },
         error: function() {
-          console.error('Error al inicializar Sketchfab Viewer API para el servomotor.');
+          servoInitialized = false;
         },
         autostart: 1,
-        preload: 1,
+        preload: 0,
         ui_watermark: 0,
         ui_infos: 0,
+        ui_hint: 0,
         annotations_visible: 0
       });
     }
@@ -1932,6 +2128,7 @@
         servoApi.pause(function(err) {
           if (!err) {
             isServoPlaying = false;
+            servoUserPaused = true;
             updateServoButtonState(false);
           }
         });
@@ -1939,6 +2136,7 @@
         servoApi.play(function(err) {
           if (!err) {
             isServoPlaying = true;
+            servoUserPaused = false;
             updateServoButtonState(true);
           }
         });
@@ -1950,6 +2148,7 @@
       const icon = document.getElementById('servo-toggle-icon');
       const text = document.getElementById('servo-toggle-text');
       const hint = document.getElementById('shortcutHintText');
+      if (!btn) return;
 
       if (playing) {
         btn.className = 'btn-animation-toggle playing';
@@ -1964,28 +2163,248 @@
       }
     }
 
-    // Atajo global Tecla Espacio para el servomotor
     window.addEventListener('keydown', function(e) {
       if (e.code === 'Space' || e.key === ' ' || e.keyCode === 32) {
-        if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
-        // Evitar scroll de la ventana
+        if (['INPUT', 'TEXTAREA', 'BUTTON'].includes(document.activeElement.tagName)) return;
+        if (!servoApi) return;
         e.preventDefault();
         toggleServoAnimation();
       }
     });
 
-    const panelServoEl = document.getElementById('panelServo');
-    if (panelServoEl) {
-      panelServoEl.addEventListener('mouseenter', () => window.focus());
+    /* ========================================================
+       3. MOTOR DE FLUIDEZ WEBGL (VIRTUALIZACIÓN POR VIEWPORT)
+       Mantiene un máximo estricto de contextos WebGL activos según
+       el tamaño de pantalla para lograr 60 FPS sin congelamientos.
+       ======================================================== */
+    const PANEL_CONFIG = [
+      { key: 'arduino',    panelId: 'panelArduino',    iframeId: 'iframe-arduino',    skId: 'sk-ard-3d',        type: 'iframe', defaultLabel: 'Cargando escena 3D Arduino UNO R3...' },
+      { key: 'pn532',      panelId: 'panelPn532',      iframeId: 'iframe-pn532',      skId: 'sk-pn-3d',         type: 'iframe', defaultLabel: 'Cargando ensamble CAD (13.56 MHz)...' },
+      { key: 'servo',      panelId: 'panelServo',      iframeId: 'iframe-servomotor', skId: 'sk-servo-3d',      type: 'servo',  defaultLabel: 'Inicializando cinemática y despiece...' },
+      { key: 'stepper',    panelId: 'panelStepper',    iframeId: 'iframe-stepper',    skId: 'sk-stepper-3d',    type: 'iframe', defaultLabel: 'Cargando modelo 3D Motor de Paso...' },
+      { key: 'l298n',      panelId: 'panelL298n',      iframeId: 'iframe-l298n',      skId: 'sk-l298n-3d',      type: 'iframe', defaultLabel: 'Cargando modelo 3D Driver Puente H L298N...' },
+      { key: 'lm2596',     panelId: 'panelLm2596',     iframeId: 'mv-lm2596',         skId: 'sk-lm2596-3d',     type: 'mv',     defaultLabel: 'Cargando geometría STEP/glTF LM2596...' },
+      { key: 'ldr',        panelId: 'panelLdr',        iframeId: 'iframe-ldr',        skId: 'sk-ldr-3d',        type: 'iframe', defaultLabel: 'Cargando modelo 3D Fotorresistencia LDR...' },
+      { key: 'resistor10k',panelId: 'panelResistor10k',iframeId: 'iframe-resistor10k',skId: 'sk-resistor10k-3d',type: 'iframe', defaultLabel: 'Cargando modelo 3D Resistencia 10kΩ...' }
+    ];
+
+    const panelState = {};
+    PANEL_CONFIG.forEach(cfg => {
+      panelState[cfg.key] = {
+        active: false,
+        visible: false,
+        tab: '3d',
+        lastActiveAt: 0,
+        debounceTimer: null
+      };
+    });
+
+    let currentViewMode = 'grid';
+
+    function getMaxActiveIframes() {
+      if (currentViewMode !== 'grid') return 1;
+      const w = window.innerWidth;
+      if (w <= 740) return 1;
+      if (w <= 1180) return 2;
+      return 3;
+    }
+
+    function dismissSkeleton(skId) {
+      const sk = document.getElementById(skId);
+      if (!sk) return;
+      sk.classList.remove('is-hibernated');
+      sk.classList.add('is-loaded');
+      setTimeout(() => {
+        if (sk.classList.contains('is-loaded')) {
+          sk.style.display = 'none';
+        }
+      }, 320);
+    }
+
+    function showSkeleton(skId, message, hibernated) {
+      const sk = document.getElementById(skId);
+      if (!sk) return;
+      sk.style.display = 'flex';
+      sk.classList.remove('is-loaded');
+      if (hibernated) {
+        sk.classList.add('is-hibernated');
+      } else {
+        sk.classList.remove('is-hibernated');
+      }
+      const label = sk.querySelector('.sk-status-pill span:last-child');
+      if (label && message) label.textContent = message;
+    }
+
+    function activatePanel(cfg) {
+      const st = panelState[cfg.key];
+      if (st.tab !== '3d') return;
+      st.lastActiveAt = Date.now();
+
+      if (cfg.type === 'mv') {
+        const mv = document.getElementById(cfg.iframeId);
+        if (mv) {
+          mv.setAttribute('auto-rotate', '');
+          if (mv.loaded) dismissSkeleton(cfg.skId);
+        }
+        st.active = true;
+        return;
+      }
+
+      if (cfg.type === 'servo') {
+        if (!servoInitialized) {
+          showSkeleton(cfg.skId, cfg.defaultLabel, false);
+          initServomotorViewer();
+        } else if (servoApi && !servoUserPaused) {
+          servoApi.play();
+          isServoPlaying = true;
+          updateServoButtonState(true);
+        }
+        st.active = true;
+        return;
+      }
+
+      // Standard iframe with LRU GPU budget enforcement
+      enforceWebGLBudget(cfg.key);
+
+      const iframe = document.getElementById(cfg.iframeId);
+      if (!iframe) return;
+      const targetSrc = iframe.getAttribute('data-src');
+      if (!targetSrc) return;
+
+      if (iframe.getAttribute('src') !== targetSrc) {
+        showSkeleton(cfg.skId, cfg.defaultLabel, false);
+        const onLoad = () => {
+          dismissSkeleton(cfg.skId);
+          iframe.removeEventListener('load', onLoad);
+        };
+        iframe.addEventListener('load', onLoad);
+        iframe.setAttribute('src', targetSrc);
+        setTimeout(() => {
+          if (panelState[cfg.key].active) dismissSkeleton(cfg.skId);
+        }, 3500);
+      } else {
+        dismissSkeleton(cfg.skId);
+      }
+      st.active = true;
+    }
+
+    function hibernatePanel(cfg) {
+      const st = panelState[cfg.key];
+      if (st.debounceTimer) {
+        clearTimeout(st.debounceTimer);
+        st.debounceTimer = null;
+      }
+
+      if (cfg.type === 'mv') {
+        const mv = document.getElementById(cfg.iframeId);
+        if (mv) mv.removeAttribute('auto-rotate');
+        st.active = false;
+        return;
+      }
+
+      if (cfg.type === 'servo') {
+        if (servoApi && isServoPlaying) {
+          servoApi.pause();
+          isServoPlaying = false;
+          updateServoButtonState(false);
+        }
+        st.active = false;
+        return;
+      }
+
+      const iframe = document.getElementById(cfg.iframeId);
+      if (iframe && iframe.getAttribute('src') && iframe.getAttribute('src') !== 'about:blank') {
+        iframe.setAttribute('src', 'about:blank');
+      }
+      st.active = false;
+      showSkeleton(cfg.skId, '▶ Clic para reactivar vista 3D', true);
+    }
+
+    function enforceWebGLBudget(keepKey) {
+      const limit = getMaxActiveIframes();
+      const activeIframes = PANEL_CONFIG.filter(c => c.type === 'iframe' && panelState[c.key].active && c.key !== keepKey);
+
+      if (activeIframes.length >= limit) {
+        // Hibernate off-screen ones first, then oldest active
+        activeIframes.sort((a, b) => {
+          const visA = panelState[a.key].visible ? 1 : 0;
+          const visB = panelState[b.key].visible ? 1 : 0;
+          if (visA !== visB) return visA - visB;
+          return panelState[a.key].lastActiveAt - panelState[b.key].lastActiveAt;
+        });
+
+        while (activeIframes.length >= limit) {
+          const victim = activeIframes.shift();
+          hibernatePanel(victim);
+        }
+      }
+    }
+
+    function forceActivatePanel(iframeId) {
+      const cfg = PANEL_CONFIG.find(c => c.iframeId === iframeId);
+      if (cfg) activatePanel(cfg);
+    }
+
+    function initViewportVirtualizer() {
+      const mv = document.getElementById('mv-lm2596');
+      if (mv) {
+        mv.addEventListener('load', () => dismissSkeleton('sk-lm2596-3d'));
+        if (mv.loaded) dismissSkeleton('sk-lm2596-3d');
+        setTimeout(() => dismissSkeleton('sk-lm2596-3d'), 4000);
+      }
+
+      if (!('IntersectionObserver' in window)) {
+        PANEL_CONFIG.slice(0, 3).forEach(activatePanel);
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const cfg = PANEL_CONFIG.find(c => c.panelId === entry.target.id);
+          if (!cfg) return;
+          const st = panelState[cfg.key];
+
+          if (entry.isIntersecting) {
+            st.visible = true;
+            if (st.debounceTimer) clearTimeout(st.debounceTimer);
+            // Breve debounce de 160ms para no cargar iframes si el usuario pasa haciendo scroll rápido
+            st.debounceTimer = setTimeout(() => {
+              if (st.visible && st.tab === '3d') {
+                activatePanel(cfg);
+              }
+            }, 160);
+          } else {
+            st.visible = false;
+            if (st.debounceTimer) {
+              clearTimeout(st.debounceTimer);
+              st.debounceTimer = null;
+            }
+            if (st.active) {
+              hibernatePanel(cfg);
+            }
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '60px 0px',
+        threshold: 0.12
+      });
+
+      PANEL_CONFIG.forEach(cfg => {
+        const el = document.getElementById(cfg.panelId);
+        if (el) observer.observe(el);
+      });
     }
 
     /* ========================================================
-       3. MODOS DE VISTA SEGMENTADA (CUADRÍCULA O ENFOCADA)
+       4. MODOS DE VISTA SEGMENTADA (CUADRÍCULA O ENFOCADA)
        ======================================================== */
     function setViewMode(mode) {
+      currentViewMode = mode;
       const main = document.getElementById('studioMain');
-      const modes = ['arduino', 'pn532', 'servo', 'stepper', 'l298n', 'lm2596', 'ldr'];
+      const modes = PANEL_CONFIG.map(c => c.key);
       const buttons = { grid: document.getElementById('btn-grid') };
+
       modes.forEach(m => {
         buttons[m] = document.getElementById('btn-' + m);
         main.classList.remove('view-' + m);
@@ -2001,113 +2420,78 @@
       if (mode === 'grid') {
         buttons.grid.classList.add('active');
         buttons.grid.setAttribute('aria-selected', 'true');
+        // Re-evaluate visible panels smoothly
+        PANEL_CONFIG.forEach(cfg => {
+          if (panelState[cfg.key].visible && panelState[cfg.key].tab === '3d') {
+            activatePanel(cfg);
+          }
+        });
       } else if (buttons[mode]) {
         main.classList.add('view-' + mode);
         buttons[mode].classList.add('active');
         buttons[mode].setAttribute('aria-selected', 'true');
+        buttons[mode].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Liberar GPU de los demás paneles y dar 100% prioridad al panel enfocado
+        PANEL_CONFIG.forEach(cfg => {
+          if (cfg.key === mode) {
+            panelState[cfg.key].visible = true;
+            if (panelState[cfg.key].tab === '3d') activatePanel(cfg);
+          } else {
+            hibernatePanel(cfg);
+          }
+        });
       }
     }
 
     /* ========================================================
-       4. PESTAÑAS INTERNAS DE CADA PANEL (3D vs RENDERS)
+       5. PESTAÑAS INTERNAS DE CADA PANEL (3D vs RENDERS)
        ======================================================== */
     function setPanelTab(panel, tab) {
-      if (panel === 'arduino') {
-        const vp3d = document.getElementById('viewport-ard-3d');
-        const vpren = document.getElementById('viewport-ard-renders');
-        const tab3d = document.getElementById('tab-ard-3d');
-        const tabren = document.getElementById('tab-ard-renders');
+      const cfg = PANEL_CONFIG.find(c => c.key === panel);
+      if (cfg) panelState[panel].tab = tab;
 
-        if (tab === '3d') {
-          vp3d.style.display = 'block';
-          vpren.classList.remove('active');
-          tab3d.classList.add('active');
-          tabren.classList.remove('active');
-        } else {
-          vp3d.style.display = 'none';
-          vpren.classList.add('active');
-          tab3d.classList.remove('active');
-          tabren.classList.add('active');
-        }
-      } else if (panel === 'pn532') {
-        const vp3d = document.getElementById('viewport-pn-3d');
-        const vpren = document.getElementById('viewport-pn-render');
-        const tab3d = document.getElementById('tab-pn-3d');
-        const tabren = document.getElementById('tab-pn-render');
+      const idMap = {
+        arduino: { vp3d: 'viewport-ard-3d', vpren: 'viewport-ard-renders', tab3d: 'tab-ard-3d', tabren: 'tab-ard-renders' },
+        pn532:   { vp3d: 'viewport-pn-3d',  vpren: 'viewport-pn-render',   tab3d: 'tab-pn-3d',  tabren: 'tab-pn-render' }
+      };
+      const ids = idMap[panel] || {
+        vp3d: 'viewport-' + panel + '-3d',
+        vpren: 'viewport-' + panel + '-render',
+        tab3d: 'tab-' + panel + '-3d',
+        tabren: 'tab-' + panel + '-render'
+      };
 
-        if (tab === '3d') {
-          vp3d.style.display = 'block';
-          vpren.classList.remove('active');
-          tab3d.classList.add('active');
-          tabren.classList.remove('active');
-        } else {
-          vp3d.style.display = 'none';
-          vpren.classList.add('active');
-          tab3d.classList.remove('active');
-          tabren.classList.add('active');
-        }
-      } else if (panel === 'servo') {
-        const vp3d = document.getElementById('viewport-servo-3d');
-        const vpren = document.getElementById('viewport-servo-render');
-        const tab3d = document.getElementById('tab-servo-3d');
-        const tabren = document.getElementById('tab-servo-render');
+      const vp3d = document.getElementById(ids.vp3d);
+      const vpren = document.getElementById(ids.vpren);
+      const tab3d = document.getElementById(ids.tab3d);
+      const tabren = document.getElementById(ids.tabren);
+      if (!vp3d || !vpren) return;
 
-        if (tab === '3d') {
-          vp3d.style.display = 'block';
-          vpren.classList.remove('active');
-          tab3d.classList.add('active');
-          tabren.classList.remove('active');
-        } else {
-          vp3d.style.display = 'none';
-          vpren.classList.add('active');
-          tab3d.classList.remove('active');
-          tabren.classList.add('active');
-        }
-      } else if (panel === 'stepper') {
-        const vp3d = document.getElementById('viewport-stepper-3d');
-        const vpren = document.getElementById('viewport-stepper-render');
-        const tab3d = document.getElementById('tab-stepper-3d');
-        const tabren = document.getElementById('tab-stepper-render');
-
-        if (tab === '3d') {
-          vp3d.style.display = 'block';
-          vpren.classList.remove('active');
-          tab3d.classList.add('active');
-          tabren.classList.remove('active');
-        } else {
-          vp3d.style.display = 'none';
-          vpren.classList.add('active');
-          tab3d.classList.remove('active');
-          tabren.classList.add('active');
-        }
-      } else if (panel === 'l298n' || panel === 'lm2596' || panel === 'ldr') {
-        const vp3d = document.getElementById('viewport-' + panel + '-3d');
-        const vpren = document.getElementById('viewport-' + panel + '-render');
-        const tab3d = document.getElementById('tab-' + panel + '-3d');
-        const tabren = document.getElementById('tab-' + panel + '-render');
-
-        if (tab === '3d') {
-          vp3d.style.display = 'block';
-          vpren.classList.remove('active');
-          tab3d.classList.add('active');
-          tabren.classList.remove('active');
-        } else {
-          vp3d.style.display = 'none';
-          vpren.classList.add('active');
-          tab3d.classList.remove('active');
-          tabren.classList.add('active');
-        }
+      if (tab === '3d') {
+        vp3d.style.display = 'block';
+        vpren.classList.remove('active');
+        tab3d.classList.add('active');
+        tabren.classList.remove('active');
+        if (cfg) activatePanel(cfg);
+      } else {
+        vp3d.style.display = 'none';
+        vpren.classList.add('active');
+        tab3d.classList.remove('active');
+        tabren.classList.add('active');
+        if (cfg) hibernatePanel(cfg);
       }
     }
 
     /* ========================================================
-       5. LIGHTBOX MODAL DE ALTA DEFINICIÓN
+       6. LIGHTBOX MODAL DE ALTA DEFINICIÓN
        ======================================================== */
     function openLightbox(src, caption) {
       const modal = document.getElementById('lightboxModal');
       const img = document.getElementById('lightboxImg');
       const cap = document.getElementById('lightboxCaption');
-      
+
       img.src = src;
       cap.textContent = caption || 'Render de Hardware';
       modal.classList.add('active');
@@ -2124,37 +2508,15 @@
       if (e.key === 'Escape') closeLightbox();
     });
 
-    /* ========================================================
-       6. CONTROL DE SKELETON LOADERS (3D VIEWPORTS)
-       ======================================================== */
-    function setupIframeSkeleton(iframeId, skeletonId) {
-      const iframe = document.getElementById(iframeId);
-      const skeleton = document.getElementById(skeletonId);
-      if (!iframe || !skeleton) return;
-
-      const dismiss = () => {
-        if (!skeleton.classList.contains('is-loaded')) {
-          skeleton.classList.add('is-loaded');
-          setTimeout(() => { if (skeleton.parentNode) skeleton.style.display = 'none'; }, 380);
-        }
-      };
-
-      iframe.addEventListener('load', dismiss);
-      // Fallback de seguridad si la conexión es lenta o si viene de caché
-      setTimeout(dismiss, 3000);
-    }
-
-    // Iniciar tema, esqueletos y 3D al cargar el DOM
+    // Iniciar tema y motor WebGL virtualizado al cargar el DOM
     window.addEventListener('DOMContentLoaded', () => {
       initTheme();
-      setupIframeSkeleton('iframe-arduino', 'sk-ard-3d');
-      setupIframeSkeleton('iframe-pn532', 'sk-pn-3d');
-      setupIframeSkeleton('iframe-servomotor', 'sk-servo-3d');
-      setupIframeSkeleton('iframe-stepper', 'sk-stepper-3d');
-      setupIframeSkeleton('iframe-l298n', 'sk-l298n-3d');
-      setupIframeSkeleton('mv-lm2596', 'sk-lm2596-3d');
-      setupIframeSkeleton('iframe-ldr', 'sk-ldr-3d');
-      initServomotorViewer();
+      initViewportVirtualizer();
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => enforceWebGLBudget(null), 220);
+      }, { passive: true });
     });
   </script>
 </body>
