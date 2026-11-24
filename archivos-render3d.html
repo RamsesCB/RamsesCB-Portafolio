@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>RamsesCB</title>
   
-  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532, Servomotor, Motor Paso a Paso y Driver Puente H L298N).">
+  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532, Servomotor, Motor Paso a Paso, Driver L298N, Conversor Buck LM2596 y Sensor LDR).">
   <meta name="theme-color" content="#000000" id="theme-color-meta">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,6 +14,8 @@
 
   <!-- Sketchfab Viewer API para control programático de cinemática -->
   <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+  <!-- Google Model Viewer para renders CAD propios (.glb) -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
   <style>
     /* ========================================================
@@ -331,48 +333,32 @@
     }
 
     /* Modos de vista enfocada */
-    main.studio-main.view-arduino,
-    main.studio-main.view-pn532,
-    main.studio-main.view-servo,
-    main.studio-main.view-stepper,
-    main.studio-main.view-l298n {
+    main.studio-main[class*="view-"] {
       grid-template-columns: 1fr;
       grid-auto-rows: calc(100vh - 84px);
     }
 
-    main.studio-main.view-arduino .panel-pn532,
-    main.studio-main.view-arduino .panel-servo,
-    main.studio-main.view-arduino .panel-stepper,
-    main.studio-main.view-arduino .panel-l298n {
+    main.studio-main.view-arduino .studio-panel:not(.panel-arduino),
+    main.studio-main.view-pn532 .studio-panel:not(.panel-pn532),
+    main.studio-main.view-servo .studio-panel:not(.panel-servo),
+    main.studio-main.view-stepper .studio-panel:not(.panel-stepper),
+    main.studio-main.view-l298n .studio-panel:not(.panel-l298n),
+    main.studio-main.view-lm2596 .studio-panel:not(.panel-lm2596),
+    main.studio-main.view-ldr .studio-panel:not(.panel-ldr) {
       display: none;
     }
 
-    main.studio-main.view-pn532 .panel-arduino,
-    main.studio-main.view-pn532 .panel-servo,
-    main.studio-main.view-pn532 .panel-stepper,
-    main.studio-main.view-pn532 .panel-l298n {
-      display: none;
+    /* Native Model-Viewer Canvas Styling */
+    .panel-viewport model-viewer {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: radial-gradient(circle at 50% 45%, #1d222b 0%, #0d0d10 78%);
+      --poster-color: transparent;
+      outline: none;
     }
-
-    main.studio-main.view-servo .panel-arduino,
-    main.studio-main.view-servo .panel-pn532,
-    main.studio-main.view-servo .panel-stepper,
-    main.studio-main.view-servo .panel-l298n {
-      display: none;
-    }
-
-    main.studio-main.view-stepper .panel-arduino,
-    main.studio-main.view-stepper .panel-pn532,
-    main.studio-main.view-stepper .panel-servo,
-    main.studio-main.view-stepper .panel-l298n {
-      display: none;
-    }
-
-    main.studio-main.view-l298n .panel-arduino,
-    main.studio-main.view-l298n .panel-pn532,
-    main.studio-main.view-l298n .panel-servo,
-    main.studio-main.view-l298n .panel-stepper {
-      display: none;
+    [data-theme="light"] .panel-viewport model-viewer {
+      background: radial-gradient(circle at 50% 45%, #ffffff 0%, #e9ecf2 82%);
     }
 
     /* ========================================================
@@ -806,6 +792,81 @@
       padding: 2px 8px;
       background: rgba(255, 55, 95, 0.14);
       border-radius: 4px;
+    }
+
+    .sk-lm2596-silhouette {
+      width: 148px;
+      height: 86px;
+      background: rgba(100, 210, 255, 0.1);
+      border: 1.5px solid rgba(100, 210, 255, 0.4);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      gap: 8px;
+    }
+    .sk-lm-inductor {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(100, 210, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.55rem;
+      font-family: monospace;
+      color: rgba(100, 210, 255, 0.9);
+    }
+    .sk-lm-7seg {
+      flex: 1;
+      height: 34px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(100, 210, 255, 0.35);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      color: #64d2ff;
+    }
+
+    .sk-ldr-silhouette {
+      width: 110px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .sk-ldr-head {
+      width: 64px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255, 214, 10, 0.14);
+      border: 2px solid rgba(255, 214, 10, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      font-family: monospace;
+      color: #ffd60a;
+    }
+    .sk-ldr-leads {
+      display: flex;
+      gap: 18px;
+      margin-top: 2px;
+    }
+    .sk-ldr-leads span {
+      width: 3px;
+      height: 38px;
+      background: rgba(255, 214, 10, 0.45);
+      border-radius: 2px;
     }
 
     @keyframes sk-cube-pulse {
@@ -1242,7 +1303,7 @@
 
       <div class="brand-group">
         <h1 class="brand-title">Hardware 3D Studio</h1>
-        <span class="brand-sub">RamsesCB • Arduino / NFC / Servomotor / Stepper / L298N</span>
+        <span class="brand-sub">RamsesCB • 7 Modelos 3D de Hardware Embebido</span>
       </div>
     </div>
 
@@ -1266,7 +1327,13 @@
           🔄 Motor Paso a Paso
         </button>
         <button class="seg-btn" id="btn-l298n" onclick="setViewMode('l298n')" role="tab" aria-selected="false">
-          🔴 Puente H L298N
+          🔴 L298N
+        </button>
+        <button class="seg-btn" id="btn-lm2596" onclick="setViewMode('lm2596')" role="tab" aria-selected="false">
+          🔋 LM2596
+        </button>
+        <button class="seg-btn" id="btn-ldr" onclick="setViewMode('ldr')" role="tab" aria-selected="false">
+          ☀️ LDR
         </button>
       </div>
     </div>
@@ -1644,6 +1711,126 @@
         </a>
       </div>
     </section>
+
+    <!-- PANEL 6: CONVERSOR BUCK DC-DC LM2596 CON VOLTÍMETRO -->
+    <section class="studio-panel panel-lm2596" id="panelLm2596">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#64d2ff; box-shadow:0 0 8px rgba(100,210,255,0.45);"></span>
+          <span class="panel-title-text">Conversor Buck LM2596</span>
+          <span class="panel-spec-tag">DC-DC 7-Seg</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-lm2596-3d" onclick="setPanelTab('lm2596', '3d')">3D CAD</button>
+          <button class="tab-pill-btn" id="tab-lm2596-render" onclick="setPanelTab('lm2596', 'render')">Render</button>
+        </div>
+      </div>
+
+      <!-- Native 3D Model Viewport (glTF PBR extraído de STEP) -->
+      <div class="panel-viewport" id="viewport-lm2596-3d">
+        <div class="viewport-skeleton-loader" id="sk-lm2596-3d" aria-hidden="true">
+          <div class="sk-board-silhouette sk-lm2596-silhouette">
+            <div class="sk-lm-inductor">470</div>
+            <div class="sk-lm-7seg">8.8.8</div>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot" style="background:#64d2ff;"></span>
+            <span>Cargando geometría STEP/glTF LM2596...</span>
+          </div>
+        </div>
+        <model-viewer id="mv-lm2596"
+                      src="/assets/models3d/lm2596_buck.glb"
+                      poster="/assets/renders3d/lm2596_render.webp"
+                      alt="Conversor Buck DC-DC LM2596 con Voltímetro Digital 3D"
+                      camera-controls
+                      auto-rotate
+                      auto-rotate-delay="1000"
+                      rotation-per-second="18deg"
+                      camera-orbit="35deg 52deg 115%"
+                      min-camera-orbit="auto auto 45%"
+                      max-camera-orbit="auto auto 250%"
+                      shadow-intensity="0.85"
+                      exposure="1.15"
+                      environment-image="neutral"
+                      interaction-prompt="none"
+                      loading="eager">
+        </model-viewer>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-lm2596-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/lm2596_render.webp', 'Conversor Buck DC-DC LM2596 con Voltímetro Digital (67x36 mm)')">
+          <img src="/assets/renders3d/lm2596_render.webp" alt="Conversor Buck LM2596 Render" loading="lazy">
+          <div class="render-info">
+            <span>LM2596 Step-Down • Voltímetro 7-Seg</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>STEP → glTF PBR • 67x36 mm</span>
+        <a href="https://grabcad.com/library/lm2596-dc-dc-step-down-buck-converter-module-with-digital-voltmeter-67x36-mm-1" target="_blank" rel="noopener">
+          GrabCAD
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- PANEL 7: FOTORRESISTENCIA LDR -->
+    <section class="studio-panel panel-ldr" id="panelLdr">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#ffd60a; box-shadow:0 0 8px rgba(255,214,10,0.45);"></span>
+          <span class="panel-title-text">Fotorresistencia LDR</span>
+          <span class="panel-spec-tag">Fotosensor</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-ldr-3d" onclick="setPanelTab('ldr', '3d')">3D CAD</button>
+          <button class="tab-pill-btn" id="tab-ldr-render" onclick="setPanelTab('ldr', 'render')">Render</button>
+        </div>
+      </div>
+
+      <!-- 3D Model Viewport -->
+      <div class="panel-viewport" id="viewport-ldr-3d">
+        <div class="viewport-skeleton-loader" id="sk-ldr-3d" aria-hidden="true">
+          <div class="sk-board-silhouette sk-ldr-silhouette">
+            <div class="sk-ldr-head">LDR</div>
+            <div class="sk-ldr-leads"><span></span><span></span></div>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot" style="background:#ffd60a;"></span>
+            <span>Cargando modelo 3D Fotorresistencia LDR...</span>
+          </div>
+        </div>
+        <iframe id="iframe-ldr"
+                title="Lichtgevoelige weerstand (LDR) 3D Model"
+                src="https://sketchfab.com/models/b80f4ba94b6c48fda171d75008d6ff42/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-ldr-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/ldr_render.webp', 'Fotorresistencia LDR (Resistor Dependiente de Luz)')">
+          <img src="/assets/renders3d/ldr_render.webp" alt="Fotorresistencia LDR Render" loading="lazy">
+          <div class="render-info">
+            <span>Fotorresistencia LDR • Sensor Óptico</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>SCB 3D • Fotosensor LDR</span>
+        <a href="https://sketchfab.com/3d-models/lichtgevoelige-weerstand-ldr-b80f4ba94b6c48fda171d75008d6ff42" target="_blank" rel="noopener">
+          Sketchfab
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- ========================================================
@@ -1797,16 +1984,13 @@
        ======================================================== */
     function setViewMode(mode) {
       const main = document.getElementById('studioMain');
-      const buttons = {
-        grid: document.getElementById('btn-grid'),
-        arduino: document.getElementById('btn-arduino'),
-        pn532: document.getElementById('btn-pn532'),
-        servo: document.getElementById('btn-servo'),
-        stepper: document.getElementById('btn-stepper'),
-        l298n: document.getElementById('btn-l298n')
-      };
+      const modes = ['arduino', 'pn532', 'servo', 'stepper', 'l298n', 'lm2596', 'ldr'];
+      const buttons = { grid: document.getElementById('btn-grid') };
+      modes.forEach(m => {
+        buttons[m] = document.getElementById('btn-' + m);
+        main.classList.remove('view-' + m);
+      });
 
-      main.classList.remove('view-arduino', 'view-pn532', 'view-servo', 'view-stepper', 'view-l298n');
       Object.values(buttons).forEach(btn => {
         if (btn) {
           btn.classList.remove('active');
@@ -1817,26 +2001,10 @@
       if (mode === 'grid') {
         buttons.grid.classList.add('active');
         buttons.grid.setAttribute('aria-selected', 'true');
-      } else if (mode === 'arduino') {
-        main.classList.add('view-arduino');
-        buttons.arduino.classList.add('active');
-        buttons.arduino.setAttribute('aria-selected', 'true');
-      } else if (mode === 'pn532') {
-        main.classList.add('view-pn532');
-        buttons.pn532.classList.add('active');
-        buttons.pn532.setAttribute('aria-selected', 'true');
-      } else if (mode === 'servo') {
-        main.classList.add('view-servo');
-        buttons.servo.classList.add('active');
-        buttons.servo.setAttribute('aria-selected', 'true');
-      } else if (mode === 'stepper') {
-        main.classList.add('view-stepper');
-        buttons.stepper.classList.add('active');
-        buttons.stepper.setAttribute('aria-selected', 'true');
-      } else if (mode === 'l298n') {
-        main.classList.add('view-l298n');
-        buttons.l298n.classList.add('active');
-        buttons.l298n.setAttribute('aria-selected', 'true');
+      } else if (buttons[mode]) {
+        main.classList.add('view-' + mode);
+        buttons[mode].classList.add('active');
+        buttons[mode].setAttribute('aria-selected', 'true');
       }
     }
 
@@ -1912,11 +2080,11 @@
           tab3d.classList.remove('active');
           tabren.classList.add('active');
         }
-      } else if (panel === 'l298n') {
-        const vp3d = document.getElementById('viewport-l298n-3d');
-        const vpren = document.getElementById('viewport-l298n-render');
-        const tab3d = document.getElementById('tab-l298n-3d');
-        const tabren = document.getElementById('tab-l298n-render');
+      } else if (panel === 'l298n' || panel === 'lm2596' || panel === 'ldr') {
+        const vp3d = document.getElementById('viewport-' + panel + '-3d');
+        const vpren = document.getElementById('viewport-' + panel + '-render');
+        const tab3d = document.getElementById('tab-' + panel + '-3d');
+        const tabren = document.getElementById('tab-' + panel + '-render');
 
         if (tab === '3d') {
           vp3d.style.display = 'block';
@@ -1984,6 +2152,8 @@
       setupIframeSkeleton('iframe-servomotor', 'sk-servo-3d');
       setupIframeSkeleton('iframe-stepper', 'sk-stepper-3d');
       setupIframeSkeleton('iframe-l298n', 'sk-l298n-3d');
+      setupIframeSkeleton('mv-lm2596', 'sk-lm2596-3d');
+      setupIframeSkeleton('iframe-ldr', 'sk-ldr-3d');
       initServomotorViewer();
     });
   </script>
