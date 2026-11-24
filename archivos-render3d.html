@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>RamsesCB</title>
   
-  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532, Servomotor y Motor Paso a Paso).">
+  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, Módulo NFC PN532, Servomotor, Motor Paso a Paso y Driver Puente H L298N).">
   <meta name="theme-color" content="#000000" id="theme-color-meta">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -334,32 +334,44 @@
     main.studio-main.view-arduino,
     main.studio-main.view-pn532,
     main.studio-main.view-servo,
-    main.studio-main.view-stepper {
+    main.studio-main.view-stepper,
+    main.studio-main.view-l298n {
       grid-template-columns: 1fr;
       grid-auto-rows: calc(100vh - 84px);
     }
 
     main.studio-main.view-arduino .panel-pn532,
     main.studio-main.view-arduino .panel-servo,
-    main.studio-main.view-arduino .panel-stepper {
+    main.studio-main.view-arduino .panel-stepper,
+    main.studio-main.view-arduino .panel-l298n {
       display: none;
     }
 
     main.studio-main.view-pn532 .panel-arduino,
     main.studio-main.view-pn532 .panel-servo,
-    main.studio-main.view-pn532 .panel-stepper {
+    main.studio-main.view-pn532 .panel-stepper,
+    main.studio-main.view-pn532 .panel-l298n {
       display: none;
     }
 
     main.studio-main.view-servo .panel-arduino,
     main.studio-main.view-servo .panel-pn532,
-    main.studio-main.view-servo .panel-stepper {
+    main.studio-main.view-servo .panel-stepper,
+    main.studio-main.view-servo .panel-l298n {
       display: none;
     }
 
     main.studio-main.view-stepper .panel-arduino,
     main.studio-main.view-stepper .panel-pn532,
-    main.studio-main.view-stepper .panel-servo {
+    main.studio-main.view-stepper .panel-servo,
+    main.studio-main.view-stepper .panel-l298n {
+      display: none;
+    }
+
+    main.studio-main.view-l298n .panel-arduino,
+    main.studio-main.view-l298n .panel-pn532,
+    main.studio-main.view-l298n .panel-servo,
+    main.studio-main.view-l298n .panel-stepper {
       display: none;
     }
 
@@ -745,6 +757,55 @@
       font-size: 0.58rem;
       font-family: monospace;
       color: var(--text-secondary);
+    }
+
+    .sk-l298n-silhouette {
+      width: 132px;
+      height: 120px;
+      background: rgba(255, 55, 95, 0.08);
+      border: 1.5px solid rgba(255, 55, 95, 0.35);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      position: relative;
+    }
+    .sk-l298n-heatsink {
+      width: 58px;
+      height: 36px;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 55, 95, 0.28) 0px,
+        rgba(255, 55, 95, 0.28) 6px,
+        rgba(255, 255, 255, 0.05) 6px,
+        rgba(255, 255, 255, 0.05) 11px
+      );
+      border: 1px solid rgba(255, 55, 95, 0.45);
+      border-radius: 4px;
+    }
+    .sk-l298n-terminals {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sk-l298n-term {
+      width: 16px;
+      height: 24px;
+      background: rgba(41, 151, 255, 0.2);
+      border: 1px solid rgba(41, 151, 255, 0.45);
+      border-radius: 3px;
+    }
+    .sk-l298n-chip {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: rgba(255, 55, 95, 0.9);
+      font-family: monospace;
+      padding: 2px 8px;
+      background: rgba(255, 55, 95, 0.14);
+      border-radius: 4px;
     }
 
     @keyframes sk-cube-pulse {
@@ -1181,7 +1242,7 @@
 
       <div class="brand-group">
         <h1 class="brand-title">Hardware 3D Studio</h1>
-        <span class="brand-sub">RamsesCB • Arduino / NFC / Servomotor / Stepper</span>
+        <span class="brand-sub">RamsesCB • Arduino / NFC / Servomotor / Stepper / L298N</span>
       </div>
     </div>
 
@@ -1203,6 +1264,9 @@
         </button>
         <button class="seg-btn" id="btn-stepper" onclick="setViewMode('stepper')" role="tab" aria-selected="false">
           🔄 Motor Paso a Paso
+        </button>
+        <button class="seg-btn" id="btn-l298n" onclick="setViewMode('l298n')" role="tab" aria-selected="false">
+          🔴 Puente H L298N
         </button>
       </div>
     </div>
@@ -1520,6 +1584,66 @@
         </a>
       </div>
     </section>
+
+    <!-- PANEL 5: DRIVER PUENTE H L298N -->
+    <section class="studio-panel panel-l298n" id="panelL298n">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#ff375f; box-shadow:0 0 8px rgba(255,55,95,0.4);"></span>
+          <span class="panel-title-text">Driver Puente H</span>
+          <span class="panel-spec-tag">L298N Dual</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-l298n-3d" onclick="setPanelTab('l298n', '3d')">3D CAD</button>
+          <button class="tab-pill-btn" id="tab-l298n-render" onclick="setPanelTab('l298n', 'render')">Render</button>
+        </div>
+      </div>
+
+      <!-- 3D Model Viewport -->
+      <div class="panel-viewport" id="viewport-l298n-3d">
+        <!-- Skeleton Preview (L298N H-Bridge Driver Silhouette) -->
+        <div class="viewport-skeleton-loader" id="sk-l298n-3d" aria-hidden="true">
+          <div class="sk-board-silhouette sk-l298n-silhouette">
+            <div class="sk-l298n-heatsink"></div>
+            <div class="sk-l298n-terminals">
+              <div class="sk-l298n-term"></div>
+              <div class="sk-l298n-chip">L298N</div>
+              <div class="sk-l298n-term"></div>
+            </div>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot" style="background:#ff375f;"></span>
+            <span>Cargando modelo 3D Driver Puente H L298N...</span>
+          </div>
+        </div>
+        <iframe id="iframe-l298n"
+                title="Driver Ponte H L298N 3D Model"
+                src="https://sketchfab.com/models/d0855802156c46539d7c2eaf96600c16/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-l298n-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/l298n_render.webp', 'Driver Puente H L298N Dual Motor')">
+          <img src="/assets/renders3d/l298n_render.webp" alt="Driver Puente H L298N Render" loading="lazy">
+          <div class="render-info">
+            <span>Driver Puente H L298N • Control Dual DC/Stepper</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>Robótica Paraná • L298N</span>
+        <a href="https://sketchfab.com/3d-models/driver-ponte-h-l298n-d0855802156c46539d7c2eaf96600c16" target="_blank" rel="noopener">
+          Sketchfab
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- ========================================================
@@ -1678,10 +1802,11 @@
         arduino: document.getElementById('btn-arduino'),
         pn532: document.getElementById('btn-pn532'),
         servo: document.getElementById('btn-servo'),
-        stepper: document.getElementById('btn-stepper')
+        stepper: document.getElementById('btn-stepper'),
+        l298n: document.getElementById('btn-l298n')
       };
 
-      main.classList.remove('view-arduino', 'view-pn532', 'view-servo', 'view-stepper');
+      main.classList.remove('view-arduino', 'view-pn532', 'view-servo', 'view-stepper', 'view-l298n');
       Object.values(buttons).forEach(btn => {
         if (btn) {
           btn.classList.remove('active');
@@ -1708,6 +1833,10 @@
         main.classList.add('view-stepper');
         buttons.stepper.classList.add('active');
         buttons.stepper.setAttribute('aria-selected', 'true');
+      } else if (mode === 'l298n') {
+        main.classList.add('view-l298n');
+        buttons.l298n.classList.add('active');
+        buttons.l298n.setAttribute('aria-selected', 'true');
       }
     }
 
@@ -1783,6 +1912,23 @@
           tab3d.classList.remove('active');
           tabren.classList.add('active');
         }
+      } else if (panel === 'l298n') {
+        const vp3d = document.getElementById('viewport-l298n-3d');
+        const vpren = document.getElementById('viewport-l298n-render');
+        const tab3d = document.getElementById('tab-l298n-3d');
+        const tabren = document.getElementById('tab-l298n-render');
+
+        if (tab === '3d') {
+          vp3d.style.display = 'block';
+          vpren.classList.remove('active');
+          tab3d.classList.add('active');
+          tabren.classList.remove('active');
+        } else {
+          vp3d.style.display = 'none';
+          vpren.classList.add('active');
+          tab3d.classList.remove('active');
+          tabren.classList.add('active');
+        }
       }
     }
 
@@ -1837,6 +1983,7 @@
       setupIframeSkeleton('iframe-pn532', 'sk-pn-3d');
       setupIframeSkeleton('iframe-servomotor', 'sk-servo-3d');
       setupIframeSkeleton('iframe-stepper', 'sk-stepper-3d');
+      setupIframeSkeleton('iframe-l298n', 'sk-l298n-3d');
       initServomotorViewer();
     });
   </script>
