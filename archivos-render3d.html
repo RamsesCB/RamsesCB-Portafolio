@@ -561,6 +561,45 @@
       color: var(--accent);
     }
 
+    /* Botón Pantalla Completa por panel (funciona en los 9 modelos: Sketchfab y glTF nativos) */
+    .btn-panel-fs {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--segmented-bg);
+      color: var(--text-secondary);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+    }
+    .btn-panel-fs:hover {
+      background: var(--segmented-active);
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+    .btn-panel-fs.is-fs {
+      background: var(--accent-soft);
+      border-color: rgba(41, 151, 255, 0.45);
+      color: var(--accent);
+    }
+
+    /* Estilos limpios en Pantalla Completa nativa */
+    .studio-panel:fullscreen,
+    .studio-panel:-webkit-full-screen {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: none !important;
+      max-height: none !important;
+      border-radius: 0 !important;
+      border: none !important;
+      background: var(--bg-canvas);
+      contain: none !important;
+    }
+
     /* Silueta DIP-28 ATmega328P-PU */
     .sk-atmega-silhouette {
       width: 156px;
@@ -1584,6 +1623,7 @@
             <button class="tab-pill-btn active" id="tab-ard-3d" onclick="setPanelTab('arduino', '3d')">3D</button>
             <button class="tab-pill-btn" id="tab-ard-renders" onclick="setPanelTab('arduino', 'renders')">Renders</button>
           </div>
+          <button class="btn-panel-fs" data-fs-panel="panelArduino" onclick="togglePanelFullscreen('panelArduino')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -1608,7 +1648,9 @@
                 title="Arduino UNO R3 3D Interactive Model"
                 data-src="https://sketchfab.com/models/85e4a60ec0294e2c83fbafa6051a3681/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                allowfullscreen
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
                 loading="lazy">
         </iframe>
       </div>
@@ -1676,9 +1718,12 @@
           <span class="panel-title-text">Módulo PN532 NFC</span>
           <span class="panel-spec-tag">13.56 MHz</span>
         </div>
-        <div class="tab-pills-wrap">
+        <div class="panel-actions-group">
+          <div class="tab-pills-wrap">
           <button class="tab-pill-btn active" id="tab-pn-3d" onclick="setPanelTab('pn532', '3d')">3D CAD</button>
           <button class="tab-pill-btn" id="tab-pn-render" onclick="setPanelTab('pn532', 'render')">Render</button>
+        </div>
+          <button class="btn-panel-fs" data-fs-panel="panelPn532" onclick="togglePanelFullscreen('panelPn532')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -1755,6 +1800,7 @@
             <button class="tab-pill-btn active" id="tab-servo-3d" onclick="setPanelTab('servo', '3d')">3D</button>
             <button class="tab-pill-btn" id="tab-servo-render" onclick="setPanelTab('servo', 'render')">Render</button>
           </div>
+          <button class="btn-panel-fs" data-fs-panel="panelServo" onclick="togglePanelFullscreen('panelServo')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -1780,7 +1826,9 @@
         <iframe id="iframe-servomotor"
                 title="Servomotor Explode Animation"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                allowfullscreen
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
                 loading="lazy">
         </iframe>
 
@@ -1819,9 +1867,12 @@
           <span class="panel-title-text">Motor Paso a Paso</span>
           <span class="panel-spec-tag">28BYJ-48</span>
         </div>
-        <div class="tab-pills-wrap">
+        <div class="panel-actions-group">
+          <div class="tab-pills-wrap">
           <button class="tab-pill-btn active" id="tab-stepper-3d" onclick="setPanelTab('stepper', '3d')">3D CAD</button>
           <button class="tab-pill-btn" id="tab-stepper-render" onclick="setPanelTab('stepper', 'render')">Render</button>
+        </div>
+          <button class="btn-panel-fs" data-fs-panel="panelStepper" onclick="togglePanelFullscreen('panelStepper')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -1850,7 +1901,9 @@
                 title="Aula 28 - Motor de Passo 3D Model"
                 data-src="https://sketchfab.com/models/b34306a0794349a0be92665081bb4b0c/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                allowfullscreen
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
                 loading="lazy">
         </iframe>
       </div>
@@ -1883,9 +1936,12 @@
           <span class="panel-title-text">Driver Puente H</span>
           <span class="panel-spec-tag">L298N Dual</span>
         </div>
-        <div class="tab-pills-wrap">
+        <div class="panel-actions-group">
+          <div class="tab-pills-wrap">
           <button class="tab-pill-btn active" id="tab-l298n-3d" onclick="setPanelTab('l298n', '3d')">3D CAD</button>
           <button class="tab-pill-btn" id="tab-l298n-render" onclick="setPanelTab('l298n', 'render')">Render</button>
+        </div>
+          <button class="btn-panel-fs" data-fs-panel="panelL298n" onclick="togglePanelFullscreen('panelL298n')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -1911,7 +1967,9 @@
                 title="Driver Ponte H L298N 3D Model"
                 data-src="https://sketchfab.com/models/d0855802156c46539d7c2eaf96600c16/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                allowfullscreen
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
                 loading="lazy">
         </iframe>
       </div>
@@ -1944,9 +2002,12 @@
           <span class="panel-title-text">Conversor Buck LM2596</span>
           <span class="panel-spec-tag">DC-DC 7-Seg</span>
         </div>
-        <div class="tab-pills-wrap">
+        <div class="panel-actions-group">
+          <div class="tab-pills-wrap">
           <button class="tab-pill-btn active" id="tab-lm2596-3d" onclick="setPanelTab('lm2596', '3d')">3D CAD</button>
           <button class="tab-pill-btn" id="tab-lm2596-render" onclick="setPanelTab('lm2596', 'render')">Render</button>
+        </div>
+          <button class="btn-panel-fs" data-fs-panel="panelLm2596" onclick="togglePanelFullscreen('panelLm2596')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -2009,9 +2070,12 @@
           <span class="panel-title-text">Fotorresistencia LDR</span>
           <span class="panel-spec-tag">Fotosensor</span>
         </div>
-        <div class="tab-pills-wrap">
+        <div class="panel-actions-group">
+          <div class="tab-pills-wrap">
           <button class="tab-pill-btn active" id="tab-ldr-3d" onclick="setPanelTab('ldr', '3d')">3D CAD</button>
           <button class="tab-pill-btn" id="tab-ldr-render" onclick="setPanelTab('ldr', 'render')">Render</button>
+        </div>
+          <button class="btn-panel-fs" data-fs-panel="panelLdr" onclick="togglePanelFullscreen('panelLdr')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -2032,7 +2096,9 @@
                 title="Lichtgevoelige weerstand (LDR) 3D Model"
                 data-src="https://sketchfab.com/models/b80f4ba94b6c48fda171d75008d6ff42/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                allowfullscreen
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
                 loading="lazy">
         </iframe>
       </div>
@@ -2065,9 +2131,12 @@
           <span class="panel-title-text">Resistencia 10kΩ</span>
           <span class="panel-spec-tag">10 kΩ ±5%</span>
         </div>
-        <div class="tab-pills-wrap">
+        <div class="panel-actions-group">
+          <div class="tab-pills-wrap">
           <button class="tab-pill-btn active" id="tab-resistor10k-3d" onclick="setPanelTab('resistor10k', '3d')">3D CAD</button>
           <button class="tab-pill-btn" id="tab-resistor10k-render" onclick="setPanelTab('resistor10k', 'render')">Render</button>
+        </div>
+          <button class="btn-panel-fs" data-fs-panel="panelResistor10k" onclick="togglePanelFullscreen('panelResistor10k')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -2094,7 +2163,9 @@
                 title="10K Ohm Resistor 3D Model"
                 data-src="https://sketchfab.com/models/170087afb2f1464dafe4875f0edb8283/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                allowfullscreen
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
                 loading="lazy">
         </iframe>
       </div>
@@ -2127,9 +2198,12 @@
           <span class="panel-title-text">Chip ATmega328P-PU</span>
           <span class="panel-spec-tag">DIP-28 AVR</span>
         </div>
-        <div class="tab-pills-wrap">
+        <div class="panel-actions-group">
+          <div class="tab-pills-wrap">
           <button class="tab-pill-btn active" id="tab-atmega-3d" onclick="setPanelTab('atmega', '3d')">3D CAD</button>
           <button class="tab-pill-btn" id="tab-atmega-render" onclick="setPanelTab('atmega', 'render')">Render</button>
+        </div>
+          <button class="btn-panel-fs" data-fs-panel="panelAtmega" onclick="togglePanelFullscreen('panelAtmega')" title="Pantalla completa" aria-label="Pantalla completa"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></button>
         </div>
       </div>
 
@@ -2151,7 +2225,9 @@
                 title="Atmega328pu 3D Model"
                 data-src="https://sketchfab.com/models/153addc26c014792b8a08ebcf10604d8/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
                 allow="autoplay; fullscreen; xr-spatial-tracking"
-                allowfullscreen
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
                 loading="lazy">
         </iframe>
       </div>
@@ -2479,8 +2555,8 @@
         return;
       }
 
-      // Standard iframe with LRU GPU budget enforcement
-      enforceWebGLBudget(cfg.key);
+      // Standard iframe with LRU GPU budget enforcement (reserving 1 slot for cfg)
+      enforceWebGLBudget(cfg.key, true);
 
       const iframe = document.getElementById(cfg.iframeId);
       if (!iframe) return;
@@ -2504,7 +2580,53 @@
       st.active = true;
     }
 
+    function getFullscreenElement() {
+      return document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || null;
+    }
+
+    function isFullscreenActive() {
+      return !!getFullscreenElement();
+    }
+
+    function isPanelInFullscreen(cfg) {
+      const fsEl = getFullscreenElement();
+      if (!fsEl) return false;
+      const panelEl = document.getElementById(cfg.panelId);
+      const iframeEl = document.getElementById(cfg.iframeId);
+      return fsEl === panelEl || fsEl === iframeEl || (panelEl && panelEl.contains(fsEl));
+    }
+
+    function togglePanelFullscreen(panelId) {
+      const panelEl = document.getElementById(panelId);
+      if (!panelEl) return;
+      const fsEl = getFullscreenElement();
+      if (fsEl === panelEl) {
+        const exit = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen;
+        if (exit) exit.call(document);
+      } else {
+        const req = panelEl.requestFullscreen || panelEl.webkitRequestFullscreen || panelEl.mozRequestFullScreen;
+        if (req) req.call(panelEl).catch(() => {});
+      }
+    }
+
+    function syncFullscreenButtons() {
+      const fsEl = getFullscreenElement();
+      const enterSvg = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>';
+      const exitSvg = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" y1="10" x2="21" y2="3"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>';
+      document.querySelectorAll('.btn-panel-fs').forEach(btn => {
+        const isThisFs = fsEl && fsEl.id === btn.getAttribute('data-fs-panel');
+        btn.classList.toggle('is-fs', !!isThisFs);
+        btn.innerHTML = isThisFs ? exitSvg : enterSvg;
+        btn.title = isThisFs ? 'Salir de pantalla completa (Esc)' : 'Pantalla completa';
+      });
+    }
+
+    document.addEventListener('fullscreenchange', syncFullscreenButtons);
+    document.addEventListener('webkitfullscreenchange', syncFullscreenButtons);
+
     function hibernatePanel(cfg) {
+      // Nunca hibernar ni recargar un panel que está en pantalla completa
+      if (isPanelInFullscreen(cfg)) return;
       const st = panelState[cfg.key];
       if (st.debounceTimer) {
         clearTimeout(st.debounceTimer);
@@ -2536,11 +2658,19 @@
       showSkeleton(cfg.skId, '▶ Clic para reactivar vista 3D', true);
     }
 
-    function enforceWebGLBudget(keepKey) {
+    function enforceWebGLBudget(keepKey, reserveSlot = false) {
+      // Jamás hibernar contextos WebGL mientras haya un visor en pantalla completa
+      if (isFullscreenActive()) return;
       const limit = getMaxActiveIframes();
-      const activeIframes = PANEL_CONFIG.filter(c => c.type === 'iframe' && panelState[c.key].active && c.key !== keepKey);
+      const maxOthers = reserveSlot ? Math.max(0, limit - 1) : limit;
+      const activeIframes = PANEL_CONFIG.filter(c =>
+        c.type === 'iframe' &&
+        panelState[c.key].active &&
+        c.key !== keepKey &&
+        !isPanelInFullscreen(c)
+      );
 
-      if (activeIframes.length >= limit) {
+      if (activeIframes.length > maxOthers) {
         // Hibernate off-screen ones first, then oldest active
         activeIframes.sort((a, b) => {
           const visA = panelState[a.key].visible ? 1 : 0;
@@ -2549,7 +2679,7 @@
           return panelState[a.key].lastActiveAt - panelState[b.key].lastActiveAt;
         });
 
-        while (activeIframes.length >= limit) {
+        while (activeIframes.length > maxOthers) {
           const victim = activeIframes.shift();
           hibernatePanel(victim);
         }
@@ -2592,6 +2722,7 @@
               }
             }, 160);
           } else {
+            if (isFullscreenActive()) return;
             st.visible = false;
             if (st.debounceTimer) {
               clearTimeout(st.debounceTimer);
@@ -2732,8 +2863,9 @@
       initViewportVirtualizer();
       let resizeTimer;
       window.addEventListener('resize', () => {
+        if (isFullscreenActive()) return;
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => enforceWebGLBudget(null), 220);
+        resizeTimer = setTimeout(() => enforceWebGLBudget(null, false), 220);
       }, { passive: true });
     });
   </script>
