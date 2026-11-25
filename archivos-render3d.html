@@ -1604,7 +1604,7 @@
       <!-- 3D CAD Viewport -->
       <div class="panel-viewport" id="viewport-pn-3d">
         <!-- Skeleton Preview (Exact PN532 NFC Board Silhouette) -->
-        <div class="viewport-skeleton-loader" id="sk-pn-3d" data-poster-for="sk-pn-3d" onclick="forceActivatePanel('iframe-pn532')" title="Clic para activar modelo 3D">
+        <div class="viewport-skeleton-loader" id="sk-pn-3d" data-poster-for="sk-pn-3d" onclick="forceActivatePanel('mv-pn532')" title="Clic para activar modelo 3D">
           <img class="sk-poster-bg" src="/assets/renders3d/pn532_render.webp" alt="" loading="lazy">
           <div class="sk-board-silhouette sk-nfc-board">
             <div class="sk-antenna-coil">
@@ -1613,34 +1613,44 @@
             <div class="sk-nfc-chip">PN532 NFC 13.56MHz</div>
           </div>
           <div class="sk-status-pill">
-            <span class="sk-dot"></span>
-            <span>Cargando ensamble CAD (13.56 MHz)...</span>
+            <span class="sk-dot" style="background:#30d158;"></span>
+            <span>Cargando geometría STEP/glTF PN532...</span>
           </div>
         </div>
-        <iframe id="iframe-pn532"
-                title="PN532 NFC RFID Module CAD Model"
-                data-src="https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=1702333&width=800&height=600&edraw=true"
-                scrolling="no"
-                allowfullscreen
-                loading="lazy">
-        </iframe>
+        <model-viewer id="mv-pn532"
+                      src="/assets/models3d/pn532_nfc.glb"
+                      poster="/assets/renders3d/pn532_render.webp"
+                      alt="Módulo PN532 NFC RFID 13.56 MHz 3D"
+                      camera-controls
+                      auto-rotate
+                      auto-rotate-delay="1000"
+                      rotation-per-second="18deg"
+                      camera-orbit="32deg 52deg 115%"
+                      min-camera-orbit="auto auto 45%"
+                      max-camera-orbit="auto auto 250%"
+                      shadow-intensity="0.85"
+                      exposure="1.15"
+                      environment-image="neutral"
+                      interaction-prompt="none"
+                      loading="eager">
+        </model-viewer>
       </div>
 
       <!-- Single Render Focus Viewport -->
       <div class="single-render-wrap" id="viewport-pn-render">
-        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/pn532_render.webp', 'Módulo PN532 NFC — Ensamble CAD V3')">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/pn532_render.webp', 'Módulo PN532 NFC: Ensamble CAD V3')">
           <img src="/assets/renders3d/pn532_render.webp" alt="PN532 NFC Ensamble Render" loading="lazy">
           <div class="render-info">
-            <span>Ensamble CAD — PN532 V3</span>
+            <span>Ensamble CAD • PN532 V3</span>
             <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
           </div>
         </div>
       </div>
 
       <div class="panel-footer-bar">
-        <span>Catálogo 171 • ID 1702333</span>
-        <a href="https://www.3dcontentcentral.com/Download-Model.aspx?catalogid=171&id=1702333" target="_blank" rel="noopener">
-          3D ContentCentral
+        <span>KiCad STEP → glTF PBR • 13.56 MHz</span>
+        <a href="https://github.com/nulllaborg/pn532-nfc-module" target="_blank" rel="noopener">
+          GitHub CAD
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
       </div>
@@ -2179,7 +2189,7 @@
        ======================================================== */
     const PANEL_CONFIG = [
       { key: 'arduino',    panelId: 'panelArduino',    iframeId: 'iframe-arduino',    skId: 'sk-ard-3d',        type: 'iframe', defaultLabel: 'Cargando escena 3D Arduino UNO R3...' },
-      { key: 'pn532',      panelId: 'panelPn532',      iframeId: 'iframe-pn532',      skId: 'sk-pn-3d',         type: 'iframe', defaultLabel: 'Cargando ensamble CAD (13.56 MHz)...' },
+      { key: 'pn532',      panelId: 'panelPn532',      iframeId: 'mv-pn532',          skId: 'sk-pn-3d',         type: 'mv',     defaultLabel: 'Cargando geometría STEP/glTF PN532...' },
       { key: 'servo',      panelId: 'panelServo',      iframeId: 'iframe-servomotor', skId: 'sk-servo-3d',      type: 'servo',  defaultLabel: 'Inicializando cinemática y despiece...' },
       { key: 'stepper',    panelId: 'panelStepper',    iframeId: 'iframe-stepper',    skId: 'sk-stepper-3d',    type: 'iframe', defaultLabel: 'Cargando modelo 3D Motor de Paso...' },
       { key: 'l298n',      panelId: 'panelL298n',      iframeId: 'iframe-l298n',      skId: 'sk-l298n-3d',      type: 'iframe', defaultLabel: 'Cargando modelo 3D Driver Puente H L298N...' },
@@ -2346,12 +2356,14 @@
     }
 
     function initViewportVirtualizer() {
-      const mv = document.getElementById('mv-lm2596');
-      if (mv) {
-        mv.addEventListener('load', () => dismissSkeleton('sk-lm2596-3d'));
-        if (mv.loaded) dismissSkeleton('sk-lm2596-3d');
-        setTimeout(() => dismissSkeleton('sk-lm2596-3d'), 4000);
-      }
+      PANEL_CONFIG.filter(c => c.type === 'mv').forEach(cfg => {
+        const mv = document.getElementById(cfg.iframeId);
+        if (mv) {
+          mv.addEventListener('load', () => dismissSkeleton(cfg.skId));
+          if (mv.loaded) dismissSkeleton(cfg.skId);
+          setTimeout(() => dismissSkeleton(cfg.skId), 4000);
+        }
+      });
 
       if (!('IntersectionObserver' in window)) {
         PANEL_CONFIG.slice(0, 3).forEach(activatePanel);
