@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>RamsesCB</title>
   
-  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, PN532 NFC, Servomotor, Motor Paso a Paso, Driver L298N, Conversor LM2596, Sensor LDR y Resistencia 10kΩ).">
+  <meta name="description" content="Hardware 3D Studio de RamsesCB: Modelos 3D interactivos y renders fotorrealistas de ingeniería embebida (Arduino UNO R3, PN532 NFC, Servomotor, Motor Paso a Paso, Driver L298N, Conversor LM2596, Sensor LDR, Resistencia 10kΩ y Microcontrolador ATmega328P-PU).">
   <meta name="theme-color" content="#000000" id="theme-color-meta">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -365,7 +365,8 @@
     main.studio-main.view-l298n .studio-panel:not(.panel-l298n),
     main.studio-main.view-lm2596 .studio-panel:not(.panel-lm2596),
     main.studio-main.view-ldr .studio-panel:not(.panel-ldr),
-    main.studio-main.view-resistor10k .studio-panel:not(.panel-resistor10k) {
+    main.studio-main.view-resistor10k .studio-panel:not(.panel-resistor10k),
+    main.studio-main.view-atmega .studio-panel:not(.panel-atmega) {
       display: none;
     }
 
@@ -482,7 +483,8 @@
       .panel-title-text {
         font-size: 0.79rem;
       }
-      #servo-toggle-text {
+      #servo-toggle-text,
+      #ard-swap-text {
         display: none;
       }
       .tab-pill-btn {
@@ -524,6 +526,76 @@
     .btn-animation-toggle:hover {
       filter: brightness(1.1);
       transform: scale(1.02);
+    }
+
+    /* Atajo rápido Arduino <-> ATmega328P */
+    .btn-chip-shortcut {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      font-size: 0.71rem;
+      font-weight: 600;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      border: 1px solid rgba(94, 92, 230, 0.35);
+      background: rgba(94, 92, 230, 0.14);
+      color: #8e8cff;
+      transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.15s ease;
+      user-select: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    [data-theme="light"] .btn-chip-shortcut {
+      color: #4b49c6;
+      background: rgba(94, 92, 230, 0.1);
+    }
+    .btn-chip-shortcut:hover {
+      background: rgba(94, 92, 230, 0.24);
+      border-color: rgba(94, 92, 230, 0.6);
+      transform: scale(1.02);
+    }
+    .btn-chip-shortcut.is-chip {
+      background: var(--accent-soft);
+      border-color: rgba(41, 151, 255, 0.45);
+      color: var(--accent);
+    }
+
+    /* Silueta DIP-28 ATmega328P-PU */
+    .sk-atmega-silhouette {
+      width: 156px;
+      height: 76px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+    }
+    .sk-dip-pins {
+      width: 128px;
+      height: 9px;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(200, 206, 220, 0.65) 0px,
+        rgba(200, 206, 220, 0.65) 4px,
+        transparent 4px,
+        transparent 9px
+      );
+    }
+    .sk-dip-body {
+      width: 138px;
+      height: 36px;
+      background: rgba(94, 92, 230, 0.16);
+      border: 1.5px solid rgba(94, 92, 230, 0.5);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.62rem;
+      font-family: monospace;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #a5a3ff;
     }
 
     /* Píldoras de Cambio de Pestaña (3D / Renders) */
@@ -1427,7 +1499,7 @@
 
         <div class="brand-group">
           <h1 class="brand-title">Hardware 3D Studio</h1>
-          <span class="brand-sub">RamsesCB • 8 Modelos 3D Embebidos</span>
+          <span class="brand-sub">RamsesCB • 9 Modelos 3D Embebidos</span>
         </div>
       </div>
 
@@ -1457,7 +1529,7 @@
       <div class="segmented-control" role="tablist" aria-label="Selector de Vista 3D">
         <button class="seg-btn active" id="btn-grid" onclick="setViewMode('grid')" role="tab" aria-selected="true">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-          <span>Cuadrícula (8)</span>
+          <span>Cuadrícula (9)</span>
         </button>
         <button class="seg-btn" id="btn-arduino" onclick="setViewMode('arduino')" role="tab" aria-selected="false">
           ⚡ Arduino
@@ -1483,6 +1555,9 @@
         <button class="seg-btn" id="btn-resistor10k" onclick="setViewMode('resistor10k')" role="tab" aria-selected="false">
           🟫 10kΩ
         </button>
+        <button class="seg-btn" id="btn-atmega" onclick="setViewMode('atmega')" role="tab" aria-selected="false">
+          🧠 ATmega328P
+        </button>
       </div>
     </div>
   </header>
@@ -1492,17 +1567,23 @@
        ======================================================== -->
   <main class="studio-main" id="studioMain">
 
-    <!-- PANEL 1: ARDUINO UNO R3 -->
+    <!-- PANEL 1: ARDUINO UNO R3 (+ ATAJO RÁPIDO AL CHIP ATMEGA328P-PU) -->
     <section class="studio-panel panel-arduino" id="panelArduino">
       <div class="panel-top-bar">
         <div class="panel-meta">
-          <span class="panel-indicator" style="background:#0a84ff; box-shadow:0 0 8px rgba(10,132,255,0.4);"></span>
-          <span class="panel-title-text">Arduino UNO R3</span>
-          <span class="panel-spec-tag">ATmega328P</span>
+          <span class="panel-indicator" id="ard-indicator" style="background:#0a84ff; box-shadow:0 0 8px rgba(10,132,255,0.4);"></span>
+          <span class="panel-title-text" id="ard-title-text">Arduino UNO R3</span>
+          <span class="panel-spec-tag" id="ard-spec-tag">ATmega328P</span>
         </div>
-        <div class="tab-pills-wrap">
-          <button class="tab-pill-btn active" id="tab-ard-3d" onclick="setPanelTab('arduino', '3d')">3D Interactivo</button>
-          <button class="tab-pill-btn" id="tab-ard-renders" onclick="setPanelTab('arduino', 'renders')">Renders (6)</button>
+        <div class="panel-actions-group">
+          <button class="btn-chip-shortcut" id="btn-arduino-chip-swap" onclick="toggleArduinoAtmega()" title="Atajo rápido: alternar entre placa Arduino UNO R3 y su chip ATmega328P-PU">
+            <span id="ard-swap-icon">🧠</span>
+            <span id="ard-swap-text">ATmega328P</span>
+          </button>
+          <div class="tab-pills-wrap">
+            <button class="tab-pill-btn active" id="tab-ard-3d" onclick="setPanelTab('arduino', '3d')">3D</button>
+            <button class="tab-pill-btn" id="tab-ard-renders" onclick="setPanelTab('arduino', 'renders')">Renders</button>
+          </div>
         </div>
       </div>
 
@@ -1579,8 +1660,8 @@
       </div>
 
       <div class="panel-footer-bar">
-        <span>Mohamed Fathi • 1080p Texturas PBR</span>
-        <a href="https://sketchfab.com/3d-models/arduino-uno-85e4a60ec0294e2c83fbafa6051a3681" target="_blank" rel="noopener">
+        <span id="ard-footer-credit">Mohamed Fathi • 1080p Texturas PBR</span>
+        <a id="ard-footer-link" href="https://sketchfab.com/3d-models/arduino-uno-85e4a60ec0294e2c83fbafa6051a3681" target="_blank" rel="noopener">
           Sketchfab
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
@@ -2037,6 +2118,63 @@
         </a>
       </div>
     </section>
+
+    <!-- PANEL 9: MICROCONTROLADOR ATMEGA328P-PU (COMPLETA FILA 3 DE 3x3) -->
+    <section class="studio-panel panel-atmega" id="panelAtmega">
+      <div class="panel-top-bar">
+        <div class="panel-meta">
+          <span class="panel-indicator" style="background:#5e5ce6; box-shadow:0 0 8px rgba(94,92,230,0.45);"></span>
+          <span class="panel-title-text">Chip ATmega328P-PU</span>
+          <span class="panel-spec-tag">DIP-28 AVR</span>
+        </div>
+        <div class="tab-pills-wrap">
+          <button class="tab-pill-btn active" id="tab-atmega-3d" onclick="setPanelTab('atmega', '3d')">3D CAD</button>
+          <button class="tab-pill-btn" id="tab-atmega-render" onclick="setPanelTab('atmega', 'render')">Render</button>
+        </div>
+      </div>
+
+      <!-- 3D Model Viewport -->
+      <div class="panel-viewport" id="viewport-atmega-3d">
+        <div class="viewport-skeleton-loader" id="sk-atmega-3d" data-poster-for="sk-atmega-3d" onclick="forceActivatePanel('iframe-atmega')" title="Clic para activar modelo 3D">
+          <img class="sk-poster-bg" src="/assets/renders3d/atmega328p_render.webp" alt="" loading="lazy">
+          <div class="sk-board-silhouette sk-atmega-silhouette">
+            <div class="sk-dip-pins"></div>
+            <div class="sk-dip-body">ATMEGA328P-PU</div>
+            <div class="sk-dip-pins"></div>
+          </div>
+          <div class="sk-status-pill">
+            <span class="sk-dot" style="background:#5e5ce6;"></span>
+            <span>Cargando modelo 3D ATmega328P-PU...</span>
+          </div>
+        </div>
+        <iframe id="iframe-atmega"
+                title="Atmega328pu 3D Model"
+                data-src="https://sketchfab.com/models/153addc26c014792b8a08ebcf10604d8/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowfullscreen
+                loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Single Render Focus Viewport -->
+      <div class="single-render-wrap" id="viewport-atmega-render">
+        <div class="single-render-card" onclick="openLightbox('/assets/renders3d/atmega328p_render.webp', 'Microcontrolador ATmega328P-PU (DIP-28 AVR de Arduino UNO)')">
+          <img src="/assets/renders3d/atmega328p_render.webp" alt="ATmega328P-PU Render" loading="lazy">
+          <div class="render-info">
+            <span>ATmega328P-PU • MCU DIP-28 8-bit AVR</span>
+            <span style="color:var(--accent); font-size:0.7rem;">Clic para ampliar ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer-bar">
+        <span>rave-games • DIP-28 AVR</span>
+        <a href="https://sketchfab.com/3d-models/atmega328pu-153addc26c014792b8a08ebcf10604d8" target="_blank" rel="noopener">
+          Sketchfab
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- ========================================================
@@ -2195,8 +2333,76 @@
       { key: 'l298n',      panelId: 'panelL298n',      iframeId: 'iframe-l298n',      skId: 'sk-l298n-3d',      type: 'iframe', defaultLabel: 'Cargando modelo 3D Driver Puente H L298N...' },
       { key: 'lm2596',     panelId: 'panelLm2596',     iframeId: 'mv-lm2596',         skId: 'sk-lm2596-3d',     type: 'mv',     defaultLabel: 'Cargando geometría STEP/glTF LM2596...' },
       { key: 'ldr',        panelId: 'panelLdr',        iframeId: 'iframe-ldr',        skId: 'sk-ldr-3d',        type: 'iframe', defaultLabel: 'Cargando modelo 3D Fotorresistencia LDR...' },
-      { key: 'resistor10k',panelId: 'panelResistor10k',iframeId: 'iframe-resistor10k',skId: 'sk-resistor10k-3d',type: 'iframe', defaultLabel: 'Cargando modelo 3D Resistencia 10kΩ...' }
+      { key: 'resistor10k',panelId: 'panelResistor10k',iframeId: 'iframe-resistor10k',skId: 'sk-resistor10k-3d',type: 'iframe', defaultLabel: 'Cargando modelo 3D Resistencia 10kΩ...' },
+      { key: 'atmega',     panelId: 'panelAtmega',     iframeId: 'iframe-atmega',     skId: 'sk-atmega-3d',     type: 'iframe', defaultLabel: 'Cargando modelo 3D ATmega328P-PU...' }
     ];
+
+    /* Atajo rápido dentro del panel Arduino UNO <-> Chip ATmega328P-PU */
+    const ARDUINO_MODES = {
+      uno: {
+        src: 'https://sketchfab.com/models/85e4a60ec0294e2c83fbafa6051a3681/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0',
+        poster: '/assets/renders3d/artstation_11298390_42991245_Arduino UNO.webp',
+        title: 'Arduino UNO R3',
+        spec: 'ATmega328P',
+        dotBg: '#0a84ff',
+        dotShadow: '0 0 8px rgba(10,132,255,0.4)',
+        credit: 'Mohamed Fathi • 1080p Texturas PBR',
+        link: 'https://sketchfab.com/3d-models/arduino-uno-85e4a60ec0294e2c83fbafa6051a3681',
+        loadingText: 'Cargando escena 3D Arduino UNO R3...',
+        btnIcon: '🧠',
+        btnText: 'ATmega328P',
+        isChip: false
+      },
+      chip: {
+        src: 'https://sketchfab.com/models/153addc26c014792b8a08ebcf10604d8/embed?autostart=1&annotations_visible=0&ui_watermark=0&ui_infos=0&ui_hint=0',
+        poster: '/assets/renders3d/atmega328p_render.webp',
+        title: 'ATmega328P-PU (MCU)',
+        spec: 'DIP-28 AVR',
+        dotBg: '#5e5ce6',
+        dotShadow: '0 0 8px rgba(94,92,230,0.45)',
+        credit: 'rave-games • Microcontrolador de Arduino UNO',
+        link: 'https://sketchfab.com/3d-models/atmega328pu-153addc26c014792b8a08ebcf10604d8',
+        loadingText: 'Cargando chip 3D ATmega328P-PU...',
+        btnIcon: '⚡',
+        btnText: 'Ver UNO',
+        isChip: true
+      }
+    };
+    let arduinoSubMode = 'uno';
+
+    function toggleArduinoAtmega() {
+      arduinoSubMode = arduinoSubMode === 'uno' ? 'chip' : 'uno';
+      const m = ARDUINO_MODES[arduinoSubMode];
+      const iframe = document.getElementById('iframe-arduino');
+      const sk = document.getElementById('sk-ard-3d');
+      const posterImg = sk ? sk.querySelector('.sk-poster-bg') : null;
+      const ind = document.getElementById('ard-indicator');
+      const titleEl = document.getElementById('ard-title-text');
+      const specEl = document.getElementById('ard-spec-tag');
+      const creditEl = document.getElementById('ard-footer-credit');
+      const linkEl = document.getElementById('ard-footer-link');
+      const btn = document.getElementById('btn-arduino-chip-swap');
+      const btnIcon = document.getElementById('ard-swap-icon');
+      const btnText = document.getElementById('ard-swap-text');
+
+      if (titleEl) titleEl.textContent = m.title;
+      if (specEl) specEl.textContent = m.spec;
+      if (ind) { ind.style.background = m.dotBg; ind.style.boxShadow = m.dotShadow; }
+      if (creditEl) creditEl.textContent = m.credit;
+      if (linkEl) linkEl.href = m.link;
+      if (posterImg) posterImg.src = m.poster;
+      if (btn) btn.classList.toggle('is-chip', m.isChip);
+      if (btnIcon) btnIcon.textContent = m.btnIcon;
+      if (btnText) btnText.textContent = m.btnText;
+
+      const ardCfg = PANEL_CONFIG.find(c => c.key === 'arduino');
+      if (ardCfg) ardCfg.defaultLabel = m.loadingText;
+      if (iframe) {
+        iframe.setAttribute('data-src', m.src);
+        // Asegurar pestaña 3D activa y cargar el nuevo render de inmediato
+        setPanelTab('arduino', '3d');
+      }
+    }
 
     const panelState = {};
     PANEL_CONFIG.forEach(cfg => {
